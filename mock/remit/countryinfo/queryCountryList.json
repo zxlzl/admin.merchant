@@ -1,0 +1,11 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "countryCode": "data_countryCode",
+        "countryName": "data_countryName",
+        "id": 100
+    },
+    "success": true,
+    "message": "message"
+}

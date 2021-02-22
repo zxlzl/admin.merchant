@@ -1,0 +1,29 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "intoAccountName": "data_intoAccountName",
+        "intoAccount": "data_intoAccount",
+        "gmtModified": "2010/01/01 00:00:00",
+        "bizType": 0,
+        "bizTypeName": "data_bizTypeName",
+        "merchantMame": "data_merchantMame",
+        "memo": "data_memo",
+        "outAccount": "data_outAccount",
+        "operator": "data_operator",
+        "operationPs": "data_operationPs",
+        "tradeAmount": 0,
+        "bankBizOrderNo": "data_bankBizOrderNo",
+        "collectedSubjectName": "data_collectedSubjectName",
+        "outAccountName": "data_outAccountName",
+        "transDate": "2010/01/00",
+        "cellStyleMap": {},
+        "id": 100,
+        "claimStatusName": "data_claimStatusName",
+        "claimStatus": "data_claimStatus",
+        "merchantNo": "data_merchantNo",
+        "operationRemark": "data_operationRemark"
+    },
+    "success": true,
+    "message": "message"
+}

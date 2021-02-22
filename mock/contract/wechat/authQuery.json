@@ -1,0 +1,29 @@
+{
+    "code": "code",
+    "data": {
+        "bankCode": "data_bankCode",
+        "certType": "data_certType",
+        "fddAppId": "data_fddAppId",
+        "unionid": "data_unionid",
+        "wechatOpenId": "data_wechatOpenId",
+        "bankCardNo": "data_bankCardNo",
+        "wechatAppid": "data_wechatAppid",
+        "mobile": "data_mobile",
+        "bankName": "data_bankName",
+        "remark": "data_remark",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "certNo": "data_certNo",
+        "gmtUpdate": "2010/01/01 00:00:00",
+        "authResult": "data_authResult",
+        "name": "data_name",
+        "authResource": "data_authResource",
+        "deposit": true,
+        "fddPassTime": "2010/01/01 00:00:00",
+        "id": 100,
+        "fddCustomerId": "data_fddCustomerId",
+        "realNameAuth": true,
+        "wechatMobile": "data_wechatMobile"
+    },
+    "success": true,
+    "message": "message"
+}

@@ -1,0 +1,50 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "vatRateMemo": "data_vatRateMemo",
+        "amount": 0,
+        "deductRate": 0,
+        "accountName": "data_accountName",
+        "deductAmount": 0,
+        "id": 100,
+        "taxOrderCostDetailList": [
+            {
+                "discountRate": 0,
+                "taxRate": 0,
+                "currentTaxRate": 0,
+                "currentTaxAmt": 0,
+                "vatRate": 0,
+                "currentAmt": 0,
+                "maxAmt": 0,
+                "id": 100,
+                "minAmt": 0
+            },
+            {
+                "discountRate": 1,
+                "taxRate": 1,
+                "currentTaxRate": 1,
+                "currentTaxAmt": 1,
+                "vatRate": 1,
+                "currentAmt": 1,
+                "maxAmt": 1,
+                "id": 101,
+                "minAmt": 1
+            },
+            {
+                "discountRate": 2,
+                "taxRate": 2,
+                "currentTaxRate": 2,
+                "currentTaxAmt": 2,
+                "vatRate": 2,
+                "currentAmt": 2,
+                "maxAmt": 2,
+                "id": 102,
+                "minAmt": 2
+            }
+        ],
+        "vatAmount": 0
+    },
+    "success": true,
+    "message": "message"
+}

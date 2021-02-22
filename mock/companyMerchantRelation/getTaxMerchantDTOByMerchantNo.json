@@ -1,0 +1,29 @@
+{
+    "code": "code",
+    "data": {
+        "belongMerchant": "data_belongMerchant",
+        "licenseUrl": "http://test.com/data_licenseUrl",
+        "gmtModified": "2010/01/01 00:00:00",
+        "paccountNo": "data_paccountNo",
+        "vatRate": 0,
+        "mobile": "data_mobile",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "feeRate": 0,
+        "operator": "data_operator",
+        "merchantAbbr": "data_merchantAbbr",
+        "merchantName": "data_merchantName",
+        "taxRate": 0,
+        "registeredAddress": "data_registeredAddress",
+        "taxpayerType": "data_taxpayerType",
+        "registrationNumber": "data_registrationNumber",
+        "collectedSubjectName": "data_collectedSubjectName",
+        "collectedSubjectNo": "data_collectedSubjectNo",
+        "id": 100,
+        "businessAddress": "data_businessAddress",
+        "merchantType": "data_merchantType",
+        "merchantNo": "data_merchantNo",
+        "status": "data_status"
+    },
+    "success": true,
+    "message": "message"
+}

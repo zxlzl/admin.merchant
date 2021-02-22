@@ -1,0 +1,88 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "current": 0,
+        "total": 15,
+        "hitCount": true,
+        "optimizeCountSql": true,
+        "size": 10,
+        "maxLimit": 0,
+        "records": [
+            {
+                "availableInvoiceAmountEnd": 0,
+                "gmtModified": "2010/01/01 00:00:00",
+                "endDate": "2010/01/01 00:00:00",
+                "pageSize": 10,
+                "invoiceMode": "data_records_0_invoiceMode",
+                "gmtCreate": "2010/01/01 00:00:00",
+                "claimedInvoiceAmount": 0,
+                "merchantName": "data_records_0_merchantName",
+                "curPage": 1,
+                "collectedSubjectName": "data_records_0_collectedSubjectName",
+                "cumulativeInvoiceAmount": 0,
+                "collectedSubjectNo": "data_records_0_collectedSubjectNo",
+                "availableInvoiceAmountStart": 0,
+                "id": 100,
+                "availableInvoiceAmount": 0,
+                "startDate": "2010/01/01 00:00:00",
+                "merchantNo": "data_records_0_merchantNo"
+            },
+            {
+                "availableInvoiceAmountEnd": 1,
+                "gmtModified": "2010/01/02 00:00:01",
+                "endDate": "2010/01/02 00:00:01",
+                "pageSize": 10,
+                "invoiceMode": "data_records_1_invoiceMode",
+                "gmtCreate": "2010/01/02 00:00:01",
+                "claimedInvoiceAmount": 1,
+                "merchantName": "data_records_1_merchantName",
+                "curPage": 2,
+                "collectedSubjectName": "data_records_1_collectedSubjectName",
+                "cumulativeInvoiceAmount": 1,
+                "collectedSubjectNo": "data_records_1_collectedSubjectNo",
+                "availableInvoiceAmountStart": 1,
+                "id": 101,
+                "availableInvoiceAmount": 1,
+                "startDate": "2010/01/02 00:00:01",
+                "merchantNo": "data_records_1_merchantNo"
+            },
+            {
+                "availableInvoiceAmountEnd": 2,
+                "gmtModified": "2010/01/03 00:00:02",
+                "endDate": "2010/01/03 00:00:02",
+                "pageSize": 10,
+                "invoiceMode": "data_records_2_invoiceMode",
+                "gmtCreate": "2010/01/03 00:00:02",
+                "claimedInvoiceAmount": 2,
+                "merchantName": "data_records_2_merchantName",
+                "curPage": 3,
+                "collectedSubjectName": "data_records_2_collectedSubjectName",
+                "cumulativeInvoiceAmount": 2,
+                "collectedSubjectNo": "data_records_2_collectedSubjectNo",
+                "availableInvoiceAmountStart": 2,
+                "id": 102,
+                "availableInvoiceAmount": 2,
+                "startDate": "2010/01/03 00:00:02",
+                "merchantNo": "data_records_2_merchantNo"
+            }
+        ],
+        "orders": [
+            {
+                "asc": true,
+                "column": "data_orders_0_column"
+            },
+            {
+                "asc": false,
+                "column": "data_orders_1_column"
+            },
+            {
+                "asc": true,
+                "column": "data_orders_2_column"
+            }
+        ],
+        "countId": "data_countId"
+    },
+    "success": true,
+    "message": "message"
+}

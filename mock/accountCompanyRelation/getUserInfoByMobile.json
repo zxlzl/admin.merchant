@@ -1,0 +1,19 @@
+{
+    "code": "code",
+    "data": {
+        "gmtModified": "2010/01/01 00:00:00",
+        "mobile": "data_mobile",
+        "name": "data_name",
+        "memo": "data_memo",
+        "company": "data_company",
+        "id": 100,
+        "position": "data_position",
+        "contactmobile": "data_contactmobile",
+        "department": "data_department",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "type": 0,
+        "status": 0
+    },
+    "success": true,
+    "message": "message"
+}

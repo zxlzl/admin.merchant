@@ -1,0 +1,11 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "totalRebateAmount": 0,
+        "availableAmount": 0,
+        "lastMonthRebateAmount": 0
+    },
+    "success": true,
+    "message": "message"
+}

@@ -1,0 +1,12 @@
+{
+    "code": "code",
+    "data": {
+        "acctAmt": 0,
+        "sysFreezeAmt": 0,
+        "bizFreezeAmt": 0,
+        "availBalance": 0,
+        "freezeAmt": 0
+    },
+    "success": true,
+    "message": "message"
+}

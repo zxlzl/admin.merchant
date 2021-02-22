@@ -1,0 +1,32 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "birthday": "data_birthday",
+        "certType": "data_certType",
+        "gmtModified": "2010/01/01 00:00:00",
+        "validType": "data_validType",
+        "endDate": "2010/01/00",
+        "sex": "data_sex",
+        "applySource": "data_applySource",
+        "applyMemo": "data_applyMemo",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "merchantName": "data_merchantName",
+        "certNo": "data_certNo",
+        "checkStatus": "data_checkStatus",
+        "otherMaterials": "data_otherMaterials",
+        "validStatus": "data_validStatus",
+        "countryCode": "data_countryCode",
+        "collectedSubjectName": "data_collectedSubjectName",
+        "imageUrl": "http://test.com/data_imageUrl",
+        "name": "data_name",
+        "collectedSubjectNo": "data_collectedSubjectNo",
+        "countryName": "data_countryName",
+        "id": 100,
+        "checkMemo": "data_checkMemo",
+        "startDate": "2010/01/00",
+        "merchantNo": "data_merchantNo"
+    },
+    "success": true,
+    "message": "message"
+}

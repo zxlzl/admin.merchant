@@ -1,0 +1,21 @@
+{
+    "code": "code",
+    "data": {
+        "effectDate": "2010/01/01 00:00:00",
+        "gmtModified": "2010/01/01 00:00:00",
+        "isAutomaticRenewal": "data_isAutomaticRenewal",
+        "productId": "data_productId",
+        "downloadUrl": "http://test.com/data_downloadUrl",
+        "productStatus": "data_productStatus",
+        "remark": "data_remark",
+        "failureDate": "2010/01/01 00:00:00",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "operator": "data_operator",
+        "payWagesChannel": "data_payWagesChannel",
+        "contractId": "data_contractId",
+        "id": 100,
+        "merchantNo": "data_merchantNo"
+    },
+    "success": true,
+    "message": "message"
+}

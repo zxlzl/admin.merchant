@@ -1,0 +1,42 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "becomeTaxpayerDate": "2010/01/01 00:00:00",
+        "gmtModified": "2010/01/01 00:00:00",
+        "serviceChargeInvoicing": "data_serviceChargeInvoicing",
+        "invoiceCategoryList": [
+            "data_invoiceCategoryList_0",
+            "data_invoiceCategoryList_1",
+            "data_invoiceCategoryList_2"
+        ],
+        "bankAccountNo": "data_bankAccountNo",
+        "bankName": "data_bankName",
+        "invoiceCategory": "data_invoiceCategory",
+        "operatorAdd": 0,
+        "operatorModified": 0,
+        "receiverAreaProvince": "data_receiverAreaProvince",
+        "receiverPhone": "1810000000",
+        "taxpayerType": "data_taxpayerType",
+        "invoicePrintingPhone": "1810000000",
+        "taxpayerRegistNo": "data_taxpayerRegistNo",
+        "invoiceNumber": 0,
+        "invoiceType": "data_invoiceType",
+        "id": 100,
+        "busiLicenseRegistAddr": "data_busiLicenseRegistAddr",
+        "invoiceTitle": "data_invoiceTitle",
+        "receiverAreaCity": "data_receiverAreaCity",
+        "receiverName": "data_receiverName",
+        "taxRegistCert": "data_taxRegistCert",
+        "receiverDetailAddress": "data_receiverDetailAddress",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "feeNumbers": 0,
+        "invoiceMedium": "data_invoiceMedium",
+        "totalAmount": 0,
+        "otherQualificateCert": "data_otherQualificateCert",
+        "receiverAreaDistrict": "data_receiverAreaDistrict",
+        "merchantNo": "data_merchantNo"
+    },
+    "success": true,
+    "message": "message"
+}

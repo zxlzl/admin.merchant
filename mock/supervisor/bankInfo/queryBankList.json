@@ -1,0 +1,68 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": [
+        {
+            "code": "data_0_code",
+            "name": "data_0_name"
+        },
+        {
+            "code": "data_1_code",
+            "name": "data_1_name"
+        },
+        {
+            "code": "data_2_code",
+            "name": "data_2_name"
+        },
+        {
+            "code": "data_3_code",
+            "name": "data_3_name"
+        },
+        {
+            "code": "data_4_code",
+            "name": "data_4_name"
+        },
+        {
+            "code": "data_5_code",
+            "name": "data_5_name"
+        },
+        {
+            "code": "data_6_code",
+            "name": "data_6_name"
+        },
+        {
+            "code": "data_7_code",
+            "name": "data_7_name"
+        },
+        {
+            "code": "data_8_code",
+            "name": "data_8_name"
+        },
+        {
+            "code": "data_9_code",
+            "name": "data_9_name"
+        },
+        {
+            "code": "data_10_code",
+            "name": "data_10_name"
+        },
+        {
+            "code": "data_11_code",
+            "name": "data_11_name"
+        },
+        {
+            "code": "data_12_code",
+            "name": "data_12_name"
+        },
+        {
+            "code": "data_13_code",
+            "name": "data_13_name"
+        },
+        {
+            "code": "data_14_code",
+            "name": "data_14_name"
+        }
+    ],
+    "success": true,
+    "message": "message"
+}

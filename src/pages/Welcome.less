@@ -1,0 +1,91 @@
+@import '~antd/es/style/themes/default.less';
+
+.accountInfo {
+  display: flex;
+  align-items: center;
+  .chart {
+    height: 100px;
+    width: 120px;
+    margin-right: 60px;
+  }
+  .balances {
+    flex: 1;
+    display: flex;
+
+    .vertical {
+      margin-right: 68px;
+      :global {
+        .ant-statistic-title {
+          &::before {
+            display: inline-block;
+            content: '';
+            width: 4px;
+            height: 4px;
+            margin-right: 6px;
+            transform: translateY(-50%);
+            background: rgba(49, 127, 255, 1);
+          }
+        }
+        .ant-statistic-content {
+        }
+      }
+    }
+
+    .horizon {
+      :global {
+        .ant-statistic-title {
+          display: inline-block;
+          &::before {
+            display: inline-block;
+            content: '';
+            width: 4px;
+            height: 4px;
+            margin-right: 6px;
+            transform: translateY(-50%);
+            background: #DCE8FC;
+          }
+        }
+        .ant-statistic-content {
+          display: inline-block;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .rightButtons {
+    text-align: right;
+  }
+}
+
+.displayFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.functionIcon {
+  width: 58px;
+  height: 58px;
+}
+
+.list {
+  margin: 0 24px;
+}
+
+.functionButtons {
+  width: 100px;
+
+  button {
+    margin-bottom: 12px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

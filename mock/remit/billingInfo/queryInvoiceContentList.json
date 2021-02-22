@@ -1,0 +1,23 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": [
+        "data_0",
+        "data_1",
+        "data_2",
+        "data_3",
+        "data_4",
+        "data_5",
+        "data_6",
+        "data_7",
+        "data_8",
+        "data_9",
+        "data_10",
+        "data_11",
+        "data_12",
+        "data_13",
+        "data_14"
+    ],
+    "success": true,
+    "message": "message"
+}

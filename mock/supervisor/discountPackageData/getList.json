@@ -1,0 +1,32 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "curPage": 1,
+        "data": {},
+        "endRecordCount": 0,
+        "recordCount": 0,
+        "pageSize": 10,
+        "startRecordCount": 0,
+        "list": [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "maxPage": 1
+    },
+    "success": true,
+    "message": "message"
+}

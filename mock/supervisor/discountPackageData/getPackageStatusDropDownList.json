@@ -1,0 +1,68 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": [
+        {
+            "packageStatusName": "data_0_packageStatusName",
+            "packageStatus": "data_0_packageStatus"
+        },
+        {
+            "packageStatusName": "data_1_packageStatusName",
+            "packageStatus": "data_1_packageStatus"
+        },
+        {
+            "packageStatusName": "data_2_packageStatusName",
+            "packageStatus": "data_2_packageStatus"
+        },
+        {
+            "packageStatusName": "data_3_packageStatusName",
+            "packageStatus": "data_3_packageStatus"
+        },
+        {
+            "packageStatusName": "data_4_packageStatusName",
+            "packageStatus": "data_4_packageStatus"
+        },
+        {
+            "packageStatusName": "data_5_packageStatusName",
+            "packageStatus": "data_5_packageStatus"
+        },
+        {
+            "packageStatusName": "data_6_packageStatusName",
+            "packageStatus": "data_6_packageStatus"
+        },
+        {
+            "packageStatusName": "data_7_packageStatusName",
+            "packageStatus": "data_7_packageStatus"
+        },
+        {
+            "packageStatusName": "data_8_packageStatusName",
+            "packageStatus": "data_8_packageStatus"
+        },
+        {
+            "packageStatusName": "data_9_packageStatusName",
+            "packageStatus": "data_9_packageStatus"
+        },
+        {
+            "packageStatusName": "data_10_packageStatusName",
+            "packageStatus": "data_10_packageStatus"
+        },
+        {
+            "packageStatusName": "data_11_packageStatusName",
+            "packageStatus": "data_11_packageStatus"
+        },
+        {
+            "packageStatusName": "data_12_packageStatusName",
+            "packageStatus": "data_12_packageStatus"
+        },
+        {
+            "packageStatusName": "data_13_packageStatusName",
+            "packageStatus": "data_13_packageStatus"
+        },
+        {
+            "packageStatusName": "data_14_packageStatusName",
+            "packageStatus": "data_14_packageStatus"
+        }
+    ],
+    "success": true,
+    "message": "message"
+}

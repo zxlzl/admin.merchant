@@ -1,0 +1,767 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "curPage": 1,
+        "data": {},
+        "endRecordCount": 0,
+        "recordCount": 0,
+        "pageSize": 10,
+        "startRecordCount": 0,
+        "list": [
+            {
+                "gmtModified": "2010/01/01 00:00:00",
+                "wechatAdminId": "data_list_0_wechatAdminId",
+                "role": "data_list_0_role",
+                "endDate": "2010/01/00",
+                "memo": "data_list_0_memo",
+                "type": 0,
+                "wechatAuthId": "data_list_0_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_0_company",
+                "id": 100,
+                "contactmobile": "data_list_0_contactmobile",
+                "department": "data_list_0_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_0_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_0_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_0_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_0_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_0_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_0_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_0_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_0_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_0_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_0_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_0_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_0_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_0_corpId",
+                "mobile": "data_list_0_mobile",
+                "gmtCreate": "2010/01/01 00:00:00",
+                "wechatAdminName": "data_list_0_wechatAdminName",
+                "systemPermissions": "data_list_0_systemPermissions",
+                "name": "data_list_0_name",
+                "roleName": "data_list_0_roleName",
+                "position": "data_list_0_position",
+                "merchantList": [
+                    "data_list_0_merchantList_0",
+                    "data_list_0_merchantList_1",
+                    "data_list_0_merchantList_2"
+                ],
+                "startDate": "2010/01/00",
+                "status": 0,
+                "useremail": "data_list_0_useremail"
+            },
+            {
+                "gmtModified": "2010/01/02 00:00:01",
+                "wechatAdminId": "data_list_1_wechatAdminId",
+                "role": "data_list_1_role",
+                "endDate": "2010/01/01",
+                "memo": "data_list_1_memo",
+                "type": 1,
+                "wechatAuthId": "data_list_1_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_1_company",
+                "id": 101,
+                "contactmobile": "data_list_1_contactmobile",
+                "department": "data_list_1_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_1_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_1_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_1_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_1_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_1_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_1_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_1_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_1_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_1_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_1_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_1_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_1_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_1_corpId",
+                "mobile": "data_list_1_mobile",
+                "gmtCreate": "2010/01/02 00:00:01",
+                "wechatAdminName": "data_list_1_wechatAdminName",
+                "systemPermissions": "data_list_1_systemPermissions",
+                "name": "data_list_1_name",
+                "roleName": "data_list_1_roleName",
+                "position": "data_list_1_position",
+                "merchantList": [
+                    "data_list_1_merchantList_0",
+                    "data_list_1_merchantList_1",
+                    "data_list_1_merchantList_2"
+                ],
+                "startDate": "2010/01/01",
+                "status": 1,
+                "useremail": "data_list_1_useremail"
+            },
+            {
+                "gmtModified": "2010/01/03 00:00:02",
+                "wechatAdminId": "data_list_2_wechatAdminId",
+                "role": "data_list_2_role",
+                "endDate": "2010/01/02",
+                "memo": "data_list_2_memo",
+                "type": 2,
+                "wechatAuthId": "data_list_2_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_2_company",
+                "id": 102,
+                "contactmobile": "data_list_2_contactmobile",
+                "department": "data_list_2_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_2_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_2_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_2_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_2_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_2_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_2_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_2_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_2_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_2_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_2_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_2_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_2_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_2_corpId",
+                "mobile": "data_list_2_mobile",
+                "gmtCreate": "2010/01/03 00:00:02",
+                "wechatAdminName": "data_list_2_wechatAdminName",
+                "systemPermissions": "data_list_2_systemPermissions",
+                "name": "data_list_2_name",
+                "roleName": "data_list_2_roleName",
+                "position": "data_list_2_position",
+                "merchantList": [
+                    "data_list_2_merchantList_0",
+                    "data_list_2_merchantList_1",
+                    "data_list_2_merchantList_2"
+                ],
+                "startDate": "2010/01/02",
+                "status": 2,
+                "useremail": "data_list_2_useremail"
+            },
+            {
+                "gmtModified": "2010/01/04 00:00:03",
+                "wechatAdminId": "data_list_3_wechatAdminId",
+                "role": "data_list_3_role",
+                "endDate": "2010/01/03",
+                "memo": "data_list_3_memo",
+                "type": 3,
+                "wechatAuthId": "data_list_3_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_3_company",
+                "id": 103,
+                "contactmobile": "data_list_3_contactmobile",
+                "department": "data_list_3_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_3_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_3_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_3_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_3_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_3_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_3_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_3_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_3_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_3_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_3_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_3_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_3_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_3_corpId",
+                "mobile": "data_list_3_mobile",
+                "gmtCreate": "2010/01/04 00:00:03",
+                "wechatAdminName": "data_list_3_wechatAdminName",
+                "systemPermissions": "data_list_3_systemPermissions",
+                "name": "data_list_3_name",
+                "roleName": "data_list_3_roleName",
+                "position": "data_list_3_position",
+                "merchantList": [
+                    "data_list_3_merchantList_0",
+                    "data_list_3_merchantList_1",
+                    "data_list_3_merchantList_2"
+                ],
+                "startDate": "2010/01/03",
+                "status": 3,
+                "useremail": "data_list_3_useremail"
+            },
+            {
+                "gmtModified": "2010/01/05 00:00:04",
+                "wechatAdminId": "data_list_4_wechatAdminId",
+                "role": "data_list_4_role",
+                "endDate": "2010/01/04",
+                "memo": "data_list_4_memo",
+                "type": 4,
+                "wechatAuthId": "data_list_4_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_4_company",
+                "id": 104,
+                "contactmobile": "data_list_4_contactmobile",
+                "department": "data_list_4_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_4_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_4_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_4_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_4_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_4_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_4_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_4_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_4_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_4_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_4_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_4_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_4_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_4_corpId",
+                "mobile": "data_list_4_mobile",
+                "gmtCreate": "2010/01/05 00:00:04",
+                "wechatAdminName": "data_list_4_wechatAdminName",
+                "systemPermissions": "data_list_4_systemPermissions",
+                "name": "data_list_4_name",
+                "roleName": "data_list_4_roleName",
+                "position": "data_list_4_position",
+                "merchantList": [
+                    "data_list_4_merchantList_0",
+                    "data_list_4_merchantList_1",
+                    "data_list_4_merchantList_2"
+                ],
+                "startDate": "2010/01/04",
+                "status": 4,
+                "useremail": "data_list_4_useremail"
+            },
+            {
+                "gmtModified": "2010/01/06 00:00:05",
+                "wechatAdminId": "data_list_5_wechatAdminId",
+                "role": "data_list_5_role",
+                "endDate": "2010/01/05",
+                "memo": "data_list_5_memo",
+                "type": 5,
+                "wechatAuthId": "data_list_5_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_5_company",
+                "id": 105,
+                "contactmobile": "data_list_5_contactmobile",
+                "department": "data_list_5_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_5_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_5_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_5_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_5_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_5_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_5_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_5_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_5_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_5_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_5_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_5_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_5_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_5_corpId",
+                "mobile": "data_list_5_mobile",
+                "gmtCreate": "2010/01/06 00:00:05",
+                "wechatAdminName": "data_list_5_wechatAdminName",
+                "systemPermissions": "data_list_5_systemPermissions",
+                "name": "data_list_5_name",
+                "roleName": "data_list_5_roleName",
+                "position": "data_list_5_position",
+                "merchantList": [
+                    "data_list_5_merchantList_0",
+                    "data_list_5_merchantList_1",
+                    "data_list_5_merchantList_2"
+                ],
+                "startDate": "2010/01/05",
+                "status": 5,
+                "useremail": "data_list_5_useremail"
+            },
+            {
+                "gmtModified": "2010/01/07 00:00:06",
+                "wechatAdminId": "data_list_6_wechatAdminId",
+                "role": "data_list_6_role",
+                "endDate": "2010/01/06",
+                "memo": "data_list_6_memo",
+                "type": 6,
+                "wechatAuthId": "data_list_6_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_6_company",
+                "id": 106,
+                "contactmobile": "data_list_6_contactmobile",
+                "department": "data_list_6_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_6_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_6_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_6_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_6_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_6_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_6_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_6_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_6_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_6_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_6_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_6_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_6_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_6_corpId",
+                "mobile": "data_list_6_mobile",
+                "gmtCreate": "2010/01/07 00:00:06",
+                "wechatAdminName": "data_list_6_wechatAdminName",
+                "systemPermissions": "data_list_6_systemPermissions",
+                "name": "data_list_6_name",
+                "roleName": "data_list_6_roleName",
+                "position": "data_list_6_position",
+                "merchantList": [
+                    "data_list_6_merchantList_0",
+                    "data_list_6_merchantList_1",
+                    "data_list_6_merchantList_2"
+                ],
+                "startDate": "2010/01/06",
+                "status": 6,
+                "useremail": "data_list_6_useremail"
+            },
+            {
+                "gmtModified": "2010/01/08 00:00:07",
+                "wechatAdminId": "data_list_7_wechatAdminId",
+                "role": "data_list_7_role",
+                "endDate": "2010/01/07",
+                "memo": "data_list_7_memo",
+                "type": 7,
+                "wechatAuthId": "data_list_7_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_7_company",
+                "id": 107,
+                "contactmobile": "data_list_7_contactmobile",
+                "department": "data_list_7_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_7_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_7_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_7_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_7_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_7_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_7_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_7_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_7_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_7_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_7_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_7_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_7_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_7_corpId",
+                "mobile": "data_list_7_mobile",
+                "gmtCreate": "2010/01/08 00:00:07",
+                "wechatAdminName": "data_list_7_wechatAdminName",
+                "systemPermissions": "data_list_7_systemPermissions",
+                "name": "data_list_7_name",
+                "roleName": "data_list_7_roleName",
+                "position": "data_list_7_position",
+                "merchantList": [
+                    "data_list_7_merchantList_0",
+                    "data_list_7_merchantList_1",
+                    "data_list_7_merchantList_2"
+                ],
+                "startDate": "2010/01/07",
+                "status": 7,
+                "useremail": "data_list_7_useremail"
+            },
+            {
+                "gmtModified": "2010/01/09 00:00:08",
+                "wechatAdminId": "data_list_8_wechatAdminId",
+                "role": "data_list_8_role",
+                "endDate": "2010/01/08",
+                "memo": "data_list_8_memo",
+                "type": 8,
+                "wechatAuthId": "data_list_8_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_8_company",
+                "id": 108,
+                "contactmobile": "data_list_8_contactmobile",
+                "department": "data_list_8_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_8_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_8_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_8_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_8_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_8_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_8_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_8_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_8_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_8_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_8_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_8_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_8_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_8_corpId",
+                "mobile": "data_list_8_mobile",
+                "gmtCreate": "2010/01/09 00:00:08",
+                "wechatAdminName": "data_list_8_wechatAdminName",
+                "systemPermissions": "data_list_8_systemPermissions",
+                "name": "data_list_8_name",
+                "roleName": "data_list_8_roleName",
+                "position": "data_list_8_position",
+                "merchantList": [
+                    "data_list_8_merchantList_0",
+                    "data_list_8_merchantList_1",
+                    "data_list_8_merchantList_2"
+                ],
+                "startDate": "2010/01/08",
+                "status": 8,
+                "useremail": "data_list_8_useremail"
+            },
+            {
+                "gmtModified": "2010/01/01 00:00:09",
+                "wechatAdminId": "data_list_9_wechatAdminId",
+                "role": "data_list_9_role",
+                "endDate": "2010/01/09",
+                "memo": "data_list_9_memo",
+                "type": 9,
+                "wechatAuthId": "data_list_9_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_9_company",
+                "id": 109,
+                "contactmobile": "data_list_9_contactmobile",
+                "department": "data_list_9_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_9_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_9_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_9_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_9_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_9_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_9_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_9_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_9_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_9_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_9_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_9_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_9_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_9_corpId",
+                "mobile": "data_list_9_mobile",
+                "gmtCreate": "2010/01/01 00:00:09",
+                "wechatAdminName": "data_list_9_wechatAdminName",
+                "systemPermissions": "data_list_9_systemPermissions",
+                "name": "data_list_9_name",
+                "roleName": "data_list_9_roleName",
+                "position": "data_list_9_position",
+                "merchantList": [
+                    "data_list_9_merchantList_0",
+                    "data_list_9_merchantList_1",
+                    "data_list_9_merchantList_2"
+                ],
+                "startDate": "2010/01/09",
+                "status": 9,
+                "useremail": "data_list_9_useremail"
+            },
+            {
+                "gmtModified": "2010/01/02 00:00:00",
+                "wechatAdminId": "data_list_10_wechatAdminId",
+                "role": "data_list_10_role",
+                "endDate": "2010/01/00",
+                "memo": "data_list_10_memo",
+                "type": 10,
+                "wechatAuthId": "data_list_10_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_10_company",
+                "id": 110,
+                "contactmobile": "data_list_10_contactmobile",
+                "department": "data_list_10_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_10_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_10_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_10_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_10_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_10_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_10_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_10_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_10_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_10_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_10_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_10_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_10_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_10_corpId",
+                "mobile": "data_list_10_mobile",
+                "gmtCreate": "2010/01/02 00:00:00",
+                "wechatAdminName": "data_list_10_wechatAdminName",
+                "systemPermissions": "data_list_10_systemPermissions",
+                "name": "data_list_10_name",
+                "roleName": "data_list_10_roleName",
+                "position": "data_list_10_position",
+                "merchantList": [
+                    "data_list_10_merchantList_0",
+                    "data_list_10_merchantList_1",
+                    "data_list_10_merchantList_2"
+                ],
+                "startDate": "2010/01/00",
+                "status": 10,
+                "useremail": "data_list_10_useremail"
+            },
+            {
+                "gmtModified": "2010/01/03 00:00:01",
+                "wechatAdminId": "data_list_11_wechatAdminId",
+                "role": "data_list_11_role",
+                "endDate": "2010/01/01",
+                "memo": "data_list_11_memo",
+                "type": 11,
+                "wechatAuthId": "data_list_11_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_11_company",
+                "id": 111,
+                "contactmobile": "data_list_11_contactmobile",
+                "department": "data_list_11_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_11_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_11_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_11_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_11_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_11_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_11_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_11_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_11_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_11_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_11_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_11_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_11_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_11_corpId",
+                "mobile": "data_list_11_mobile",
+                "gmtCreate": "2010/01/03 00:00:01",
+                "wechatAdminName": "data_list_11_wechatAdminName",
+                "systemPermissions": "data_list_11_systemPermissions",
+                "name": "data_list_11_name",
+                "roleName": "data_list_11_roleName",
+                "position": "data_list_11_position",
+                "merchantList": [
+                    "data_list_11_merchantList_0",
+                    "data_list_11_merchantList_1",
+                    "data_list_11_merchantList_2"
+                ],
+                "startDate": "2010/01/01",
+                "status": 11,
+                "useremail": "data_list_11_useremail"
+            },
+            {
+                "gmtModified": "2010/01/04 00:00:02",
+                "wechatAdminId": "data_list_12_wechatAdminId",
+                "role": "data_list_12_role",
+                "endDate": "2010/01/02",
+                "memo": "data_list_12_memo",
+                "type": 12,
+                "wechatAuthId": "data_list_12_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_12_company",
+                "id": 112,
+                "contactmobile": "data_list_12_contactmobile",
+                "department": "data_list_12_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_12_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_12_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_12_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_12_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_12_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_12_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_12_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_12_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_12_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_12_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_12_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_12_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_12_corpId",
+                "mobile": "data_list_12_mobile",
+                "gmtCreate": "2010/01/04 00:00:02",
+                "wechatAdminName": "data_list_12_wechatAdminName",
+                "systemPermissions": "data_list_12_systemPermissions",
+                "name": "data_list_12_name",
+                "roleName": "data_list_12_roleName",
+                "position": "data_list_12_position",
+                "merchantList": [
+                    "data_list_12_merchantList_0",
+                    "data_list_12_merchantList_1",
+                    "data_list_12_merchantList_2"
+                ],
+                "startDate": "2010/01/02",
+                "status": 12,
+                "useremail": "data_list_12_useremail"
+            },
+            {
+                "gmtModified": "2010/01/05 00:00:03",
+                "wechatAdminId": "data_list_13_wechatAdminId",
+                "role": "data_list_13_role",
+                "endDate": "2010/01/03",
+                "memo": "data_list_13_memo",
+                "type": 13,
+                "wechatAuthId": "data_list_13_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_13_company",
+                "id": 113,
+                "contactmobile": "data_list_13_contactmobile",
+                "department": "data_list_13_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_13_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_13_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_13_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_13_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_13_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_13_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_13_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_13_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_13_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_13_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_13_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_13_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_13_corpId",
+                "mobile": "data_list_13_mobile",
+                "gmtCreate": "2010/01/05 00:00:03",
+                "wechatAdminName": "data_list_13_wechatAdminName",
+                "systemPermissions": "data_list_13_systemPermissions",
+                "name": "data_list_13_name",
+                "roleName": "data_list_13_roleName",
+                "position": "data_list_13_position",
+                "merchantList": [
+                    "data_list_13_merchantList_0",
+                    "data_list_13_merchantList_1",
+                    "data_list_13_merchantList_2"
+                ],
+                "startDate": "2010/01/03",
+                "status": 13,
+                "useremail": "data_list_13_useremail"
+            },
+            {
+                "gmtModified": "2010/01/06 00:00:04",
+                "wechatAdminId": "data_list_14_wechatAdminId",
+                "role": "data_list_14_role",
+                "endDate": "2010/01/04",
+                "memo": "data_list_14_memo",
+                "type": 14,
+                "wechatAuthId": "data_list_14_wechatAuthId",
+                "password": "000000",
+                "company": "data_list_14_company",
+                "id": 114,
+                "contactmobile": "data_list_14_contactmobile",
+                "department": "data_list_14_department",
+                "merchantAndCollectedList": [
+                    {
+                        "collectedSubjectName": "data_list_14_merchantAndCollectedList_0_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_14_merchantAndCollectedList_0_collectedSubjectNo",
+                        "merchantName": "data_list_14_merchantAndCollectedList_0_merchantName",
+                        "merchantNo": "data_list_14_merchantAndCollectedList_0_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_14_merchantAndCollectedList_1_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_14_merchantAndCollectedList_1_collectedSubjectNo",
+                        "merchantName": "data_list_14_merchantAndCollectedList_1_merchantName",
+                        "merchantNo": "data_list_14_merchantAndCollectedList_1_merchantNo"
+                    },
+                    {
+                        "collectedSubjectName": "data_list_14_merchantAndCollectedList_2_collectedSubjectName",
+                        "collectedSubjectNo": "data_list_14_merchantAndCollectedList_2_collectedSubjectNo",
+                        "merchantName": "data_list_14_merchantAndCollectedList_2_merchantName",
+                        "merchantNo": "data_list_14_merchantAndCollectedList_2_merchantNo"
+                    }
+                ],
+                "corpId": "data_list_14_corpId",
+                "mobile": "data_list_14_mobile",
+                "gmtCreate": "2010/01/06 00:00:04",
+                "wechatAdminName": "data_list_14_wechatAdminName",
+                "systemPermissions": "data_list_14_systemPermissions",
+                "name": "data_list_14_name",
+                "roleName": "data_list_14_roleName",
+                "position": "data_list_14_position",
+                "merchantList": [
+                    "data_list_14_merchantList_0",
+                    "data_list_14_merchantList_1",
+                    "data_list_14_merchantList_2"
+                ],
+                "startDate": "2010/01/04",
+                "status": 14,
+                "useremail": "data_list_14_useremail"
+            }
+        ],
+        "maxPage": 1
+    },
+    "success": true,
+    "message": "message"
+}

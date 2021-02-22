@@ -1,0 +1,19 @@
+{
+    "code": "code",
+    "data": {
+        "englishName": "data_englishName",
+        "gmtModified": "2010/01/01 00:00:00",
+        "mainAccountNo": "data_mainAccountNo",
+        "maxAmtSingle": 0,
+        "collectedSubjectName": "data_collectedSubjectName",
+        "collectedSubjectNo": "data_collectedSubjectNo",
+        "remark": "data_remark",
+        "id": 100,
+        "gmtCreate": "2010/01/01 00:00:00",
+        "maxAmount": 0,
+        "operator": "data_operator",
+        "status": "data_status"
+    },
+    "success": true,
+    "message": "message"
+}

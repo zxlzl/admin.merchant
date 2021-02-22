@@ -1,0 +1,141 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "failureDateRemark": "data_failureDateRemark",
+        "effectDate": "2010/01/01 00:00:00",
+        "packageTypeName": "data_packageTypeName",
+        "packageStatusName": "data_packageStatusName",
+        "id": 100,
+        "packageName": "data_packageName",
+        "failureDate": "2010/01/01 00:00:00",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "list": [
+            {
+                "level": 0,
+                "rebateRate": 0,
+                "maxAmt": 0,
+                "id": 100,
+                "minAmt": 0,
+                "discountFeeRate": 0
+            },
+            {
+                "level": 1,
+                "rebateRate": 1,
+                "maxAmt": 1,
+                "id": 101,
+                "minAmt": 1,
+                "discountFeeRate": 1
+            },
+            {
+                "level": 2,
+                "rebateRate": 2,
+                "maxAmt": 2,
+                "id": 102,
+                "minAmt": 2,
+                "discountFeeRate": 2
+            },
+            {
+                "level": 3,
+                "rebateRate": 3,
+                "maxAmt": 3,
+                "id": 103,
+                "minAmt": 3,
+                "discountFeeRate": 3
+            },
+            {
+                "level": 4,
+                "rebateRate": 4,
+                "maxAmt": 4,
+                "id": 104,
+                "minAmt": 4,
+                "discountFeeRate": 4
+            },
+            {
+                "level": 5,
+                "rebateRate": 5,
+                "maxAmt": 5,
+                "id": 105,
+                "minAmt": 5,
+                "discountFeeRate": 5
+            },
+            {
+                "level": 6,
+                "rebateRate": 6,
+                "maxAmt": 6,
+                "id": 106,
+                "minAmt": 6,
+                "discountFeeRate": 6
+            },
+            {
+                "level": 7,
+                "rebateRate": 7,
+                "maxAmt": 7,
+                "id": 107,
+                "minAmt": 7,
+                "discountFeeRate": 7
+            },
+            {
+                "level": 8,
+                "rebateRate": 8,
+                "maxAmt": 8,
+                "id": 108,
+                "minAmt": 8,
+                "discountFeeRate": 8
+            },
+            {
+                "level": 9,
+                "rebateRate": 9,
+                "maxAmt": 9,
+                "id": 109,
+                "minAmt": 9,
+                "discountFeeRate": 9
+            },
+            {
+                "level": 10,
+                "rebateRate": 10,
+                "maxAmt": 10,
+                "id": 110,
+                "minAmt": 10,
+                "discountFeeRate": 10
+            },
+            {
+                "level": 11,
+                "rebateRate": 11,
+                "maxAmt": 11,
+                "id": 111,
+                "minAmt": 11,
+                "discountFeeRate": 11
+            },
+            {
+                "level": 12,
+                "rebateRate": 12,
+                "maxAmt": 12,
+                "id": 112,
+                "minAmt": 12,
+                "discountFeeRate": 12
+            },
+            {
+                "level": 13,
+                "rebateRate": 13,
+                "maxAmt": 13,
+                "id": 113,
+                "minAmt": 13,
+                "discountFeeRate": 13
+            },
+            {
+                "level": 14,
+                "rebateRate": 14,
+                "maxAmt": 14,
+                "id": 114,
+                "minAmt": 14,
+                "discountFeeRate": 14
+            }
+        ],
+        "packageStatus": "data_packageStatus",
+        "packageType": "data_packageType",
+        "packageNo": "data_packageNo"
+    },
+    "success": true,
+    "message": "message"
+}

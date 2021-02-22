@@ -1,0 +1,15 @@
+{
+    "code": "code",
+    "data": {
+        "deviceType": 0,
+        "weChatWorkOpenUserId": "data_weChatWorkOpenUserId",
+        "authToken": "data_authToken",
+        "collectedSubjectName": "data_collectedSubjectName",
+        "mobile": "data_mobile",
+        "collectedSubjectNo": "data_collectedSubjectNo",
+        "merchantName": "data_merchantName",
+        "merchantNo": "data_merchantNo"
+    },
+    "success": true,
+    "message": "message"
+}

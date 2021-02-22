@@ -1,0 +1,24 @@
+{
+    "code": "code",
+    "data": {
+        "subjectTypeName": "data_subjectTypeName",
+        "corpSquareLogoUrl": "http://test.com/data_corpSquareLogoUrl",
+        "updateDate": "2010/01/01 00:00:00",
+        "corpId": "data_corpId",
+        "corpWxqrcode": "data_corpWxqrcode",
+        "corpType": "data_corpType",
+        "corpTypeName": "data_corpTypeName",
+        "corpName": "data_corpName",
+        "subjectType": 0,
+        "corpUserMax": 0,
+        "corpIndustry": "data_corpIndustry",
+        "corpSubIndustry": "data_corpSubIndustry",
+        "verifiedEndTime": 0,
+        "location": "data_location",
+        "corpScale": "data_corpScale",
+        "createDate": "2010/01/01 00:00:00",
+        "dealerCorpInfoCorpName": "data_dealerCorpInfoCorpName"
+    },
+    "success": true,
+    "message": "message"
+}

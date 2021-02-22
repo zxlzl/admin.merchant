@@ -1,0 +1,27 @@
+{
+    "code": "code",
+    "data": {
+        "country": "data_country",
+        "unionId": "data_unionId",
+        "gender": 0,
+        "avatarUrl": "http://test.com/data_avatarUrl",
+        "city": "data_city",
+        "nickName": "data_nickName",
+        "openid": "data_openid",
+        "idCardNo": "data_idCardNo",
+        "userNo": "data_userNo",
+        "language": "data_language",
+        "updateTime": "2010/01/01 00:00:00",
+        "birthDate": "2010/01/01 00:00:00",
+        "realName": "data_realName",
+        "realNameCheckedTime": "2010/01/01 00:00:00",
+        "province": "data_province",
+        "createTime": "2010/01/01 00:00:00",
+        "phone": "1810000000",
+        "id": 100,
+        "isDel": true,
+        "realNameChecked": 0
+    },
+    "success": true,
+    "message": "message"
+}

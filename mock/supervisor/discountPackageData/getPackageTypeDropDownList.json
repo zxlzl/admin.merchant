@@ -1,0 +1,68 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": [
+        {
+            "packageTypeName": "data_0_packageTypeName",
+            "packageType": "data_0_packageType"
+        },
+        {
+            "packageTypeName": "data_1_packageTypeName",
+            "packageType": "data_1_packageType"
+        },
+        {
+            "packageTypeName": "data_2_packageTypeName",
+            "packageType": "data_2_packageType"
+        },
+        {
+            "packageTypeName": "data_3_packageTypeName",
+            "packageType": "data_3_packageType"
+        },
+        {
+            "packageTypeName": "data_4_packageTypeName",
+            "packageType": "data_4_packageType"
+        },
+        {
+            "packageTypeName": "data_5_packageTypeName",
+            "packageType": "data_5_packageType"
+        },
+        {
+            "packageTypeName": "data_6_packageTypeName",
+            "packageType": "data_6_packageType"
+        },
+        {
+            "packageTypeName": "data_7_packageTypeName",
+            "packageType": "data_7_packageType"
+        },
+        {
+            "packageTypeName": "data_8_packageTypeName",
+            "packageType": "data_8_packageType"
+        },
+        {
+            "packageTypeName": "data_9_packageTypeName",
+            "packageType": "data_9_packageType"
+        },
+        {
+            "packageTypeName": "data_10_packageTypeName",
+            "packageType": "data_10_packageType"
+        },
+        {
+            "packageTypeName": "data_11_packageTypeName",
+            "packageType": "data_11_packageType"
+        },
+        {
+            "packageTypeName": "data_12_packageTypeName",
+            "packageType": "data_12_packageType"
+        },
+        {
+            "packageTypeName": "data_13_packageTypeName",
+            "packageType": "data_13_packageType"
+        },
+        {
+            "packageTypeName": "data_14_packageTypeName",
+            "packageType": "data_14_packageType"
+        }
+    ],
+    "success": true,
+    "message": "message"
+}

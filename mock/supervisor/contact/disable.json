@@ -1,0 +1,22 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "gmtModified": "2010/01/01 00:00:00",
+        "city": "data_city",
+        "cityCode": "data_cityCode",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "operator": "data_operator",
+        "detailAddr": "data_detailAddr",
+        "province": "data_province",
+        "phone": "1810000000",
+        "district": "data_district",
+        "name": "data_name",
+        "id": 100,
+        "email": "data_email_email@test.com",
+        "merchantNo": "data_merchantNo",
+        "status": "data_status"
+    },
+    "success": true,
+    "message": "message"
+}

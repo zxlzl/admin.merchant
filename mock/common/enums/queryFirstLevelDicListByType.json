@@ -1,0 +1,127 @@
+{
+    "code": "code",
+    "data": [
+        {
+            "dicCode": "data_0_dicCode",
+            "createTime": "2010/01/01 00:00:00",
+            "remark": "data_0_remark",
+            "updateTime": "2010/01/01 00:00:00",
+            "id": 100,
+            "dicName": "data_0_dicName"
+        },
+        {
+            "dicCode": "data_1_dicCode",
+            "createTime": "2010/01/02 00:00:01",
+            "remark": "data_1_remark",
+            "updateTime": "2010/01/02 00:00:01",
+            "id": 101,
+            "dicName": "data_1_dicName"
+        },
+        {
+            "dicCode": "data_2_dicCode",
+            "createTime": "2010/01/03 00:00:02",
+            "remark": "data_2_remark",
+            "updateTime": "2010/01/03 00:00:02",
+            "id": 102,
+            "dicName": "data_2_dicName"
+        },
+        {
+            "dicCode": "data_3_dicCode",
+            "createTime": "2010/01/04 00:00:03",
+            "remark": "data_3_remark",
+            "updateTime": "2010/01/04 00:00:03",
+            "id": 103,
+            "dicName": "data_3_dicName"
+        },
+        {
+            "dicCode": "data_4_dicCode",
+            "createTime": "2010/01/05 00:00:04",
+            "remark": "data_4_remark",
+            "updateTime": "2010/01/05 00:00:04",
+            "id": 104,
+            "dicName": "data_4_dicName"
+        },
+        {
+            "dicCode": "data_5_dicCode",
+            "createTime": "2010/01/06 00:00:05",
+            "remark": "data_5_remark",
+            "updateTime": "2010/01/06 00:00:05",
+            "id": 105,
+            "dicName": "data_5_dicName"
+        },
+        {
+            "dicCode": "data_6_dicCode",
+            "createTime": "2010/01/07 00:00:06",
+            "remark": "data_6_remark",
+            "updateTime": "2010/01/07 00:00:06",
+            "id": 106,
+            "dicName": "data_6_dicName"
+        },
+        {
+            "dicCode": "data_7_dicCode",
+            "createTime": "2010/01/08 00:00:07",
+            "remark": "data_7_remark",
+            "updateTime": "2010/01/08 00:00:07",
+            "id": 107,
+            "dicName": "data_7_dicName"
+        },
+        {
+            "dicCode": "data_8_dicCode",
+            "createTime": "2010/01/09 00:00:08",
+            "remark": "data_8_remark",
+            "updateTime": "2010/01/09 00:00:08",
+            "id": 108,
+            "dicName": "data_8_dicName"
+        },
+        {
+            "dicCode": "data_9_dicCode",
+            "createTime": "2010/01/01 00:00:09",
+            "remark": "data_9_remark",
+            "updateTime": "2010/01/01 00:00:09",
+            "id": 109,
+            "dicName": "data_9_dicName"
+        },
+        {
+            "dicCode": "data_10_dicCode",
+            "createTime": "2010/01/02 00:00:00",
+            "remark": "data_10_remark",
+            "updateTime": "2010/01/02 00:00:00",
+            "id": 110,
+            "dicName": "data_10_dicName"
+        },
+        {
+            "dicCode": "data_11_dicCode",
+            "createTime": "2010/01/03 00:00:01",
+            "remark": "data_11_remark",
+            "updateTime": "2010/01/03 00:00:01",
+            "id": 111,
+            "dicName": "data_11_dicName"
+        },
+        {
+            "dicCode": "data_12_dicCode",
+            "createTime": "2010/01/04 00:00:02",
+            "remark": "data_12_remark",
+            "updateTime": "2010/01/04 00:00:02",
+            "id": 112,
+            "dicName": "data_12_dicName"
+        },
+        {
+            "dicCode": "data_13_dicCode",
+            "createTime": "2010/01/05 00:00:03",
+            "remark": "data_13_remark",
+            "updateTime": "2010/01/05 00:00:03",
+            "id": 113,
+            "dicName": "data_13_dicName"
+        },
+        {
+            "dicCode": "data_14_dicCode",
+            "createTime": "2010/01/06 00:00:04",
+            "remark": "data_14_remark",
+            "updateTime": "2010/01/06 00:00:04",
+            "id": 114,
+            "dicName": "data_14_dicName"
+        }
+    ],
+    "success": true,
+    "message": "message"
+}

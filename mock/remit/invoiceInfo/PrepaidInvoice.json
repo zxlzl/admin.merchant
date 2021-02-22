@@ -1,0 +1,25 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "availableInvoiceAmountEnd": 0,
+        "gmtModified": "2010/01/01 00:00:00",
+        "endDate": "2010/01/01 00:00:00",
+        "pageSize": 10,
+        "invoiceMode": "data_invoiceMode",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "claimedInvoiceAmount": 0,
+        "merchantName": "data_merchantName",
+        "curPage": 1,
+        "collectedSubjectName": "data_collectedSubjectName",
+        "cumulativeInvoiceAmount": 0,
+        "collectedSubjectNo": "data_collectedSubjectNo",
+        "availableInvoiceAmountStart": 0,
+        "id": 100,
+        "availableInvoiceAmount": 0,
+        "startDate": "2010/01/01 00:00:00",
+        "merchantNo": "data_merchantNo"
+    },
+    "success": true,
+    "message": "message"
+}

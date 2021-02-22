@@ -1,0 +1,19 @@
+{
+    "code": "code",
+    "data": {
+        "companyId": 100,
+        "createUserId": 100,
+        "companyNo": "data_companyNo",
+        "createTime": "2010/01/01 00:00:00",
+        "updateUserId": 100,
+        "collectedSubjectName": "data_collectedSubjectName",
+        "collectedSubjectNo": "data_collectedSubjectNo",
+        "updateTime": "2010/01/01 00:00:00",
+        "id": 100,
+        "isDel": true,
+        "merchantName": "data_merchantName",
+        "merchantNo": "data_merchantNo"
+    },
+    "success": true,
+    "message": "message"
+}

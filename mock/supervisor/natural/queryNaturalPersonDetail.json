@@ -1,0 +1,27 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "gmtModified": "2010/01/01 00:00:00",
+        "idType": "data_idType",
+        "endDate": "2010/01/00",
+        "mobile": "data_mobile",
+        "returnMessage": "data_returnMessage",
+        "bankAccountNo": "data_bankAccountNo",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "merchantName": "data_merchantName",
+        "identityNo": "data_identityNo",
+        "returnCode": "data_returnCode",
+        "collectedSubjectName": "data_collectedSubjectName",
+        "outTradeNo": "data_outTradeNo",
+        "name": "data_name",
+        "collectedSubjectNo": "data_collectedSubjectNo",
+        "id": 100,
+        "authType": "data_authType",
+        "startDate": "2010/01/00",
+        "merchantNo": "data_merchantNo",
+        "status": "data_status"
+    },
+    "success": true,
+    "message": "message"
+}

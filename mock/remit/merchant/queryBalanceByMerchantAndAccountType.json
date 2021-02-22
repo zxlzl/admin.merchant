@@ -1,0 +1,23 @@
+{
+    "code": "code",
+    "data": {
+        "acctAmt": 0,
+        "bizFreezeAmt": 0,
+        "openedBank": "data_openedBank",
+        "bankBranch": "data_bankBranch",
+        "purpose": "data_purpose",
+        "accountType": "data_accountType",
+        "acctName": "data_acctName",
+        "title": "data_title",
+        "freezeAmt": 0,
+        "sysFreezeAmt": 0,
+        "availBalance": 0,
+        "subAccountNo": "data_subAccountNo",
+        "acctNo": "data_acctNo",
+        "subAccountName": "data_subAccountName",
+        "collectedSubjectName": "data_collectedSubjectName",
+        "collectedSubjectNo": "data_collectedSubjectNo"
+    },
+    "success": true,
+    "message": "message"
+}

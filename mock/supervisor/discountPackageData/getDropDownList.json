@@ -1,0 +1,68 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": [
+        {
+            "id": 100,
+            "packageName": "data_0_packageName"
+        },
+        {
+            "id": 101,
+            "packageName": "data_1_packageName"
+        },
+        {
+            "id": 102,
+            "packageName": "data_2_packageName"
+        },
+        {
+            "id": 103,
+            "packageName": "data_3_packageName"
+        },
+        {
+            "id": 104,
+            "packageName": "data_4_packageName"
+        },
+        {
+            "id": 105,
+            "packageName": "data_5_packageName"
+        },
+        {
+            "id": 106,
+            "packageName": "data_6_packageName"
+        },
+        {
+            "id": 107,
+            "packageName": "data_7_packageName"
+        },
+        {
+            "id": 108,
+            "packageName": "data_8_packageName"
+        },
+        {
+            "id": 109,
+            "packageName": "data_9_packageName"
+        },
+        {
+            "id": 110,
+            "packageName": "data_10_packageName"
+        },
+        {
+            "id": 111,
+            "packageName": "data_11_packageName"
+        },
+        {
+            "id": 112,
+            "packageName": "data_12_packageName"
+        },
+        {
+            "id": 113,
+            "packageName": "data_13_packageName"
+        },
+        {
+            "id": 114,
+            "packageName": "data_14_packageName"
+        }
+    ],
+    "success": true,
+    "message": "message"
+}

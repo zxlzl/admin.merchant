@@ -1,0 +1,30 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "gmtModified": "2010/01/01 00:00:00",
+        "openedBank": "data_openedBank",
+        "payChannelName": "data_payChannelName",
+        "bankBranch": "data_bankBranch",
+        "openedBankName": "data_openedBankName",
+        "purpose": "data_purpose",
+        "pageSize": 10,
+        "gmtCreate": "2010/01/01 00:00:00",
+        "gmtCreateEnd": "2010/01/01 00:00:00",
+        "operator": "data_operator",
+        "mainAccountName": "data_mainAccountName",
+        "subAccountNo": "data_subAccountNo",
+        "curPage": 1,
+        "mainAccountNo": "data_mainAccountNo",
+        "subAccountName": "data_subAccountName",
+        "accountNo": "data_accountNo",
+        "collectedSubjectName": "data_collectedSubjectName",
+        "collectedSubjectNo": "data_collectedSubjectNo",
+        "payChannel": "data_payChannel",
+        "id": 100,
+        "merchantNo": "data_merchantNo",
+        "status": "data_status"
+    },
+    "success": true,
+    "message": "message"
+}

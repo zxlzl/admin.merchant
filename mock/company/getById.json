@@ -1,0 +1,44 @@
+{
+    "code": "code",
+    "data": {
+        "businessLicense": "data_businessLicense",
+        "createUserId": 100,
+        "abbrName": "data_abbrName",
+        "pageSize": 10,
+        "remark": "data_remark",
+        "merchantNos": [
+            "data_merchantNos_0",
+            "data_merchantNos_1",
+            "data_merchantNos_2"
+        ],
+        "companyNo": "data_companyNo",
+        "pageNo": 0,
+        "startTime": "2010/01/01 00:00:00",
+        "id": 100,
+        "businessAddress": "data_businessAddress",
+        "businessLicensePic": "data_businessLicensePic",
+        "companyType": 0,
+        "updateUserId": 100,
+        "mobile": "data_mobile",
+        "updateTime": "2010/01/01 00:00:00",
+        "createTime": "2010/01/01 00:00:00",
+        "businessLicensePicUrls": [
+            "data_businessLicensePicUrls_0",
+            "data_businessLicensePicUrls_1",
+            "data_businessLicensePicUrls_2"
+        ],
+        "name": "data_name",
+        "ids": [
+            0,
+            1,
+            2
+        ],
+        "endTime": "2010/01/01 00:00:00",
+        "businessType": 0,
+        "isDel": true,
+        "status": true,
+        "username": "data_username"
+    },
+    "success": true,
+    "message": "message"
+}

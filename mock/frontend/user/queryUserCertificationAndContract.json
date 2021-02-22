@@ -1,0 +1,16 @@
+{
+    "code": "code",
+    "data": {
+        "contractCheckedTime": "2010/01/01 00:00:00",
+        "collectedSubjectName": "data_collectedSubjectName",
+        "contractChecked": 0,
+        "collectedSubjectNo": "data_collectedSubjectNo",
+        "id": 100,
+        "wxmpUserId": 100,
+        "realNameChecked": 0,
+        "merchantName": "data_merchantName",
+        "merchantNo": "data_merchantNo"
+    },
+    "success": true,
+    "message": "message"
+}

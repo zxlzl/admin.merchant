@@ -1,0 +1,24 @@
+{
+    "code": "code",
+    "data": {
+        "gmtModified": "2010/01/01 00:00:00",
+        "role": "data_role",
+        "mobile": "data_mobile",
+        "memo": "data_memo",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "type": 0,
+        "systemPermissions": "data_systemPermissions",
+        "name": "data_name",
+        "roleName": "data_roleName",
+        "company": "data_company",
+        "id": 100,
+        "position": "data_position",
+        "contactmobile": "data_contactmobile",
+        "department": "data_department",
+        "merchantNo": "data_merchantNo",
+        "status": 0,
+        "useremail": "data_useremail"
+    },
+    "success": true,
+    "message": "message"
+}

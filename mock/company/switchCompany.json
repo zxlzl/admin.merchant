@@ -1,0 +1,23 @@
+{
+    "code": "code",
+    "data": {
+        "businessLicense": "data_businessLicense",
+        "businessLicensePic": "data_businessLicensePic",
+        "createUserId": 100,
+        "companyType": 0,
+        "updateUserId": 100,
+        "abbrName": "data_abbrName",
+        "remark": "data_remark",
+        "updateTime": "2010/01/01 00:00:00",
+        "companyNo": "data_companyNo",
+        "createTime": "2010/01/01 00:00:00",
+        "name": "data_name",
+        "id": 100,
+        "businessAddress": "data_businessAddress",
+        "businessType": 0,
+        "isDel": true,
+        "status": true
+    },
+    "success": true,
+    "message": "message"
+}

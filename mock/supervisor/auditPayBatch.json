@@ -1,0 +1,7 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": true,
+    "success": true,
+    "message": "message"
+}

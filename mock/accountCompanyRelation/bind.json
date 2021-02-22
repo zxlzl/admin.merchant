@@ -1,0 +1,17 @@
+{
+    "code": "code",
+    "data": {
+        "accountId": 100,
+        "companyId": 100,
+        "createUserId": 100,
+        "createTime": "2010/01/01 00:00:00",
+        "updateUserId": 100,
+        "mobile": "data_mobile",
+        "name": "data_name",
+        "updateTime": "2010/01/01 00:00:00",
+        "id": 100,
+        "isDel": true
+    },
+    "success": true,
+    "message": "message"
+}

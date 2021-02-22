@@ -1,0 +1,157 @@
+{
+    "code": "code",
+    "data": [
+        {
+            "companyCode": 0,
+            "createTime": "2010/01/01 00:00:00",
+            "storeAddress": "data_0_storeAddress",
+            "updateUser": "data_0_updateUser",
+            "storeName": "data_0_storeName",
+            "updateTime": "2010/01/01 00:00:00",
+            "id": 100,
+            "isDel": 0
+        },
+        {
+            "companyCode": 1,
+            "createTime": "2010/01/02 00:00:01",
+            "storeAddress": "data_1_storeAddress",
+            "updateUser": "data_1_updateUser",
+            "storeName": "data_1_storeName",
+            "updateTime": "2010/01/02 00:00:01",
+            "id": 101,
+            "isDel": 1
+        },
+        {
+            "companyCode": 2,
+            "createTime": "2010/01/03 00:00:02",
+            "storeAddress": "data_2_storeAddress",
+            "updateUser": "data_2_updateUser",
+            "storeName": "data_2_storeName",
+            "updateTime": "2010/01/03 00:00:02",
+            "id": 102,
+            "isDel": 2
+        },
+        {
+            "companyCode": 3,
+            "createTime": "2010/01/04 00:00:03",
+            "storeAddress": "data_3_storeAddress",
+            "updateUser": "data_3_updateUser",
+            "storeName": "data_3_storeName",
+            "updateTime": "2010/01/04 00:00:03",
+            "id": 103,
+            "isDel": 3
+        },
+        {
+            "companyCode": 4,
+            "createTime": "2010/01/05 00:00:04",
+            "storeAddress": "data_4_storeAddress",
+            "updateUser": "data_4_updateUser",
+            "storeName": "data_4_storeName",
+            "updateTime": "2010/01/05 00:00:04",
+            "id": 104,
+            "isDel": 4
+        },
+        {
+            "companyCode": 5,
+            "createTime": "2010/01/06 00:00:05",
+            "storeAddress": "data_5_storeAddress",
+            "updateUser": "data_5_updateUser",
+            "storeName": "data_5_storeName",
+            "updateTime": "2010/01/06 00:00:05",
+            "id": 105,
+            "isDel": 5
+        },
+        {
+            "companyCode": 6,
+            "createTime": "2010/01/07 00:00:06",
+            "storeAddress": "data_6_storeAddress",
+            "updateUser": "data_6_updateUser",
+            "storeName": "data_6_storeName",
+            "updateTime": "2010/01/07 00:00:06",
+            "id": 106,
+            "isDel": 6
+        },
+        {
+            "companyCode": 7,
+            "createTime": "2010/01/08 00:00:07",
+            "storeAddress": "data_7_storeAddress",
+            "updateUser": "data_7_updateUser",
+            "storeName": "data_7_storeName",
+            "updateTime": "2010/01/08 00:00:07",
+            "id": 107,
+            "isDel": 7
+        },
+        {
+            "companyCode": 8,
+            "createTime": "2010/01/09 00:00:08",
+            "storeAddress": "data_8_storeAddress",
+            "updateUser": "data_8_updateUser",
+            "storeName": "data_8_storeName",
+            "updateTime": "2010/01/09 00:00:08",
+            "id": 108,
+            "isDel": 8
+        },
+        {
+            "companyCode": 9,
+            "createTime": "2010/01/01 00:00:09",
+            "storeAddress": "data_9_storeAddress",
+            "updateUser": "data_9_updateUser",
+            "storeName": "data_9_storeName",
+            "updateTime": "2010/01/01 00:00:09",
+            "id": 109,
+            "isDel": 9
+        },
+        {
+            "companyCode": 10,
+            "createTime": "2010/01/02 00:00:00",
+            "storeAddress": "data_10_storeAddress",
+            "updateUser": "data_10_updateUser",
+            "storeName": "data_10_storeName",
+            "updateTime": "2010/01/02 00:00:00",
+            "id": 110,
+            "isDel": 10
+        },
+        {
+            "companyCode": 11,
+            "createTime": "2010/01/03 00:00:01",
+            "storeAddress": "data_11_storeAddress",
+            "updateUser": "data_11_updateUser",
+            "storeName": "data_11_storeName",
+            "updateTime": "2010/01/03 00:00:01",
+            "id": 111,
+            "isDel": 11
+        },
+        {
+            "companyCode": 12,
+            "createTime": "2010/01/04 00:00:02",
+            "storeAddress": "data_12_storeAddress",
+            "updateUser": "data_12_updateUser",
+            "storeName": "data_12_storeName",
+            "updateTime": "2010/01/04 00:00:02",
+            "id": 112,
+            "isDel": 12
+        },
+        {
+            "companyCode": 13,
+            "createTime": "2010/01/05 00:00:03",
+            "storeAddress": "data_13_storeAddress",
+            "updateUser": "data_13_updateUser",
+            "storeName": "data_13_storeName",
+            "updateTime": "2010/01/05 00:00:03",
+            "id": 113,
+            "isDel": 13
+        },
+        {
+            "companyCode": 14,
+            "createTime": "2010/01/06 00:00:04",
+            "storeAddress": "data_14_storeAddress",
+            "updateUser": "data_14_updateUser",
+            "storeName": "data_14_storeName",
+            "updateTime": "2010/01/06 00:00:04",
+            "id": 114,
+            "isDel": 14
+        }
+    ],
+    "success": true,
+    "message": "message"
+}

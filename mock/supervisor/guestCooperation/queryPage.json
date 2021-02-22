@@ -1,0 +1,287 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "curPage": 1,
+        "data": {},
+        "endRecordCount": 0,
+        "recordCount": 0,
+        "pageSize": 10,
+        "startRecordCount": 0,
+        "list": [
+            {
+                "sourceCode": "data_list_0_sourceCode",
+                "gmtModified": "2010/01/01 00:00:00",
+                "contractInfo": "data_list_0_contractInfo",
+                "cooperationContent": "data_list_0_cooperationContent",
+                "name": "data_list_0_name",
+                "cooperationContentList": [
+                    "data_list_0_cooperationContentList_0",
+                    "data_list_0_cooperationContentList_1",
+                    "data_list_0_cooperationContentList_2"
+                ],
+                "memo": "data_list_0_memo",
+                "company": "data_list_0_company",
+                "id": 100,
+                "position": "data_list_0_position",
+                "gmtCreate": "2010/01/01 00:00:00",
+                "email": "data_list_0_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_1_sourceCode",
+                "gmtModified": "2010/01/02 00:00:01",
+                "contractInfo": "data_list_1_contractInfo",
+                "cooperationContent": "data_list_1_cooperationContent",
+                "name": "data_list_1_name",
+                "cooperationContentList": [
+                    "data_list_1_cooperationContentList_0",
+                    "data_list_1_cooperationContentList_1",
+                    "data_list_1_cooperationContentList_2"
+                ],
+                "memo": "data_list_1_memo",
+                "company": "data_list_1_company",
+                "id": 101,
+                "position": "data_list_1_position",
+                "gmtCreate": "2010/01/02 00:00:01",
+                "email": "data_list_1_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_2_sourceCode",
+                "gmtModified": "2010/01/03 00:00:02",
+                "contractInfo": "data_list_2_contractInfo",
+                "cooperationContent": "data_list_2_cooperationContent",
+                "name": "data_list_2_name",
+                "cooperationContentList": [
+                    "data_list_2_cooperationContentList_0",
+                    "data_list_2_cooperationContentList_1",
+                    "data_list_2_cooperationContentList_2"
+                ],
+                "memo": "data_list_2_memo",
+                "company": "data_list_2_company",
+                "id": 102,
+                "position": "data_list_2_position",
+                "gmtCreate": "2010/01/03 00:00:02",
+                "email": "data_list_2_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_3_sourceCode",
+                "gmtModified": "2010/01/04 00:00:03",
+                "contractInfo": "data_list_3_contractInfo",
+                "cooperationContent": "data_list_3_cooperationContent",
+                "name": "data_list_3_name",
+                "cooperationContentList": [
+                    "data_list_3_cooperationContentList_0",
+                    "data_list_3_cooperationContentList_1",
+                    "data_list_3_cooperationContentList_2"
+                ],
+                "memo": "data_list_3_memo",
+                "company": "data_list_3_company",
+                "id": 103,
+                "position": "data_list_3_position",
+                "gmtCreate": "2010/01/04 00:00:03",
+                "email": "data_list_3_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_4_sourceCode",
+                "gmtModified": "2010/01/05 00:00:04",
+                "contractInfo": "data_list_4_contractInfo",
+                "cooperationContent": "data_list_4_cooperationContent",
+                "name": "data_list_4_name",
+                "cooperationContentList": [
+                    "data_list_4_cooperationContentList_0",
+                    "data_list_4_cooperationContentList_1",
+                    "data_list_4_cooperationContentList_2"
+                ],
+                "memo": "data_list_4_memo",
+                "company": "data_list_4_company",
+                "id": 104,
+                "position": "data_list_4_position",
+                "gmtCreate": "2010/01/05 00:00:04",
+                "email": "data_list_4_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_5_sourceCode",
+                "gmtModified": "2010/01/06 00:00:05",
+                "contractInfo": "data_list_5_contractInfo",
+                "cooperationContent": "data_list_5_cooperationContent",
+                "name": "data_list_5_name",
+                "cooperationContentList": [
+                    "data_list_5_cooperationContentList_0",
+                    "data_list_5_cooperationContentList_1",
+                    "data_list_5_cooperationContentList_2"
+                ],
+                "memo": "data_list_5_memo",
+                "company": "data_list_5_company",
+                "id": 105,
+                "position": "data_list_5_position",
+                "gmtCreate": "2010/01/06 00:00:05",
+                "email": "data_list_5_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_6_sourceCode",
+                "gmtModified": "2010/01/07 00:00:06",
+                "contractInfo": "data_list_6_contractInfo",
+                "cooperationContent": "data_list_6_cooperationContent",
+                "name": "data_list_6_name",
+                "cooperationContentList": [
+                    "data_list_6_cooperationContentList_0",
+                    "data_list_6_cooperationContentList_1",
+                    "data_list_6_cooperationContentList_2"
+                ],
+                "memo": "data_list_6_memo",
+                "company": "data_list_6_company",
+                "id": 106,
+                "position": "data_list_6_position",
+                "gmtCreate": "2010/01/07 00:00:06",
+                "email": "data_list_6_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_7_sourceCode",
+                "gmtModified": "2010/01/08 00:00:07",
+                "contractInfo": "data_list_7_contractInfo",
+                "cooperationContent": "data_list_7_cooperationContent",
+                "name": "data_list_7_name",
+                "cooperationContentList": [
+                    "data_list_7_cooperationContentList_0",
+                    "data_list_7_cooperationContentList_1",
+                    "data_list_7_cooperationContentList_2"
+                ],
+                "memo": "data_list_7_memo",
+                "company": "data_list_7_company",
+                "id": 107,
+                "position": "data_list_7_position",
+                "gmtCreate": "2010/01/08 00:00:07",
+                "email": "data_list_7_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_8_sourceCode",
+                "gmtModified": "2010/01/09 00:00:08",
+                "contractInfo": "data_list_8_contractInfo",
+                "cooperationContent": "data_list_8_cooperationContent",
+                "name": "data_list_8_name",
+                "cooperationContentList": [
+                    "data_list_8_cooperationContentList_0",
+                    "data_list_8_cooperationContentList_1",
+                    "data_list_8_cooperationContentList_2"
+                ],
+                "memo": "data_list_8_memo",
+                "company": "data_list_8_company",
+                "id": 108,
+                "position": "data_list_8_position",
+                "gmtCreate": "2010/01/09 00:00:08",
+                "email": "data_list_8_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_9_sourceCode",
+                "gmtModified": "2010/01/01 00:00:09",
+                "contractInfo": "data_list_9_contractInfo",
+                "cooperationContent": "data_list_9_cooperationContent",
+                "name": "data_list_9_name",
+                "cooperationContentList": [
+                    "data_list_9_cooperationContentList_0",
+                    "data_list_9_cooperationContentList_1",
+                    "data_list_9_cooperationContentList_2"
+                ],
+                "memo": "data_list_9_memo",
+                "company": "data_list_9_company",
+                "id": 109,
+                "position": "data_list_9_position",
+                "gmtCreate": "2010/01/01 00:00:09",
+                "email": "data_list_9_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_10_sourceCode",
+                "gmtModified": "2010/01/02 00:00:00",
+                "contractInfo": "data_list_10_contractInfo",
+                "cooperationContent": "data_list_10_cooperationContent",
+                "name": "data_list_10_name",
+                "cooperationContentList": [
+                    "data_list_10_cooperationContentList_0",
+                    "data_list_10_cooperationContentList_1",
+                    "data_list_10_cooperationContentList_2"
+                ],
+                "memo": "data_list_10_memo",
+                "company": "data_list_10_company",
+                "id": 110,
+                "position": "data_list_10_position",
+                "gmtCreate": "2010/01/02 00:00:00",
+                "email": "data_list_10_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_11_sourceCode",
+                "gmtModified": "2010/01/03 00:00:01",
+                "contractInfo": "data_list_11_contractInfo",
+                "cooperationContent": "data_list_11_cooperationContent",
+                "name": "data_list_11_name",
+                "cooperationContentList": [
+                    "data_list_11_cooperationContentList_0",
+                    "data_list_11_cooperationContentList_1",
+                    "data_list_11_cooperationContentList_2"
+                ],
+                "memo": "data_list_11_memo",
+                "company": "data_list_11_company",
+                "id": 111,
+                "position": "data_list_11_position",
+                "gmtCreate": "2010/01/03 00:00:01",
+                "email": "data_list_11_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_12_sourceCode",
+                "gmtModified": "2010/01/04 00:00:02",
+                "contractInfo": "data_list_12_contractInfo",
+                "cooperationContent": "data_list_12_cooperationContent",
+                "name": "data_list_12_name",
+                "cooperationContentList": [
+                    "data_list_12_cooperationContentList_0",
+                    "data_list_12_cooperationContentList_1",
+                    "data_list_12_cooperationContentList_2"
+                ],
+                "memo": "data_list_12_memo",
+                "company": "data_list_12_company",
+                "id": 112,
+                "position": "data_list_12_position",
+                "gmtCreate": "2010/01/04 00:00:02",
+                "email": "data_list_12_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_13_sourceCode",
+                "gmtModified": "2010/01/05 00:00:03",
+                "contractInfo": "data_list_13_contractInfo",
+                "cooperationContent": "data_list_13_cooperationContent",
+                "name": "data_list_13_name",
+                "cooperationContentList": [
+                    "data_list_13_cooperationContentList_0",
+                    "data_list_13_cooperationContentList_1",
+                    "data_list_13_cooperationContentList_2"
+                ],
+                "memo": "data_list_13_memo",
+                "company": "data_list_13_company",
+                "id": 113,
+                "position": "data_list_13_position",
+                "gmtCreate": "2010/01/05 00:00:03",
+                "email": "data_list_13_email_email@test.com"
+            },
+            {
+                "sourceCode": "data_list_14_sourceCode",
+                "gmtModified": "2010/01/06 00:00:04",
+                "contractInfo": "data_list_14_contractInfo",
+                "cooperationContent": "data_list_14_cooperationContent",
+                "name": "data_list_14_name",
+                "cooperationContentList": [
+                    "data_list_14_cooperationContentList_0",
+                    "data_list_14_cooperationContentList_1",
+                    "data_list_14_cooperationContentList_2"
+                ],
+                "memo": "data_list_14_memo",
+                "company": "data_list_14_company",
+                "id": 114,
+                "position": "data_list_14_position",
+                "gmtCreate": "2010/01/06 00:00:04",
+                "email": "data_list_14_email_email@test.com"
+            }
+        ],
+        "maxPage": 1
+    },
+    "success": true,
+    "message": "message"
+}

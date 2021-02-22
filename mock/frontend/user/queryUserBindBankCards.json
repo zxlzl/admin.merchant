@@ -1,0 +1,18 @@
+{
+    "code": "code",
+    "data": {
+        "bankCode": "data_bankCode",
+        "bankImgUrl": "http://test.com/data_bankImgUrl",
+        "certNo": "data_certNo",
+        "bankCardNo": "data_bankCardNo",
+        "gmtUpdate": "2010/01/01 00:00:00",
+        "mobile": "data_mobile",
+        "name": "data_name",
+        "bankName": "data_bankName",
+        "remark": "data_remark",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "realNameAuth": true
+    },
+    "success": true,
+    "message": "message"
+}

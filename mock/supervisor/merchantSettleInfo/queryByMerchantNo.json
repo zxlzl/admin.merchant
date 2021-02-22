@@ -1,0 +1,19 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "bankAccountName": "data_bankAccountName",
+        "bankCode": "data_bankCode",
+        "gmtModified": "2010/01/01 00:00:00",
+        "bankAccountNo": "data_bankAccountNo",
+        "branchName": "data_branchName",
+        "bankName": "data_bankName",
+        "id": 100,
+        "gmtCreate": "2010/01/01 00:00:00",
+        "operatorAdd": 0,
+        "operatorModified": 0,
+        "merchantNo": "data_merchantNo"
+    },
+    "success": true,
+    "message": "message"
+}

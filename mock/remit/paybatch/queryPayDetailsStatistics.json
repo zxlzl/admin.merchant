@@ -1,0 +1,13 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "amount": 0,
+        "payBatchNo": "data_payBatchNo",
+        "canPayNumbers": 0,
+        "numbers": 0,
+        "canPayAmount": 0
+    },
+    "success": true,
+    "message": "message"
+}
