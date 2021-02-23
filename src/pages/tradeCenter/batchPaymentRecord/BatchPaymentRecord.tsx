@@ -5,7 +5,7 @@ import router from 'umi/router';
 
 import '@ant-design/compatible/assets/index.css';
 
-import { Divider, Spin, Popconfirm, message } from 'antd';
+import { Divider, Spin, Popconfirm, message ,Button} from 'antd';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import { transformBlobToFile } from '@/utils/utils';
 
@@ -117,19 +117,6 @@ class BatchPaymentRecord extends React.Component<BatchPaymentRecordProps, BatchP
       params,
     });
   };
-
-  operators = [
-    {
-      name: '导出打款批次文件',
-      attr: {
-        type: 'primary',
-        onClick: () => {
-          this.exportRecord();
-        },
-        icon: <DownloadOutlined />,
-      },
-    },
-  ];
 
   exportRecord = async () => {
     const { query = {} } = this.state?.params || { query: {} };
@@ -324,7 +311,9 @@ class BatchPaymentRecord extends React.Component<BatchPaymentRecordProps, BatchP
     const { tableData, queryOptions, loading, payBaseModalVisible, payBaseInfo } = this.state;
 
     const tableProps = {
+      cardTitle: '发放批次记录',
       tableData, // 表格数据
+      extra: <Button type="primary" onClick={this.exportRecord} icon={<DownloadOutlined />} >下载发放批次文件</Button>,
       rowSelectType: null,
       onLoad: this.loadData, // 加载表格数据函数
       columns: this.columns, // 表格列配置
@@ -332,7 +321,6 @@ class BatchPaymentRecord extends React.Component<BatchPaymentRecordProps, BatchP
       querys: this.querys, // 表格筛选条件配置
       rowKey: 'payBatchNo', // 表格行ID
       options: queryOptions, // 表格筛选条件下拉枚举配置
-      operators: this.operators, // 表格操作栏按钮配置
       // onSelectRow: this.handleSelectRow, // 表格行选中事件
     };
 

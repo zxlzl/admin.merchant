@@ -133,87 +133,29 @@ export default {
               component: './Welcome',
             },
             {
-              path: '/userMng',
-              name: '用户管理',
-              icon: 'user',
-              routes: [
-                {
-                  path: '/userMng/signMng/:id',
-                  menuPath: '/userMng/signMng/taxForMerchant',
-                  name: '用户签约',
-                  component: './userMng/signMng',
-                },
-                {
-                  path: '/userMng/cardList/:id',
-                  menuPath: '/userMng/cardList/taxForMerchant',
-                  name: '用户验证',
-                  component: './userMng/cardList',
-                },
-                {
-                  path: '/userMng/passList/:id',
-                  menuPath: '/userMng/passList/taxForMerchant',
-                  name: '用户免验证',
-                  component: './userMng/passList',
-                },
-                {
-                  path: '/userMng/import',
-                  name: '用户导入',
-                  component: './userMng/import',
-                },
-              ],
-            },
-            {
-              path: '/send_single',
-              name: '业务管理',
-              icon: 'solution',
-              routes: [
-                {
-                  path: '/send_single/project',
-                  name: '服务项目',
-                  component: './sendSingle/project/Project',
-                },
-                {
-                  path: '/send_single/project_detail',
-                  name: '项目详情',
-                  component: './sendSingle/project/ProjectDetail',
-                  hideInMenu: true,
-                },
-                {
-                  path: '/send_single/service',
-                  name: '服务订单',
-                  component: './sendSingle/service/Service',
-                },
-                {
-                  path: '/send_single/service_detail',
-                  name: '订单详情',
-                  component: './sendSingle/service/ServiceDetail',
-                  hideInMenu: true,
-                },
-              ],
-            },
-            {
               path: '/order_manage',
-              name: '交易管理',
-              icon: 'bank',
+              name: '发放管理',
+              icon: 'reconciliation',
               routes: [
                 {
                   path: '/order_manage/batch_payment',
-                  name: '批量打款',
+                  name: '批量发放',
                   component: './tradeCenter/batchPayment/BatchPayment',
                 },
                 {
-                  path: '/order_manage/batch_payment_record',
-                  name: '打款批次',
-                  component: './tradeCenter/batchPaymentRecord/BatchPaymentRecord',
-                },
-                {
                   path: '/order_manage/hang_up_list',
-                  name: '打款挂起',
+                  name: '挂起订单',
                   component: './tradeCenter/hungUpOrder/HungUpOrder',
                 },
                 {
+                  path: '/order_manage/batch_payment_record',
+                  name: '发放批次',
+                  component: './tradeCenter/batchPaymentRecord/BatchPaymentRecord',
+                },
+                
+                {
                   path: '/order_manage/order_list',
-                  name: '打款明细',
+                  name: '发放明细',
                   component: './tradeCenter/order/Order',
                 },
                 {
@@ -231,9 +173,9 @@ export default {
               ],
             },
             {
-              icon: 'money-collect',
+              icon: 'pay-circle',
               path: '/fund_mange',
-              name: '财务管理',
+              name: '资金管理',
               routes: [
                 {
                   path: '/fund_mange/account',
@@ -246,14 +188,14 @@ export default {
                   hideInMenu: true,
                   component: './tradeCenter/transfer/Transfer',
                 },
-                {
-                  path: '/fund_mange/deduction_account',
-                  name: '抵扣账户',
-                  component: './tradeCenter/deductionAccount/DeductionAccount',
-                },
+                // {
+                //   path: '/fund_mange/deduction_account',
+                //   name: '抵扣账户',
+                //   component: './tradeCenter/deductionAccount/DeductionAccount',
+                // },
                 {
                   path: '/fund_mange/account_flow',
-                  name: '账务明细',
+                  name: '资金账务',
                   component: './tradeCenter/accountFlow/AccountFlow',
                 },
               ],
@@ -261,7 +203,7 @@ export default {
             {
               path: '/invoice',
               name: '发票管理',
-              icon: 'profile',
+              icon: 'audit',
               routes: [
                 {
                   path: '/invoice/application',
@@ -300,6 +242,36 @@ export default {
               ],
             },
             {
+              path: '/userMng',
+              name: '个人管理',
+              icon: 'user',
+              routes: [
+                {
+                  path: '/userMng/cardList/:id',
+                  menuPath: '/userMng/cardList/taxForMerchant',
+                  name: '个人验证',
+                  component: './userMng/cardList',
+                },
+                {
+                  path: '/userMng/passList/:id',
+                  menuPath: '/userMng/passList/taxForMerchant',
+                  name: '个人免验证',
+                  component: './userMng/passList',
+                },
+                {
+                  path: '/userMng/signMng/:id',
+                  menuPath: '/userMng/signMng/taxForMerchant',
+                  name: '个人签约',
+                  component: './userMng/signMng',
+                },
+                // {
+                //   path: '/userMng/import',
+                //   name: '用户导入',
+                //   component: './userMng/import',
+                // },
+              ],
+            },
+            {
               path: '/setting',
               name: '商户设置',
               icon: 'setting',
@@ -314,18 +286,37 @@ export default {
                   name: '功能设置',
                   component: './setting/function',
                 },
-                {
-                  path: '/setting/application',
-                  name: '应用设置',
-                  component: './setting/application',
-                },
-                {
-                  path: '/setting/apiSet',
-                  name: 'API设置',
-                  component: './setting/apiSet',
-                },
               ],
             },
+            // {
+            //   path: '/send_single',
+            //   name: '业务管理',
+            //   icon: 'solution',
+            //   routes: [
+            //     {
+            //       path: '/send_single/project',
+            //       name: '服务项目',
+            //       component: './sendSingle/project/Project',
+            //     },
+            //     {
+            //       path: '/send_single/project_detail',
+            //       name: '项目详情',
+            //       component: './sendSingle/project/ProjectDetail',
+            //       hideInMenu: true,
+            //     },
+            //     {
+            //       path: '/send_single/service',
+            //       name: '服务订单',
+            //       component: './sendSingle/service/Service',
+            //     },
+            //     {
+            //       path: '/send_single/service_detail',
+            //       name: '订单详情',
+            //       component: './sendSingle/service/ServiceDetail',
+            //       hideInMenu: true,
+            //     },
+            //   ],
+            // },
             {
               component: './404',
             },

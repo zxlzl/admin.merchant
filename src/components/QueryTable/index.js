@@ -477,6 +477,7 @@ class QueryTable extends PureComponent {
       tableHeader,
       onExpand,
       scroll,
+      extra,
       props,
     } = this.props;
     const { rows = [], pagination: serverPagination } = tableData;
@@ -515,7 +516,7 @@ class QueryTable extends PureComponent {
       : null;
 
     return (
-      <Card bordered={false} bodyStyle={bodyStyle} title={cardTitle}>
+      <Card bordered={false} bodyStyle={bodyStyle} title={cardTitle} extra={extra}>
         <div className={styles.tableList}>
           <div className={styles.tableListForm}>{this.renderForm()}</div>
           {this.renderOperator()}

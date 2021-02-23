@@ -236,6 +236,7 @@ class Application extends React.Component {
     const { invoiceMode } = this.state;
     const { tableData, tableLoading, options = {} } = this.state;
     const tableProps = {
+      cardTitle: '账单开票',
       tableData, // 表格数据
       options,
       loading: tableLoading,
@@ -246,22 +247,9 @@ class Application extends React.Component {
       onLoad: this.loadData, // 加载表格数据函数
       rowKey: 'id', // 表格行ID
     };
-    const tabList =
-      invoiceMode == 2
-        ? [
-            {
-              key: 'bill',
-              tab: '账单开票',
-            },
-            {
-              key: 'pre-charge',
-              tab: '预充值开票',
-            },
-          ]
-        : [];
 
     return (
-      <PageHeaderWrapper tabList={tabList} onTabChange={this.handleTabChange}>
+      <PageHeaderWrapper  onTabChange={this.handleTabChange}>
         <QueryTable {...tableProps} />
       </PageHeaderWrapper>
     );

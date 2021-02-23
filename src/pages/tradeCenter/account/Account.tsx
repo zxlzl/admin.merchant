@@ -3,6 +3,7 @@ import '@ant-design/compatible/assets/index.css';
 import { bizTypeEnums, accoutStatusEnums } from '@/utils/enums';
 import { Popover } from 'antd';
 import { InfoCircleOutlined } from '@ant-design/icons';
+import { DownloadOutlined } from '@ant-design/icons';
 import router from 'umi/router';
 import moment from 'moment';
 import styles from './index.less';
@@ -393,18 +394,6 @@ export default class Account extends React.Component<AccountProps, AccountState>
     });
   };
 
-  operators = [
-    {
-      name: '导出资金操作记录文件',
-      attr: {
-        type: 'primary',
-        onClick: () => {
-          this.exportAccountRecord();
-        },
-      },
-    },
-  ];
-
   exportAccountRecord = async () => {
     const query = this.state?.params || {};
     this.setState({
@@ -458,6 +447,7 @@ export default class Account extends React.Component<AccountProps, AccountState>
     } = this.state;
     const tableProps = {
       cardTitle: '资金操作记录',
+      extra: <Button type="primary" onClick={this.exportAccountRecord} icon={<DownloadOutlined />} >下载资金操作记录文件</Button>,
       tableData, // 表格数据
       // tableHeader: () => `累计充值 ${}元，实际到账 ${}元`,
       // loading, // 请求状态
@@ -467,7 +457,6 @@ export default class Account extends React.Component<AccountProps, AccountState>
       querys: this.querys, // 表格筛选条件配置
       rowKey: 'id', // 表格行ID
       options: queryOptions, // 表格筛选条件下拉枚举配置
-      operators: this.operators,
     };
 
     const pinganyiText = (
@@ -488,7 +477,7 @@ export default class Account extends React.Component<AccountProps, AccountState>
       '冻结金额，是指提交打款时，系统冻结该批次的用户实收金额与应收费用。等打款完成后，成功的订单扣减对应的用户实收金额和应收费用，失败的订单冻结对应的用户实收金额和应收费用。';
     return (
       <PageHeaderWrapper>
-        <Card bordered={false} title="资金账户">
+        <Card bordered={false} title="资金账户" style={{marginBottom: 20}}>
           <div className={styles.box}>
             <Card
               onClick={() => this.choose(0)}

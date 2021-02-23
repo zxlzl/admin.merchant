@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 import moment from 'moment';
 import router from 'umi/router';
-import { Spin } from 'antd';
+import { Spin,Button } from 'antd';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 
 import QueryTable from '@/components/QueryTable';
@@ -153,19 +153,6 @@ class Order extends React.Component<OrderProps, OrderState> {
     });
   };
 
-  operators = [
-    {
-      name: '导出打款明细文件',
-      attr: {
-        type: 'primary',
-        onClick: () => {
-          this.exportRecord();
-        },
-        icon:<DownloadOutlined />
-      },
-    },
-  ];
-
   exportRecord = async () => {
     const { query = {} } = this.state?.params || { query: {} };
     this.setState({
@@ -277,6 +264,8 @@ class Order extends React.Component<OrderProps, OrderState> {
     const { loading } = this.context;
 
     const tableProps = {
+      cardTitle: '发放明细记录',
+      extra: <Button type="primary" onClick={this.exportRecord} icon={<DownloadOutlined />} >下载发放明细文件</Button>,
       tableData, // 表格数据
       loading, // 请求状态
       options,
@@ -286,7 +275,6 @@ class Order extends React.Component<OrderProps, OrderState> {
       columns: this.columns, // 表格列配置
       querys: this.querys, // 表格筛选条件配置
       rowKey: 'payDetailNo', // 表格行ID
-      operators: this.operators,
     };
 
     const modalProps = {

@@ -3,14 +3,14 @@ import { connect } from 'dva';
 import moment from 'moment';
 
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
-
+import { DownloadOutlined } from '@ant-design/icons';
 import QueryTable from '@/components/QueryTable';
 import { transformBlobToFile } from '@/utils/utils';
 import { ConnectState } from '@/models/connect';
 import { TableStateFilters } from 'antd/lib/table';
 import { Form } from '@ant-design/compatible';
 import '@ant-design/compatible/assets/index.css';
-import { message, Modal, Descriptions, Steps, Spin } from 'antd';
+import { message, Modal, Descriptions, Steps, Spin,Button } from 'antd';
 import { GlobalContextProps, GlobalContext } from '@/components/GlobalContext';
 
 import { queryCapitalFlowPage,queryTransSubCodeList } from '@/components/api/remit/capitalflow';
@@ -222,18 +222,6 @@ class AccountFlow extends React.Component<AccountFlowProps, AccountFlowState> {
     });
   };
 
-  operators = [
-    {
-      name: '导出账务明细文件',
-      attr: {
-        type: 'primary',
-        onClick: () => {
-          this.exportRecord();
-        },
-      },
-    },
-  ];
-
   exportRecord = async () => {
     const query = this.state?.params || {}
     const {request={}} = query
@@ -263,6 +251,8 @@ class AccountFlow extends React.Component<AccountFlowProps, AccountFlowState> {
     const { loading } = this.context;
 
     const tableProps = {
+      cardTitle: '资金账务',
+      extra: <Button type="primary" onClick={this.exportRecord} icon={<DownloadOutlined />} >下载账务明细文件</Button>,
       tableData, // 表格数据
       loading, // 请求状态
       noInitLoad: true,
@@ -273,7 +263,6 @@ class AccountFlow extends React.Component<AccountFlowProps, AccountFlowState> {
       querys: this.querys, // 表格筛选条件配置
       rowKey: 'id', // 表格行ID
       // options: queryOptions, // 表格筛选条件下拉枚举配置
-      operators: this.operators, // 表格操作栏按钮配置
       // onSelectRow: this.handleSelectRow, // 表格行选中事件
     };
     return (

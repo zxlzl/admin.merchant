@@ -255,7 +255,7 @@ class HungUpOrder extends React.Component<HungUpOrderProps, HungUpOrderState> {
           </a>
           {row.canRepay ? (
             <a style={{ marginRight: 10 }} onClick={() => this.handleRetry(row)}>
-              重新打款
+              重新发放
             </a>
           ) : (
             ''
@@ -399,6 +399,7 @@ class HungUpOrder extends React.Component<HungUpOrderProps, HungUpOrderState> {
       />
     );
     const tableProps = {
+      cardTitle: '挂起订单记录',
       tableHeader,
       tableData, // 表格数据
       loading, // 请求状态
