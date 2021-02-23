@@ -5,7 +5,7 @@ import React from 'react';
 import { connect } from 'dva';
 import Footer from './Footer';
 import { ConnectProps, ConnectState } from '@/models/connect';
-import logo from '../assets/index-logo.png';
+import logo from '../assets/logo.png';
 import styles from './UserLayout.less';
 
 export interface UserLayoutProps extends ConnectProps {
@@ -45,7 +45,7 @@ const UserLayout: React.SFC<UserLayoutProps> = props => {
                 {/* <span className={styles.title}>Ant Design</span> */}
               </Link>
             </div>
-            <div className={styles.desc}>平 台 级 薪 税 结 算 SaaS 服 务 提 供 商</div>
+            <div className={styles.desc}>xxx是国内最有影响力的财税服务一体化解决方案</div>
           </div>
           {children}
         </div>

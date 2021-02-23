@@ -54,7 +54,7 @@ export default {
   menu: {
     locale: true,
   },
-  title: '财税中心',
+  title: '商户平台',
   pwa: false,
   iconfontUrl: '',
 } as DefaultSettings;

@@ -83,7 +83,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
   }
   // const to = location.href.indexOf('.gongxinji.com') == -1 ? `${API_URL}`:''
   const topmMenu = [
-    { path: '/welcome', name: '财税中心' },
+    { path: '/welcome', name: '商户后台' },
     { path: to, name: '用工中心', },
   ];
 
@@ -95,9 +95,9 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
       {...props}
       // logo={<img style={{height: '23px'}} src={logo}></img>}
       logo={logo}
-      route={{
-        routes: topmMenu,
-      }}
+      // route={{
+      //   routes: topmMenu,
+      // }}
       menuItemRender={(menuItemProps, defaultDom) => {
         if (menuItemProps.name==='用工中心') {
           return <a href={to} target='_blank'>用工中心</a>
