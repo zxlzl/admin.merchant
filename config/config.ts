@@ -133,6 +133,52 @@ export default {
               component: './Welcome',
             },
             {
+              path: '/send_single',
+              name: '用工管理',
+              icon: 'solution',
+              routes: [
+                {
+                  path: '/send_single/project',
+                  name: '用工任务',
+                  component: './sendSingle/project/Project',
+                },
+                {
+                  path: '/send_single/project_detail',
+                  name: '项目详情',
+                  component: './sendSingle/project/ProjectDetail',
+                  hideInMenu: true,
+                },
+                {
+                  path: '/send_single/service',
+                  name: '任务订单',
+                  component: './sendSingle/service/Service',
+                },
+                {
+                  path: '/send_single/service_detail',
+                  name: '订单详情',
+                  component: './sendSingle/service/ServiceDetail',
+                  hideInMenu: true,
+                },
+              ],
+            },
+            // {
+            //   path: '/recruit',
+            //   name: '用工管理',
+            //   icon: 'robot',
+            //   routes: [
+            //     {
+            //       path: '/recruit/task',
+            //       name: '用工任务',
+            //       component: './recruit/task',
+            //     },
+            //     {
+            //       path: '/recruit/order',
+            //       name: '任务订单',
+            //       component: './recruit/order',
+            //     },
+            //   ]
+            // },
+            {
               path: '/order_manage',
               name: '发放管理',
               icon: 'reconciliation',
@@ -288,35 +334,7 @@ export default {
                 },
               ],
             },
-            // {
-            //   path: '/send_single',
-            //   name: '业务管理',
-            //   icon: 'solution',
-            //   routes: [
-            //     {
-            //       path: '/send_single/project',
-            //       name: '服务项目',
-            //       component: './sendSingle/project/Project',
-            //     },
-            //     {
-            //       path: '/send_single/project_detail',
-            //       name: '项目详情',
-            //       component: './sendSingle/project/ProjectDetail',
-            //       hideInMenu: true,
-            //     },
-            //     {
-            //       path: '/send_single/service',
-            //       name: '服务订单',
-            //       component: './sendSingle/service/Service',
-            //     },
-            //     {
-            //       path: '/send_single/service_detail',
-            //       name: '订单详情',
-            //       component: './sendSingle/service/ServiceDetail',
-            //       hideInMenu: true,
-            //     },
-            //   ],
-            // },
+            
             {
               component: './404',
             },
