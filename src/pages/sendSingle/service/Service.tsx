@@ -49,7 +49,7 @@ export default class Service extends React.Component{
       width: 100,
       title: '操作',
       render: (row: any) => <div>
-        <a style={{ marginRight: 10 }} onClick={() => router.push({ pathname: "/send_single/project_detail", query: { projectNo: row.projectNo } })}>查看项目</a>
+        <a style={{ marginRight: 10 }} onClick={() => router.push({ pathname: "/send_single/project_detail", query: { projectNo: row.projectNo } })}>任务详情</a>
         <a onClick={() => router.push({ pathname: "/send_single/service_detail", query: { id: row.id }})}>订单详情</a>
       </div>
     }

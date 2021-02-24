@@ -144,7 +144,7 @@ export default {
                 },
                 {
                   path: '/send_single/project_detail',
-                  name: '项目详情',
+                  name: '任务详情',
                   component: './sendSingle/project/ProjectDetail',
                   hideInMenu: true,
                 },
