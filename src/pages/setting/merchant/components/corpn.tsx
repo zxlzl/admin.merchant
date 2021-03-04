@@ -1,6 +1,6 @@
 import { Form } from '@ant-design/compatible';
 import '@ant-design/compatible/assets/index.css';
-import { Button, Input, Select} from 'antd';
+import { Button, Input, Select, Radio } from 'antd';
 import React, { Component } from 'react';
 
 import { FormComponentProps } from '@ant-design/compatible/es/form';
@@ -10,40 +10,33 @@ import { CorpnData } from '../data';
 const FormItem = Form.Item;
 const { Option } = Select;
 
-import { queryLegalPerson } from '@/components/api/remit/merchantLegalPerson'
+import { queryLegalPerson } from '@/components/api/remit/merchantLegalPerson';
 
 interface CorpnProps extends FormComponentProps {
   merchantNo?: string;
   merchantId?: string;
-  setParentState: (commonState: {}) => void
+  corpnData: CorpnData;
+  setParentState: (commonState: {}) => void;
 }
 
 class Corpn extends Component<CorpnProps> {
   view: HTMLDivElement | undefined = undefined;
   cityPicker: HTMLDivElement | undefined = undefined;
-  state = { positionValue: [], isEdit: false }
+  state = { positionValue: [], isEdit: false };
 
   componentDidMount() {
-    this.setCorpnData()
+    this.setCorpnData();
   }
 
   setCorpnData = async () => {
-    console.log(this.props);
-    const {merchantNo=""} = this.props
-    const {data} = await queryLegalPerson()
-    console.log(data);
-    return
     const { corpnData, form } = this.props;
 
-    if (contactData) {
+    const obj = {};
+    if (corpnData) {
       Object.keys(form.getFieldsValue()).forEach(key => {
-        const obj = {};
-        obj[key] = contactData[key] || null;
-        if (key === 'position') {
-          obj[key] = `${contactData['province'] || ''} / ${contactData['city'] || ''} / ${contactData['district'] || ''}`
-        }
-        form.setFieldsValue(obj);
+        obj[key] = corpnData[key] || null;
       });
+      form.setFieldsValue(obj);
     }
   };
 
@@ -64,25 +57,27 @@ class Corpn extends Component<CorpnProps> {
         <Form {...formItemLayout}>
           <FormItem label="法人姓名">
             {getFieldDecorator('legalName', {
-              rules: [
-                { required: true, message: '法人姓名' },
-              ],
+              rules: [{ required: true, message: '法人姓名' }],
             })(<Input readOnly />)}
           </FormItem>
           <FormItem label="法人性别">
-            {getFieldDecorator('legalGender', {
-            })(<Input readOnly />)}
+            {getFieldDecorator(
+              'legalGender',
+              {},
+            )(
+              <Radio.Group>
+                <Radio value="a">男</Radio>
+                <Radio value="b">女</Radio>
+              </Radio.Group>,
+            )}
           </FormItem>
           <FormItem label="法人手机号">
             {getFieldDecorator('legalMobile', {
-              rules: [
-                { required: true, message: '请填写法人手机号！' },
-              ],
+              rules: [{ required: true, message: '请填写法人手机号！' }],
             })(<Input readOnly />)}
           </FormItem>
           <FormItem label="法人邮箱">
-            {getFieldDecorator("legalEmail", {
-            })(<Input readOnly />)}
+            {getFieldDecorator('legalEmail', {})(<Input readOnly />)}
           </FormItem>
         </Form>
       </div>

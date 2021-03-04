@@ -9,13 +9,14 @@ import SettleView from './components/settle';
 import InvoiceView from './components/invoice';
 import CorpnView from './components/corpn';
 
-import { BaseData, ContactData, SettleData, InvoiceData } from './data.d';
+import { BaseData, ContactData, SettleData, InvoiceData,CorpnData } from './data.d';
 import styles from './style.less';
 
-import { queryByMerchantNo } from '@/components/api/remit/merchant'
-import { queryByMerchantNo as queryContactByMerchantNo } from '@/components/api/remit/contact'
-import { querySettleInfo } from '@/components/api/remit/merchantSettleInfo'
-import { queryInvoicingInfo } from '@/components/api/remit/merchantInvoicingInfo'
+import { queryByMerchantNo } from '@/components/api/remit/merchant';
+import { queryByMerchantNo as queryContactByMerchantNo } from '@/components/api/remit/contact';
+import { querySettleInfo } from '@/components/api/remit/merchantSettleInfo';
+import { queryInvoicingInfo } from '@/components/api/remit/merchantInvoicingInfo';
+import { queryLegalPerson } from '@/components/api/remit/merchantLegalPerson';
 
 import getQuery from '@/utils/query';
 
@@ -38,15 +39,14 @@ interface MerchantState {
   contactData: ContactData;
   /** 结算信息 */
   settleData: SettleData;
+  /** 法人信息 */
+  corpnData: CorpnData;
   /** 开票信息 */
   invoiceData: InvoiceData;
   merchantNo: string;
 }
 
-class Merchant extends Component<
-  MerchantProps,
-  MerchantState
-  > {
+class Merchant extends Component<MerchantProps, MerchantState> {
   main: HTMLDivElement | undefined = undefined;
 
   constructor(props: MerchantProps) {
@@ -61,42 +61,38 @@ class Merchant extends Component<
     this.state = {
       menuMap,
       mode: 'inline',
-      selectKey: 'corpn', //base
+      selectKey: 'base', 
       merchantNo: '',
     };
   }
 
   async componentDidMount() {
-    const merchantNo = localStorage.getItem('merchant_no')
+    const merchantNo = localStorage.getItem('merchant_no');
     if (merchantNo) {
+      try {
+        const { data = {} } = await queryByMerchantNo(merchantNo);
+        this.setState({ baseData: data });
+      } catch (error) {}
 
       try {
-        const { data = {} } = await queryByMerchantNo(merchantNo)
-        this.setState({ baseData: data })
-      } catch (error) {
-
-      }
+        const { data = {} } = await queryLegalPerson(merchantNo);
+        this.setState({ corpnData: data });
+      } catch (error) {}
 
       try {
-        const { data = [] } = await queryContactByMerchantNo(merchantNo)
-        this.setState({ contactData: data[0] || {} })
-      } catch (error) {
-
-      }
+        const { data = [] } = await queryContactByMerchantNo(merchantNo);
+        this.setState({ contactData: data[0] || {} });
+      } catch (error) {}
 
       try {
-        const { data = {} } = await querySettleInfo()
-        this.setState({ settleData: data })
-      } catch (error) {
-
-      }
+        const { data = {} } = await querySettleInfo();
+        this.setState({ settleData: data });
+      } catch (error) {}
 
       try {
-        const { data = {} } = await queryInvoicingInfo()
-        this.setState({ invoiceData: data })
-      } catch (error) {
-
-      }
+        const { data = {} } = await queryInvoicingInfo();
+        this.setState({ invoiceData: data });
+      } catch (error) {}
 
       this.setState({ merchantNo });
     }
@@ -119,8 +115,11 @@ class Merchant extends Component<
   };
 
   selectKey = (key: MerchantStateKeys) => {
-    const { merchantNo } = this.state
-    if (!merchantNo && key !== 'base') { message.info('请先保存基本信息！'); return false }
+    const { merchantNo } = this.state;
+    if (!merchantNo && key !== 'base') {
+      message.info('请先保存基本信息！');
+      return false;
+    }
 
     this.setState({
       selectKey: key,
@@ -128,8 +127,8 @@ class Merchant extends Component<
   };
 
   setParentState = (commonState = {}) => {
-    this.setState({ ...commonState })
-  }
+    this.setState({ ...commonState });
+  };
 
   resize = () => {
     if (!this.main) {
@@ -154,8 +153,8 @@ class Merchant extends Component<
   };
 
   renderChildren = () => {
-    const { selectKey, baseData, contactData, settleData, invoiceData, merchantNo } = this.state;
-    const commonProps = { merchantNo, setParentState: this.setParentState }
+    const { selectKey, baseData, contactData, settleData, invoiceData, merchantNo,corpnData } = this.state;
+    const commonProps = { merchantNo, setParentState: this.setParentState };
     switch (selectKey) {
       case 'base':
         return <BaseView baseData={baseData} {...commonProps} />;
@@ -165,8 +164,8 @@ class Merchant extends Component<
         return <SettleView settleData={settleData} {...commonProps} />;
       case 'invoice':
         return <InvoiceView invoiceData={invoiceData} {...commonProps} />;
-        case 'corpn':
-        return <CorpnView {...commonProps} />;
+      case 'corpn':
+        return <CorpnView corpnData={corpnData} {...commonProps} />;
       default:
         break;
     }
@@ -178,12 +177,21 @@ class Merchant extends Component<
     const { mode, selectKey } = this.state;
     return (
       <GridContent>
-        <div className={styles.main} ref={ref => { if (ref) { this.main = ref; } }}>
+        <div
+          className={styles.main}
+          ref={ref => {
+            if (ref) {
+              this.main = ref;
+            }
+          }}
+        >
           <div className={styles.leftMenu}>
             <Menu
               mode={mode}
               selectedKeys={[selectKey]}
-              onClick={({ key }) => { this.selectKey(key as MerchantStateKeys) }}
+              onClick={({ key }) => {
+                this.selectKey(key as MerchantStateKeys);
+              }}
             >
               {this.getMenu()}
             </Menu>
