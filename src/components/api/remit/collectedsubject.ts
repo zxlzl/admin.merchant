@@ -4,7 +4,7 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 根据查询代征主体
+ * 根据查询服务主体
  * @param collectedSubjectNo 
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
@@ -22,7 +22,7 @@ export function querybyCollectedSubjectNo(collectedSubjectNo?: string, success?:
 }
 
 /**
- * 查询所有可用代征主体
+ * 查询所有可用服务主体
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */

@@ -24,6 +24,44 @@ export function sign(signId?: number, success?: (data: ServiceResult<string>["da
 }
 
 /**
+ * 使用签约邀请码进行签约，预请求
+ * @param signCode  签约邀请码
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ * @since 彭晓峰
+ */
+export function preSignByCode(signCode?: string, success?: (data: ServiceResult<PreSignDetail>["data"], response: ServiceResult<PreSignDetail>, xhr: any) => void, error?: (message: ServiceResult<PreSignDetail>["message"], response: ServiceResult<PreSignDetail>, xhr: any) => void, options?: any): Promise<ServiceResult<PreSignDetail>["data"]> {
+    return ajax({
+        url: `/contract/wechat/preSignByCode`,
+        data: {
+            signCode: signCode
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 使用签约邀请码进行签约
+ * @param signCode  签约邀请码
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ * @since 彭晓峰
+ */
+export function signByCode(signCode?: string, success?: (data: ServiceResult<string>["data"], response: ServiceResult<string>, xhr: any) => void, error?: (message: ServiceResult<string>["message"], response: ServiceResult<string>, xhr: any) => void, options?: any): Promise<ServiceResult<string>["data"]> {
+    return ajax({
+        url: `/contract/wechat/signByCode`,
+        data: {
+            signCode: signCode
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
  * 个人实名认证
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
@@ -75,44 +113,6 @@ export function querySignRecords(signQuery?: SignQuery, success?: (data: Service
     }) as any;
 }
 
-/**
- * 使用签约邀请码进行签约，预请求
- * @param signCode  签约邀请码
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- * @since 彭晓峰
- */
-export function preSignByCode(signCode?: string, success?: (data: ServiceResult<PreSignDetail>["data"], response: ServiceResult<PreSignDetail>, xhr: any) => void, error?: (message: ServiceResult<PreSignDetail>["message"], response: ServiceResult<PreSignDetail>, xhr: any) => void, options?: any): Promise<ServiceResult<PreSignDetail>["data"]> {
-    return ajax({
-        url: `/contract/wechat/preSignByCode`,
-        data: {
-            signCode: signCode
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 使用签约邀请码进行签约
- * @param signCode  签约邀请码
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- * @since 彭晓峰
- */
-export function signByCode(signCode?: string, success?: (data: ServiceResult<string>["data"], response: ServiceResult<string>, xhr: any) => void, error?: (message: ServiceResult<string>["message"], response: ServiceResult<string>, xhr: any) => void, options?: any): Promise<ServiceResult<string>["data"]> {
-    return ajax({
-        url: `/contract/wechat/signByCode`,
-        data: {
-            signCode: signCode
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
 export interface ServiceResult<T> {
 
     code: string;
@@ -122,6 +122,14 @@ export interface ServiceResult<T> {
     success: boolean;
 
     message: string;
+
+}
+
+export interface PreSignDetail {
+
+    memo: string;
+
+    title: string;
 
 }
 
@@ -310,14 +318,6 @@ export interface TaxFddContractSign {
      * 签约状态：I-待签约，CG-签约中，S-签约成功，F-签约失败
      */
     status: string;
-
-}
-
-export interface PreSignDetail {
-
-    memo: string;
-
-    title: string;
 
 }
 

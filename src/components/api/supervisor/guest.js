@@ -11,20 +11,11 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.add = exports.queryPage = exports.queryAllTaxPlanningType = void 0;
+exports.add = exports.queryAllTaxPlanningType = exports.queryPage = void 0;
 /**
  * @file API：/supervisor/guest
  */
 var request_1 = require("@/utils/request");
-/**
- * 获取节税类型
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function queryAllTaxPlanningType(success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/guest/queryAllTaxPlanningType", success: success, error: error }, options));
-}
-exports.queryAllTaxPlanningType = queryAllTaxPlanningType;
 /**
  * 访客列表
  * @param vo  查询条件
@@ -37,6 +28,15 @@ function queryPage(vo, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.queryPage = queryPage;
+/**
+ * 获取节税类型
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function queryAllTaxPlanningType(success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/guest/queryAllTaxPlanningType", success: success, error: error }, options));
+}
+exports.queryAllTaxPlanningType = queryAllTaxPlanningType;
 /**
  * 新增访客
  * @param taxGuestUserDTO  访客记录

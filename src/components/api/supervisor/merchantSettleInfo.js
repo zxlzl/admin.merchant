@@ -11,7 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.queryByMerchantNo = exports.updateSettleInfo = exports.addSettleInfo = void 0;
+exports.updateSettleInfo = exports.queryByMerchantNo = exports.addSettleInfo = void 0;
 /**
  * @file API：/supervisor/merchantSettleInfo
  */
@@ -29,18 +29,6 @@ function addSettleInfo(settleInfoDTO, success, error, options) {
 }
 exports.addSettleInfo = addSettleInfo;
 /**
- * 更新结算信息
- * @param settleInfoDTO  商户
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function updateSettleInfo(settleInfoDTO, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/merchantSettleInfo/updateSettleInfo", type: "POST", data: {
-            settleInfoDTO: settleInfoDTO
-        }, success: success, error: error }, options));
-}
-exports.updateSettleInfo = updateSettleInfo;
-/**
  * 根据商户号查询结算信息
  * @param merchantNo  查询条件
  * @param success 请求成功的回调函数
@@ -52,3 +40,15 @@ function queryByMerchantNo(merchantNo, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.queryByMerchantNo = queryByMerchantNo;
+/**
+ * 更新结算信息
+ * @param settleInfoDTO  商户
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function updateSettleInfo(settleInfoDTO, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/merchantSettleInfo/updateSettleInfo", type: "POST", data: {
+            settleInfoDTO: settleInfoDTO
+        }, success: success, error: error }, options));
+}
+exports.updateSettleInfo = updateSettleInfo;

@@ -11,7 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.getOne = exports.getDropDownList = exports.delete_1 = exports.getPackageStatusDropDownList = exports.getPackageTypeDropDownList = exports.deleteRebate = exports.getList = exports.saveOrUpdate = void 0;
+exports.getDropDownList = exports.getOne = exports.delete_1 = exports.getList = exports.getPackageStatusDropDownList = exports.getPackageTypeDropDownList = exports.deleteRebate = exports.saveOrUpdate = void 0;
 /**
  * @file API：/supervisor/discountPackageData
  */
@@ -28,18 +28,6 @@ function saveOrUpdate(taxDiscountPackageDataPO, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.saveOrUpdate = saveOrUpdate;
-/**
- * 优惠套餐列表查询
- * @param taxDiscountPackageDataQuery
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function getList(taxDiscountPackageDataQuery, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/discountPackageData/getList", type: "POST", contentType: "application/json", data: {
-            taxDiscountPackageDataQuery: taxDiscountPackageDataQuery
-        }, success: success, error: error }, options));
-}
-exports.getList = getList;
 /**
  * 返点费率列表删除
  * @param id
@@ -71,6 +59,18 @@ function getPackageStatusDropDownList(success, error, options) {
 }
 exports.getPackageStatusDropDownList = getPackageStatusDropDownList;
 /**
+ * 优惠套餐列表查询
+ * @param taxDiscountPackageDataQuery
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function getList(taxDiscountPackageDataQuery, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/discountPackageData/getList", type: "POST", contentType: "application/json", data: {
+            taxDiscountPackageDataQuery: taxDiscountPackageDataQuery
+        }, success: success, error: error }, options));
+}
+exports.getList = getList;
+/**
  * 优惠套餐列表删除
  * @param id
  * @param success 请求成功的回调函数
@@ -83,15 +83,6 @@ function delete_1(id, success, error, options) {
 }
 exports.delete_1 = delete_1;
 /**
- * 优惠套餐下拉列表
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function getDropDownList(success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/discountPackageData/getDropDownList", type: "POST", success: success, error: error }, options));
-}
-exports.getDropDownList = getDropDownList;
-/**
  * 优惠套餐详情
  * @param id
  * @param success 请求成功的回调函数
@@ -103,3 +94,12 @@ function getOne(id, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.getOne = getOne;
+/**
+ * 优惠套餐下拉列表
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function getDropDownList(success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/discountPackageData/getDropDownList", type: "POST", success: success, error: error }, options));
+}
+exports.getDropDownList = getDropDownList;

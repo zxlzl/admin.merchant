@@ -4,25 +4,6 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 新增开票信息
- * @param billingInfoDTO  商户
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function addInvoicingInfo(billingInfoDTO?: TaxMerchantInvoicingInfoDTO, success?: (data: WebResult<boolean>["data"], response: WebResult<boolean>, xhr: any) => void, error?: (message: WebResult<boolean>["message"], response: WebResult<boolean>, xhr: any) => void, options?: any): Promise<WebResult<boolean>["data"]> {
-    return ajax({
-        url: `/supervisor/merchantInvoicingInfo/addInvoicingInfo`,
-        type: "POST",
-        data: {
-            billingInfoDTO: billingInfoDTO
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
  * 根据商户号查询开票信息(开票页面使用，没有类目报错)
  * @param merchantNo  查询条件
  * @param success 请求成功的回调函数
@@ -80,14 +61,18 @@ export function queryByMerchantNo(merchantNo?: string, success?: (data: WebResul
 }
 
 /**
- * 查询开票信息
+ * 新增开票信息
+ * @param billingInfoDTO  商户
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function queryInvoicingInfo(success?: (data: WebResult<TaxMerchantInvoicingInfoDTO>["data"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantInvoicingInfoDTO>["message"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantInvoicingInfoDTO>["data"]> {
+export function addInvoicingInfo(billingInfoDTO?: TaxMerchantInvoicingInfoDTO, success?: (data: WebResult<boolean>["data"], response: WebResult<boolean>, xhr: any) => void, error?: (message: WebResult<boolean>["message"], response: WebResult<boolean>, xhr: any) => void, options?: any): Promise<WebResult<boolean>["data"]> {
     return ajax({
-        url: `/supervisor/merchantInvoicingInfo/queryInvoicingInfo`,
+        url: `/supervisor/merchantInvoicingInfo/addInvoicingInfo`,
         type: "POST",
+        data: {
+            billingInfoDTO: billingInfoDTO
+        },
         success: success,
         error: error,
         ...options
@@ -107,6 +92,35 @@ export function queryPrepaidInvoicingInfo(success?: (data: WebResult<TaxMerchant
         error: error,
         ...options
     }) as any;
+}
+
+/**
+ * 查询开票信息
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryInvoicingInfo(success?: (data: WebResult<TaxMerchantInvoicingInfoDTO>["data"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantInvoicingInfoDTO>["message"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantInvoicingInfoDTO>["data"]> {
+    return ajax({
+        url: `/supervisor/merchantInvoicingInfo/queryInvoicingInfo`,
+        type: "POST",
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+export interface WebResult<T> {
+
+    code: string;
+
+    redirectUrl: string;
+
+    data: T;
+
+    success: boolean;
+
+    message: string;
+
 }
 
 export interface TaxMerchantInvoicingInfoDTO {
@@ -260,20 +274,6 @@ export interface TaxMerchantInvoicingInfoDTO {
      * 商户号
      */
     merchantNo: string;
-
-}
-
-export interface WebResult<T> {
-
-    code: string;
-
-    redirectUrl: string;
-
-    data: T;
-
-    success: boolean;
-
-    message: string;
 
 }
 

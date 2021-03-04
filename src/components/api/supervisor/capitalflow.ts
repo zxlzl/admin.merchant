@@ -4,6 +4,20 @@
 import { ajax } from "@/utils/request";
 
 /**
+ * 查询业务类型枚举
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryTransSubCodeList(success?: (data: WebResult<{[key: string]: string}[]>["data"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, error?: (message: WebResult<{[key: string]: string}[]>["message"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, options?: any): Promise<WebResult<{[key: string]: string}[]>["data"]> {
+    return ajax({
+        url: `/supervisor/capitalflow/queryTransSubCodeList`,
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
  * 资金流水
  * @param vo  查询条件
  * @param success 请求成功的回调函数
@@ -22,18 +36,18 @@ export function queryCapitalFlowPage(vo?: CapitalFlowVO, success?: (data: WebRes
     }) as any;
 }
 
-/**
- * 查询业务类型枚举
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryTransSubCodeList(success?: (data: WebResult<{[key: string]: string}[]>["data"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, error?: (message: WebResult<{[key: string]: string}[]>["message"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, options?: any): Promise<WebResult<{[key: string]: string}[]>["data"]> {
-    return ajax({
-        url: `/supervisor/capitalflow/queryTransSubCodeList`,
-        success: success,
-        error: error,
-        ...options
-    }) as any;
+export interface WebResult<T> {
+
+    code: string;
+
+    redirectUrl: string;
+
+    data: T;
+
+    success: boolean;
+
+    message: string;
+
 }
 
 export interface Object {
@@ -124,20 +138,6 @@ export interface CapitalFlowVO {
     request: QueryIncomeExpensesDetailRequest;
 
     page: PageBean;
-
-}
-
-export interface WebResult<T> {
-
-    code: string;
-
-    redirectUrl: string;
-
-    data: T;
-
-    success: boolean;
-
-    message: string;
 
 }
 
@@ -244,7 +244,7 @@ export interface IncomeExpensesDetailDto {
     changeDirection: number;
 
     /**
-     * 代征主体
+     * 服务主体
      */
     collectedSubjectName: string;
 
@@ -254,7 +254,7 @@ export interface IncomeExpensesDetailDto {
     gmtUpdate: string;
 
     /**
-     * 代征主体编码
+     * 服务主体编码
      */
     collectedSubjectNo: string;
 

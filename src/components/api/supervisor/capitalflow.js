@@ -11,11 +11,20 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.queryTransSubCodeList = exports.queryCapitalFlowPage = void 0;
+exports.queryCapitalFlowPage = exports.queryTransSubCodeList = void 0;
 /**
  * @file API：/supervisor/capitalflow
  */
 var request_1 = require("@/utils/request");
+/**
+ * 查询业务类型枚举
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function queryTransSubCodeList(success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/capitalflow/queryTransSubCodeList", success: success, error: error }, options));
+}
+exports.queryTransSubCodeList = queryTransSubCodeList;
 /**
  * 资金流水
  * @param vo  查询条件
@@ -28,12 +37,3 @@ function queryCapitalFlowPage(vo, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.queryCapitalFlowPage = queryCapitalFlowPage;
-/**
- * 查询业务类型枚举
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function queryTransSubCodeList(success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/capitalflow/queryTransSubCodeList", success: success, error: error }, options));
-}
-exports.queryTransSubCodeList = queryTransSubCodeList;

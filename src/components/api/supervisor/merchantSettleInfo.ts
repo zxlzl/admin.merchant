@@ -23,25 +23,6 @@ export function addSettleInfo(settleInfoDTO?: TaxMerchantSettleInfoDTO, success?
 }
 
 /**
- * 更新结算信息
- * @param settleInfoDTO  商户
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function updateSettleInfo(settleInfoDTO?: TaxMerchantSettleInfoDTO, success?: (data: WebResult<boolean>["data"], response: WebResult<boolean>, xhr: any) => void, error?: (message: WebResult<boolean>["message"], response: WebResult<boolean>, xhr: any) => void, options?: any): Promise<WebResult<boolean>["data"]> {
-    return ajax({
-        url: `/supervisor/merchantSettleInfo/updateSettleInfo`,
-        type: "POST",
-        data: {
-            settleInfoDTO: settleInfoDTO
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
  * 根据商户号查询结算信息
  * @param merchantNo  查询条件
  * @param success 请求成功的回调函数
@@ -53,6 +34,25 @@ export function queryByMerchantNo(merchantNo?: string, success?: (data: WebResul
         type: "POST",
         data: {
             merchantNo: merchantNo
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 更新结算信息
+ * @param settleInfoDTO  商户
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function updateSettleInfo(settleInfoDTO?: TaxMerchantSettleInfoDTO, success?: (data: WebResult<boolean>["data"], response: WebResult<boolean>, xhr: any) => void, error?: (message: WebResult<boolean>["message"], response: WebResult<boolean>, xhr: any) => void, options?: any): Promise<WebResult<boolean>["data"]> {
+    return ajax({
+        url: `/supervisor/merchantSettleInfo/updateSettleInfo`,
+        type: "POST",
+        data: {
+            settleInfoDTO: settleInfoDTO
         },
         success: success,
         error: error,

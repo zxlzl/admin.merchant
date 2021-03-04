@@ -4,12 +4,35 @@
 import { ajax } from "@/utils/request";
 
 /**
+ * 审核免验证
+ * @param id  免验证id
+ * @param checkStatus  审核状态1:审核通过 2:审核拒绝
+ * @param checkMemo  审核备注
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function checkAuthentication(id?: number, checkStatus?: string, checkMemo?: string, success?: (data: WebResult["data"], response: WebResult, xhr: any) => void, error?: (message: WebResult["message"], response: WebResult, xhr: any) => void, options?: any): Promise<WebResult["data"]> {
+    return ajax({
+        url: `/supervisor/authentication/checkAuthentication`,
+        type: "POST",
+        data: {
+            id: id,
+            checkStatus: checkStatus,
+            checkMemo: checkMemo
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
  * 查询免验证详情
  * @param id  查询免验证详情
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function queryAuthenticationDetail(id?: number, success?: (data: WebResult<TaxAuthenticationInfoDTO>["data"], response: WebResult<TaxAuthenticationInfoDTO>, xhr: any) => void, error?: (message: WebResult<TaxAuthenticationInfoDTO>["message"], response: WebResult<TaxAuthenticationInfoDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxAuthenticationInfoDTO>["data"]> {
+export function queryAuthenticationDetail(id?: number, success?: (data: WebResult_1<TaxAuthenticationInfoDTO>["data"], response: WebResult_1<TaxAuthenticationInfoDTO>, xhr: any) => void, error?: (message: WebResult_1<TaxAuthenticationInfoDTO>["message"], response: WebResult_1<TaxAuthenticationInfoDTO>, xhr: any) => void, options?: any): Promise<WebResult_1<TaxAuthenticationInfoDTO>["data"]> {
     return ajax({
         url: `/supervisor/authentication/queryAuthenticationDetail`,
         type: "POST",
@@ -28,7 +51,7 @@ export function queryAuthenticationDetail(id?: number, success?: (data: WebResul
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function queryAuthenticationList(query?: TaxAuthenticationInfoVO, success?: (data: WebResult<PageBean_1<TaxAuthenticationInfoDTO>>["data"], response: WebResult<PageBean_1<TaxAuthenticationInfoDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean_1<TaxAuthenticationInfoDTO>>["message"], response: WebResult<PageBean_1<TaxAuthenticationInfoDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean_1<TaxAuthenticationInfoDTO>>["data"]> {
+export function queryAuthenticationList(query?: TaxAuthenticationInfoVO, success?: (data: WebResult_1<PageBean_1<TaxAuthenticationInfoDTO>>["data"], response: WebResult_1<PageBean_1<TaxAuthenticationInfoDTO>>, xhr: any) => void, error?: (message: WebResult_1<PageBean_1<TaxAuthenticationInfoDTO>>["message"], response: WebResult_1<PageBean_1<TaxAuthenticationInfoDTO>>, xhr: any) => void, options?: any): Promise<WebResult_1<PageBean_1<TaxAuthenticationInfoDTO>>["data"]> {
     return ajax({
         url: `/supervisor/authentication/queryAuthenticationList`,
         type: "POST",
@@ -42,30 +65,21 @@ export function queryAuthenticationList(query?: TaxAuthenticationInfoVO, success
     }) as any;
 }
 
-/**
- * 审核免验证
- * @param id  免验证id
- * @param checkStatus  审核状态1:审核通过 2:审核拒绝
- * @param checkMemo  审核备注
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function checkAuthentication(id?: number, checkStatus?: string, checkMemo?: string, success?: (data: WebResult_1["data"], response: WebResult_1, xhr: any) => void, error?: (message: WebResult_1["message"], response: WebResult_1, xhr: any) => void, options?: any): Promise<WebResult_1["data"]> {
-    return ajax({
-        url: `/supervisor/authentication/checkAuthentication`,
-        type: "POST",
-        data: {
-            id: id,
-            checkStatus: checkStatus,
-            checkMemo: checkMemo
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
+export interface WebResult {
+
+    code: string;
+
+    redirectUrl: string;
+
+    data: any;
+
+    success: boolean;
+
+    message: string;
+
 }
 
-export interface WebResult<T> {
+export interface WebResult_1<T> {
 
     code: string;
 
@@ -154,7 +168,7 @@ export interface TaxAuthenticationInfoDTO {
     countryCode: string;
 
     /**
-     * 代征主体名称
+     * 服务主体名称
      */
     collectedSubjectName: string;
 
@@ -169,7 +183,7 @@ export interface TaxAuthenticationInfoDTO {
     name: string;
 
     /**
-     * 代征主体编号
+     * 服务主体编号
      */
     collectedSubjectNo: string;
 
@@ -246,20 +260,6 @@ export interface PageBean_1<T> {
     list: any[];
 
     maxPage: number;
-
-}
-
-export interface WebResult_1 {
-
-    code: string;
-
-    redirectUrl: string;
-
-    data: any;
-
-    success: boolean;
-
-    message: string;
 
 }
 

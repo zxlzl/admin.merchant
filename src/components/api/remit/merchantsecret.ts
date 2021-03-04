@@ -4,6 +4,24 @@
 import { ajax } from "@/utils/request";
 
 /**
+ * 下载平台公钥
+ * @param fileName  下载文件名
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function downLoadSecret(fileName?: string, success?: (data: any, response: void, xhr: any) => void, error?: (message: any, response: void, xhr: any) => void, options?: any): Promise<any> {
+    return ajax({
+        url: `/remit/merchantsecret/downLoadSecret`,
+        data: {
+            fileName: fileName
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
  * 根据商户号查询商户密钥等信息
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
@@ -43,24 +61,6 @@ export function saveMerchantSecret(taxMerchantSecretVO?: TaxMerchantSecretVO, su
 export function queryPlatformSecret(success?: (data: WebResult<TaxPlatformSecretVO>["data"], response: WebResult<TaxPlatformSecretVO>, xhr: any) => void, error?: (message: WebResult<TaxPlatformSecretVO>["message"], response: WebResult<TaxPlatformSecretVO>, xhr: any) => void, options?: any): Promise<WebResult<TaxPlatformSecretVO>["data"]> {
     return ajax({
         url: `/remit/merchantsecret/queryPlatformSecret`,
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 下载平台公钥
- * @param fileName  下载文件名
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function downLoadSecret(fileName?: string, success?: (data: any, response: void, xhr: any) => void, error?: (message: any, response: void, xhr: any) => void, options?: any): Promise<any> {
-    return ajax({
-        url: `/remit/merchantsecret/downLoadSecret`,
-        data: {
-            fileName: fileName
-        },
         success: success,
         error: error,
         ...options

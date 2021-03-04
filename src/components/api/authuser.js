@@ -11,20 +11,11 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.verifyCode = exports.verifyUserBindVerifyCode = exports.sentUserBindVerifyCode = exports.sentVerificationCode = exports.getAdminMobile = exports.getCurrentTaxUser = exports.weChatWorkWebAuthLogin = exports.passwordReset = exports.loginWithPhoneNumber = exports.sendSmsVerificationCode = exports.weChatWorkScanCodeAuthLogin = exports.sendGraphicVerificationCode = void 0;
+exports.verifyCode = exports.verifyUserBindVerifyCode = exports.sentUserBindVerifyCode = exports.sentVerificationCode = exports.getAdminMobile = exports.getCurrentTaxUser = exports.weChatWorkWebAuthLogin = exports.passwordReset = exports.loginWithPhoneNumber = exports.sendGraphicVerificationCode = exports.sendSmsVerificationCode = exports.weChatWorkScanCodeAuthLogin = void 0;
 /**
  * @file API：/authuser
  */
 var request_1 = require("@/utils/request");
-/**
- * 获取图形验证码
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function sendGraphicVerificationCode(success, error, options) {
-    return request_1.ajax(__assign({ url: "/authuser/sendGraphicVerificationCode", type: "POST", success: success, error: error }, options));
-}
-exports.sendGraphicVerificationCode = sendGraphicVerificationCode;
 /**
  * 扫码授权登录
  * @param auth_code
@@ -40,7 +31,7 @@ exports.weChatWorkScanCodeAuthLogin = weChatWorkScanCodeAuthLogin;
 /**
  * 获取短信验证码
  * @param phoneNumber  手机号
- * @param type  type = 1:手机号登录 = 2:重置密码
+ * @param type  type = 1:手机号登录 = 2:重置/找回/忘记密码
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
@@ -51,6 +42,15 @@ function sendSmsVerificationCode(phoneNumber, type, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.sendSmsVerificationCode = sendSmsVerificationCode;
+/**
+ * 获取图形验证码
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function sendGraphicVerificationCode(success, error, options) {
+    return request_1.ajax(__assign({ url: "/authuser/sendGraphicVerificationCode", type: "POST", success: success, error: error }, options));
+}
+exports.sendGraphicVerificationCode = sendGraphicVerificationCode;
 /**
  * 手机号登录
  * @param phoneNumber  手机号
@@ -137,7 +137,7 @@ function sentUserBindVerifyCode(mobile, success, error, options) {
 }
 exports.sentUserBindVerifyCode = sentUserBindVerifyCode;
 /**
- * 发送绑定验证码
+ * 校验绑定验证码
  * @param userBindDto
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数

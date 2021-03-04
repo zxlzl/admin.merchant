@@ -7,6 +7,7 @@ import BaseView from './components/base';
 import ContactView from './components/contact';
 import SettleView from './components/settle';
 import InvoiceView from './components/invoice';
+import CorpnView from './components/corpn';
 
 import { BaseData, ContactData, SettleData, InvoiceData } from './data.d';
 import styles from './style.less';
@@ -24,7 +25,7 @@ interface MerchantProps {
   dispatch: Dispatch<any>;
 }
 
-type MerchantStateKeys = 'base' | 'contact' | 'settle' | 'invoice';
+type MerchantStateKeys = 'base' | 'contact' | 'settle' | 'invoice' | 'corpn';
 interface MerchantState {
   mode: 'inline' | 'horizontal';
   menuMap: {
@@ -52,6 +53,7 @@ class Merchant extends Component<
     super(props);
     const menuMap = {
       base: '基本信息',
+      corpn: '法人信息',
       contact: '联系信息',
       settle: '结算信息',
       invoice: '开票信息',
@@ -163,6 +165,8 @@ class Merchant extends Component<
         return <SettleView settleData={settleData} {...commonProps} />;
       case 'invoice':
         return <InvoiceView invoiceData={invoiceData} {...commonProps} />;
+        case 'corpn':
+        return <CorpnView contactData={contactData} {...commonProps} />;
       default:
         break;
     }

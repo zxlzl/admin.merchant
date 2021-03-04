@@ -11,11 +11,23 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.downLoadSecret = exports.queryPlatformSecret = exports.saveMerchantSecret = exports.querySecretByMerchantNo = void 0;
+exports.queryPlatformSecret = exports.saveMerchantSecret = exports.querySecretByMerchantNo = exports.downLoadSecret = void 0;
 /**
  * @file API：/supervisor/merchantsecret
  */
 var request_1 = require("@/utils/request");
+/**
+ * 下载平台公钥
+ * @param fileName  下载文件名
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function downLoadSecret(fileName, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/merchantsecret/downLoadSecret", data: {
+            fileName: fileName
+        }, success: success, error: error }, options));
+}
+exports.downLoadSecret = downLoadSecret;
 /**
  * 根据商户号查询商户密钥等信息
  * @param merchantNo  查询条件
@@ -52,15 +64,3 @@ function queryPlatformSecret(merchantNo, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.queryPlatformSecret = queryPlatformSecret;
-/**
- * 下载平台公钥
- * @param fileName  下载文件名
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function downLoadSecret(fileName, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/merchantsecret/downLoadSecret", data: {
-            fileName: fileName
-        }, success: success, error: error }, options));
-}
-exports.downLoadSecret = downLoadSecret;

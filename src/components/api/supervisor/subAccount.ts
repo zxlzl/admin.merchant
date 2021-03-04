@@ -4,32 +4,14 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 平安充值专户查询
+ * 根据商户号查询商户子账户
  * @param merchantNo  查询条件
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function queryAccount(merchantNo?: string, success?: (data: WebResult<TaxSubAccountVO>["data"], response: WebResult<TaxSubAccountVO>, xhr: any) => void, error?: (message: WebResult<TaxSubAccountVO>["message"], response: WebResult<TaxSubAccountVO>, xhr: any) => void, options?: any): Promise<WebResult<TaxSubAccountVO>["data"]> {
+export function queryByMerchantNo(merchantNo?: string, success?: (data: WebResult<TaxSubAccountDTO[]>["data"], response: WebResult<TaxSubAccountDTO[]>, xhr: any) => void, error?: (message: WebResult<TaxSubAccountDTO[]>["message"], response: WebResult<TaxSubAccountDTO[]>, xhr: any) => void, options?: any): Promise<WebResult<TaxSubAccountDTO[]>["data"]> {
     return ajax({
-        url: `/supervisor/subAccount/queryAccount`,
-        data: {
-            merchantNo: merchantNo
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 查询商户平安易资金监管充值账户（项目）
- * @param merchantNo  查询条件
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryPinganyiByMerchant(merchantNo?: string, success?: (data: WebResult<TaxSubAccountDTO[]>["data"], response: WebResult<TaxSubAccountDTO[]>, xhr: any) => void, error?: (message: WebResult<TaxSubAccountDTO[]>["message"], response: WebResult<TaxSubAccountDTO[]>, xhr: any) => void, options?: any): Promise<WebResult<TaxSubAccountDTO[]>["data"]> {
-    return ajax({
-        url: `/supervisor/subAccount/queryPinganyiByMerchant`,
+        url: `/supervisor/subAccount/queryByMerchantNo`,
         data: {
             merchantNo: merchantNo
         },
@@ -76,14 +58,32 @@ export function getTaxMerchantPayProject(merchantNo?: string, success?: (data: W
 }
 
 /**
- * 根据商户号查询商户子账户
+ * 平安充值专户查询
  * @param merchantNo  查询条件
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function queryByMerchantNo(merchantNo?: string, success?: (data: WebResult<TaxSubAccountDTO[]>["data"], response: WebResult<TaxSubAccountDTO[]>, xhr: any) => void, error?: (message: WebResult<TaxSubAccountDTO[]>["message"], response: WebResult<TaxSubAccountDTO[]>, xhr: any) => void, options?: any): Promise<WebResult<TaxSubAccountDTO[]>["data"]> {
+export function queryAccount(merchantNo?: string, success?: (data: WebResult<TaxSubAccountVO>["data"], response: WebResult<TaxSubAccountVO>, xhr: any) => void, error?: (message: WebResult<TaxSubAccountVO>["message"], response: WebResult<TaxSubAccountVO>, xhr: any) => void, options?: any): Promise<WebResult<TaxSubAccountVO>["data"]> {
     return ajax({
-        url: `/supervisor/subAccount/queryByMerchantNo`,
+        url: `/supervisor/subAccount/queryAccount`,
+        data: {
+            merchantNo: merchantNo
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 查询商户平安易资金监管充值账户（项目）
+ * @param merchantNo  查询条件
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryPinganyiByMerchant(merchantNo?: string, success?: (data: WebResult<TaxSubAccountDTO[]>["data"], response: WebResult<TaxSubAccountDTO[]>, xhr: any) => void, error?: (message: WebResult<TaxSubAccountDTO[]>["message"], response: WebResult<TaxSubAccountDTO[]>, xhr: any) => void, options?: any): Promise<WebResult<TaxSubAccountDTO[]>["data"]> {
+    return ajax({
+        url: `/supervisor/subAccount/queryPinganyiByMerchant`,
         data: {
             merchantNo: merchantNo
         },
@@ -205,12 +205,12 @@ export interface TaxSubAccountDTO {
     accountNo: string;
 
     /**
-     * 代征主体名称
+     * 服务主体名称
      */
     collectedSubjectName: string;
 
     /**
-     * 代征主体代码
+     * 服务主体代码
      */
     collectedSubjectNo: string;
 
@@ -230,32 +230,6 @@ export interface TaxSubAccountDTO {
      * 00:失效，01:有效
      */
     status: string;
-
-}
-
-export interface TaxSubAccountVO {
-
-    /**
-     * 代征主体名称
-     */
-    collectedSubjectName: string;
-
-    list: TaxSubAccountDTO[];
-
-    /**
-     * 是否显示按钮
-     */
-    isShowButton: boolean;
-
-    /**
-     * 商户名称
-     */
-    merchantName: string;
-
-    /**
-     * 商户代码
-     */
-    merchantNo: string;
 
 }
 
@@ -341,6 +315,32 @@ export interface TaxMerchantPayProjectDTO {
      * 项目可使用金额
      */
     projectAvailableAmount: number;
+
+}
+
+export interface TaxSubAccountVO {
+
+    /**
+     * 服务主体名称
+     */
+    collectedSubjectName: string;
+
+    list: TaxSubAccountDTO[];
+
+    /**
+     * 是否显示按钮
+     */
+    isShowButton: boolean;
+
+    /**
+     * 商户名称
+     */
+    merchantName: string;
+
+    /**
+     * 商户代码
+     */
+    merchantNo: string;
 
 }
 

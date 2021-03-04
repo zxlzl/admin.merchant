@@ -4,6 +4,24 @@
 import { ajax } from "@/utils/request";
 
 /**
+ * 服务订单列表详情
+ * @param id  服务订单主键
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryServiceOrderDetail(id?: number, success?: (data: WebResult<TaxServiceOrderDetailDTO>["data"], response: WebResult<TaxServiceOrderDetailDTO>, xhr: any) => void, error?: (message: WebResult<TaxServiceOrderDetailDTO>["message"], response: WebResult<TaxServiceOrderDetailDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxServiceOrderDetailDTO>["data"]> {
+    return ajax({
+        url: `/remit/serviceOrder/queryServiceOrderDetail`,
+        data: {
+            id: id
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
  * 结算明细列表分页查询
  * @param query  传服务单号serviceNo、接单人姓名receiptName、接单人证件号码receiptIdNo
  * @param success 请求成功的回调函数
@@ -15,24 +33,6 @@ export function queryOrderSettlePage(query?: TaxServiceOrderDTO, success?: (data
         contentType: "application/json",
         data: {
             query: query
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 服务订单列表详情
- * @param id  服务订单主键
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryServiceOrderDetail(id?: number, success?: (data: WebResult<TaxServiceOrderDetailDTO>["data"], response: WebResult<TaxServiceOrderDetailDTO>, xhr: any) => void, error?: (message: WebResult<TaxServiceOrderDetailDTO>["message"], response: WebResult<TaxServiceOrderDetailDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxServiceOrderDetailDTO>["data"]> {
-    return ajax({
-        url: `/remit/serviceOrder/queryServiceOrderDetail`,
-        data: {
-            id: id
         },
         success: success,
         error: error,
@@ -57,6 +57,154 @@ export function queryServiceOrderPage(query?: TaxServiceOrderDTO, success?: (dat
         error: error,
         ...options
     }) as any;
+}
+
+export interface WebResult<T> {
+
+    code: string;
+
+    redirectUrl: string;
+
+    data: T;
+
+    success: boolean;
+
+    message: string;
+
+}
+
+export interface TaxDispatchProjectDTO {
+
+    /**
+     * 服务类型：01-推广服务，02-咨询服务，03-信息服务，04-技术服务 *\/
+     */
+    serviceType: string;
+
+    /**
+     * 修改时间
+     */
+    gmtModified: string;
+
+    /**
+     * 最大预算金额
+     */
+    budgetUpperAmount: number;
+
+    /**
+     * 数量，预留字段，若用计件模式，按数量来计算总金额
+     */
+    numbers: number;
+
+    /**
+     * 项目状态中文描述
+     */
+    projectStatusDesc: string;
+
+    /**
+     * 发起商户名称
+     */
+    merchantName: string;
+
+    /**
+     * 项目模式：01-众包，02-招标，03-计件
+     */
+    projectModel: string;
+
+    /**
+     * 项目周期结束
+     */
+    projectEndTime: string;
+
+    /**
+     * 项目编号
+     */
+    projectNo: string;
+
+    /**
+     * 服务主体名称（服务主体）
+     */
+    collectedSubjectName: string;
+
+    /**
+     * 服务主体编码
+     */
+    collectedSubjectNo: string;
+
+    /**
+     * 项目主键
+     */
+    id: number;
+
+    /**
+     * 最小预算金额
+     */
+    budgetLowerAmount: number;
+
+    /**
+     * 失效时间
+     */
+    effectiveEndTime: string;
+
+    /**
+     * 发起时间(创建时间)
+     */
+    gmtCreate: string;
+
+    /**
+     * 发起时间结束值
+     */
+    gmtCreateEnd: string;
+
+    /**
+     * 项目模式中文描述
+     */
+    projectModelName: string;
+
+    /**
+     * 生效时间
+     */
+    effectiveStartTime: string;
+
+    /**
+     * 项目周期开始
+     */
+    projectStartTime: string;
+
+    /**
+     * 项目状态：01-生效，02-失效
+     */
+    projectStatus: string;
+
+    /**
+     * 预算金额描述（元）
+     */
+    budgetAmount: string;
+
+    /**
+     * 项目描述
+     */
+    projectDesc: string;
+
+    /**
+     * 发起时间开始值
+     */
+    gmtCreateBegin: string;
+
+    /**
+     * 项目名称
+     */
+    projectName: string;
+
+    /**
+     * 服务类型名称
+     */
+    serviceTypeName: string;
+
+    /**
+     * 发起商户号
+     */
+    merchantNo: string;
+
 }
 
 export interface TaxServiceOrderDTO {
@@ -122,12 +270,12 @@ export interface TaxServiceOrderDTO {
     receiptTimeEnd: string;
 
     /**
-     * 代征主体名称（服务主体）
+     * 服务主体名称（服务主体）
      */
     collectedSubjectName: string;
 
     /**
-     * 代征主体编码
+     * 服务主体编码
      */
     collectedSubjectNo: string;
 
@@ -213,17 +361,17 @@ export interface TaxServiceOrderDTO {
 
 }
 
-export interface WebResult<T> {
+export interface TaxServiceOrderDetailDTO {
 
-    code: string;
+    /**
+     * 项目需求
+     */
+    taxProjectDTO: TaxDispatchProjectDTO;
 
-    redirectUrl: string;
-
-    data: T;
-
-    success: boolean;
-
-    message: string;
+    /**
+     * 服务订单(包含接单人信息)
+     */
+    taxServiceOrderDTO: TaxServiceOrderDTO;
 
 }
 
@@ -294,12 +442,12 @@ export interface TaxOrderSettleDTO {
     settleOrderNo: string;
 
     /**
-     * 代征主体名称（服务主体）
+     * 服务主体名称（服务主体）
      */
     collectedSubjectName: string;
 
     /**
-     * 代征主体编码
+     * 服务主体编码
      */
     collectedSubjectNo: string;
 
@@ -322,154 +470,6 @@ export interface TaxOrderSettleDTO {
      * 商户号
      */
     merchantNo: string;
-
-}
-
-export interface TaxDispatchProjectDTO {
-
-    /**
-     * 服务类型：01-推广服务，02-咨询服务，03-信息服务，04-技术服务 *\/
-     */
-    serviceType: string;
-
-    /**
-     * 修改时间
-     */
-    gmtModified: string;
-
-    /**
-     * 最大预算金额
-     */
-    budgetUpperAmount: number;
-
-    /**
-     * 数量，预留字段，若用计件模式，按数量来计算总金额
-     */
-    numbers: number;
-
-    /**
-     * 项目状态中文描述
-     */
-    projectStatusDesc: string;
-
-    /**
-     * 发起商户名称
-     */
-    merchantName: string;
-
-    /**
-     * 项目模式：01-众包，02-招标，03-计件
-     */
-    projectModel: string;
-
-    /**
-     * 项目周期结束
-     */
-    projectEndTime: string;
-
-    /**
-     * 项目编号
-     */
-    projectNo: string;
-
-    /**
-     * 代征主体名称（服务主体）
-     */
-    collectedSubjectName: string;
-
-    /**
-     * 代征主体编码
-     */
-    collectedSubjectNo: string;
-
-    /**
-     * 项目主键
-     */
-    id: number;
-
-    /**
-     * 最小预算金额
-     */
-    budgetLowerAmount: number;
-
-    /**
-     * 失效时间
-     */
-    effectiveEndTime: string;
-
-    /**
-     * 发起时间(创建时间)
-     */
-    gmtCreate: string;
-
-    /**
-     * 发起时间结束值
-     */
-    gmtCreateEnd: string;
-
-    /**
-     * 项目模式中文描述
-     */
-    projectModelName: string;
-
-    /**
-     * 生效时间
-     */
-    effectiveStartTime: string;
-
-    /**
-     * 项目周期开始
-     */
-    projectStartTime: string;
-
-    /**
-     * 项目状态：01-生效，02-失效
-     */
-    projectStatus: string;
-
-    /**
-     * 预算金额描述（元）
-     */
-    budgetAmount: string;
-
-    /**
-     * 项目描述
-     */
-    projectDesc: string;
-
-    /**
-     * 发起时间开始值
-     */
-    gmtCreateBegin: string;
-
-    /**
-     * 项目名称
-     */
-    projectName: string;
-
-    /**
-     * 服务类型名称
-     */
-    serviceTypeName: string;
-
-    /**
-     * 发起商户号
-     */
-    merchantNo: string;
-
-}
-
-export interface TaxServiceOrderDetailDTO {
-
-    /**
-     * 项目需求
-     */
-    taxProjectDTO: TaxDispatchProjectDTO;
-
-    /**
-     * 服务订单(包含接单人信息)
-     */
-    taxServiceOrderDTO: TaxServiceOrderDTO;
 
 }
 

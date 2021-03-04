@@ -17,7 +17,7 @@ exports.update = exports.add = exports.queryAllAvailable = exports.querybyCollec
  */
 var request_1 = require("@/utils/request");
 /**
- * 查询所有可用代征主体
+ * 查询所有可用服务主体
  * @param collectedSubjectNo
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
@@ -29,7 +29,7 @@ function querybyCollectedSubjectNo(collectedSubjectNo, success, error, options) 
 }
 exports.querybyCollectedSubjectNo = querybyCollectedSubjectNo;
 /**
- * 查询所有可用代征主体
+ * 查询所有可用服务主体
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
@@ -38,7 +38,7 @@ function queryAllAvailable(success, error, options) {
 }
 exports.queryAllAvailable = queryAllAvailable;
 /**
- * 新增代征主体
+ * 新增服务主体
  * @param taxCollectedSubjectDTO  关联商户账号
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
@@ -50,7 +50,7 @@ function add(taxCollectedSubjectDTO, success, error, options) {
 }
 exports.add = add;
 /**
- * 修改代征主体
+ * 修改服务主体
  * @param taxCollectedSubjectDTO  关联商户账号
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数

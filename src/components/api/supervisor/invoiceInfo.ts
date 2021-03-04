@@ -4,17 +4,16 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 开票核销
- * @param inoicingVerifyDTO  开票核销参数
+ * 查询发票(管理后台商户号选填)
+ * @param params 
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function invoicingVerify(inoicingVerifyDTO?: InvoicingVerifyDTO, success?: (data: WebResult<boolean>["data"], response: WebResult<boolean>, xhr: any) => void, error?: (message: WebResult<boolean>["message"], response: WebResult<boolean>, xhr: any) => void, options?: any): Promise<WebResult<boolean>["data"]> {
+export function pageInvoiceInfo(params?: TaxMerchantInvoiceInfoDTO, success?: (data: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>["data"], response: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>["message"], response: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>["data"]> {
     return ajax({
-        url: `/supervisor/invoiceInfo/invoicingVerify`,
-        type: "POST",
+        url: `/supervisor/invoiceInfo/pageInvoiceInfo`,
         data: {
-            inoicingVerifyDTO: inoicingVerifyDTO
+            params: params
         },
         success: success,
         error: error,
@@ -60,39 +59,17 @@ export function pagePrepaidInvoice(params?: TaxMerchantPrepaidInvoiceDTO, succes
 }
 
 /**
- * 查询发票(管理后台商户号选填)
- * @param params 
+ * 开票核销
+ * @param inoicingVerifyDTO  开票核销参数
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function pageInvoiceInfo(params?: TaxMerchantInvoiceInfoDTO, success?: (data: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>["data"], response: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>["message"], response: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>["data"]> {
+export function invoicingVerify(inoicingVerifyDTO?: InvoicingVerifyDTO, success?: (data: WebResult<boolean>["data"], response: WebResult<boolean>, xhr: any) => void, error?: (message: WebResult<boolean>["message"], response: WebResult<boolean>, xhr: any) => void, options?: any): Promise<WebResult<boolean>["data"]> {
     return ajax({
-        url: `/supervisor/invoiceInfo/pageInvoiceInfo`,
-        data: {
-            params: params
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 查看发票账单明细
- * @param applyNo  申请单号
- * @param curPage  当前页码
- * @param pageSize  每页多少条
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function invoiceBillDetail(applyNo?: string, curPage?: number, pageSize?: number, success?: (data: WebResult<PageBean<TaxMerchantBillingInfoDTO>>["data"], response: WebResult<PageBean<TaxMerchantBillingInfoDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean<TaxMerchantBillingInfoDTO>>["message"], response: WebResult<PageBean<TaxMerchantBillingInfoDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean<TaxMerchantBillingInfoDTO>>["data"]> {
-    return ajax({
-        url: `/supervisor/invoiceInfo/invoiceBillDetail`,
+        url: `/supervisor/invoiceInfo/invoicingVerify`,
         type: "POST",
         data: {
-            applyNo: applyNo,
-            curPage: curPage,
-            pageSize: pageSize
+            inoicingVerifyDTO: inoicingVerifyDTO
         },
         success: success,
         error: error,
@@ -194,210 +171,27 @@ export function invoiceDetail(applyNo?: string, success?: (data: WebResult<TaxMe
     }) as any;
 }
 
-export interface InvoicingVerifyDTO {
-
-    /**
-     * 核销备注
-     */
-    verifyRemark: string;
-
-    /**
-     * 发票影像件url
-     */
-    invoiceUrl: string;
-
-    /**
-     * 申请单号
-     */
-    applyNo: string;
-
-    /**
-     * 物流公司
-     */
-    logisticsCompany: string;
-
-    /**
-     * 核销结论：3已开票，7已驳回
-     */
-    verifyResult: string;
-
-    /**
-     * 快递单号
-     */
-    fastMailNo: string;
-
-}
-
-export interface WebResult<T> {
-
-    code: string;
-
-    redirectUrl: string;
-
-    data: T;
-
-    success: boolean;
-
-    message: string;
-
-}
-
-export interface RefundInvoiceVerifyDTO {
-
-    /**
-     * 退票类型  1:发票信息错误，2:发票类型错误，3:退款
-     */
-    refundType: string;
-
-    /**
-     * 退票发票邮寄物流
-     */
-    refundLogisticsCompany: string;
-
-    /**
-     * 退票核销备注
-     */
-    refundVerifyRemark: string;
-
-    /**
-     * 退票原因
-     */
-    refundReason: string;
-
-    /**
-     * 申请单号
-     */
-    applyNo: string;
-
-    /**
-     * 退票运单号
-     */
-    refundFastMailNo: string;
-
-    /**
-     * 退票核销结论：5发票作废，3退票驳回
-     */
-    refundVerifyResult: string;
-
-}
-
-export interface TaxMerchantPrepaidInvoiceDTO {
-
-    /**
-     * 可索取发票金额结束
-     */
-    availableInvoiceAmountEnd: number;
-
-    /**
-     * 更新时间
-     */
-    gmtModified: string;
-
-    /**
-     * 结束时间
-     */
-    endDate: string;
-
-    /**
-     * 每页多少条
-     */
-    pageSize: number;
-
-    /**
-     * 当前开票模式，1账单开票，2预充值开票
-     */
-    invoiceMode: string;
-
-    /**
-     * 创建时间
-     */
-    gmtCreate: string;
-
-    /**
-     * 已索取发票金额
-     */
-    claimedInvoiceAmount: number;
-
-    /**
-     * 商户名称
-     */
-    merchantName: string;
-
-    /**
-     * 当前页码
-     */
-    curPage: number;
-
-    /**
-     * 代征主体名称
-     */
-    collectedSubjectName: string;
-
-    /**
-     * 累计可开票金额
-     */
-    cumulativeInvoiceAmount: number;
-
-    /**
-     * 代征主体编码
-     */
-    collectedSubjectNo: string;
-
-    /**
-     * 可索取发票金额开始
-     */
-    availableInvoiceAmountStart: number;
-
-    /**
-     * 主键
-     */
-    id: number;
-
-    /**
-     * 可索取发票金额
-     */
-    availableInvoiceAmount: number;
-
-    /**
-     * 开始时间
-     */
-    startDate: string;
-
-    /**
-     * 商户编号
-     */
-    merchantNo: string;
-
-}
-
-export interface OrderItem {
-
-    asc: boolean;
-
-    column: string;
-
-}
-
-export interface Page<T> {
-
-    current: number;
-
-    total: number;
-
-    hitCount: boolean;
-
-    optimizeCountSql: boolean;
-
-    size: number;
-
-    maxLimit: number;
-
-    records: T[];
-
-    orders: OrderItem[];
-
-    countId: string;
-
+/**
+ * 查看发票账单明细
+ * @param applyNo  申请单号
+ * @param curPage  当前页码
+ * @param pageSize  每页多少条
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function invoiceBillDetail(applyNo?: string, curPage?: number, pageSize?: number, success?: (data: WebResult<PageBean<TaxMerchantBillingInfoDTO>>["data"], response: WebResult<PageBean<TaxMerchantBillingInfoDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean<TaxMerchantBillingInfoDTO>>["message"], response: WebResult<PageBean<TaxMerchantBillingInfoDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean<TaxMerchantBillingInfoDTO>>["data"]> {
+    return ajax({
+        url: `/supervisor/invoiceInfo/invoiceBillDetail`,
+        type: "POST",
+        data: {
+            applyNo: applyNo,
+            curPage: curPage,
+            pageSize: pageSize
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
 }
 
 export interface TaxMerchantInvoiceInfoDTO {
@@ -714,6 +508,20 @@ export interface TaxMerchantInvoiceInfoDTO {
 
 }
 
+export interface WebResult<T> {
+
+    code: string;
+
+    redirectUrl: string;
+
+    data: T;
+
+    success: boolean;
+
+    message: string;
+
+}
+
 export interface Object {
 
 }
@@ -735,6 +543,227 @@ export interface PageBean<T> {
     list: T[];
 
     maxPage: number;
+
+}
+
+export interface RefundInvoiceVerifyDTO {
+
+    /**
+     * 退票类型  1:发票信息错误，2:发票类型错误，3:退款
+     */
+    refundType: string;
+
+    /**
+     * 退票发票邮寄物流
+     */
+    refundLogisticsCompany: string;
+
+    /**
+     * 退票核销备注
+     */
+    refundVerifyRemark: string;
+
+    /**
+     * 退票原因
+     */
+    refundReason: string;
+
+    /**
+     * 申请单号
+     */
+    applyNo: string;
+
+    /**
+     * 退票运单号
+     */
+    refundFastMailNo: string;
+
+    /**
+     * 退票核销结论：5发票作废，3退票驳回
+     */
+    refundVerifyResult: string;
+
+}
+
+export interface TaxMerchantPrepaidInvoiceDTO {
+
+    /**
+     * 可索取发票金额结束
+     */
+    availableInvoiceAmountEnd: number;
+
+    /**
+     * 更新时间
+     */
+    gmtModified: string;
+
+    /**
+     * 结束时间
+     */
+    endDate: string;
+
+    /**
+     * 每页多少条
+     */
+    pageSize: number;
+
+    /**
+     * 当前开票模式，1账单开票，2预充值开票
+     */
+    invoiceMode: string;
+
+    /**
+     * 创建时间
+     */
+    gmtCreate: string;
+
+    /**
+     * 已索取发票金额
+     */
+    claimedInvoiceAmount: number;
+
+    /**
+     * 商户名称
+     */
+    merchantName: string;
+
+    /**
+     * 当前页码
+     */
+    curPage: number;
+
+    /**
+     * 服务主体名称
+     */
+    collectedSubjectName: string;
+
+    /**
+     * 累计可开票金额
+     */
+    cumulativeInvoiceAmount: number;
+
+    /**
+     * 服务主体编码
+     */
+    collectedSubjectNo: string;
+
+    /**
+     * 可索取发票金额开始
+     */
+    availableInvoiceAmountStart: number;
+
+    /**
+     * 主键
+     */
+    id: number;
+
+    /**
+     * 可索取发票金额
+     */
+    availableInvoiceAmount: number;
+
+    /**
+     * 开始时间
+     */
+    startDate: string;
+
+    /**
+     * 商户编号
+     */
+    merchantNo: string;
+
+}
+
+export interface OrderItem {
+
+    asc: boolean;
+
+    column: string;
+
+}
+
+export interface Page<T> {
+
+    current: number;
+
+    total: number;
+
+    hitCount: boolean;
+
+    optimizeCountSql: boolean;
+
+    size: number;
+
+    maxLimit: number;
+
+    records: T[];
+
+    orders: OrderItem[];
+
+    countId: string;
+
+}
+
+export interface InvoicingVerifyDTO {
+
+    /**
+     * 核销备注
+     */
+    verifyRemark: string;
+
+    /**
+     * 发票影像件url
+     */
+    invoiceUrl: string;
+
+    /**
+     * 申请单号
+     */
+    applyNo: string;
+
+    /**
+     * 物流公司
+     */
+    logisticsCompany: string;
+
+    /**
+     * 核销结论：3已开票，7已驳回
+     */
+    verifyResult: string;
+
+    /**
+     * 快递单号
+     */
+    fastMailNo: string;
+
+}
+
+export interface RefundInvoiceDTO {
+
+    /**
+     * 退票类型  1:发票信息错误，2:发票类型错误，3:退款
+     */
+    refundType: string;
+
+    /**
+     * 退票发票邮寄物流
+     */
+    refundLogisticsCompany: string;
+
+    /**
+     * 退票原因
+     */
+    refundReason: string;
+
+    /**
+     * 申请单号
+     */
+    applyNo: string;
+
+    /**
+     * 退票运单号
+     */
+    refundFastMailNo: string;
 
 }
 
@@ -863,35 +892,6 @@ export interface TaxMerchantBillingInfoDTO {
      * merchant_no，商户号
      */
     merchantNo: string;
-
-}
-
-export interface RefundInvoiceDTO {
-
-    /**
-     * 退票类型  1:发票信息错误，2:发票类型错误，3:退款
-     */
-    refundType: string;
-
-    /**
-     * 退票发票邮寄物流
-     */
-    refundLogisticsCompany: string;
-
-    /**
-     * 退票原因
-     */
-    refundReason: string;
-
-    /**
-     * 申请单号
-     */
-    applyNo: string;
-
-    /**
-     * 退票运单号
-     */
-    refundFastMailNo: string;
 
 }
 

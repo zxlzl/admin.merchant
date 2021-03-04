@@ -22,44 +22,6 @@ export function pageBillingInfo(params?: TaxMerchantBillingInfoDTO, success?: (d
 }
 
 /**
- * 申请开票(查询开票信息,商户号自动获取)
- * @param billNoJson  账单编号数组
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function invoicingApply(billNoJson?: string, success?: (data: WebResult<TaxMerchantInvoicingInfoDTO>["data"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantInvoicingInfoDTO>["message"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantInvoicingInfoDTO>["data"]> {
-    return ajax({
-        url: `/remit/billingInfo/invoicingApply`,
-        type: "POST",
-        data: {
-            billNoJson: billNoJson
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 确定开票(商户号自动获取)
- * @param invoiceDTO  开票信息
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function confirmInvoicing(invoiceDTO?: TaxMerchantInvoiceInfoDTO, success?: (data: WebResult<boolean>["data"], response: WebResult<boolean>, xhr: any) => void, error?: (message: WebResult<boolean>["message"], response: WebResult<boolean>, xhr: any) => void, options?: any): Promise<WebResult<boolean>["data"]> {
-    return ajax({
-        url: `/remit/billingInfo/confirmInvoicing`,
-        type: "POST",
-        data: {
-            invoiceDTO: invoiceDTO
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
  * 查看账单详情
  * @param query  查询对象，参数billNo必填
  * @param success 请求成功的回调函数
@@ -102,6 +64,44 @@ export function queryInvoiceStatusList(success?: (data: WebResult<{[key: string]
     return ajax({
         url: `/remit/billingInfo/queryInvoiceStatusList`,
         type: "POST",
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 申请开票(查询开票信息,商户号自动获取)
+ * @param billNoJson  账单编号数组
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function invoicingApply(billNoJson?: string, success?: (data: WebResult<TaxMerchantInvoicingInfoDTO>["data"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantInvoicingInfoDTO>["message"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantInvoicingInfoDTO>["data"]> {
+    return ajax({
+        url: `/remit/billingInfo/invoicingApply`,
+        type: "POST",
+        data: {
+            billNoJson: billNoJson
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 确定开票(商户号自动获取)
+ * @param invoiceDTO  开票信息
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function confirmInvoicing(invoiceDTO?: TaxMerchantInvoiceInfoDTO, success?: (data: WebResult<boolean>["data"], response: WebResult<boolean>, xhr: any) => void, error?: (message: WebResult<boolean>["message"], response: WebResult<boolean>, xhr: any) => void, options?: any): Promise<WebResult<boolean>["data"]> {
+    return ajax({
+        url: `/remit/billingInfo/confirmInvoicing`,
+        type: "POST",
+        data: {
+            invoiceDTO: invoiceDTO
+        },
         success: success,
         error: error,
         ...options
@@ -271,6 +271,110 @@ export interface PageBean<T> {
     list: T[];
 
     maxPage: number;
+
+}
+
+export interface TaxPayBatchBillingDetailDto {
+
+    /**
+     * 实收服务费(元)
+     */
+    serviceFee: number;
+
+    /**
+     * 总笔数
+     */
+    totalNumber: number;
+
+    /**
+     * 商户批次号
+     */
+    payBatchNo: string;
+
+    /**
+     * 每页多少条
+     */
+    pageSize: number;
+
+    /**
+     * 商户名称
+     */
+    merchantName: string;
+
+    /**
+     * 发放通道
+     */
+    paymentChannel: string;
+
+    /**
+     * 发放通道名称
+     */
+    paymentChannelName: string;
+
+    /**
+     * 总金额
+     */
+    totalAmount: number;
+
+    /**
+     * 当前页码
+     */
+    curPage: number;
+
+    /**
+     * 成功笔数
+     */
+    succNumber: number;
+
+    /**
+     * 创建时间
+     */
+    createTime: string;
+
+    /**
+     * 批次状态名称
+     */
+    payStatusName: string;
+
+    /**
+     * 完成时间
+     */
+    endTime: string;
+
+    /**
+     * 主键
+     */
+    id: number;
+
+    /**
+     * 成功金额
+     */
+    succAmount: number;
+
+    /**
+     * 实收税费(元)
+     */
+    taxFee: number;
+
+    /**
+     * 账单编号，查询时必填
+     */
+    billNo: string;
+
+    /**
+     * 批次状态
+     */
+    payStatus: string;
+
+    /**
+     * 平台批次号
+     */
+    platBatchNo: string;
+
+    /**
+     * 商户号
+     */
+    merchantNo: string;
 
 }
 
@@ -739,110 +843,6 @@ export interface TaxMerchantInvoiceInfoDTO {
      * 发票状态，1:初始,2:开票中,3:已开票,4:退票中,5:已作废,6:已撤销,7:已驳回
      */
     invoiceStatus: string;
-
-}
-
-export interface TaxPayBatchBillingDetailDto {
-
-    /**
-     * 实收服务费(元)
-     */
-    serviceFee: number;
-
-    /**
-     * 总笔数
-     */
-    totalNumber: number;
-
-    /**
-     * 商户批次号
-     */
-    payBatchNo: string;
-
-    /**
-     * 每页多少条
-     */
-    pageSize: number;
-
-    /**
-     * 商户名称
-     */
-    merchantName: string;
-
-    /**
-     * 打款通道
-     */
-    paymentChannel: string;
-
-    /**
-     * 打款通道名称
-     */
-    paymentChannelName: string;
-
-    /**
-     * 总金额
-     */
-    totalAmount: number;
-
-    /**
-     * 当前页码
-     */
-    curPage: number;
-
-    /**
-     * 成功笔数
-     */
-    succNumber: number;
-
-    /**
-     * 创建时间
-     */
-    createTime: string;
-
-    /**
-     * 批次状态名称
-     */
-    payStatusName: string;
-
-    /**
-     * 完成时间
-     */
-    endTime: string;
-
-    /**
-     * 主键
-     */
-    id: number;
-
-    /**
-     * 成功金额
-     */
-    succAmount: number;
-
-    /**
-     * 实收税费(元)
-     */
-    taxFee: number;
-
-    /**
-     * 账单编号，查询时必填
-     */
-    billNo: string;
-
-    /**
-     * 批次状态
-     */
-    payStatus: string;
-
-    /**
-     * 平台批次号
-     */
-    platBatchNo: string;
-
-    /**
-     * 商户号
-     */
-    merchantNo: string;
 
 }
 

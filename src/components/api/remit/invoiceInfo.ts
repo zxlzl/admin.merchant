@@ -4,21 +4,16 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 查看发票账单明细
- * @param applyNo  申请单号
- * @param curPage  当前页码
- * @param pageSize  每页多少条
+ * 查询发票(商户后台商户号自动获取)
+ * @param params 
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function invoiceBillDetail(applyNo?: string, curPage?: number, pageSize?: number, success?: (data: WebResult<PageBean<TaxMerchantBillingInfoDTO>>["data"], response: WebResult<PageBean<TaxMerchantBillingInfoDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean<TaxMerchantBillingInfoDTO>>["message"], response: WebResult<PageBean<TaxMerchantBillingInfoDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean<TaxMerchantBillingInfoDTO>>["data"]> {
+export function pageInvoiceInfo(params?: TaxMerchantInvoiceInfoDTO, success?: (data: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>["data"], response: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>["message"], response: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>["data"]> {
     return ajax({
-        url: `/remit/invoiceInfo/invoiceBillDetail`,
-        type: "POST",
+        url: `/remit/invoiceInfo/pageInvoiceInfo`,
         data: {
-            applyNo: applyNo,
-            curPage: curPage,
-            pageSize: pageSize
+            params: params
         },
         success: success,
         error: error,
@@ -102,24 +97,6 @@ export function PrepaidInvoice(params?: TaxMerchantPrepaidInvoiceDTO, success?: 
 }
 
 /**
- * 查询发票(商户后台商户号自动获取)
- * @param params 
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function pageInvoiceInfo(params?: TaxMerchantInvoiceInfoDTO, success?: (data: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>["data"], response: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>["message"], response: WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>["data"]> {
-    return ajax({
-        url: `/remit/invoiceInfo/pageInvoiceInfo`,
-        data: {
-            params: params
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
  * 查看发票详情&查看发票影像
  * @param applyNo  申请单号
  * @param success 请求成功的回调函数
@@ -138,288 +115,27 @@ export function invoiceDetail(applyNo?: string, success?: (data: WebResult<TaxMe
     }) as any;
 }
 
-export interface WebResult<T> {
-
-    code: string;
-
-    redirectUrl: string;
-
-    data: T;
-
-    success: boolean;
-
-    message: string;
-
-}
-
-export interface Object {
-
-}
-
-export interface PageBean<T> {
-
-    curPage: number;
-
-    data: Object;
-
-    endRecordCount: number;
-
-    recordCount: number;
-
-    pageSize: number;
-
-    startRecordCount: number;
-
-    list: T[];
-
-    maxPage: number;
-
-}
-
-export interface TaxMerchantBillingInfoDTO {
-
-    /**
-     * gmt_modified，操作时间
-     */
-    gmtModified: string;
-
-    /**
-     * 每页多少条
-     */
-    pageSize: number;
-
-    /**
-     * 账单内容
-     */
-    billContent: string;
-
-    /**
-     * 账单日期结束时间
-     */
-    billDateEnd: string;
-
-    /**
-     * merchant_name，商户名称
-     */
-    merchantName: string;
-
-    idInList: number[];
-
-    /**
-     * bill_amount，账单金额(元)
-     */
-    billAmount: number;
-
-    /**
-     * payment_succ_amount，打款成功金额(元)
-     */
-    paymentSuccAmount: number;
-
-    /**
-     * collected_subject_name，代证主体
-     */
-    collectedSubjectName: string;
-
-    /**
-     * id
-     */
-    id: number;
-
-    /**
-     * tax_fee，实收税费(元)
-     */
-    taxFee: number;
-
-    /**
-     * bill_no，账单编号
-     */
-    billNo: string;
-
-    /**
-     * service_fee，实收服务费(元)
-     */
-    serviceFee: number;
-
-    /**
-     * status_desc，状态描述，如开票驳回、退票驳回等
-     */
-    statusDesc: string;
-
-    /**
-     * 账单类型，01:批次账单,02:日账单
-     */
-    billType: string;
-
-    /**
-     * bill_date，账单日期
-     */
-    billDate: string;
-
-    /**
-     * gmt_create，添加时间
-     */
-    gmtCreate: string;
-
-    /**
-     * 当前页码
-     */
-    curPage: number;
-
-    /**
-     * can_invoicing_amount，可开票金额(元)
-     */
-    canInvoicingAmount: number;
-
-    billNoInList: string[];
-
-    /**
-     * 是否统计 0：否，1：是
-     */
-    iscount: number;
-
-    /**
-     * 账单类型名称
-     */
-    billTypeName: string;
-
-    /**
-     * invoice_status，发票状态，1:初始,2:开票中,3:已开票,4:退票中,5:已作废,6:已撤销,7:已驳回
-     */
-    invoiceStatus: string;
-
-    /**
-     * 账单日期开始时间
-     */
-    billDateStart: string;
-
-    /**
-     * bill_period，账单周期，批次账单为单个批次id号；日账单为账单日期
-     */
-    billPeriod: string;
-
-    /**
-     * merchant_no，商户号
-     */
-    merchantNo: string;
-
-}
-
-export interface RefundInvoiceDTO {
-
-    /**
-     * 退票类型  1:发票信息错误，2:发票类型错误，3:退款
-     */
-    refundType: string;
-
-    /**
-     * 退票发票邮寄物流
-     */
-    refundLogisticsCompany: string;
-
-    /**
-     * 退票原因
-     */
-    refundReason: string;
-
-    /**
-     * 申请单号
-     */
-    applyNo: string;
-
-    /**
-     * 退票运单号
-     */
-    refundFastMailNo: string;
-
-}
-
-export interface TaxMerchantPrepaidInvoiceDTO {
-
-    /**
-     * 可索取发票金额结束
-     */
-    availableInvoiceAmountEnd: number;
-
-    /**
-     * 更新时间
-     */
-    gmtModified: string;
-
-    /**
-     * 结束时间
-     */
-    endDate: string;
-
-    /**
-     * 每页多少条
-     */
-    pageSize: number;
-
-    /**
-     * 当前开票模式，1账单开票，2预充值开票
-     */
-    invoiceMode: string;
-
-    /**
-     * 创建时间
-     */
-    gmtCreate: string;
-
-    /**
-     * 已索取发票金额
-     */
-    claimedInvoiceAmount: number;
-
-    /**
-     * 商户名称
-     */
-    merchantName: string;
-
-    /**
-     * 当前页码
-     */
-    curPage: number;
-
-    /**
-     * 代征主体名称
-     */
-    collectedSubjectName: string;
-
-    /**
-     * 累计可开票金额
-     */
-    cumulativeInvoiceAmount: number;
-
-    /**
-     * 代征主体编码
-     */
-    collectedSubjectNo: string;
-
-    /**
-     * 可索取发票金额开始
-     */
-    availableInvoiceAmountStart: number;
-
-    /**
-     * 主键
-     */
-    id: number;
-
-    /**
-     * 可索取发票金额
-     */
-    availableInvoiceAmount: number;
-
-    /**
-     * 开始时间
-     */
-    startDate: string;
-
-    /**
-     * 商户编号
-     */
-    merchantNo: string;
-
+/**
+ * 查看发票账单明细
+ * @param applyNo  申请单号
+ * @param curPage  当前页码
+ * @param pageSize  每页多少条
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function invoiceBillDetail(applyNo?: string, curPage?: number, pageSize?: number, success?: (data: WebResult<PageBean<TaxMerchantBillingInfoDTO>>["data"], response: WebResult<PageBean<TaxMerchantBillingInfoDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean<TaxMerchantBillingInfoDTO>>["message"], response: WebResult<PageBean<TaxMerchantBillingInfoDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean<TaxMerchantBillingInfoDTO>>["data"]> {
+    return ajax({
+        url: `/remit/invoiceInfo/invoiceBillDetail`,
+        type: "POST",
+        data: {
+            applyNo: applyNo,
+            curPage: curPage,
+            pageSize: pageSize
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
 }
 
 export interface TaxMerchantInvoiceInfoDTO {
@@ -733,6 +449,290 @@ export interface TaxMerchantInvoiceInfoDTO {
      * 发票状态，1:初始,2:开票中,3:已开票,4:退票中,5:已作废,6:已撤销,7:已驳回
      */
     invoiceStatus: string;
+
+}
+
+export interface WebResult<T> {
+
+    code: string;
+
+    redirectUrl: string;
+
+    data: T;
+
+    success: boolean;
+
+    message: string;
+
+}
+
+export interface Object {
+
+}
+
+export interface PageBean<T> {
+
+    curPage: number;
+
+    data: Object;
+
+    endRecordCount: number;
+
+    recordCount: number;
+
+    pageSize: number;
+
+    startRecordCount: number;
+
+    list: T[];
+
+    maxPage: number;
+
+}
+
+export interface RefundInvoiceDTO {
+
+    /**
+     * 退票类型  1:发票信息错误，2:发票类型错误，3:退款
+     */
+    refundType: string;
+
+    /**
+     * 退票发票邮寄物流
+     */
+    refundLogisticsCompany: string;
+
+    /**
+     * 退票原因
+     */
+    refundReason: string;
+
+    /**
+     * 申请单号
+     */
+    applyNo: string;
+
+    /**
+     * 退票运单号
+     */
+    refundFastMailNo: string;
+
+}
+
+export interface TaxMerchantPrepaidInvoiceDTO {
+
+    /**
+     * 可索取发票金额结束
+     */
+    availableInvoiceAmountEnd: number;
+
+    /**
+     * 更新时间
+     */
+    gmtModified: string;
+
+    /**
+     * 结束时间
+     */
+    endDate: string;
+
+    /**
+     * 每页多少条
+     */
+    pageSize: number;
+
+    /**
+     * 当前开票模式，1账单开票，2预充值开票
+     */
+    invoiceMode: string;
+
+    /**
+     * 创建时间
+     */
+    gmtCreate: string;
+
+    /**
+     * 已索取发票金额
+     */
+    claimedInvoiceAmount: number;
+
+    /**
+     * 商户名称
+     */
+    merchantName: string;
+
+    /**
+     * 当前页码
+     */
+    curPage: number;
+
+    /**
+     * 服务主体名称
+     */
+    collectedSubjectName: string;
+
+    /**
+     * 累计可开票金额
+     */
+    cumulativeInvoiceAmount: number;
+
+    /**
+     * 服务主体编码
+     */
+    collectedSubjectNo: string;
+
+    /**
+     * 可索取发票金额开始
+     */
+    availableInvoiceAmountStart: number;
+
+    /**
+     * 主键
+     */
+    id: number;
+
+    /**
+     * 可索取发票金额
+     */
+    availableInvoiceAmount: number;
+
+    /**
+     * 开始时间
+     */
+    startDate: string;
+
+    /**
+     * 商户编号
+     */
+    merchantNo: string;
+
+}
+
+export interface TaxMerchantBillingInfoDTO {
+
+    /**
+     * gmt_modified，操作时间
+     */
+    gmtModified: string;
+
+    /**
+     * 每页多少条
+     */
+    pageSize: number;
+
+    /**
+     * 账单内容
+     */
+    billContent: string;
+
+    /**
+     * 账单日期结束时间
+     */
+    billDateEnd: string;
+
+    /**
+     * merchant_name，商户名称
+     */
+    merchantName: string;
+
+    idInList: number[];
+
+    /**
+     * bill_amount，账单金额(元)
+     */
+    billAmount: number;
+
+    /**
+     * payment_succ_amount，打款成功金额(元)
+     */
+    paymentSuccAmount: number;
+
+    /**
+     * collected_subject_name，代证主体
+     */
+    collectedSubjectName: string;
+
+    /**
+     * id
+     */
+    id: number;
+
+    /**
+     * tax_fee，实收税费(元)
+     */
+    taxFee: number;
+
+    /**
+     * bill_no，账单编号
+     */
+    billNo: string;
+
+    /**
+     * service_fee，实收服务费(元)
+     */
+    serviceFee: number;
+
+    /**
+     * status_desc，状态描述，如开票驳回、退票驳回等
+     */
+    statusDesc: string;
+
+    /**
+     * 账单类型，01:批次账单,02:日账单
+     */
+    billType: string;
+
+    /**
+     * bill_date，账单日期
+     */
+    billDate: string;
+
+    /**
+     * gmt_create，添加时间
+     */
+    gmtCreate: string;
+
+    /**
+     * 当前页码
+     */
+    curPage: number;
+
+    /**
+     * can_invoicing_amount，可开票金额(元)
+     */
+    canInvoicingAmount: number;
+
+    billNoInList: string[];
+
+    /**
+     * 是否统计 0：否，1：是
+     */
+    iscount: number;
+
+    /**
+     * 账单类型名称
+     */
+    billTypeName: string;
+
+    /**
+     * invoice_status，发票状态，1:初始,2:开票中,3:已开票,4:退票中,5:已作废,6:已撤销,7:已驳回
+     */
+    invoiceStatus: string;
+
+    /**
+     * 账单日期开始时间
+     */
+    billDateStart: string;
+
+    /**
+     * bill_period，账单周期，批次账单为单个批次id号；日账单为账单日期
+     */
+    billPeriod: string;
+
+    /**
+     * merchant_no，商户号
+     */
+    merchantNo: string;
 
 }
 

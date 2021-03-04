@@ -11,7 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.signByCode = exports.preSignByCode = exports.querySignRecords = exports.authQuery = exports.personAuth = exports.sign = void 0;
+exports.querySignRecords = exports.authQuery = exports.personAuth = exports.signByCode = exports.preSignByCode = exports.sign = void 0;
 /**
  * @file API：/contract/wechat
  */
@@ -29,6 +29,32 @@ function sign(signId, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.sign = sign;
+/**
+ * 使用签约邀请码进行签约，预请求
+ * @param signCode  签约邀请码
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ * @since 彭晓峰
+ */
+function preSignByCode(signCode, success, error, options) {
+    return request_1.ajax(__assign({ url: "/contract/wechat/preSignByCode", data: {
+            signCode: signCode
+        }, success: success, error: error }, options));
+}
+exports.preSignByCode = preSignByCode;
+/**
+ * 使用签约邀请码进行签约
+ * @param signCode  签约邀请码
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ * @since 彭晓峰
+ */
+function signByCode(signCode, success, error, options) {
+    return request_1.ajax(__assign({ url: "/contract/wechat/signByCode", data: {
+            signCode: signCode
+        }, success: success, error: error }, options));
+}
+exports.signByCode = signByCode;
 /**
  * 个人实名认证
  * @param success 请求成功的回调函数
@@ -62,29 +88,3 @@ function querySignRecords(signQuery, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.querySignRecords = querySignRecords;
-/**
- * 使用签约邀请码进行签约，预请求
- * @param signCode  签约邀请码
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- * @since 彭晓峰
- */
-function preSignByCode(signCode, success, error, options) {
-    return request_1.ajax(__assign({ url: "/contract/wechat/preSignByCode", data: {
-            signCode: signCode
-        }, success: success, error: error }, options));
-}
-exports.preSignByCode = preSignByCode;
-/**
- * 使用签约邀请码进行签约
- * @param signCode  签约邀请码
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- * @since 彭晓峰
- */
-function signByCode(signCode, success, error, options) {
-    return request_1.ajax(__assign({ url: "/contract/wechat/signByCode", data: {
-            signCode: signCode
-        }, success: success, error: error }, options));
-}
-exports.signByCode = signByCode;

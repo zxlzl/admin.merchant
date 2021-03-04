@@ -11,23 +11,11 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.disable = exports.update = exports.add = exports.queryByMerchantNo = exports.able = void 0;
+exports.disable = exports.update = exports.add = exports.able = exports.queryByMerchantNo = void 0;
 /**
  * @file API：/supervisor/contact
  */
 var request_1 = require("@/utils/request");
-/**
- * 启用商户联系人
- * @param id  商户ID
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function able(id, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/contact/able", data: {
-            id: id
-        }, success: success, error: error }, options));
-}
-exports.able = able;
 /**
  * 根据商户号查询商户联系人
  * @param merchantNo  查询条件
@@ -40,6 +28,18 @@ function queryByMerchantNo(merchantNo, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.queryByMerchantNo = queryByMerchantNo;
+/**
+ * 启用商户联系人
+ * @param id  商户ID
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function able(id, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/contact/able", data: {
+            id: id
+        }, success: success, error: error }, options));
+}
+exports.able = able;
 /**
  * 新增商户联系人
  * @param taxContactDTO  商户联系人

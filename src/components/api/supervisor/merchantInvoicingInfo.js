@@ -11,23 +11,11 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.queryPrepaidInvoicingInfo = exports.queryInvoicingInfo = exports.queryByMerchantNo = exports.updateInvoicingInfo = exports.queryPrepaidByMerchantNo = exports.addInvoicingInfo = void 0;
+exports.queryInvoicingInfo = exports.queryPrepaidInvoicingInfo = exports.addInvoicingInfo = exports.queryByMerchantNo = exports.updateInvoicingInfo = exports.queryPrepaidByMerchantNo = void 0;
 /**
  * @file API：/supervisor/merchantInvoicingInfo
  */
 var request_1 = require("@/utils/request");
-/**
- * 新增开票信息
- * @param billingInfoDTO  商户
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function addInvoicingInfo(billingInfoDTO, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/merchantInvoicingInfo/addInvoicingInfo", type: "POST", data: {
-            billingInfoDTO: billingInfoDTO
-        }, success: success, error: error }, options));
-}
-exports.addInvoicingInfo = addInvoicingInfo;
 /**
  * 根据商户号查询开票信息(开票页面使用，没有类目报错)
  * @param merchantNo  查询条件
@@ -65,14 +53,17 @@ function queryByMerchantNo(merchantNo, success, error, options) {
 }
 exports.queryByMerchantNo = queryByMerchantNo;
 /**
- * 查询开票信息
+ * 新增开票信息
+ * @param billingInfoDTO  商户
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-function queryInvoicingInfo(success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/merchantInvoicingInfo/queryInvoicingInfo", type: "POST", success: success, error: error }, options));
+function addInvoicingInfo(billingInfoDTO, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/merchantInvoicingInfo/addInvoicingInfo", type: "POST", data: {
+            billingInfoDTO: billingInfoDTO
+        }, success: success, error: error }, options));
 }
-exports.queryInvoicingInfo = queryInvoicingInfo;
+exports.addInvoicingInfo = addInvoicingInfo;
 /**
  * 查询开票信息(开票页面使用，没有类目报错)
  * @param success 请求成功的回调函数
@@ -82,3 +73,12 @@ function queryPrepaidInvoicingInfo(success, error, options) {
     return request_1.ajax(__assign({ url: "/supervisor/merchantInvoicingInfo/queryPrepaidInvoicingInfo", type: "POST", success: success, error: error }, options));
 }
 exports.queryPrepaidInvoicingInfo = queryPrepaidInvoicingInfo;
+/**
+ * 查询开票信息
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function queryInvoicingInfo(success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/merchantInvoicingInfo/queryInvoicingInfo", type: "POST", success: success, error: error }, options));
+}
+exports.queryInvoicingInfo = queryInvoicingInfo;

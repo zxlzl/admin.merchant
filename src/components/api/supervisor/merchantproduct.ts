@@ -4,20 +4,6 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 查询所有可用打款通道
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryPayChannel(success?: (data: ServiceResult<{[key: string]: string}[]>["data"], response: ServiceResult<{[key: string]: string}[]>, xhr: any) => void, error?: (message: ServiceResult<{[key: string]: string}[]>["message"], response: ServiceResult<{[key: string]: string}[]>, xhr: any) => void, options?: any): Promise<ServiceResult<{[key: string]: string}[]>["data"]> {
-    return ajax({
-        url: `/supervisor/merchantproduct/queryPayChannel`,
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
  * 查询商户产品信息
  * @param merchantNo 
  * @param success 请求成功的回调函数
@@ -29,6 +15,20 @@ export function queryByMerchantNo(merchantNo?: string, success?: (data: ServiceR
         data: {
             merchantNo: merchantNo
         },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 查询所有可用发放通道
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryPayChannel(success?: (data: ServiceResult<{[key: string]: string}[]>["data"], response: ServiceResult<{[key: string]: string}[]>, xhr: any) => void, error?: (message: ServiceResult<{[key: string]: string}[]>["message"], response: ServiceResult<{[key: string]: string}[]>, xhr: any) => void, options?: any): Promise<ServiceResult<{[key: string]: string}[]>["data"]> {
+    return ajax({
+        url: `/supervisor/merchantproduct/queryPayChannel`,
         success: success,
         error: error,
         ...options

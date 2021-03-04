@@ -4,7 +4,7 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 查询所有可用代征主体
+ * 查询所有可用服务主体
  * @param collectedSubjectNo 
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
@@ -22,7 +22,7 @@ export function querybyCollectedSubjectNo(collectedSubjectNo?: string, success?:
 }
 
 /**
- * 查询所有可用代征主体
+ * 查询所有可用服务主体
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
@@ -36,7 +36,7 @@ export function queryAllAvailable(success?: (data: ServiceResult<TaxCollectedSub
 }
 
 /**
- * 新增代征主体
+ * 新增服务主体
  * @param taxCollectedSubjectDTO  关联商户账号
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
@@ -54,7 +54,7 @@ export function add(taxCollectedSubjectDTO?: TaxCollectedSubjectDTO, success?: (
 }
 
 /**
- * 修改代征主体
+ * 修改服务主体
  * @param taxCollectedSubjectDTO  关联商户账号
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数

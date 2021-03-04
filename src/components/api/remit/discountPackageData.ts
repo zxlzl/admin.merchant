@@ -4,21 +4,6 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 优惠套餐下拉列表
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function getDropDownList(success?: (data: WebResult<DiscountPackageChildVO[]>["data"], response: WebResult<DiscountPackageChildVO[]>, xhr: any) => void, error?: (message: WebResult<DiscountPackageChildVO[]>["message"], response: WebResult<DiscountPackageChildVO[]>, xhr: any) => void, options?: any): Promise<WebResult<DiscountPackageChildVO[]>["data"]> {
-    return ajax({
-        url: `/remit/discountPackageData/getDropDownList`,
-        type: "POST",
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
  * 优惠套餐详情
  * @param id 
  * @param success 请求成功的回调函数
@@ -37,6 +22,21 @@ export function getOne(id?: number, success?: (data: WebResult<TaxDiscountPackag
     }) as any;
 }
 
+/**
+ * 优惠套餐下拉列表
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function getDropDownList(success?: (data: WebResult<DiscountPackageChildVO[]>["data"], response: WebResult<DiscountPackageChildVO[]>, xhr: any) => void, error?: (message: WebResult<DiscountPackageChildVO[]>["message"], response: WebResult<DiscountPackageChildVO[]>, xhr: any) => void, options?: any): Promise<WebResult<DiscountPackageChildVO[]>["data"]> {
+    return ajax({
+        url: `/remit/discountPackageData/getDropDownList`,
+        type: "POST",
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
 export interface WebResult<T> {
 
     code: string;
@@ -48,20 +48,6 @@ export interface WebResult<T> {
     success: boolean;
 
     message: string;
-
-}
-
-export interface DiscountPackageChildVO {
-
-    /**
-     * id
-     */
-    id: number;
-
-    /**
-     * 套餐名称
-     */
-    packageName: string;
 
 }
 
@@ -160,6 +146,20 @@ export interface TaxDiscountPackageDataVO {
      * 套餐编号
      */
     packageNo: string;
+
+}
+
+export interface DiscountPackageChildVO {
+
+    /**
+     * id
+     */
+    id: number;
+
+    /**
+     * 套餐名称
+     */
+    packageName: string;
 
 }
 

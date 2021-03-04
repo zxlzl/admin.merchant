@@ -11,32 +11,23 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.querySecondLevelDicListById = exports.queryFirstLevelDicListByType = exports.queryThirdLevelDicListById = exports.queryEnumsListByType = exports.queryAllPayChannelList = void 0;
+exports.queryAllPayChannelList = exports.queryFirstLevelDicListByType = exports.queryEnumsListByType = exports.queryThirdLevelDicListById = exports.querySecondLevelDicListById = void 0;
 /**
  * @file API：/common/enums
  */
 var request_1 = require("@/utils/request");
 /**
- * 查询所有可用打款通道
+ * 根据字典id获取二级字典值
+ * @param id  字典id
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-function queryAllPayChannelList(success, error, options) {
-    return request_1.ajax(__assign({ url: "/common/enums/queryAllPayChannelList", success: success, error: error }, options));
-}
-exports.queryAllPayChannelList = queryAllPayChannelList;
-/**
- * 根据枚举类型查询枚举值
- * @param enumType  枚举类型
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function queryEnumsListByType(enumType, success, error, options) {
-    return request_1.ajax(__assign({ url: "/common/enums/queryEnumsListByType", data: {
-            enumType: enumType
+function querySecondLevelDicListById(id, success, error, options) {
+    return request_1.ajax(__assign({ url: "/common/enums/querySecondLevelDicListById", data: {
+            id: id
         }, success: success, error: error }, options));
 }
-exports.queryEnumsListByType = queryEnumsListByType;
+exports.querySecondLevelDicListById = querySecondLevelDicListById;
 /**
  * 根据字典id获取三级字典值
  * @param id  字典id
@@ -50,6 +41,18 @@ function queryThirdLevelDicListById(id, success, error, options) {
 }
 exports.queryThirdLevelDicListById = queryThirdLevelDicListById;
 /**
+ * 根据枚举类型查询枚举值
+ * @param enumType  枚举类型
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function queryEnumsListByType(enumType, success, error, options) {
+    return request_1.ajax(__assign({ url: "/common/enums/queryEnumsListByType", data: {
+            enumType: enumType
+        }, success: success, error: error }, options));
+}
+exports.queryEnumsListByType = queryEnumsListByType;
+/**
  * 根据类型获取一级字典值
  * @param dicTypeCode  字典类型
  * @param success 请求成功的回调函数
@@ -62,14 +65,11 @@ function queryFirstLevelDicListByType(dicTypeCode, success, error, options) {
 }
 exports.queryFirstLevelDicListByType = queryFirstLevelDicListByType;
 /**
- * 根据字典id获取二级字典值
- * @param id  字典id
+ * 查询所有可用发放通道
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-function querySecondLevelDicListById(id, success, error, options) {
-    return request_1.ajax(__assign({ url: "/common/enums/querySecondLevelDicListById", data: {
-            id: id
-        }, success: success, error: error }, options));
+function queryAllPayChannelList(success, error, options) {
+    return request_1.ajax(__assign({ url: "/common/enums/queryAllPayChannelList", success: success, error: error }, options));
 }
-exports.querySecondLevelDicListById = querySecondLevelDicListById;
+exports.queryAllPayChannelList = queryAllPayChannelList;

@@ -24,26 +24,6 @@ export function saveOrUpdate(taxDiscountPackageDataPO?: TaxDiscountPackageDataPO
 }
 
 /**
- * 优惠套餐列表查询
- * @param taxDiscountPackageDataQuery 
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function getList(taxDiscountPackageDataQuery?: TaxDiscountPackageDataQuery, success?: (data: WebResult<PageBean>["data"], response: WebResult<PageBean>, xhr: any) => void, error?: (message: WebResult<PageBean>["message"], response: WebResult<PageBean>, xhr: any) => void, options?: any): Promise<WebResult<PageBean>["data"]> {
-    return ajax({
-        url: `/supervisor/discountPackageData/getList`,
-        type: "POST",
-        contentType: "application/json",
-        data: {
-            taxDiscountPackageDataQuery: taxDiscountPackageDataQuery
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
  * 返点费率列表删除
  * @param id 
  * @param success 请求成功的回调函数
@@ -93,6 +73,26 @@ export function getPackageStatusDropDownList(success?: (data: WebResult<Discount
 }
 
 /**
+ * 优惠套餐列表查询
+ * @param taxDiscountPackageDataQuery 
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function getList(taxDiscountPackageDataQuery?: TaxDiscountPackageDataQuery, success?: (data: WebResult<PageBean>["data"], response: WebResult<PageBean>, xhr: any) => void, error?: (message: WebResult<PageBean>["message"], response: WebResult<PageBean>, xhr: any) => void, options?: any): Promise<WebResult<PageBean>["data"]> {
+    return ajax({
+        url: `/supervisor/discountPackageData/getList`,
+        type: "POST",
+        contentType: "application/json",
+        data: {
+            taxDiscountPackageDataQuery: taxDiscountPackageDataQuery
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
  * 优惠套餐列表删除
  * @param id 
  * @param success 请求成功的回调函数
@@ -112,21 +112,6 @@ export function delete_1(id?: number, success?: (data: WebResult<void>["data"], 
 }
 
 /**
- * 优惠套餐下拉列表
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function getDropDownList(success?: (data: WebResult<DiscountPackageChildVO[]>["data"], response: WebResult<DiscountPackageChildVO[]>, xhr: any) => void, error?: (message: WebResult<DiscountPackageChildVO[]>["message"], response: WebResult<DiscountPackageChildVO[]>, xhr: any) => void, options?: any): Promise<WebResult<DiscountPackageChildVO[]>["data"]> {
-    return ajax({
-        url: `/supervisor/discountPackageData/getDropDownList`,
-        type: "POST",
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
  * 优惠套餐详情
  * @param id 
  * @param success 请求成功的回调函数
@@ -139,6 +124,21 @@ export function getOne(id?: number, success?: (data: WebResult<TaxDiscountPackag
         data: {
             id: id
         },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 优惠套餐下拉列表
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function getDropDownList(success?: (data: WebResult<DiscountPackageChildVO[]>["data"], response: WebResult<DiscountPackageChildVO[]>, xhr: any) => void, error?: (message: WebResult<DiscountPackageChildVO[]>["message"], response: WebResult<DiscountPackageChildVO[]>, xhr: any) => void, options?: any): Promise<WebResult<DiscountPackageChildVO[]>["data"]> {
+    return ajax({
+        url: `/supervisor/discountPackageData/getDropDownList`,
+        type: "POST",
         success: success,
         error: error,
         ...options
@@ -227,6 +227,34 @@ export interface WebResult<T> {
 
 }
 
+export interface DiscountPackageTypeEnumVO {
+
+    /**
+     * 套餐类型名称
+     */
+    packageTypeName: string;
+
+    /**
+     * 套餐类型 0--阶梯返点套餐
+     */
+    packageType: string;
+
+}
+
+export interface DiscountPackageStatusVO {
+
+    /**
+     * 套餐状态名称 
+     */
+    packageStatusName: string;
+
+    /**
+     * 套餐状态 0--失效  1--生效 
+     */
+    packageStatus: string;
+
+}
+
 export interface TaxDiscountPackageDataQuery {
 
     /**
@@ -302,48 +330,6 @@ export interface PageBean {
     list: any[];
 
     maxPage: number;
-
-}
-
-export interface DiscountPackageTypeEnumVO {
-
-    /**
-     * 套餐类型名称
-     */
-    packageTypeName: string;
-
-    /**
-     * 套餐类型 0--阶梯返点套餐
-     */
-    packageType: string;
-
-}
-
-export interface DiscountPackageStatusVO {
-
-    /**
-     * 套餐状态名称 
-     */
-    packageStatusName: string;
-
-    /**
-     * 套餐状态 0--失效  1--生效 
-     */
-    packageStatus: string;
-
-}
-
-export interface DiscountPackageChildVO {
-
-    /**
-     * id
-     */
-    id: number;
-
-    /**
-     * 套餐名称
-     */
-    packageName: string;
 
 }
 
@@ -442,6 +428,20 @@ export interface TaxDiscountPackageDataVO {
      * 套餐编号
      */
     packageNo: string;
+
+}
+
+export interface DiscountPackageChildVO {
+
+    /**
+     * id
+     */
+    id: number;
+
+    /**
+     * 套餐名称
+     */
+    packageName: string;
 
 }
 

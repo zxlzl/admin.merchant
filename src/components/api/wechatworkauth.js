@@ -11,7 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.setSessionInfo = exports.getRegisterCode = exports.getAuthUrl = void 0;
+exports.setSessionInfo = exports.getAuthUrl = exports.getRegisterCode = void 0;
 /**
  * @file API：/wechatworkauth
  */
@@ -21,19 +21,19 @@ var request_1 = require("@/utils/request");
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-function getAuthUrl(success, error, options) {
-    return request_1.ajax(__assign({ url: "/wechatworkauth/getAuthUrl", success: success, error: error }, options));
+function getRegisterCode(success, error, options) {
+    return request_1.ajax(__assign({ url: "/wechatworkauth/getRegisterCode", success: success, error: error }, options));
 }
-exports.getAuthUrl = getAuthUrl;
+exports.getRegisterCode = getRegisterCode;
 /**
  * 获取应用授权 URL
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-function getRegisterCode(success, error, options) {
-    return request_1.ajax(__assign({ url: "/wechatworkauth/getRegisterCode", success: success, error: error }, options));
+function getAuthUrl(success, error, options) {
+    return request_1.ajax(__assign({ url: "/wechatworkauth/getAuthUrl", success: success, error: error }, options));
 }
-exports.getRegisterCode = getRegisterCode;
+exports.getAuthUrl = getAuthUrl;
 /**
  * 设置授权配置
  * @param authType

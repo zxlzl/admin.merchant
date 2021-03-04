@@ -4,26 +4,12 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 获取节税类型
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryAllTaxPlanningType(success?: (data: WebResult["data"], response: WebResult, xhr: any) => void, error?: (message: WebResult["message"], response: WebResult, xhr: any) => void, options?: any): Promise<WebResult["data"]> {
-    return ajax({
-        url: `/supervisor/guest/queryAllTaxPlanningType`,
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
  * 访客列表
  * @param vo  查询条件
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function queryPage(vo?: TaxGuestUserVO, success?: (data: WebResult_1<PageBean_1<TaxGuestUserDTO>>["data"], response: WebResult_1<PageBean_1<TaxGuestUserDTO>>, xhr: any) => void, error?: (message: WebResult_1<PageBean_1<TaxGuestUserDTO>>["message"], response: WebResult_1<PageBean_1<TaxGuestUserDTO>>, xhr: any) => void, options?: any): Promise<WebResult_1<PageBean_1<TaxGuestUserDTO>>["data"]> {
+export function queryPage(vo?: TaxGuestUserVO, success?: (data: WebResult<PageBean_1<TaxGuestUserDTO>>["data"], response: WebResult<PageBean_1<TaxGuestUserDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean_1<TaxGuestUserDTO>>["message"], response: WebResult<PageBean_1<TaxGuestUserDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean_1<TaxGuestUserDTO>>["data"]> {
     return ajax({
         url: `/supervisor/guest/queryPage`,
         contentType: "application/json",
@@ -37,12 +23,26 @@ export function queryPage(vo?: TaxGuestUserVO, success?: (data: WebResult_1<Page
 }
 
 /**
+ * 获取节税类型
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryAllTaxPlanningType(success?: (data: WebResult_1["data"], response: WebResult_1, xhr: any) => void, error?: (message: WebResult_1["message"], response: WebResult_1, xhr: any) => void, options?: any): Promise<WebResult_1["data"]> {
+    return ajax({
+        url: `/supervisor/guest/queryAllTaxPlanningType`,
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
  * 新增访客
  * @param taxGuestUserDTO  访客记录
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function add(taxGuestUserDTO?: TaxGuestUserDTO, success?: (data: WebResult["data"], response: WebResult, xhr: any) => void, error?: (message: WebResult["message"], response: WebResult, xhr: any) => void, options?: any): Promise<WebResult["data"]> {
+export function add(taxGuestUserDTO?: TaxGuestUserDTO, success?: (data: WebResult_1["data"], response: WebResult_1, xhr: any) => void, error?: (message: WebResult_1["message"], response: WebResult_1, xhr: any) => void, options?: any): Promise<WebResult_1["data"]> {
     return ajax({
         url: `/supervisor/guest/add`,
         contentType: "application/json",
@@ -53,20 +53,6 @@ export function add(taxGuestUserDTO?: TaxGuestUserDTO, success?: (data: WebResul
         error: error,
         ...options
     }) as any;
-}
-
-export interface WebResult {
-
-    code: string;
-
-    redirectUrl: string;
-
-    data: any;
-
-    success: boolean;
-
-    message: string;
-
 }
 
 export interface TaxGuestUserQuery {
@@ -143,7 +129,7 @@ export interface TaxGuestUserVO {
 
 }
 
-export interface WebResult_1<T> {
+export interface WebResult<T> {
 
     code: string;
 
@@ -194,6 +180,20 @@ export interface TaxGuestUserDTO {
     gmtCreate: string;
 
     gname: string;
+
+}
+
+export interface WebResult_1 {
+
+    code: string;
+
+    redirectUrl: string;
+
+    data: any;
+
+    success: boolean;
+
+    message: string;
 
 }
 

@@ -100,12 +100,12 @@ export interface TaxMerchantExtendDTO {
     settleMode: number;
 
     /**
-     * 代征主体名称
+     * 服务主体名称
      */
     collectedSubjectName: string;
 
     /**
-     * 代征主体代码
+     * 服务主体代码
      */
     collectedSubjectNo: string;
 

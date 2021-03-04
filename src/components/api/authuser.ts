@@ -4,21 +4,6 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 获取图形验证码
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function sendGraphicVerificationCode(success?: (data: Result<string>["data"], response: Result<string>, xhr: any) => void, error?: (message: Result<string>["message"], response: Result<string>, xhr: any) => void, options?: any): Promise<Result<string>["data"]> {
-    return ajax({
-        url: `/authuser/sendGraphicVerificationCode`,
-        type: "POST",
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
  * 扫码授权登录
  * @param auth_code 
  * @param success 请求成功的回调函数
@@ -39,7 +24,7 @@ export function weChatWorkScanCodeAuthLogin(auth_code?: string, success?: (data:
 /**
  * 获取短信验证码
  * @param phoneNumber  手机号
- * @param type  type = 1:手机号登录 = 2:重置密码
+ * @param type  type = 1:手机号登录 = 2:重置/找回/忘记密码
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
@@ -51,6 +36,21 @@ export function sendSmsVerificationCode(phoneNumber?: string, type?: number, suc
             phoneNumber: phoneNumber,
             type: type
         },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 获取图形验证码
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function sendGraphicVerificationCode(success?: (data: Result<string>["data"], response: Result<string>, xhr: any) => void, error?: (message: Result<string>["message"], response: Result<string>, xhr: any) => void, options?: any): Promise<Result<string>["data"]> {
+    return ajax({
+        url: `/authuser/sendGraphicVerificationCode`,
+        type: "POST",
         success: success,
         error: error,
         ...options
@@ -187,7 +187,7 @@ export function sentUserBindVerifyCode(mobile?: string, success?: (data: Result<
 }
 
 /**
- * 发送绑定验证码
+ * 校验绑定验证码
  * @param userBindDto 
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数

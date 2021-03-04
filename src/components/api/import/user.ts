@@ -4,6 +4,21 @@
 import { ajax } from "@/utils/request";
 
 /**
+ * 用户导入excel
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function importUserExcel(success?: (data: WebResult<boolean>["data"], response: WebResult<boolean>, xhr: any) => void, error?: (message: WebResult<boolean>["message"], response: WebResult<boolean>, xhr: any) => void, options?: any): Promise<WebResult<boolean>["data"]> {
+    return ajax({
+        url: `/import/user/importUserExcel`,
+        type: "POST",
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
  * 查询用户导入列表信息
  * @param taxImportRecordDTO 
  * @param success 请求成功的回调函数
@@ -37,19 +52,18 @@ export function downLoadTemplate(success?: (data: any, response: void, xhr: any)
     }) as any;
 }
 
-/**
- * 用户导入excel
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function importUserExcel(success?: (data: WebResult<boolean>["data"], response: WebResult<boolean>, xhr: any) => void, error?: (message: WebResult<boolean>["message"], response: WebResult<boolean>, xhr: any) => void, options?: any): Promise<WebResult<boolean>["data"]> {
-    return ajax({
-        url: `/import/user/importUserExcel`,
-        type: "POST",
-        success: success,
-        error: error,
-        ...options
-    }) as any;
+export interface WebResult<T> {
+
+    code: string;
+
+    redirectUrl: string;
+
+    data: T;
+
+    success: boolean;
+
+    message: string;
+
 }
 
 export interface TaxImportRecordDTO {
@@ -99,12 +113,12 @@ export interface TaxImportRecordDTO {
     pageNo: number;
 
     /**
-     * 代征主体
+     * 服务主体
      */
     collectedSubjectName: string;
 
     /**
-     * 代征主体代码
+     * 服务主体代码
      */
     collectedSubjectNo: string;
 
@@ -142,20 +156,6 @@ export interface TaxImportRecordDTO {
      * 商户id
      */
     merchantNo: string;
-
-}
-
-export interface WebResult<T> {
-
-    code: string;
-
-    redirectUrl: string;
-
-    data: T;
-
-    success: boolean;
-
-    message: string;
 
 }
 

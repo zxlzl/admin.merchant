@@ -11,35 +11,35 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.retryDetailPay = exports.executePay = exports.bindUser = exports.queryPayDetailsList = exports.queryPayBatchList = exports.auditPayBatch = exports.downloadPayDetails = exports.detailPayStatus = exports.batchPayStatus = exports.payDetail = exports.queryPayBath = exports.payBill = exports.queryPayBathSummary = void 0;
+exports.executePay = exports.retryDetailPay = exports.auditPayBatch = exports.payBill = exports.queryPayBathSummary = exports.queryPayDetailsList = exports.downloadPayDetails = exports.detailPayStatus = exports.batchPayStatus = exports.payDetail = exports.queryPayBath = exports.queryPayBatchList = exports.bindUser = void 0;
 /**
  * @file API：/supervisor
  */
 var request_1 = require("@/utils/request");
 /**
- * 打款批次概要
- * @param query
+ * 关联商户账号
+ * @param taxMerchantUserDTO  关联商户账号
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-function queryPayBathSummary(query, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/queryPayBathSummary", contentType: "application/json", data: {
+function bindUser(taxMerchantUserDTO, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/bindUser", data: {
+            taxMerchantUserDTO: taxMerchantUserDTO
+        }, success: success, error: error }, options));
+}
+exports.bindUser = bindUser;
+/**
+ * 打款批次列表
+ * @param query  查询条件
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function queryPayBatchList(query, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/queryPayBatchList", contentType: "application/json", data: {
             query: query
         }, success: success, error: error }, options));
 }
-exports.queryPayBathSummary = queryPayBathSummary;
-/**
- * 费用单
- * @param id  批次明细主键
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function payBill(id, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/payBill", data: {
-            id: id
-        }, success: success, error: error }, options));
-}
-exports.payBill = payBill;
+exports.queryPayBatchList = queryPayBatchList;
 /**
  * 打款批次
  * @param query
@@ -95,30 +95,6 @@ function downloadPayDetails(query, success, error, options) {
 }
 exports.downloadPayDetails = downloadPayDetails;
 /**
- * 打款批次审核
- * @param taxPayBatchAuditDTO  批次审核对象
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function auditPayBatch(taxPayBatchAuditDTO, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/auditPayBatch", data: {
-            taxPayBatchAuditDTO: taxPayBatchAuditDTO
-        }, success: success, error: error }, options));
-}
-exports.auditPayBatch = auditPayBatch;
-/**
- * 打款批次列表
- * @param query  查询条件
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function queryPayBatchList(query, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/queryPayBatchList", contentType: "application/json", data: {
-            query: query
-        }, success: success, error: error }, options));
-}
-exports.queryPayBatchList = queryPayBatchList;
-/**
  * 打款明细列表
  * @param query  查询条件
  * @param success 请求成功的回调函数
@@ -131,29 +107,41 @@ function queryPayDetailsList(query, success, error, options) {
 }
 exports.queryPayDetailsList = queryPayDetailsList;
 /**
- * 关联商户账号
- * @param taxMerchantUserDTO  关联商户账号
+ * 打款批次概要
+ * @param query
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-function bindUser(taxMerchantUserDTO, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/bindUser", data: {
-            taxMerchantUserDTO: taxMerchantUserDTO
+function queryPayBathSummary(query, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/queryPayBathSummary", contentType: "application/json", data: {
+            query: query
         }, success: success, error: error }, options));
 }
-exports.bindUser = bindUser;
+exports.queryPayBathSummary = queryPayBathSummary;
 /**
- * 打款
- * @param taxPayBatchDTO  批次
+ * 费用单
+ * @param id  批次明细主键
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-function executePay(taxPayBatchDTO, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/executePay", contentType: "application/json", data: {
-            taxPayBatchDTO: taxPayBatchDTO
+function payBill(id, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/payBill", data: {
+            id: id
         }, success: success, error: error }, options));
 }
-exports.executePay = executePay;
+exports.payBill = payBill;
+/**
+ * 打款批次审核
+ * @param taxPayBatchAuditDTO  批次审核对象
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function auditPayBatch(taxPayBatchAuditDTO, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/auditPayBatch", data: {
+            taxPayBatchAuditDTO: taxPayBatchAuditDTO
+        }, success: success, error: error }, options));
+}
+exports.auditPayBatch = auditPayBatch;
 /**
  * 重试打款
  * @param taxPayBatchDetailDTO  批次明细
@@ -166,3 +154,15 @@ function retryDetailPay(taxPayBatchDetailDTO, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.retryDetailPay = retryDetailPay;
+/**
+ * 打款
+ * @param taxPayBatchDTO  批次
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function executePay(taxPayBatchDTO, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/executePay", contentType: "application/json", data: {
+            taxPayBatchDTO: taxPayBatchDTO
+        }, success: success, error: error }, options));
+}
+exports.executePay = executePay;

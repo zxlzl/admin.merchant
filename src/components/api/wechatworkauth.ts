@@ -8,9 +8,9 @@ import { ajax } from "@/utils/request";
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function getAuthUrl(success?: (data: Result<string>["data"], response: Result<string>, xhr: any) => void, error?: (message: Result<string>["message"], response: Result<string>, xhr: any) => void, options?: any): Promise<Result<string>["data"]> {
+export function getRegisterCode(success?: (data: Result<string>["data"], response: Result<string>, xhr: any) => void, error?: (message: Result<string>["message"], response: Result<string>, xhr: any) => void, options?: any): Promise<Result<string>["data"]> {
     return ajax({
-        url: `/wechatworkauth/getAuthUrl`,
+        url: `/wechatworkauth/getRegisterCode`,
         success: success,
         error: error,
         ...options
@@ -22,9 +22,9 @@ export function getAuthUrl(success?: (data: Result<string>["data"], response: Re
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function getRegisterCode(success?: (data: Result<string>["data"], response: Result<string>, xhr: any) => void, error?: (message: Result<string>["message"], response: Result<string>, xhr: any) => void, options?: any): Promise<Result<string>["data"]> {
+export function getAuthUrl(success?: (data: Result<string>["data"], response: Result<string>, xhr: any) => void, error?: (message: Result<string>["message"], response: Result<string>, xhr: any) => void, options?: any): Promise<Result<string>["data"]> {
     return ajax({
-        url: `/wechatworkauth/getRegisterCode`,
+        url: `/wechatworkauth/getAuthUrl`,
         success: success,
         error: error,
         ...options

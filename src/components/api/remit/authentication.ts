@@ -172,7 +172,7 @@ export interface AuthenticationInfoDto {
     countryCode: string;
 
     /**
-     * 代征主体名称
+     * 服务主体名称
      */
     collectedSubjectName: string;
 
@@ -187,7 +187,7 @@ export interface AuthenticationInfoDto {
     name: string;
 
     /**
-     * 代征主体编号
+     * 服务主体编号
      */
     collectedSubjectNo: string;
 
@@ -316,7 +316,7 @@ export interface TaxAuthenticationInfoDTO {
     countryCode: string;
 
     /**
-     * 代征主体名称
+     * 服务主体名称
      */
     collectedSubjectName: string;
 
@@ -331,7 +331,7 @@ export interface TaxAuthenticationInfoDTO {
     name: string;
 
     /**
-     * 代征主体编号
+     * 服务主体编号
      */
     collectedSubjectNo: string;
 

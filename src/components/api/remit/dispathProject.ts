@@ -167,12 +167,12 @@ export interface TaxDispatchProjectDTO {
     projectNo: string;
 
     /**
-     * 代征主体名称（服务主体）
+     * 服务主体名称（服务主体）
      */
     collectedSubjectName: string;
 
     /**
-     * 代征主体编码
+     * 服务主体编码
      */
     collectedSubjectNo: string;
 

@@ -4,6 +4,24 @@
 import { ajax } from "@/utils/request";
 
 /**
+ * 下载平台公钥
+ * @param fileName  下载文件名
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function downLoadSecret(fileName?: string, success?: (data: any, response: void, xhr: any) => void, error?: (message: any, response: void, xhr: any) => void, options?: any): Promise<any> {
+    return ajax({
+        url: `/supervisor/merchantsecret/downLoadSecret`,
+        data: {
+            fileName: fileName
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
  * 根据商户号查询商户密钥等信息
  * @param merchantNo  查询条件
  * @param success 请求成功的回调函数
@@ -50,24 +68,6 @@ export function queryPlatformSecret(merchantNo?: string, success?: (data: WebRes
         url: `/supervisor/merchantsecret/queryPlatformSecret`,
         data: {
             merchantNo: merchantNo
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 下载平台公钥
- * @param fileName  下载文件名
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function downLoadSecret(fileName?: string, success?: (data: any, response: void, xhr: any) => void, error?: (message: any, response: void, xhr: any) => void, options?: any): Promise<any> {
-    return ajax({
-        url: `/supervisor/merchantsecret/downLoadSecret`,
-        data: {
-            fileName: fileName
         },
         success: success,
         error: error,

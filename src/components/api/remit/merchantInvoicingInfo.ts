@@ -4,13 +4,13 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 查询开票信息
+ * 查询开票信息(开票页面使用，没有类目报错)
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function queryInvoicingInfo(success?: (data: WebResult<TaxMerchantInvoicingInfoDTO>["data"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantInvoicingInfoDTO>["message"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantInvoicingInfoDTO>["data"]> {
+export function queryPrepaidInvoicingInfo(success?: (data: WebResult<TaxMerchantInvoicingInfoDTO>["data"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantInvoicingInfoDTO>["message"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantInvoicingInfoDTO>["data"]> {
     return ajax({
-        url: `/remit/merchantInvoicingInfo/queryInvoicingInfo`,
+        url: `/remit/merchantInvoicingInfo/queryPrepaidInvoicingInfo`,
         type: "POST",
         success: success,
         error: error,
@@ -19,13 +19,13 @@ export function queryInvoicingInfo(success?: (data: WebResult<TaxMerchantInvoici
 }
 
 /**
- * 查询开票信息(开票页面使用，没有类目报错)
+ * 查询开票信息
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function queryPrepaidInvoicingInfo(success?: (data: WebResult<TaxMerchantInvoicingInfoDTO>["data"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantInvoicingInfoDTO>["message"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantInvoicingInfoDTO>["data"]> {
+export function queryInvoicingInfo(success?: (data: WebResult<TaxMerchantInvoicingInfoDTO>["data"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantInvoicingInfoDTO>["message"], response: WebResult<TaxMerchantInvoicingInfoDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantInvoicingInfoDTO>["data"]> {
     return ajax({
-        url: `/remit/merchantInvoicingInfo/queryPrepaidInvoicingInfo`,
+        url: `/remit/merchantInvoicingInfo/queryInvoicingInfo`,
         type: "POST",
         success: success,
         error: error,

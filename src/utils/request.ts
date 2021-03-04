@@ -9,8 +9,11 @@ import { getQuery } from './query';
 let apiUrl, loginUrl, middlewareApi;
 switch (process.env.DEFINED_ENV) {
   case 'dev':
-    apiUrl = 'http://swy-taxmng.wdai.com/api'; // 稳定环境
-    middlewareApi = 'http://basicservice.wdai.com/api';
+    // apiUrl = 'http://swy-taxmng.wdai.com/api'; // 稳定环境
+    // middlewareApi = 'http://basicservice.wdai.com/api';
+
+    apiUrl = 'http://settlement.szjh.com/api'; 
+    middlewareApi = 'http://basicService.szjh.com/api';
     break;
   case 'fat':
     apiUrl = 'http://settlement.szjh.com/api'; 

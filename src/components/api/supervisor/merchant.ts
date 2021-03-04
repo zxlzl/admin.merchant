@@ -40,124 +40,6 @@ export function queryWeChatWorkCorpAdmins(merchantNo?: string, success?: (data: 
 }
 
 /**
- * 获取服务商枚举
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function belongMerchant(success?: (data: WebResult<{[key: string]: string}[]>["data"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, error?: (message: WebResult<{[key: string]: string}[]>["message"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, options?: any): Promise<WebResult<{[key: string]: string}[]>["data"]> {
-    return ajax({
-        url: `/supervisor/merchant/belongMerchant`,
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 启用商户
- * @param id  商户ID
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function able(id?: number, success?: (data: WebResult<TaxMerchantDTO>["data"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantDTO>["message"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantDTO>["data"]> {
-    return ajax({
-        url: `/supervisor/merchant/able`,
-        data: {
-            id: id
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 商户列表
- * @param vo  查询条件
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryPage(vo?: MerchantVO, success?: (data: WebResult<PageBean_1<TaxMerchantDTO>>["data"], response: WebResult<PageBean_1<TaxMerchantDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean_1<TaxMerchantDTO>>["message"], response: WebResult<PageBean_1<TaxMerchantDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean_1<TaxMerchantDTO>>["data"]> {
-    return ajax({
-        url: `/supervisor/merchant/queryPage`,
-        contentType: "application/json",
-        data: {
-            vo: vo
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 查询所有可用商户
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryAllAvailable(success?: (data: ServiceResult<TaxMerchantDTO[]>["data"], response: ServiceResult<TaxMerchantDTO[]>, xhr: any) => void, error?: (message: ServiceResult<TaxMerchantDTO[]>["message"], response: ServiceResult<TaxMerchantDTO[]>, xhr: any) => void, options?: any): Promise<ServiceResult<TaxMerchantDTO[]>["data"]> {
-    return ajax({
-        url: `/supervisor/merchant/queryAllAvailable`,
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 更新商户---新
- * @param merchantDTO  商户
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function updateMerchant(merchantDTO?: TaxMerchantDTO, success?: (data: WebResult<TaxMerchantDTO>["data"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantDTO>["message"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantDTO>["data"]> {
-    return ajax({
-        url: `/supervisor/merchant/updateMerchant`,
-        contentType: "application/json",
-        data: {
-            merchantDTO: merchantDTO
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 查询所有可用商户及代征主体列表
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryAllMerchant(success?: (data: ServiceResult<TaxMerchantAndCollectedSubject[]>["data"], response: ServiceResult<TaxMerchantAndCollectedSubject[]>, xhr: any) => void, error?: (message: ServiceResult<TaxMerchantAndCollectedSubject[]>["message"], response: ServiceResult<TaxMerchantAndCollectedSubject[]>, xhr: any) => void, options?: any): Promise<ServiceResult<TaxMerchantAndCollectedSubject[]>["data"]> {
-    return ajax({
-        url: `/supervisor/merchant/queryAllMerchant`,
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 发送邮件
- * @param merchantNo 
- * @param useremail 
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function sendEmail(merchantNo?: string, useremail?: string, success?: (data: ServiceResult<void>["data"], response: ServiceResult<void>, xhr: any) => void, error?: (message: ServiceResult<void>["message"], response: ServiceResult<void>, xhr: any) => void, options?: any): Promise<ServiceResult<void>["data"]> {
-    return ajax({
-        url: `/supervisor/merchant/sendEmail`,
-        data: {
-            merchantNo: merchantNo,
-            useremail: useremail
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
  * 获取操作来源枚举
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
@@ -165,24 +47,6 @@ export function sendEmail(merchantNo?: string, useremail?: string, success?: (da
 export function operatorSource(success?: (data: WebResult<OperatorSourceEnum[]>["data"], response: WebResult<OperatorSourceEnum[]>, xhr: any) => void, error?: (message: WebResult<OperatorSourceEnum[]>["message"], response: WebResult<OperatorSourceEnum[]>, xhr: any) => void, options?: any): Promise<WebResult<OperatorSourceEnum[]>["data"]> {
     return ajax({
         url: `/supervisor/merchant/operatorSource`,
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 根据商户号查询商户
- * @param merchantNo  查询条件
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryByMerchantNo(merchantNo?: string, success?: (data: WebResult<TaxMerchantDTO>["data"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantDTO>["message"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantDTO>["data"]> {
-    return ajax({
-        url: `/supervisor/merchant/queryByMerchantNo`,
-        data: {
-            merchantNo: merchantNo
-        },
         success: success,
         error: error,
         ...options
@@ -226,17 +90,83 @@ export function queryBalanceListByMerchant(merchantNo?: string, success?: (data:
 }
 
 /**
- * 新增商户（商户基本信息）
- * @param merchantDTO  商户
+ * 获取服务商枚举
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function addMerchant(merchantDTO?: TaxMerchantDTO, success?: (data: WebResult<TaxMerchantDTO>["data"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantDTO>["message"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantDTO>["data"]> {
+export function belongMerchant(success?: (data: WebResult<{[key: string]: string}[]>["data"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, error?: (message: WebResult<{[key: string]: string}[]>["message"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, options?: any): Promise<WebResult<{[key: string]: string}[]>["data"]> {
     return ajax({
-        url: `/supervisor/merchant/addMerchant`,
+        url: `/supervisor/merchant/belongMerchant`,
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 商户列表
+ * @param vo  查询条件
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryPage(vo?: MerchantVO, success?: (data: WebResult<PageBean_1<TaxMerchantDTO>>["data"], response: WebResult<PageBean_1<TaxMerchantDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean_1<TaxMerchantDTO>>["message"], response: WebResult<PageBean_1<TaxMerchantDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean_1<TaxMerchantDTO>>["data"]> {
+    return ajax({
+        url: `/supervisor/merchant/queryPage`,
         contentType: "application/json",
         data: {
-            merchantDTO: merchantDTO
+            vo: vo
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 根据商户号查询商户
+ * @param merchantNo  查询条件
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryByMerchantNo(merchantNo?: string, success?: (data: WebResult<TaxMerchantDTO>["data"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantDTO>["message"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantDTO>["data"]> {
+    return ajax({
+        url: `/supervisor/merchant/queryByMerchantNo`,
+        data: {
+            merchantNo: merchantNo
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 查询所有可用商户及服务主体列表
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryAllMerchant(success?: (data: ServiceResult<TaxMerchantAndCollectedSubject[]>["data"], response: ServiceResult<TaxMerchantAndCollectedSubject[]>, xhr: any) => void, error?: (message: ServiceResult<TaxMerchantAndCollectedSubject[]>["message"], response: ServiceResult<TaxMerchantAndCollectedSubject[]>, xhr: any) => void, options?: any): Promise<ServiceResult<TaxMerchantAndCollectedSubject[]>["data"]> {
+    return ajax({
+        url: `/supervisor/merchant/queryAllMerchant`,
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 发送邮件
+ * @param merchantNo 
+ * @param useremail 
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function sendEmail(merchantNo?: string, useremail?: string, success?: (data: ServiceResult<void>["data"], response: ServiceResult<void>, xhr: any) => void, error?: (message: ServiceResult<void>["message"], response: ServiceResult<void>, xhr: any) => void, options?: any): Promise<ServiceResult<void>["data"]> {
+    return ajax({
+        url: `/supervisor/merchant/sendEmail`,
+        data: {
+            merchantNo: merchantNo,
+            useremail: useremail
         },
         success: success,
         error: error,
@@ -256,6 +186,76 @@ export function queryWeChatWorkCorpInfos(merchantNo?: string, success?: (data: S
         data: {
             merchantNo: merchantNo
         },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 启用商户
+ * @param id  商户ID
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function able(id?: number, success?: (data: WebResult<TaxMerchantDTO>["data"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantDTO>["message"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantDTO>["data"]> {
+    return ajax({
+        url: `/supervisor/merchant/able`,
+        data: {
+            id: id
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 新增商户（商户基本信息）
+ * @param merchantDTO  商户
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function addMerchant(merchantDTO?: TaxMerchantDTO, success?: (data: WebResult<TaxMerchantDTO>["data"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantDTO>["message"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantDTO>["data"]> {
+    return ajax({
+        url: `/supervisor/merchant/addMerchant`,
+        contentType: "application/json",
+        data: {
+            merchantDTO: merchantDTO
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 更新商户---新
+ * @param merchantDTO  商户
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function updateMerchant(merchantDTO?: TaxMerchantDTO, success?: (data: WebResult<TaxMerchantDTO>["data"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantDTO>["message"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantDTO>["data"]> {
+    return ajax({
+        url: `/supervisor/merchant/updateMerchant`,
+        contentType: "application/json",
+        data: {
+            merchantDTO: merchantDTO
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 查询所有可用商户
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryAllAvailable(success?: (data: ServiceResult<TaxMerchantDTO[]>["data"], response: ServiceResult<TaxMerchantDTO[]>, xhr: any) => void, error?: (message: ServiceResult<TaxMerchantDTO[]>["message"], response: ServiceResult<TaxMerchantDTO[]>, xhr: any) => void, options?: any): Promise<ServiceResult<TaxMerchantDTO[]>["data"]> {
+    return ajax({
+        url: `/supervisor/merchant/queryAllAvailable`,
         success: success,
         error: error,
         ...options
@@ -459,6 +459,170 @@ export interface WebResult<T> {
 
 }
 
+export enum OperatorSourceEnum {
+
+}
+
+export interface Object {
+
+}
+
+export interface PageBean {
+
+    curPage: number;
+
+    data: Object;
+
+    endRecordCount: number;
+
+    recordCount: number;
+
+    pageSize: number;
+
+    startRecordCount: number;
+
+    list: any[];
+
+    maxPage: number;
+
+}
+
+export interface QueryMerchantAccountBalanceVO {
+
+    accountType: string;
+
+    page: PageBean;
+
+    merchantNo: string;
+
+}
+
+export interface PlatformAccountDTO {
+
+    acctAmt: number;
+
+    bizFreezeAmt: number;
+
+    openedBank: string;
+
+    bankBranch: string;
+
+    purpose: string;
+
+    accountType: string;
+
+    acctName: string;
+
+    title: string;
+
+    freezeAmt: number;
+
+    sysFreezeAmt: number;
+
+    availBalance: number;
+
+    subAccountNo: string;
+
+    acctNo: string;
+
+    subAccountName: string;
+
+    collectedSubjectName: string;
+
+    collectedSubjectNo: string;
+
+}
+
+export interface MerchantQuery {
+
+    operatorSource: string;
+
+    licenseUrl: string;
+
+    gmtModified: string;
+
+    endDate: string;
+
+    /**
+     * 排序语句
+     */
+    orderBy: string;
+
+    /**
+     * 每页多少条
+     */
+    pageSize: number;
+
+    gmtCreate: string;
+
+    feeRate: number;
+
+    operator: string;
+
+    merchantAbbr: string;
+
+    merchantName: string;
+
+    taxRate: number;
+
+    /**
+     * sql查询记录开始下标
+     */
+    startIndex: number;
+
+    /**
+     * 当前页码
+     */
+    curPage: number;
+
+    belongSalesman: string;
+
+    taxpayerType: string;
+
+    registrationNumber: string;
+
+    collectedSubjectNo: string;
+
+    id: number;
+
+    isApiAccess: string;
+
+    startDate: string;
+
+    merchantNo: string;
+
+    status: string;
+
+}
+
+export interface MerchantVO {
+
+    merchantQuery: MerchantQuery;
+
+    page: PageBean;
+
+}
+
+export interface PageBean_1<T> {
+
+    curPage: number;
+
+    data: Object;
+
+    endRecordCount: number;
+
+    recordCount: number;
+
+    pageSize: number;
+
+    startRecordCount: number;
+
+    list: any[];
+
+    maxPage: number;
+
+}
+
 export interface TaxUserDto {
 
     gmtModified: string;
@@ -567,120 +731,6 @@ export interface TaxMerchantDTO {
 
 }
 
-export interface MerchantQuery {
-
-    operatorSource: string;
-
-    licenseUrl: string;
-
-    gmtModified: string;
-
-    endDate: string;
-
-    /**
-     * 排序语句
-     */
-    orderBy: string;
-
-    /**
-     * 每页多少条
-     */
-    pageSize: number;
-
-    gmtCreate: string;
-
-    feeRate: number;
-
-    operator: string;
-
-    merchantAbbr: string;
-
-    merchantName: string;
-
-    taxRate: number;
-
-    /**
-     * sql查询记录开始下标
-     */
-    startIndex: number;
-
-    /**
-     * 当前页码
-     */
-    curPage: number;
-
-    belongSalesman: string;
-
-    taxpayerType: string;
-
-    registrationNumber: string;
-
-    collectedSubjectNo: string;
-
-    id: number;
-
-    isApiAccess: string;
-
-    startDate: string;
-
-    merchantNo: string;
-
-    status: string;
-
-}
-
-export interface Object {
-
-}
-
-export interface PageBean {
-
-    curPage: number;
-
-    data: Object;
-
-    endRecordCount: number;
-
-    recordCount: number;
-
-    pageSize: number;
-
-    startRecordCount: number;
-
-    list: any[];
-
-    maxPage: number;
-
-}
-
-export interface MerchantVO {
-
-    merchantQuery: MerchantQuery;
-
-    page: PageBean;
-
-}
-
-export interface PageBean_1<T> {
-
-    curPage: number;
-
-    data: Object;
-
-    endRecordCount: number;
-
-    recordCount: number;
-
-    pageSize: number;
-
-    startRecordCount: number;
-
-    list: any[];
-
-    maxPage: number;
-
-}
-
 export interface TaxMerchantAndCollectedSubject {
 
     collectedSubjectName: string;
@@ -690,56 +740,6 @@ export interface TaxMerchantAndCollectedSubject {
     merchantName: string;
 
     merchantNo: string;
-
-}
-
-export enum OperatorSourceEnum {
-
-}
-
-export interface QueryMerchantAccountBalanceVO {
-
-    accountType: string;
-
-    page: PageBean;
-
-    merchantNo: string;
-
-}
-
-export interface PlatformAccountDTO {
-
-    acctAmt: number;
-
-    bizFreezeAmt: number;
-
-    openedBank: string;
-
-    bankBranch: string;
-
-    purpose: string;
-
-    accountType: string;
-
-    acctName: string;
-
-    title: string;
-
-    freezeAmt: number;
-
-    sysFreezeAmt: number;
-
-    availBalance: number;
-
-    subAccountNo: string;
-
-    acctNo: string;
-
-    subAccountName: string;
-
-    collectedSubjectName: string;
-
-    collectedSubjectNo: string;
 
 }
 
@@ -944,12 +944,12 @@ export interface TaxSubAccountDTO {
     accountNo: string;
 
     /**
-     * 代征主体名称
+     * 服务主体名称
      */
     collectedSubjectName: string;
 
     /**
-     * 代征主体代码
+     * 服务主体代码
      */
     collectedSubjectNo: string;
 

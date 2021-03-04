@@ -4,70 +4,6 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 根据用户id查询商户列表
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryByUid(success?: (data: WebResult<TaxMerchantDTO[]>["data"], response: WebResult<TaxMerchantDTO[]>, xhr: any) => void, error?: (message: WebResult<TaxMerchantDTO[]>["message"], response: WebResult<TaxMerchantDTO[]>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantDTO[]>["data"]> {
-    return ajax({
-        url: `/remit/merchant/queryByUid`,
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 获取服务商枚举
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function belongMerchant(success?: (data: WebResult<{[key: string]: string}[]>["data"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, error?: (message: WebResult<{[key: string]: string}[]>["message"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, options?: any): Promise<WebResult<{[key: string]: string}[]>["data"]> {
-    return ajax({
-        url: `/remit/merchant/belongMerchant`,
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 查询授权应用信息
- * @param merchantNo 
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryWeChatWorkCorpAgents(merchantNo?: string, success?: (data: ServiceResult<TaxWeChatWorkPermanentAgentVo[]>["data"], response: ServiceResult<TaxWeChatWorkPermanentAgentVo[]>, xhr: any) => void, error?: (message: ServiceResult<TaxWeChatWorkPermanentAgentVo[]>["message"], response: ServiceResult<TaxWeChatWorkPermanentAgentVo[]>, xhr: any) => void, options?: any): Promise<ServiceResult<TaxWeChatWorkPermanentAgentVo[]>["data"]> {
-    return ajax({
-        url: `/remit/merchant/queryWeChatWorkCorpAgents`,
-        data: {
-            merchantNo: merchantNo
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 根据商户号查询商户
- * @param merchantNo  查询条件
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryByMerchantNo(merchantNo?: string, success?: (data: WebResult<TaxMerchantDTO>["data"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantDTO>["message"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantDTO>["data"]> {
-    return ajax({
-        url: `/remit/merchant/queryByMerchantNo`,
-        data: {
-            merchantNo: merchantNo
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
  * 根据商户号查询商户账户余额（payaccount）
  * @param queryMerchantAccountBalanceVO  查询条件
  * @param success 请求成功的回调函数
@@ -115,6 +51,152 @@ export function getCurrentMerchant(success?: (data: WebResult<TaxMerchantDTO>["d
         error: error,
         ...options
     }) as any;
+}
+
+/**
+ * 根据用户id查询商户列表
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryByUid(success?: (data: WebResult<TaxMerchantDTO[]>["data"], response: WebResult<TaxMerchantDTO[]>, xhr: any) => void, error?: (message: WebResult<TaxMerchantDTO[]>["message"], response: WebResult<TaxMerchantDTO[]>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantDTO[]>["data"]> {
+    return ajax({
+        url: `/remit/merchant/queryByUid`,
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 获取服务商枚举
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function belongMerchant(success?: (data: WebResult<{[key: string]: string}[]>["data"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, error?: (message: WebResult<{[key: string]: string}[]>["message"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, options?: any): Promise<WebResult<{[key: string]: string}[]>["data"]> {
+    return ajax({
+        url: `/remit/merchant/belongMerchant`,
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 根据商户号查询商户
+ * @param merchantNo  查询条件
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryByMerchantNo(merchantNo?: string, success?: (data: WebResult<TaxMerchantDTO>["data"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, error?: (message: WebResult<TaxMerchantDTO>["message"], response: WebResult<TaxMerchantDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxMerchantDTO>["data"]> {
+    return ajax({
+        url: `/remit/merchant/queryByMerchantNo`,
+        data: {
+            merchantNo: merchantNo
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 查询授权应用信息
+ * @param merchantNo 
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function queryWeChatWorkCorpAgents(merchantNo?: string, success?: (data: ServiceResult<TaxWeChatWorkPermanentAgentVo[]>["data"], response: ServiceResult<TaxWeChatWorkPermanentAgentVo[]>, xhr: any) => void, error?: (message: ServiceResult<TaxWeChatWorkPermanentAgentVo[]>["message"], response: ServiceResult<TaxWeChatWorkPermanentAgentVo[]>, xhr: any) => void, options?: any): Promise<ServiceResult<TaxWeChatWorkPermanentAgentVo[]>["data"]> {
+    return ajax({
+        url: `/remit/merchant/queryWeChatWorkCorpAgents`,
+        data: {
+            merchantNo: merchantNo
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+export interface Object {
+
+}
+
+export interface PageBean {
+
+    curPage: number;
+
+    data: Object;
+
+    endRecordCount: number;
+
+    recordCount: number;
+
+    pageSize: number;
+
+    startRecordCount: number;
+
+    list: any[];
+
+    maxPage: number;
+
+}
+
+export interface QueryMerchantAccountBalanceVO {
+
+    accountType: string;
+
+    page: PageBean;
+
+    merchantNo: string;
+
+}
+
+export interface ServiceResult<T> {
+
+    code: string;
+
+    data: T;
+
+    success: boolean;
+
+    message: string;
+
+}
+
+export interface PlatformAccountDTO {
+
+    acctAmt: number;
+
+    bizFreezeAmt: number;
+
+    openedBank: string;
+
+    bankBranch: string;
+
+    purpose: string;
+
+    accountType: string;
+
+    acctName: string;
+
+    title: string;
+
+    freezeAmt: number;
+
+    sysFreezeAmt: number;
+
+    availBalance: number;
+
+    subAccountNo: string;
+
+    acctNo: string;
+
+    subAccountName: string;
+
+    collectedSubjectName: string;
+
+    collectedSubjectNo: string;
+
 }
 
 export interface WebResult<T> {
@@ -239,18 +321,6 @@ export interface TaxMerchantDTO {
 
 }
 
-export interface ServiceResult<T> {
-
-    code: string;
-
-    data: T;
-
-    success: boolean;
-
-    message: string;
-
-}
-
 export interface TaxWeChatWorkPermanentAgentVo {
 
     /**
@@ -335,76 +405,6 @@ export interface TaxWeChatWorkPermanentAgentVo {
     isDel: boolean;
 
     createDate: string;
-
-}
-
-export interface Object {
-
-}
-
-export interface PageBean {
-
-    curPage: number;
-
-    data: Object;
-
-    endRecordCount: number;
-
-    recordCount: number;
-
-    pageSize: number;
-
-    startRecordCount: number;
-
-    list: any[];
-
-    maxPage: number;
-
-}
-
-export interface QueryMerchantAccountBalanceVO {
-
-    accountType: string;
-
-    page: PageBean;
-
-    merchantNo: string;
-
-}
-
-export interface PlatformAccountDTO {
-
-    acctAmt: number;
-
-    bizFreezeAmt: number;
-
-    openedBank: string;
-
-    bankBranch: string;
-
-    purpose: string;
-
-    accountType: string;
-
-    acctName: string;
-
-    title: string;
-
-    freezeAmt: number;
-
-    sysFreezeAmt: number;
-
-    availBalance: number;
-
-    subAccountNo: string;
-
-    acctNo: string;
-
-    subAccountName: string;
-
-    collectedSubjectName: string;
-
-    collectedSubjectNo: string;
 
 }
 

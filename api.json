@@ -1,5 +1,15 @@
 {
 	"types":{
+		"com.weidai.taxmng.taxmng.dto.account.ChangeType":{
+			"properties":{
+				"code":{
+					"type":"java.lang.String"
+				},
+				"desc":{
+					"type":"java.lang.String"
+				}
+			}
+		},
 		"com.weidai.taxmng.taxmng.dto.IncomeExpensesDetailDto":{
 			"properties":{
 				"accountingDate":{
@@ -67,7 +77,7 @@
 					"type":"java.lang.Integer"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体",
+					"summary":"服务主体",
 					"type":"java.lang.String"
 				},
 				"gmtUpdate":{
@@ -75,7 +85,7 @@
 					"type":"java.util.Date"
 				},
 				"collectedSubjectNo":{
-					"summary":"代征主体编码",
+					"summary":"服务主体编码",
 					"type":"java.lang.String"
 				},
 				"changeDirectionName":{
@@ -788,7 +798,7 @@
 					"type":"java.lang.String"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体",
+					"summary":"服务主体",
 					"type":"java.lang.String"
 				},
 				"outAccountName":{
@@ -1132,7 +1142,7 @@
 					"type":"java.lang.String"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体名称",
+					"summary":"服务主体名称",
 					"type":"java.lang.String"
 				},
 				"imageUrl":{
@@ -1144,7 +1154,7 @@
 					"type":"java.lang.String"
 				},
 				"collectedSubjectNo":{
-					"summary":"代征主体编号",
+					"summary":"服务主体编号",
 					"type":"java.lang.String"
 				},
 				"countryName":{
@@ -1477,7 +1487,7 @@
 					"type":"java.math.BigDecimal"
 				},
 				"payChannelCode":{
-					"summary":"打款通道编码",
+					"summary":"发放通道编码",
 					"type":"java.lang.String"
 				},
 				"endIndex":{
@@ -1527,7 +1537,7 @@
 					"type":"java.lang.String"
 				},
 				"payChannelCodeName":{
-					"summary":"打款通道",
+					"summary":"发放通道",
 					"type":"java.lang.String"
 				},
 				"merchantOrderNo":{
@@ -1615,7 +1625,7 @@
 					"type":"java.lang.String"
 				},
 				"oidPartner":{
-					"summary":"服务商商户号(连连分配给宫薪记的商户号)",
+					"summary":"服务商商户号(连连分配给代征平台的商户号)",
 					"type":"java.lang.String"
 				},
 				"hangupRemark":{
@@ -1647,7 +1657,7 @@
 					"type":"java.lang.String"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体",
+					"summary":"服务主体",
 					"type":"java.lang.String"
 				},
 				"collectedSubjectNo":{
@@ -1726,7 +1736,7 @@
 					"type":"java.math.BigDecimal"
 				},
 				"channelName":{
-					"summary":"打款通道",
+					"summary":"发放通道",
 					"type":"java.lang.String"
 				},
 				"payStatus":{
@@ -2039,7 +2049,7 @@
 					"type":"java.lang.String"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体名称",
+					"summary":"服务主体名称",
 					"type":"java.lang.String"
 				},
 				"imageUrl":{
@@ -2051,7 +2061,7 @@
 					"type":"java.lang.String"
 				},
 				"collectedSubjectNo":{
-					"summary":"代征主体编号",
+					"summary":"服务主体编号",
 					"type":"java.lang.String"
 				},
 				"countryName":{
@@ -2117,7 +2127,7 @@
 					"type":"java.math.BigDecimal"
 				},
 				"payChannelCode":{
-					"summary":"打款通道编码",
+					"summary":"发放通道编码",
 					"type":"java.lang.String"
 				},
 				"endIndex":{
@@ -2166,7 +2176,7 @@
 					"type":"java.lang.String"
 				},
 				"payChannelCodeName":{
-					"summary":"打款通道",
+					"summary":"发放通道",
 					"type":"java.lang.String"
 				},
 				"merchantOrderNo":{
@@ -2253,7 +2263,7 @@
 					"type":"java.lang.String"
 				},
 				"oidPartner":{
-					"summary":"服务商商户号(连连分配给宫薪记的商户号)",
+					"summary":"服务商商户号(连连分配给代征平台的商户号)",
 					"type":"java.lang.String"
 				},
 				"hangupRemark":{
@@ -2285,7 +2295,7 @@
 					"type":"java.lang.String"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体",
+					"summary":"服务主体",
 					"type":"java.lang.String"
 				},
 				"collectedSubjectNo":{
@@ -2364,7 +2374,7 @@
 					"type":"java.math.BigDecimal"
 				},
 				"channelName":{
-					"summary":"打款通道",
+					"summary":"发放通道",
 					"type":"java.lang.String"
 				},
 				"payStatus":{
@@ -2467,9 +2477,6 @@
 				},
 				"collectedSubjectName":{
 					"type":"java.lang.String"
-				},
-				"gmtUpdate":{
-					"type":"java.util.Date"
 				},
 				"acctType":{
 					"type":"java.lang.String"
@@ -2783,7 +2790,7 @@
 					"type":"java.lang.Integer"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体名称",
+					"summary":"服务主体名称",
 					"type":"java.lang.String"
 				},
 				"cumulativeInvoiceAmount":{
@@ -2791,7 +2798,7 @@
 					"type":"java.math.BigDecimal"
 				},
 				"collectedSubjectNo":{
-					"summary":"代征主体编码",
+					"summary":"服务主体编码",
 					"type":"java.lang.String"
 				},
 				"availableInvoiceAmountStart":{
@@ -2922,7 +2929,7 @@
 					"type":"java.lang.Integer"
 				},
 				"payChannelCode":{
-					"summary":"打款通道编码",
+					"summary":"发放通道编码",
 					"type":"java.lang.String"
 				},
 				"processAmount":{
@@ -2961,7 +2968,7 @@
 					"type":"java.lang.Integer"
 				},
 				"payChannelCodeName":{
-					"summary":"打款通道名称",
+					"summary":"发放通道名称",
 					"type":"java.lang.String"
 				},
 				"settleOrderNo":{
@@ -3032,7 +3039,7 @@
 					"type":"java.lang.String"
 				},
 				"oidPartner":{
-					"summary":"服务商商户号(连连分配给宫薪记的商户号)",
+					"summary":"服务商商户号(连连分配给代征平台的商户号)",
 					"type":"java.lang.String"
 				},
 				"paymentBasisDocument":{
@@ -3052,11 +3059,11 @@
 					"type":"java.util.Date"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体名称",
+					"summary":"服务主体名称",
 					"type":"java.lang.String"
 				},
 				"collectedSubjectNo":{
-					"summary":"代征主体代码",
+					"summary":"服务主体代码",
 					"type":"java.lang.String"
 				},
 				"paymentBasisDocumentName":{
@@ -3255,6 +3262,28 @@
 		},
 		"java.lang.Object":{
 		},
+		"com.weidai.taxmng.taxmng.dto.account.AdjustBillOrder":{
+			"properties":{
+				"payers":{
+					"type":"com.weidai.taxmng.taxmng.dto.account.AccountOrder[]"
+				},
+				"orderNo":{
+					"type":"java.lang.String"
+				},
+				"receipters":{
+					"type":"com.weidai.taxmng.taxmng.dto.account.AccountOrder[]"
+				},
+				"remark":{
+					"type":"java.lang.String"
+				},
+				"bizPlatformNo":{
+					"type":"java.lang.String"
+				},
+				"voucherCode":{
+					"type":"java.lang.String"
+				}
+			}
+		},
 		"com.weidai.taxmng.taxmng.dal.vo.DiscountPackageTypeEnumVO":{
 			"properties":{
 				"packageTypeName":{
@@ -3323,7 +3352,7 @@
 		"com.weidai.taxmng.taxmng.webapp.vo.TaxSubAccountVO":{
 			"properties":{
 				"collectedSubjectName":{
-					"summary":"代征主体名称",
+					"summary":"服务主体名称",
 					"type":"java.lang.String"
 				},
 				"list":{
@@ -3465,7 +3494,7 @@
 					"type":"java.lang.String"
 				},
 				"oidPartner":{
-					"summary":"服务商商户号(连连分配给宫薪记的商户号)",
+					"summary":"服务商商户号(连连分配给代征平台的商户号)",
 					"type":"java.lang.String"
 				},
 				"paymentBasisDocument":{
@@ -3485,11 +3514,11 @@
 					"type":"java.util.Date"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体名称",
+					"summary":"服务主体名称",
 					"type":"java.lang.String"
 				},
 				"collectedSubjectNo":{
-					"summary":"代征主体代码",
+					"summary":"服务主体代码",
 					"type":"java.lang.String"
 				},
 				"paymentBasisDocumentName":{
@@ -3897,11 +3926,11 @@
 					"type":"java.lang.String"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体名称（服务主体）",
+					"summary":"服务主体名称（服务主体）",
 					"type":"java.lang.String"
 				},
 				"collectedSubjectNo":{
-					"summary":"代征主体编码",
+					"summary":"服务主体编码",
 					"type":"java.lang.String"
 				},
 				"id":{
@@ -3964,11 +3993,11 @@
 					"type":"java.lang.Integer"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体名称",
+					"summary":"服务主体名称",
 					"type":"java.lang.String"
 				},
 				"collectedSubjectNo":{
-					"summary":"代征主体代码",
+					"summary":"服务主体代码",
 					"type":"java.lang.String"
 				},
 				"adjustMode":{
@@ -4063,11 +4092,11 @@
 					"type":"java.lang.String"
 				},
 				"paymentChannel":{
-					"summary":"打款通道",
+					"summary":"发放通道",
 					"type":"java.lang.String"
 				},
 				"paymentChannelName":{
-					"summary":"打款通道名称",
+					"summary":"发放通道名称",
 					"type":"java.lang.String"
 				},
 				"totalAmount":{
@@ -4245,11 +4274,11 @@
 					"type":"java.lang.String"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体名称（服务主体）",
+					"summary":"服务主体名称（服务主体）",
 					"type":"java.lang.String"
 				},
 				"collectedSubjectNo":{
-					"summary":"代征主体编码",
+					"summary":"服务主体编码",
 					"type":"java.lang.String"
 				},
 				"id":{
@@ -4432,11 +4461,11 @@
 					"type":"java.lang.String"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体名称",
+					"summary":"服务主体名称",
 					"type":"java.lang.String"
 				},
 				"collectedSubjectNo":{
-					"summary":"代征主体代码",
+					"summary":"服务主体代码",
 					"type":"java.lang.String"
 				},
 				"payChannel":{
@@ -4814,11 +4843,11 @@
 					"type":"java.util.Date"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体名称（服务主体）",
+					"summary":"服务主体名称（服务主体）",
 					"type":"java.lang.String"
 				},
 				"collectedSubjectNo":{
-					"summary":"代征主体编码",
+					"summary":"服务主体编码",
 					"type":"java.lang.String"
 				},
 				"id":{
@@ -4895,6 +4924,43 @@
 				},
 				"packageName":{
 					"summary":"套餐名称",
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"com.weidai.taxmng.taxmng.dto.account.AccountOrder":{
+			"properties":{
+				"uid":{
+					"type":"java.lang.Integer"
+				},
+				"amount":{
+					"type":"java.math.BigDecimal"
+				},
+				"adjustType":{
+					"type":"java.lang.String"
+				},
+				"accountNo":{
+					"type":"java.lang.String"
+				},
+				"accountType":{
+					"type":"java.lang.String"
+				},
+				"freezeNo":{
+					"type":"java.lang.String"
+				},
+				"adjustCode":{
+					"type":"java.lang.String"
+				},
+				"bidNo":{
+					"type":"java.lang.String"
+				},
+				"remark":{
+					"type":"java.lang.String"
+				},
+				"bizPlatformNo":{
+					"type":"java.lang.String"
+				},
+				"voucherCode":{
 					"type":"java.lang.String"
 				}
 			}
@@ -4984,11 +5050,11 @@
 					"type":"int"
 				},
 				"collectedSubjectName":{
-					"summary":"代征主体",
+					"summary":"服务主体",
 					"type":"java.lang.String"
 				},
 				"collectedSubjectNo":{
-					"summary":"代征主体代码",
+					"summary":"服务主体代码",
 					"type":"java.lang.String"
 				},
 				"createUser":{
@@ -5434,6 +5500,22 @@
 				}
 			}
 		},
+		"com.weidai.taxmng.taxmng.dal.vo.RebateVO":{
+			"properties":{
+				"totalRebateAmount":{
+					"summary":"累计返点金额",
+					"type":"java.math.BigDecimal"
+				},
+				"availableAmount":{
+					"summary":"可用余额",
+					"type":"java.math.BigDecimal"
+				},
+				"lastMonthRebateAmount":{
+					"summary":"上月返点金额",
+					"type":"java.math.BigDecimal"
+				}
+			}
+		},
 		"com.weidai.taxmng.taxmng.integration.entity.QueryIncomeExpensesDetailRequest":{
 			"properties":{
 				"accountId":{
@@ -5479,22 +5561,6 @@
 				"transSubCode":{
 					"summary":"业务类型，见枚举接口",
 					"type":"java.lang.String"
-				}
-			}
-		},
-		"com.weidai.taxmng.taxmng.dal.vo.RebateVO":{
-			"properties":{
-				"totalRebateAmount":{
-					"summary":"累计返点金额",
-					"type":"java.math.BigDecimal"
-				},
-				"availableAmount":{
-					"summary":"可用余额",
-					"type":"java.math.BigDecimal"
-				},
-				"lastMonthRebateAmount":{
-					"summary":"上月返点金额",
-					"type":"java.math.BigDecimal"
 				}
 			}
 		},
@@ -5566,6 +5632,107 @@
 				},
 				"payOrderQuery":{
 					"type":"com.weidai.taxmng.taxmng.dal.query.PayOrderQuery"
+				}
+			}
+		},
+		"com.weidai.taxmng.taxmng.dto.account.AccountDO":{
+			"properties":{
+				"accountName":{
+					"type":"java.lang.String"
+				},
+				"bindPlatAccountNo":{
+					"summary":"绑定的其它平台账户",
+					"type":"java.lang.String"
+				},
+				"overdraft":{
+					"type":"java.lang.String"
+				},
+				"acctBalance":{
+					"type":"java.math.BigDecimal"
+				},
+				"userNo":{
+					"type":"java.lang.String"
+				},
+				"remark":{
+					"type":"java.lang.String"
+				},
+				"allotWithdraw":{
+					"type":"java.lang.Boolean"
+				},
+				"operator":{
+					"type":"java.lang.String"
+				},
+				"subAccount":{
+					"type":"boolean"
+				},
+				"uid":{
+					"type":"java.lang.String"
+				},
+				"hideDepBalance":{
+					"type":"java.lang.Boolean"
+				},
+				"userSysCode":{
+					"type":"java.lang.String"
+				},
+				"bindDepositAccountName":{
+					"summary":"绑定的其它平台存款账户名",
+					"type":"java.lang.String"
+				},
+				"availableAmount":{
+					"type":"java.math.BigDecimal"
+				},
+				"isExistSubAccount":{
+					"type":"java.lang.Boolean"
+				},
+				"accountNo":{
+					"type":"java.lang.String"
+				},
+				"loginName":{
+					"type":"java.lang.String"
+				},
+				"bindDepositAccountNo":{
+					"summary":"绑定的其它平台存款账户",
+					"type":"java.lang.String"
+				},
+				"arriveBalance":{
+					"type":"java.math.BigDecimal"
+				},
+				"groupCode":{
+					"type":"java.lang.String"
+				},
+				"redirect":{
+					"type":"java.lang.Boolean"
+				},
+				"creator":{
+					"type":"java.lang.String"
+				},
+				"euid":{
+					"type":"java.lang.String"
+				},
+				"allotIn":{
+					"type":"java.lang.Boolean"
+				},
+				"accountType":{
+					"type":"java.lang.String"
+				},
+				"balanceWaring":{
+					"type":"java.lang.Boolean"
+				},
+				"userName":{
+					"type":"java.lang.String"
+				},
+				"allotRecharge":{
+					"type":"java.lang.Boolean"
+				},
+				"allotOut":{
+					"type":"java.lang.Boolean"
+				},
+				"bindPlatAccountName":{
+					"summary":"绑定的其它平台账户名",
+					"type":"java.lang.String"
+				},
+				"guid":{
+					"type":"java.lang.String"
 				}
 			}
 		},
@@ -6060,6 +6227,50 @@
 		"int":{
 			"alias":"number"
 		},
+		"com.weidai.taxmng.taxmng.dto.TaxMerchantLegalPersonDTO":{
+			"properties":{
+				"legalName":{
+					"summary":"法人姓名",
+					"type":"java.lang.String"
+				},
+				"legalGender":{
+					"summary":"法人性别",
+					"type":"java.lang.String"
+				},
+				"gmtModified":{
+					"summary":"操作时间",
+					"type":"java.util.Date"
+				},
+				"legalEmail":{
+					"summary":"法人邮箱",
+					"type":"java.lang.String"
+				},
+				"id":{
+					"summary":"",
+					"type":"java.lang.Integer"
+				},
+				"legalMobile":{
+					"summary":"法人手机号",
+					"type":"java.lang.String"
+				},
+				"gmtCreate":{
+					"summary":"添加时间",
+					"type":"java.util.Date"
+				},
+				"operatorAdd":{
+					"summary":"添加人",
+					"type":"java.lang.Integer"
+				},
+				"operatorModified":{
+					"summary":"操作人",
+					"type":"java.lang.Integer"
+				},
+				"merchantNo":{
+					"summary":"商户号",
+					"type":"java.lang.String"
+				}
+			}
+		},
 		"com.weidai.taxmng.taxmng.webapp.vo.TaxGuestUserVO":{
 			"properties":{
 				"taxGuestUserQuery":{
@@ -6127,56 +6338,737 @@
 		}
 	},
 	"apis":{
-		"/remit/payorder/queryPayOrderPage":{
-			"summary":"资金明细",
+		"/common/enums/querySecondLevelDicListById":{
+			"summary":"根据字典id获取二级字典值",
 			"responses":[
 				{
-					"summary":"WebResult<PageBean<TaxPayOrderDto>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxPayOrderDto>>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"vo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayOrderVO"
-				}
-			}
-		},
-		"/remit/payorder/queryOrder":{
-			"summary":"资金明细",
-			"responses":[
-				{
-					"summary":"WebResult<TaxPayOrderDto>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxPayOrderDto>"
+					"summary":"WebResult<List<TaxDictionaryDTO>>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxDictionaryDTO[]>"
 				}
 			],
 			"parameters":{
 				"id":{
 					"pattern":"",
+					"summary":"字典id",
+					"optional":false,
+					"type":"int"
+				}
+			}
+		},
+		"/common/enums/queryThirdLevelDicListById":{
+			"summary":"根据字典id获取三级字典值",
+			"responses":[
+				{
+					"summary":"WebResult<List<TaxDictionaryDTO>>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxDictionaryDTO[]>"
+				}
+			],
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"字典id",
+					"optional":false,
+					"type":"int"
+				}
+			}
+		},
+		"/common/enums/queryEnumsListByType":{
+			"summary":"根据枚举类型查询枚举值",
+			"responses":[
+				{
+					"summary":"WebResult<List<Map<String,String>>>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String{}[]>"
+				}
+			],
+			"parameters":{
+				"enumType":{
+					"pattern":"",
+					"summary":"枚举类型",
+					"optional":false,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/common/enums/queryFirstLevelDicListByType":{
+			"summary":"根据类型获取一级字典值",
+			"responses":[
+				{
+					"summary":"WebResult<List<TaxDictionaryDTO>>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxDictionaryDTO[]>"
+				}
+			],
+			"parameters":{
+				"dicTypeCode":{
+					"pattern":"",
+					"summary":"字典类型",
+					"optional":false,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/common/enums/queryAllPayChannelList":{
+			"summary":"查询所有可用发放通道",
+			"responses":[
+				{
+					"summary":"WebResult<List<Map<String,String>>>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String{}[]>"
+				}
+			]
+		},
+		"/contract/admin/detail":{
+			"summary":"签约详情",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.service.entity.ContractSignVO>"
+				}
+			],
+			"parameters":{
+				"signId":{
+					"pattern":"",
+					"summary":"签约记录ID",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			},
+			"author":"彭晓峰"
+		},
+		"/contract/admin/page":{
+			"summary":"分页查询签约记录",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.ContractSignVO>>"
+				}
+			],
+			"parameters":{
+				"contractSignQuery":{
+					"pattern":"",
 					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dal.query.ContractSignQuery"
+				}
+			},
+			"author":"彭晓峰"
+		},
+		"/contract/admin/batchInvite":{
+			"summary":"批量邀请",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"contractSignQuery":{
+					"pattern":"",
+					"summary":"签约记录ID们,英文逗号分隔",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dal.query.ContractSignQuery"
+				}
+			},
+			"author":"彭晓峰"
+		},
+		"/contract/admin/signType":{
+			"summary":"签约配置枚举",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<javafx.util.Pair<java.lang.String,java.lang.Integer>[]>"
+				}
+			],
+			"author":"彭晓峰"
+		},
+		"/contract/merchant/page":{
+			"summary":"分页查询签约记录",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.ContractSignVO>>"
+				}
+			],
+			"parameters":{
+				"contractSignQuery":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dal.query.ContractSignQuery"
+				}
+			},
+			"author":"彭晓峰"
+		},
+		"/contract/wechat/sign":{
+			"summary":"签约",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String>"
+				}
+			],
+			"cache":5000,
+			"parameters":{
+				"signId":{
+					"pattern":"",
+					"summary":"签约ID",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			},
+			"author":"彭晓峰"
+		},
+		"/contract/wechat/preSignByCode":{
+			"summary":"使用签约邀请码进行签约，预请求",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.service.sign.model.PreSignDetail>"
+				}
+			],
+			"parameters":{
+				"signCode":{
+					"pattern":"",
+					"summary":"签约邀请码",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			},
+			"author":"彭晓峰"
+		},
+		"/contract/wechat/signByCode":{
+			"summary":"使用签约邀请码进行签约",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String>"
+				}
+			],
+			"parameters":{
+				"signCode":{
+					"pattern":"",
+					"summary":"签约邀请码",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			},
+			"author":"彭晓峰"
+		},
+		"/contract/wechat/personAuth":{
+			"summary":"个人实名认证",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String>"
+				}
+			],
+			"cache":5000,
+			"author":"彭晓峰"
+		},
+		"/contract/wechat/authQuery":{
+			"summary":"个人实名认证查询",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dal.entity.TaxCustomer>"
+				}
+			],
+			"cache":5000,
+			"author":"彭晓峰"
+		},
+		"/contract/wechat/querySignRecords":{
+			"summary":"查询签约记录",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dal.entity.TaxFddContractSign[]>"
+				}
+			],
+			"cache":5000,
+			"parameters":{
+				"signQuery":{
+					"pattern":"",
+					"summary":"签约状态，不填默认查询所有记录",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.request.SignQuery"
+				}
+			},
+			"author":"彭晓峰"
+		},
+		"/remit/countryinfo/queryCountryList":{
+			"summary":"查询国家地区列表",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxCountryInfoDTO>"
+				}
+			],
+			"method":"POST"
+		},
+		"/remit/fundOperation/getOne":{
+			"summary":"资金业务记录详情",
+			"responses":[
+				{
+					"summary":"WebResult<FundOperationVO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.FundOperationVO>"
+				}
+			],
+			"method":"GET",
+			"parameters":{
+				"id":{
 					"optional":true,
 					"type":"java.lang.Integer"
 				}
 			}
 		},
-		"/remit/accountorder/queryAccountOrderPage":{
-			"summary":"账户流水",
+		"/remit/fundOperation/getRebateAmount":{
+			"summary":"查询可用余额 上月返点 累计返点",
 			"responses":[
 				{
-					"summary":"WebResult<PageBean<AccountLogDto>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.AccountLogDto>>"
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.RebateVO>"
+				}
+			],
+			"method":"POST"
+		},
+		"/remit/fundOperation/export":{
+			"summary":"资金业务记录导出",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Void>"
+				}
+			],
+			"method":"POST",
+			"contentType":"application/json",
+			"parameters":{
+				"fundOperationQuery":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dal.query.FundOperationQuery"
+				}
+			}
+		},
+		"/remit/fundOperation/getList":{
+			"summary":"资金业务记录列表",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<FundOperationVO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dal.vo.FundOperationVO>>"
+				}
+			],
+			"method":"POST",
+			"contentType":"application/json",
+			"parameters":{
+				"fundOperationQuery":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dal.query.FundOperationQuery"
+				}
+			}
+		},
+		"/remit/paybatch/uploadMerchantDetail":{
+			"summary":"商户上传打款明细EXCEL",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"parameters":{
+				"payBatchNo":{
+					"pattern":"",
+					"summary":"批次号",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"merchantPayBatchNo":{
+					"pattern":"",
+					"summary":"商户自定义批次号",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"payChannelCode":{
+					"pattern":"",
+					"summary":"发放通道",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"totalAmount":{
+					"pattern":"",
+					"summary":"总金额",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"count":{
+					"pattern":"",
+					"summary":"总笔数",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/remit/paybatch/updatePaymentBasisDocument":{
+			"summary":"修改打款依据文件",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
+				}
+			],
+			"parameters":{
+				"payBatchNo":{
+					"pattern":"",
+					"summary":"批次号",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/paybatch/queryPayBatchList":{
+			"summary":"打款批次列表",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxPayBatchDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO>>"
 				}
 			],
 			"contentType":"application/json",
 			"parameters":{
-				"vo":{
+				"query":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayBatchVO"
+				}
+			}
+		},
+		"/remit/paybatch/queryPayBatchByPayBatchNo":{
+			"summary":"按批次号查询打款批次信息",
+			"responses":[
+				{
+					"summary":"TaxPayBatchDto",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO>"
+				}
+			],
+			"parameters":{
+				"payBatchNo":{
+					"pattern":"",
+					"summary":"打款批次号",
+					"optional":false,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/paybatch/queryPayBath":{
+			"summary":"打款批次",
+			"responses":[
+				{
+					"summary":"WebResult<TaxPayBatchDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"query":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayBatchVO"
+				}
+			}
+		},
+		"/remit/paybatch/payDetail":{
+			"summary":"打款详情",
+			"responses":[
+				{
+					"summary":"WebResult<TaxPayBatchDetailDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO>"
+				}
+			],
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"批次明细主键",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/remit/paybatch/batchPayStatus":{
+			"summary":"查询批次状态枚举",
+			"responses":[
+				{
+					"summary":"WebResult<TaxPayBatchDetailDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
+				}
+			]
+		},
+		"/remit/paybatch/detailPayStatus":{
+			"summary":"查询明细订单状态枚举",
+			"responses":[
+				{
+					"summary":"WebResult<TaxPayBatchDetailDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
+				}
+			]
+		},
+		"/remit/paybatch/cancelDetail":{
+			"summary":"撤销",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"parameters":{
+				"taxPayBatchDTO":{
+					"pattern":"",
+					"summary":"批次明细",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO"
+				}
+			}
+		},
+		"/remit/paybatch/downLoadTemplate":{
+			"summary":"下载批量打款明细模板EXCEL",
+			"parameters":{
+				"payChannelCode":{
+					"pattern":"",
+					"summary":"发放通道",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/paybatch/queryPayDetailsList":{
+			"summary":"打款明细列表",
+			"responses":[
+				{
+					"summary":"PageBean<TaxPayBatchDetailDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO>>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"query":{
 					"pattern":"",
 					"summary":"查询条件",
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.AccountOrderVO"
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayBatchDetailVO"
+				}
+			}
+		},
+		"/remit/paybatch/queryPayDetailsStatistics":{
+			"summary":"打款明细统计",
+			"responses":[
+				{
+					"summary":"TaxPayBatchStatisticsDto",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxPayBatchStatisticsDto>"
+				}
+			],
+			"parameters":{
+				"payBatchNo":{
+					"pattern":"",
+					"summary":"批次号",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/paybatch/updateStatusByPayBatchNo":{
+			"summary":"更新打款批次状态",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"parameters":{
+				"status":{
+					"pattern":"",
+					"summary":"要变更的状态",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"payBatchNo":{
+					"pattern":"",
+					"summary":"批次号",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/paybatch/lockBatch":{
+			"summary":"锁定批次",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"taxPayBatchDTO":{
+					"pattern":"",
+					"summary":"批次",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO"
+				}
+			}
+		},
+		"/remit/paybatch/repay":{
+			"summary":"重新打款",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"parameters":{
+				"taxPayBatchDTO":{
+					"pattern":"",
+					"summary":"批次号",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO"
+				}
+			}
+		},
+		"/remit/paybatch/applyPay":{
+			"summary":"打款申请",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"parameters":{
+				"taxPayBatchDTO":{
+					"pattern":"",
+					"summary":"批次",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO"
+				}
+			}
+		},
+		"/remit/paybatch/revoke":{
+			"summary":"批次打款撤销",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"parameters":{
+				"taxPayBatchDTO":{
+					"pattern":"",
+					"summary":"批次",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO"
+				}
+			}
+		},
+		"/remit/paybatch/queryPayBatchDetail":{
+			"summary":"打款批次详情查询",
+			"responses":[
+				{
+					"summary":"TaxPayBatchDto",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxPayBatchDto>"
+				}
+			],
+			"parameters":{
+				"payBatchNo":{
+					"pattern":"",
+					"summary":"打款批次号",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/paybatch/updatePayBatchNo":{
+			"summary":"数据订正批次号",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"method":"GET",
+			"parameters":{
+				"oldPayBatchNo":{
+					"pattern":"",
+					"summary":"旧批次号",
+					"optional":false,
+					"type":"java.lang.String"
+				},
+				"newPayBatchNo":{
+					"pattern":"",
+					"summary":"新批次号",
+					"optional":false,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/paybatch/queryPayBathSummary":{
+			"summary":"打款批次概要",
+			"responses":[
+				{
+					"summary":"WebResult<TaxPayBatchDetailSummaryDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailSummaryDTO>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"query":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO"
+				}
+			}
+		},
+		"/remit/paybatch/payBill":{
+			"summary":"费用单",
+			"responses":[
+				{
+					"summary":"WebResult<TaxBatchDetailCostDto>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxBatchDetailCostDto>"
+				}
+			],
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"批次明细主键",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/remit/payBatchData/queryPayBatchList":{
+			"summary":"打款批次列表",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxPayBatchDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO>>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"query":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayBatchVO"
+				}
+			}
+		},
+		"/remit/payBatchData/countPayBatchData":{
+			"summary":"查询商户批次统计数据",
+			"responses":[
+				{
+					"summary":"WebResult<TaxPayBatchDetailDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.PayBatchCountDto>"
+				}
+			]
+		},
+		"/remit/payBatchData/queryMerchantChannelListBalance":{
+			"summary":"查询商户已开通通道列表余额",
+			"responses":[
+				{
+					"summary":"WebResult<MerchantBalanceDto>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.facade.dto.MerchantBalanceDto>"
+				}
+			]
+		},
+		"/remit/payBatchData/queryMyInfo":{
+			"summary":"查询我的信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
+				}
+			]
+		},
+		"/remit/payBatchData/queryPayBatchDetail":{
+			"summary":"打款批次详情查询",
+			"responses":[
+				{
+					"summary":"TaxPayBatchDto",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO>"
+				}
+			],
+			"parameters":{
+				"payBatchNo":{
+					"pattern":"",
+					"summary":"打款批次号",
+					"optional":true,
+					"type":"java.lang.String"
 				}
 			}
 		},
@@ -6206,58 +7098,170 @@
 				}
 			}
 		},
-		"/remit/paybatchdetail/updateStatusById":{
-			"summary":"更新打款批次明细状态,商户后台挂起和撤销",
+		"/remit/accountorder/queryAccountOrderPage":{
+			"summary":"账户流水",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+					"summary":"WebResult<PageBean<AccountLogDto>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.AccountLogDto>>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"vo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.AccountOrderVO"
+				}
+			}
+		},
+		"/remit/attachment/uploadAttachment":{
+			"summary":"附件上传",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			],
+			"method":"POST"
+		},
+		"/remit/bankInfo/queryBankList":{
+			"summary":"获取银行数据列表",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.BankDTO[]>"
+				}
+			],
+			"method":"POST"
+		},
+		"/remit/bankReceipt/previewBankReceipt":{
+			"summary":"预览银行回单",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
 				}
 			],
 			"parameters":{
-				"status":{
+				"payDetailNo":{
 					"pattern":"",
-					"summary":"挂起/撤销状态",
+					"summary":"明细单号",
 					"optional":true,
 					"type":"java.lang.String"
-				},
-				"id":{
+				}
+			}
+		},
+		"/remit/collectedsubject/querybyCollectedSubjectNo":{
+			"summary":"根据查询服务主体",
+			"responses":[
+				{
+					"summary":"WebResult<TaxCollectedSubjectDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxCollectedSubjectDTO>"
+				}
+			],
+			"parameters":{
+				"collectedSubjectNo":{
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/collectedsubject/queryAllAvailable":{
+			"summary":"查询所有可用服务主体",
+			"responses":[
+				{
+					"summary":"WebResult<List<TaxCollectedSubjectDTO>>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxCollectedSubjectDTO[]>"
+				}
+			]
+		},
+		"/remit/contact/queryByMerchantNo":{
+			"summary":"根据商户号查询商户联系人",
+			"responses":[
+				{
+					"summary":"WebResult<TaxContactDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxContactDTO[]>"
+				}
+			],
+			"parameters":{
+				"merchantNo":{
 					"pattern":"",
-					"summary":"批次明细主键",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/discountPackageData/getOne":{
+			"summary":"优惠套餐详情",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.TaxDiscountPackageDataVO>"
+				}
+			],
+			"method":"GET",
+			"parameters":{
+				"id":{
 					"optional":true,
 					"type":"java.lang.Integer"
 				}
 			}
 		},
-		"/remit/paybatchdetail/updateTaxPayBatchDetail":{
-			"summary":"修改批次订单明细",
+		"/remit/discountPackageData/getDropDownList":{
+			"summary":"优惠套餐下拉列表",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.DiscountPackageChildVO[]>"
 				}
 			],
+			"method":"POST"
+		},
+		"/remit/dispathProject/queryDispatchProjectList":{
+			"summary":"派单项目列表查询",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxDispatchProjectDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxDispatchProjectDTO>>"
+				}
+			],
+			"contentType":"application/json",
 			"parameters":{
-				"taxPayBatchDetailDto":{
-					"pattern":"",
-					"summary":"批次明细",
+				"query":{
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxPayBatchDetailDto"
+					"type":"com.weidai.taxmng.taxmng.dal.query.DispatchProjectQuery"
 				}
 			}
 		},
-		"/remit/paybatchdetail/queryOrderCostDetail":{
-			"summary":"费用单明细查询",
+		"/remit/dispathProject/queryDispatchProjectDetail":{
+			"summary":"查询项目详情",
 			"responses":[
 				{
-					"summary":"TaxBatchDetailCostDto",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxBatchDetailCostDto>"
+					"summary":"WebResult<TaxProjectDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxDispatchProjectDTO>"
 				}
 			],
 			"parameters":{
-				"id":{
+				"projectNo":{
 					"pattern":"",
-					"summary":"批次明细主键",
+					"summary":"项目编号",
 					"optional":true,
-					"type":"java.lang.Integer"
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/export/exportPayBatch":{
+			"summary":"导出批次记录",
+			"responses":[
+				{
+					"summary":"string",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"request":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.service.entity.ExportDataRequest"
 				}
 			}
 		},
@@ -6298,7 +7302,7 @@
 			}
 		},
 		"/remit/export/exportAccountDetail":{
-			"summary":"导出账务明细",
+			"summary":"导出账务详情",
 			"responses":[
 				{
 					"summary":"string",
@@ -6315,317 +7319,30 @@
 				}
 			}
 		},
-		"/remit/export/exportPayBatch":{
-			"summary":"导出批次记录",
+		"/remit/capitalflow/queryTransSubCodeList":{
+			"summary":"查询业务类型枚举",
 			"responses":[
 				{
-					"summary":"string",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"request":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.ExportDataRequest"
-				}
-			}
-		},
-		"/remit/payBatchData/countPayBatchData":{
-			"summary":"查询商户批次统计数据",
-			"responses":[
-				{
-					"summary":"WebResult<TaxPayBatchDetailDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.PayBatchCountDto>"
-				}
-			]
-		},
-		"/remit/payBatchData/queryMerchantChannelListBalance":{
-			"summary":"查询商户已开通通道列表余额",
-			"responses":[
-				{
-					"summary":"WebResult<MerchantBalanceDto>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.facade.dto.MerchantBalanceDto>"
-				}
-			]
-		},
-		"/remit/payBatchData/queryPayBatchList":{
-			"summary":"打款批次列表",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxPayBatchDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO>>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayBatchVO"
-				}
-			}
-		},
-		"/remit/payBatchData/queryPayBatchDetail":{
-			"summary":"打款批次详情查询",
-			"responses":[
-				{
-					"summary":"TaxPayBatchDto",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO>"
-				}
-			],
-			"parameters":{
-				"payBatchNo":{
-					"pattern":"",
-					"summary":"打款批次号",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/payBatchData/queryMyInfo":{
-			"summary":"查询我的信息",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
-				}
-			]
-		},
-		"/remit/rebatepackage/queryAll":{
-			"summary":"查询所有返点套餐",
-			"responses":[
-				{
-					"summary":"WebResult<TaxRebatePackageDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxRebatePackageDTO[]>"
-				}
-			]
-		},
-		"/remit/collectedsubject/querybyCollectedSubjectNo":{
-			"summary":"根据查询代征主体",
-			"responses":[
-				{
-					"summary":"WebResult<TaxCollectedSubjectDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxCollectedSubjectDTO>"
-				}
-			],
-			"parameters":{
-				"collectedSubjectNo":{
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/collectedsubject/queryAllAvailable":{
-			"summary":"查询所有可用代征主体",
-			"responses":[
-				{
-					"summary":"WebResult<List<TaxCollectedSubjectDTO>>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxCollectedSubjectDTO[]>"
-				}
-			]
-		},
-		"/remit/subAccount/queryByMerchantNo":{
-			"summary":"根据商户号查询商户子账户",
-			"responses":[
-				{
-					"summary":"WebResult<TaxSubAccountDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO[]>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/subAccount/query":{
-			"summary":"根据账户类型查询商户本地账户信息",
-			"responses":[
-				{
-					"summary":"WebResult<TaxSubAccountDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO[]>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/billingInfo/pageBillingInfo":{
-			"summary":"查询账单",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxMerchantBillingInfoDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxMerchantBillingInfoDTO>>"
-				}
-			],
-			"parameters":{
-				"params":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantBillingInfoDTO"
-				}
-			}
-		},
-		"/remit/billingInfo/invoicingApply":{
-			"summary":"申请开票(查询开票信息,商户号自动获取)",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
-				}
-			],
-			"method":"POST",
-			"parameters":{
-				"billNoJson":{
-					"pattern":"",
-					"summary":"账单编号数组",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/billingInfo/confirmInvoicing":{
-			"summary":"确定开票(商户号自动获取)",
-			"responses":[
-				{
-					"summary":"WebResult<Boolean>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
-				}
-			],
-			"method":"POST",
-			"parameters":{
-				"invoiceDTO":{
-					"pattern":"",
-					"summary":"开票信息",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantInvoiceInfoDTO"
-				}
-			}
-		},
-		"/remit/billingInfo/billDetail":{
-			"summary":"查看账单详情",
-			"responses":[
-				{
-					"summary":"WebResult<List<TaxPayBatchExtDto>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxPayBatchBillingDetailDto>>"
-				}
-			],
-			"method":"POST",
-			"parameters":{
-				"query":{
-					"pattern":"",
-					"summary":"查询对象，参数billNo必填",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxPayBatchBillingDetailDto"
-				}
-			}
-		},
-		"/remit/billingInfo/queryInvoiceCategoryList":{
-			"summary":"查询开票类目枚举列表",
-			"responses":[
-				{
-					"summary":"WebResult<List<TaxPayBatchExtDto>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String[]>"
-				}
-			],
-			"method":"POST"
-		},
-		"/remit/billingInfo/queryInvoiceStatusList":{
-			"summary":"查询开票状态枚举列表",
-			"responses":[
-				{
-					"summary":"WebResult<List<Map<String, String>>",
+					"summary":"WebResult<List<TransSubCodeEnum>>",
 					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
 				}
-			],
-			"method":"POST"
-		},
-		"/remit/fundOperation/export":{
-			"summary":"资金操作记录导出",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Void>"
-				}
-			],
-			"method":"POST",
-			"contentType":"application/json",
-			"parameters":{
-				"fundOperationQuery":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dal.query.FundOperationQuery"
-				}
-			}
-		},
-		"/remit/fundOperation/getList":{
-			"summary":"资金操作记录列表",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<FundOperationVO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dal.vo.FundOperationVO>>"
-				}
-			],
-			"method":"POST",
-			"contentType":"application/json",
-			"parameters":{
-				"fundOperationQuery":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dal.query.FundOperationQuery"
-				}
-			}
-		},
-		"/remit/fundOperation/getRebateAmount":{
-			"summary":"查询可用余额 上月返点 累计返点",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.RebateVO>"
-				}
-			],
-			"method":"POST"
-		},
-		"/remit/fundOperation/getOne":{
-			"summary":"资金操作记录详情",
-			"responses":[
-				{
-					"summary":"WebResult<FundOperationVO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.FundOperationVO>"
-				}
-			],
-			"method":"GET",
-			"parameters":{
-				"id":{
-					"optional":true,
-					"type":"java.lang.Integer"
-				}
-			}
-		},
-		"/remit/merchantproduct/queryPayChanleByMerchantNo":{
-			"summary":"查询商户配置的可用打款通道",
-			"responses":[
-				{
-					"summary":"WebResult<PayChanelCodeEnum>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String{}[]>"
-				}
 			]
 		},
-		"/remit/merchantproduct/queryByMerchantNo":{
-			"summary":"查询商户产品信息",
+		"/remit/capitalflow/queryCapitalFlowPage":{
+			"summary":"资金流水",
 			"responses":[
 				{
-					"summary":"WebResult<TaxMerchantProductDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantProductDTO>"
+					"summary":"WebResult<PageBean<IncomeExpensesDetailDto>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.IncomeExpensesDetailDto>>"
 				}
 			],
+			"contentType":"application/json",
 			"parameters":{
-				"merchantNo":{
+				"vo":{
+					"pattern":"",
+					"summary":"查询条件",
 					"optional":true,
-					"type":"java.lang.String"
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.CapitalFlowVO"
 				}
 			}
 		},
@@ -6715,132 +7432,92 @@
 				}
 			}
 		},
-		"/remit/merchantsecret/querySecretByMerchantNo":{
-			"summary":"根据商户号查询商户密钥等信息",
+		"/remit/billingInfo/pageBillingInfo":{
+			"summary":"查询账单",
 			"responses":[
 				{
-					"summary":"WebResult<TaxMerchantSecretDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantSecretDTO>"
-				}
-			]
-		},
-		"/remit/merchantsecret/saveMerchantSecret":{
-			"summary":"保存商户API公钥等信息",
-			"responses":[
-				{
-					"summary":"保存商户API公钥结果",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+					"summary":"WebResult<PageBean<TaxMerchantBillingInfoDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxMerchantBillingInfoDTO>>"
 				}
 			],
 			"parameters":{
-				"taxMerchantSecretVO":{
-					"pattern":"",
-					"summary":"查询条件",
+				"params":{
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantSecretVO"
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantBillingInfoDTO"
 				}
 			}
 		},
-		"/remit/merchantsecret/queryPlatformSecret":{
-			"summary":"查询平台公钥",
+		"/remit/billingInfo/billDetail":{
+			"summary":"查看账单详情",
 			"responses":[
 				{
-					"summary":"WebResult<TaxMerchantSecretDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxPlatformSecretVO>"
+					"summary":"WebResult<List<TaxPayBatchExtDto>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxPayBatchBillingDetailDto>>"
 				}
-			]
-		},
-		"/remit/merchantsecret/downLoadSecret":{
-			"summary":"下载平台公钥",
+			],
+			"method":"POST",
 			"parameters":{
-				"fileName":{
+				"query":{
 					"pattern":"",
-					"summary":"下载文件名",
+					"summary":"查询对象，参数billNo必填",
 					"optional":true,
-					"type":"java.lang.String"
+					"type":"com.weidai.taxmng.taxmng.dto.TaxPayBatchBillingDetailDto"
 				}
 			}
 		},
-		"/remit/attachment/uploadAttachment":{
-			"summary":"附件上传",
+		"/remit/billingInfo/queryInvoiceCategoryList":{
+			"summary":"查询开票类目枚举列表",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+					"summary":"WebResult<List<TaxPayBatchExtDto>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String[]>"
 				}
 			],
 			"method":"POST"
 		},
-		"/remit/product/queryAll":{
-			"summary":"查询所有产品",
+		"/remit/billingInfo/queryInvoiceStatusList":{
+			"summary":"查询开票状态枚举列表",
 			"responses":[
 				{
-					"summary":"WebResult<TaxProductDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxProductDTO[]>"
-				}
-			]
-		},
-		"/remit/merchanttaxrule/queryByMerchantNo":{
-			"summary":"根据商户号查询配置的费率规则",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantTaxRuleDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantTaxRuleDTO[]>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/merchant/queryByUid":{
-			"summary":"根据用户id查询商户列表",
-			"responses":[
-				{
-					"summary":"WebResult<List<TaxMerchantDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO[]>"
-				}
-			]
-		},
-		"/remit/merchant/belongMerchant":{
-			"summary":"获取服务商枚举",
-			"responses":[
-				{
-					"summary":"WebResult<List<Map<String, String>>>",
+					"summary":"WebResult<List<Map<String, String>>",
 					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
 				}
-			]
+			],
+			"method":"POST"
 		},
-		"/remit/merchant/queryWeChatWorkCorpAgents":{
-			"summary":"查询授权应用信息",
+		"/remit/billingInfo/invoicingApply":{
+			"summary":"申请开票(查询开票信息,商户号自动获取)",
 			"responses":[
 				{
-					"summary":"WebResult<List<TaxWeChatWorkPermanentAgent>>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.webapp.vo.TaxWeChatWorkPermanentAgentVo[]>"
+					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
 				}
 			],
+			"method":"POST",
 			"parameters":{
-				"merchantNo":{
+				"billNoJson":{
+					"pattern":"",
+					"summary":"账单编号数组",
 					"optional":true,
 					"type":"java.lang.String"
 				}
 			}
 		},
-		"/remit/merchant/queryByMerchantNo":{
-			"summary":"根据商户号查询商户",
+		"/remit/billingInfo/confirmInvoicing":{
+			"summary":"确定开票(商户号自动获取)",
 			"responses":[
 				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
+					"summary":"WebResult<Boolean>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
 				}
 			],
+			"method":"POST",
 			"parameters":{
-				"merchantNo":{
+				"invoiceDTO":{
 					"pattern":"",
-					"summary":"查询条件",
+					"summary":"开票信息",
 					"optional":true,
-					"type":"java.lang.String"
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantInvoiceInfoDTO"
 				}
 			}
 		},
@@ -6887,100 +7564,53 @@
 				}
 			]
 		},
-		"/remit/discountPackageData/getDropDownList":{
-			"summary":"优惠套餐下拉列表",
+		"/remit/merchant/queryByUid":{
+			"summary":"根据用户id查询商户列表",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.DiscountPackageChildVO[]>"
+					"summary":"WebResult<List<TaxMerchantDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO[]>"
 				}
-			],
-			"method":"POST"
+			]
 		},
-		"/remit/discountPackageData/getOne":{
-			"summary":"优惠套餐详情",
+		"/remit/merchant/belongMerchant":{
+			"summary":"获取服务商枚举",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.TaxDiscountPackageDataVO>"
+					"summary":"WebResult<List<Map<String, String>>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
+				}
+			]
+		},
+		"/remit/merchant/queryByMerchantNo":{
+			"summary":"根据商户号查询商户",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
 				}
 			],
-			"method":"GET",
 			"parameters":{
-				"id":{
+				"merchantNo":{
+					"pattern":"",
+					"summary":"查询条件",
 					"optional":true,
-					"type":"java.lang.Integer"
+					"type":"java.lang.String"
 				}
 			}
 		},
-		"/remit/merchantInvoicingInfo/queryInvoicingInfo":{
-			"summary":"查询开票信息",
+		"/remit/merchant/queryWeChatWorkCorpAgents":{
+			"summary":"查询授权应用信息",
 			"responses":[
 				{
-					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
-				}
-			],
-			"method":"POST"
-		},
-		"/remit/merchantInvoicingInfo/queryPrepaidInvoicingInfo":{
-			"summary":"查询开票信息(开票页面使用，没有类目报错)",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
-				}
-			],
-			"method":"POST"
-		},
-		"/remit/serviceOrder/queryOrderSettlePage":{
-			"summary":"结算明细列表分页查询",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxOrderSettleDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxOrderSettleDTO>>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"pattern":"",
-					"summary":"传服务单号serviceNo、接单人姓名receiptName、接单人证件号码receiptIdNo",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.TaxServiceOrderDTO"
-				}
-			}
-		},
-		"/remit/serviceOrder/queryServiceOrderDetail":{
-			"summary":"服务订单列表详情",
-			"responses":[
-				{
-					"summary":"WebResult<TaxServiceOrderDetailDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxServiceOrderDetailDTO>"
+					"summary":"WebResult<List<TaxWeChatWorkPermanentAgent>>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.webapp.vo.TaxWeChatWorkPermanentAgentVo[]>"
 				}
 			],
 			"parameters":{
-				"id":{
-					"pattern":"",
-					"summary":"服务订单主键",
+				"merchantNo":{
 					"optional":true,
-					"type":"java.lang.Integer"
-				}
-			}
-		},
-		"/remit/serviceOrder/queryServiceOrderPage":{
-			"summary":"服务订单列表",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxServiceOrderDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxServiceOrderDTO>>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"pattern":"",
-					"summary":"查询对象",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.TaxServiceOrderDTO"
+					"type":"java.lang.String"
 				}
 			}
 		},
@@ -7014,421 +7644,18 @@
 				}
 			}
 		},
-		"/remit/paybatch/updatePayBatchNo":{
-			"summary":"数据订正批次号",
+		"/remit/invoiceInfo/pageInvoiceInfo":{
+			"summary":"查询发票(商户后台商户号自动获取)",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"method":"GET",
-			"parameters":{
-				"oldPayBatchNo":{
-					"pattern":"",
-					"summary":"旧批次号",
-					"optional":false,
-					"type":"java.lang.String"
-				},
-				"newPayBatchNo":{
-					"pattern":"",
-					"summary":"新批次号",
-					"optional":false,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/paybatch/queryPayBathSummary":{
-			"summary":"打款批次概要",
-			"responses":[
-				{
-					"summary":"WebResult<TaxPayBatchDetailSummaryDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailSummaryDTO>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO"
-				}
-			}
-		},
-		"/remit/paybatch/payBill":{
-			"summary":"费用单",
-			"responses":[
-				{
-					"summary":"WebResult<TaxBatchDetailCostDto>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxBatchDetailCostDto>"
+					"summary":"WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoiceInfoDTO>>"
 				}
 			],
 			"parameters":{
-				"id":{
-					"pattern":"",
-					"summary":"批次明细主键",
+				"params":{
 					"optional":true,
-					"type":"java.lang.Integer"
-				}
-			}
-		},
-		"/remit/paybatch/queryPayBatchByPayBatchNo":{
-			"summary":"按批次号查询打款批次信息",
-			"responses":[
-				{
-					"summary":"TaxPayBatchDto",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO>"
-				}
-			],
-			"parameters":{
-				"payBatchNo":{
-					"pattern":"",
-					"summary":"打款批次号",
-					"optional":false,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/paybatch/queryPayBath":{
-			"summary":"打款批次",
-			"responses":[
-				{
-					"summary":"WebResult<TaxPayBatchDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayBatchVO"
-				}
-			}
-		},
-		"/remit/paybatch/payDetail":{
-			"summary":"打款详情",
-			"responses":[
-				{
-					"summary":"WebResult<TaxPayBatchDetailDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO>"
-				}
-			],
-			"parameters":{
-				"id":{
-					"pattern":"",
-					"summary":"批次明细主键",
-					"optional":true,
-					"type":"java.lang.Integer"
-				}
-			}
-		},
-		"/remit/paybatch/batchPayStatus":{
-			"summary":"查询批次状态枚举",
-			"responses":[
-				{
-					"summary":"WebResult<TaxPayBatchDetailDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
-				}
-			]
-		},
-		"/remit/paybatch/detailPayStatus":{
-			"summary":"查询明细订单状态枚举",
-			"responses":[
-				{
-					"summary":"WebResult<TaxPayBatchDetailDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
-				}
-			]
-		},
-		"/remit/paybatch/queryPayBatchList":{
-			"summary":"打款批次列表",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxPayBatchDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO>>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayBatchVO"
-				}
-			}
-		},
-		"/remit/paybatch/queryPayBatchDetail":{
-			"summary":"打款批次详情查询",
-			"responses":[
-				{
-					"summary":"TaxPayBatchDto",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxPayBatchDto>"
-				}
-			],
-			"parameters":{
-				"payBatchNo":{
-					"pattern":"",
-					"summary":"打款批次号",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/paybatch/uploadMerchantDetail":{
-			"summary":"商户上传打款明细EXCEL",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"parameters":{
-				"payBatchNo":{
-					"pattern":"",
-					"summary":"批次号",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"merchantPayBatchNo":{
-					"pattern":"",
-					"summary":"商户自定义批次号",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"payChannelCode":{
-					"pattern":"",
-					"summary":"打款通道",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"totalAmount":{
-					"pattern":"",
-					"summary":"总金额",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"count":{
-					"pattern":"",
-					"summary":"总笔数",
-					"optional":true,
-					"type":"java.lang.Integer"
-				}
-			}
-		},
-		"/remit/paybatch/downLoadTemplate":{
-			"summary":"下载批量打款明细模板EXCEL",
-			"parameters":{
-				"payChannelCode":{
-					"pattern":"",
-					"summary":"打款通道",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/paybatch/updatePaymentBasisDocument":{
-			"summary":"修改打款依据文件",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
-				}
-			],
-			"parameters":{
-				"payBatchNo":{
-					"pattern":"",
-					"summary":"批次号",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/paybatch/queryPayDetailsList":{
-			"summary":"打款明细列表",
-			"responses":[
-				{
-					"summary":"PageBean<TaxPayBatchDetailDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO>>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayBatchDetailVO"
-				}
-			}
-		},
-		"/remit/paybatch/queryPayDetailsStatistics":{
-			"summary":"打款明细统计",
-			"responses":[
-				{
-					"summary":"TaxPayBatchStatisticsDto",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxPayBatchStatisticsDto>"
-				}
-			],
-			"parameters":{
-				"payBatchNo":{
-					"pattern":"",
-					"summary":"批次号",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/paybatch/updateStatusByPayBatchNo":{
-			"summary":"更新打款批次状态",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"parameters":{
-				"status":{
-					"pattern":"",
-					"summary":"要变更的状态",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"payBatchNo":{
-					"pattern":"",
-					"summary":"批次号",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/paybatch/lockBatch":{
-			"summary":"锁定批次",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"taxPayBatchDTO":{
-					"pattern":"",
-					"summary":"批次",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO"
-				}
-			}
-		},
-		"/remit/paybatch/cancelDetail":{
-			"summary":"撤销",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"parameters":{
-				"taxPayBatchDTO":{
-					"pattern":"",
-					"summary":"批次明细",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO"
-				}
-			}
-		},
-		"/remit/paybatch/repay":{
-			"summary":"重新打款",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"parameters":{
-				"taxPayBatchDTO":{
-					"pattern":"",
-					"summary":"批次号",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO"
-				}
-			}
-		},
-		"/remit/paybatch/applyPay":{
-			"summary":"打款申请",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"parameters":{
-				"taxPayBatchDTO":{
-					"pattern":"",
-					"summary":"批次",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO"
-				}
-			}
-		},
-		"/remit/paybatch/revoke":{
-			"summary":"批次打款撤销",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"parameters":{
-				"taxPayBatchDTO":{
-					"pattern":"",
-					"summary":"批次",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO"
-				}
-			}
-		},
-		"/remit/merchantSettleInfo/querySettleInfo":{
-			"summary":"根据商户号查询结算信息",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantSettleInfoDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantSettleInfoDTO>"
-				}
-			],
-			"method":"POST"
-		},
-		"/remit/bankReceipt/previewBankReceipt":{
-			"summary":"预览银行回单",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
-				}
-			],
-			"parameters":{
-				"payDetailNo":{
-					"pattern":"",
-					"summary":"明细单号",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/invoiceInfo/invoiceBillDetail":{
-			"summary":"查看发票账单明细",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxMerchantBillingInfoDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxMerchantBillingInfoDTO>>"
-				}
-			],
-			"method":"POST",
-			"parameters":{
-				"applyNo":{
-					"pattern":"",
-					"summary":"申请单号",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"curPage":{
-					"pattern":"",
-					"summary":"当前页码",
-					"optional":true,
-					"type":"java.lang.Integer"
-				},
-				"pageSize":{
-					"pattern":"",
-					"summary":"每页多少条",
-					"optional":true,
-					"type":"java.lang.Integer"
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantInvoiceInfoDTO"
 				}
 			}
 		},
@@ -7501,21 +7728,6 @@
 				}
 			}
 		},
-		"/remit/invoiceInfo/pageInvoiceInfo":{
-			"summary":"查询发票(商户后台商户号自动获取)",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoiceInfoDTO>>"
-				}
-			],
-			"parameters":{
-				"params":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantInvoiceInfoDTO"
-				}
-			}
-		},
 		"/remit/invoiceInfo/invoiceDetail":{
 			"summary":"查看发票详情&查看发票影像",
 			"responses":[
@@ -7533,6 +7745,66 @@
 					"type":"java.lang.String"
 				}
 			}
+		},
+		"/remit/invoiceInfo/invoiceBillDetail":{
+			"summary":"查看发票账单明细",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxMerchantBillingInfoDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxMerchantBillingInfoDTO>>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"applyNo":{
+					"pattern":"",
+					"summary":"申请单号",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"curPage":{
+					"pattern":"",
+					"summary":"当前页码",
+					"optional":true,
+					"type":"java.lang.Integer"
+				},
+				"pageSize":{
+					"pattern":"",
+					"summary":"每页多少条",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/remit/merchantInvoicingInfo/queryPrepaidInvoicingInfo":{
+			"summary":"查询开票信息(开票页面使用，没有类目报错)",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
+				}
+			],
+			"method":"POST"
+		},
+		"/remit/merchantInvoicingInfo/queryInvoicingInfo":{
+			"summary":"查询开票信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
+				}
+			],
+			"method":"POST"
+		},
+		"/remit/merchantLegalPerson/queryLegalPerson":{
+			"summary":"根据商户号查询法人信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantLegalPersonDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantLegalPersonDTO>"
+				}
+			],
+			"method":"POST"
 		},
 		"/remit/natural/queryNaturalPersonDetail":{
 			"summary":"查询卡验证详情",
@@ -7569,55 +7841,268 @@
 				}
 			}
 		},
-		"/remit/dispathProject/queryDispatchProjectList":{
-			"summary":"派单项目列表查询",
+		"/remit/merchantproduct/queryPayChanleByMerchantNo":{
+			"summary":"查询商户配置的可用发放通道",
 			"responses":[
 				{
-					"summary":"WebResult<PageBean<TaxDispatchProjectDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxDispatchProjectDTO>>"
+					"summary":"WebResult<PayChanelCodeEnum>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String{}[]>"
 				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dal.query.DispatchProjectQuery"
-				}
-			}
+			]
 		},
-		"/remit/dispathProject/queryDispatchProjectDetail":{
-			"summary":"查询项目详情",
+		"/remit/merchantproduct/queryByMerchantNo":{
+			"summary":"查询商户产品信息",
 			"responses":[
 				{
-					"summary":"WebResult<TaxProjectDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxDispatchProjectDTO>"
+					"summary":"WebResult<TaxMerchantProductDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantProductDTO>"
 				}
 			],
 			"parameters":{
-				"projectNo":{
-					"pattern":"",
-					"summary":"项目编号",
+				"merchantNo":{
 					"optional":true,
 					"type":"java.lang.String"
 				}
 			}
 		},
-		"/remit/bankInfo/queryBankList":{
-			"summary":"获取银行数据列表",
+		"/remit/merchantsecret/downLoadSecret":{
+			"summary":"下载平台公钥",
+			"parameters":{
+				"fileName":{
+					"pattern":"",
+					"summary":"下载文件名",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/merchantsecret/querySecretByMerchantNo":{
+			"summary":"根据商户号查询商户密钥等信息",
 			"responses":[
 				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.BankDTO[]>"
+					"summary":"WebResult<TaxMerchantSecretDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantSecretDTO>"
+				}
+			]
+		},
+		"/remit/merchantsecret/saveMerchantSecret":{
+			"summary":"保存商户API公钥等信息",
+			"responses":[
+				{
+					"summary":"保存商户API公钥结果",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			],
+			"parameters":{
+				"taxMerchantSecretVO":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantSecretVO"
+				}
+			}
+		},
+		"/remit/merchantsecret/queryPlatformSecret":{
+			"summary":"查询平台公钥",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantSecretDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxPlatformSecretVO>"
+				}
+			]
+		},
+		"/remit/merchantSettleInfo/querySettleInfo":{
+			"summary":"根据商户号查询结算信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantSettleInfoDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantSettleInfoDTO>"
 				}
 			],
 			"method":"POST"
 		},
-		"/remit/contact/queryByMerchantNo":{
-			"summary":"根据商户号查询商户联系人",
+		"/remit/merchanttaxrule/queryByMerchantNo":{
+			"summary":"根据商户号查询配置的费率规则",
 			"responses":[
 				{
-					"summary":"WebResult<TaxContactDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxContactDTO[]>"
+					"summary":"WebResult<TaxMerchantTaxRuleDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantTaxRuleDTO[]>"
+				}
+			],
+			"parameters":{
+				"merchantNo":{
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/paybatchdetail/updateStatusById":{
+			"summary":"更新打款批次明细状态,商户后台挂起和撤销",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"parameters":{
+				"status":{
+					"pattern":"",
+					"summary":"挂起/撤销状态",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"id":{
+					"pattern":"",
+					"summary":"批次明细主键",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/remit/paybatchdetail/updateTaxPayBatchDetail":{
+			"summary":"修改批次订单明细",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"parameters":{
+				"taxPayBatchDetailDto":{
+					"pattern":"",
+					"summary":"批次明细",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxPayBatchDetailDto"
+				}
+			}
+		},
+		"/remit/paybatchdetail/queryOrderCostDetail":{
+			"summary":"费用单明细查询",
+			"responses":[
+				{
+					"summary":"TaxBatchDetailCostDto",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxBatchDetailCostDto>"
+				}
+			],
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"批次明细主键",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/remit/payorder/queryPayOrderPage":{
+			"summary":"资金明细",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxPayOrderDto>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxPayOrderDto>>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"vo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayOrderVO"
+				}
+			}
+		},
+		"/remit/payorder/queryOrder":{
+			"summary":"资金明细",
+			"responses":[
+				{
+					"summary":"WebResult<TaxPayOrderDto>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxPayOrderDto>"
+				}
+			],
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/remit/product/queryAll":{
+			"summary":"查询所有产品",
+			"responses":[
+				{
+					"summary":"WebResult<TaxProductDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxProductDTO[]>"
+				}
+			]
+		},
+		"/remit/rebatepackage/queryAll":{
+			"summary":"查询所有返点套餐",
+			"responses":[
+				{
+					"summary":"WebResult<TaxRebatePackageDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxRebatePackageDTO[]>"
+				}
+			]
+		},
+		"/remit/serviceOrder/queryServiceOrderDetail":{
+			"summary":"服务订单列表详情",
+			"responses":[
+				{
+					"summary":"WebResult<TaxServiceOrderDetailDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxServiceOrderDetailDTO>"
+				}
+			],
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"服务订单主键",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/remit/serviceOrder/queryOrderSettlePage":{
+			"summary":"结算明细列表分页查询",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxOrderSettleDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxOrderSettleDTO>>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"query":{
+					"pattern":"",
+					"summary":"传服务单号serviceNo、接单人姓名receiptName、接单人证件号码receiptIdNo",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.service.entity.TaxServiceOrderDTO"
+				}
+			}
+		},
+		"/remit/serviceOrder/queryServiceOrderPage":{
+			"summary":"服务订单列表",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxServiceOrderDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxServiceOrderDTO>>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"query":{
+					"pattern":"",
+					"summary":"查询对象",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.service.entity.TaxServiceOrderDTO"
+				}
+			}
+		},
+		"/remit/subAccount/queryByMerchantNo":{
+			"summary":"根据商户号查询商户子账户",
+			"responses":[
+				{
+					"summary":"WebResult<TaxSubAccountDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO[]>"
 				}
 			],
 			"parameters":{
@@ -7629,7 +8114,318 @@
 				}
 			}
 		},
-		"/remit/capitalflow/queryCapitalFlowPage":{
+		"/remit/subAccount/query":{
+			"summary":"根据账户类型查询商户本地账户信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxSubAccountDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO[]>"
+				}
+			],
+			"parameters":{
+				"merchantNo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/selectOption/querySelectOptions":{
+			"summary":"获取所有的下拉框",
+			"responses":[
+				{
+					"summary":"获取所有的下拉框",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.Object>"
+				}
+			],
+			"method":"GET"
+		},
+		"/supervisor/account/offlineRecharge":{
+			"summary":"线下充值",
+			"responses":[
+				{
+					"summary":"WebResult",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"parameters":{
+				"rechargeVO":{
+					"pattern":"",
+					"summary":"充值内容",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.OfflineRechargeVO"
+				}
+			}
+		},
+		"/supervisor/account/queryPage":{
+			"summary":"查询资金账户列表",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxMerchantAccountVO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.webapp.vo.TaxMerchantAccountVO>>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"accountVO":{
+					"pattern":"",
+					"summary":"查询VO",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.MerchantAccountVO"
+				}
+			}
+		},
+		"/supervisor/account/queryAllAvailable":{
+			"summary":"查询所有可用商户账户",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantAccountDTO[]>"
+				}
+			],
+			"parameters":{
+				"merchantNo":{
+					"pattern":"",
+					"summary":"商户号",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/accountOpt/queryAllChangeTypes":{
+			"summary":"查询所有的账务类型",
+			"responses":[
+				{
+					"summary":"List<TypeDayBalanceDO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.account.ChangeType[]>"
+				}
+			]
+		},
+		"/supervisor/accountOpt/openAccount":{
+			"summary":"开户操作",
+			"responses":[
+				{
+					"summary":"Void",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"accountDO":{
+					"pattern":"",
+					"summary":"accountDO",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.account.AccountDO"
+				}
+			}
+		},
+		"/supervisor/accountOpt/adjustAccount":{
+			"summary":"调账",
+			"responses":[
+				{
+					"summary":"Void",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"adjustBillOrder":{
+					"pattern":"",
+					"summary":"调账",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.account.AdjustBillOrder"
+				}
+			}
+		},
+		"/supervisor/accountOpt/genSequence":{
+			"summary":"生成订单号",
+			"responses":[
+				{
+					"summary":"String",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			]
+		},
+		"/supervisor/accountOpt/updateAccount":{
+			"summary":"账户更新",
+			"responses":[
+				{
+					"summary":"AccountDO",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"accountDO":{
+					"pattern":"",
+					"summary":"accountDO",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.account.AccountDO"
+				}
+			}
+		},
+		"/supervisor/accountOpt/queryAllAccounts":{
+			"summary":"查询所有平台账户",
+			"responses":[
+				{
+					"summary":"PageBean<AccountDO>",
+					"type":"com.weidai.taxmng.taxmng.dto.account.AccountDO[]"
+				}
+			],
+			"parameters":{
+				"query":{
+					"pattern":"",
+					"summary":"查询参数",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.account.AccountDO"
+				}
+			}
+		},
+		"/supervisor/accountorder/queryAccountOrderPage":{
+			"summary":"账户流水",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<AccountLogDto>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.AccountLogDto>>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"vo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.AccountOrderVO"
+				}
+			}
+		},
+		"/supervisor/atachment/downloadAttachment":{
+			"summary":"下载附件",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"method":"GET",
+			"parameters":{
+				"url":{
+					"pattern":"",
+					"summary":"附件url",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/atachment/uploadAttachment":{
+			"summary":"附件上传",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			],
+			"method":"POST"
+		},
+		"/supervisor/authentication/checkAuthentication":{
+			"summary":"审核免验证",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"免验证id",
+					"optional":true,
+					"type":"java.lang.Integer"
+				},
+				"checkStatus":{
+					"pattern":"",
+					"summary":"审核状态1:审核通过 2:审核拒绝",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"checkMemo":{
+					"pattern":"",
+					"summary":"审核备注",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/authentication/queryAuthenticationDetail":{
+			"summary":"查询免验证详情",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxAuthenticationInfoDTO>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"查询免验证详情",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/supervisor/authentication/queryAuthenticationList":{
+			"summary":"免验证列表查询",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxAuthenticationInfoDTO>>"
+				}
+			],
+			"method":"POST",
+			"contentType":"application/json",
+			"parameters":{
+				"query":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.TaxAuthenticationInfoVO"
+				}
+			}
+		},
+		"/supervisor/bankInfo/queryBankList":{
+			"summary":"获取银行数据列表",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.BankDTO[]>"
+				}
+			],
+			"method":"POST"
+		},
+		"/supervisor/bankReceipt/previewBankReceipt":{
+			"summary":"预览银行回单",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			],
+			"parameters":{
+				"payDetailNo":{
+					"pattern":"",
+					"summary":"明细单号",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/capitalflow/queryTransSubCodeList":{
+			"summary":"查询业务类型枚举",
+			"responses":[
+				{
+					"summary":"WebResult<List<TransSubCodeEnum>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
+				}
+			]
+		},
+		"/supervisor/capitalflow/queryCapitalFlowPage":{
 			"summary":"资金流水",
 			"responses":[
 				{
@@ -7647,292 +8443,468 @@
 				}
 			}
 		},
-		"/remit/capitalflow/queryTransSubCodeList":{
-			"summary":"查询业务类型枚举",
+		"/supervisor/collectedsubject/querybyCollectedSubjectNo":{
+			"summary":"查询所有可用服务主体",
 			"responses":[
 				{
-					"summary":"WebResult<List<TransSubCodeEnum>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
+					"summary":"WebResult<TaxCollectedSubjectDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxCollectedSubjectDTO>"
+				}
+			],
+			"parameters":{
+				"collectedSubjectNo":{
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/collectedsubject/queryAllAvailable":{
+			"summary":"查询所有可用服务主体",
+			"responses":[
+				{
+					"summary":"WebResult<TaxCollectedSubjectDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxCollectedSubjectDTO[]>"
 				}
 			]
 		},
-		"/remit/countryinfo/queryCountryList":{
-			"summary":"查询国家地区列表",
+		"/supervisor/collectedsubject/add":{
+			"summary":"新增服务主体",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxCountryInfoDTO>"
+					"summary":"WebResult",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"parameters":{
+				"taxCollectedSubjectDTO":{
+					"pattern":"",
+					"summary":"关联商户账号",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxCollectedSubjectDTO"
+				}
+			}
+		},
+		"/supervisor/collectedsubject/update":{
+			"summary":"修改服务主体",
+			"responses":[
+				{
+					"summary":"WebResult",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"parameters":{
+				"taxCollectedSubjectDTO":{
+					"pattern":"",
+					"summary":"关联商户账号",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxCollectedSubjectDTO"
+				}
+			}
+		},
+		"/supervisor/contact/queryByMerchantNo":{
+			"summary":"根据商户号查询商户联系人",
+			"responses":[
+				{
+					"summary":"WebResult<TaxContactDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxContactDTO[]>"
+				}
+			],
+			"parameters":{
+				"merchantNo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/contact/able":{
+			"summary":"启用商户联系人",
+			"responses":[
+				{
+					"summary":"WebResult<TaxContactDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxContactDTO>"
+				}
+			],
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"商户ID",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/supervisor/contact/add":{
+			"summary":"新增商户联系人",
+			"responses":[
+				{
+					"summary":"WebResult<TaxContactDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxContactDTO>"
+				}
+			],
+			"parameters":{
+				"taxContactDTO":{
+					"pattern":"",
+					"summary":"商户联系人",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxContactDTO"
+				}
+			}
+		},
+		"/supervisor/contact/update":{
+			"summary":"更新商户联系人",
+			"responses":[
+				{
+					"summary":"WebResult<TaxContactDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxContactDTO>"
+				}
+			],
+			"parameters":{
+				"taxContactDTO":{
+					"pattern":"",
+					"summary":"商户联系人",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxContactDTO"
+				}
+			}
+		},
+		"/supervisor/contact/disable":{
+			"summary":"停用商户商户联系人",
+			"responses":[
+				{
+					"summary":"WebResult<TaxContactDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxContactDTO>"
+				}
+			],
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"商户联系人ID",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/supervisor/discountPackageData/saveOrUpdate":{
+			"summary":"优惠套餐列表添加/修改",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Void>"
+				}
+			],
+			"method":"POST",
+			"contentType":"application/json",
+			"parameters":{
+				"taxDiscountPackageDataPO":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dal.po.TaxDiscountPackageDataPO"
+				}
+			}
+		},
+		"/supervisor/discountPackageData/deleteRebate":{
+			"summary":"返点费率列表删除",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Void>"
+				}
+			],
+			"method":"GET",
+			"parameters":{
+				"id":{
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/supervisor/discountPackageData/getPackageTypeDropDownList":{
+			"summary":"优惠套餐==类型==下拉列表",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.DiscountPackageTypeEnumVO[]>"
 				}
 			],
 			"method":"POST"
 		},
-		"/contract/wechat/sign":{
-			"summary":"签约",
+		"/supervisor/discountPackageData/getPackageStatusDropDownList":{
+			"summary":"优惠套餐==状态==下拉列表",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String>"
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.DiscountPackageStatusVO[]>"
 				}
 			],
-			"cache":5000,
+			"method":"POST"
+		},
+		"/supervisor/discountPackageData/getList":{
+			"summary":"优惠套餐列表查询",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean>"
+				}
+			],
+			"method":"POST",
+			"contentType":"application/json",
 			"parameters":{
-				"signId":{
-					"pattern":"",
-					"summary":"签约ID",
+				"taxDiscountPackageDataQuery":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dal.query.TaxDiscountPackageDataQuery"
+				}
+			}
+		},
+		"/supervisor/discountPackageData/delete":{
+			"summary":"优惠套餐列表删除",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Void>"
+				}
+			],
+			"method":"GET",
+			"parameters":{
+				"id":{
 					"optional":true,
 					"type":"java.lang.Integer"
 				}
-			},
-			"author":"彭晓峰"
+			}
 		},
-		"/contract/wechat/personAuth":{
-			"summary":"个人实名认证",
+		"/supervisor/discountPackageData/getOne":{
+			"summary":"优惠套餐详情",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String>"
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.TaxDiscountPackageDataVO>"
 				}
 			],
-			"cache":5000,
-			"author":"彭晓峰"
-		},
-		"/contract/wechat/authQuery":{
-			"summary":"个人实名认证查询",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dal.entity.TaxCustomer>"
-				}
-			],
-			"cache":5000,
-			"author":"彭晓峰"
-		},
-		"/contract/wechat/querySignRecords":{
-			"summary":"查询签约记录",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dal.entity.TaxFddContractSign[]>"
-				}
-			],
-			"cache":5000,
+			"method":"GET",
 			"parameters":{
-				"signQuery":{
-					"pattern":"",
-					"summary":"签约状态，不填默认查询所有记录",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.request.SignQuery"
-				}
-			},
-			"author":"彭晓峰"
-		},
-		"/contract/wechat/preSignByCode":{
-			"summary":"使用签约邀请码进行签约，预请求",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.service.sign.model.PreSignDetail>"
-				}
-			],
-			"parameters":{
-				"signCode":{
-					"pattern":"",
-					"summary":"签约邀请码",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			},
-			"author":"彭晓峰"
-		},
-		"/contract/wechat/signByCode":{
-			"summary":"使用签约邀请码进行签约",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String>"
-				}
-			],
-			"parameters":{
-				"signCode":{
-					"pattern":"",
-					"summary":"签约邀请码",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			},
-			"author":"彭晓峰"
-		},
-		"/contract/admin/detail":{
-			"summary":"签约详情",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.service.entity.ContractSignVO>"
-				}
-			],
-			"parameters":{
-				"signId":{
-					"pattern":"",
-					"summary":"签约记录ID",
+				"id":{
 					"optional":true,
 					"type":"java.lang.Integer"
 				}
-			},
-			"author":"彭晓峰"
+			}
 		},
-		"/contract/admin/page":{
-			"summary":"分页查询签约记录",
+		"/supervisor/discountPackageData/getDropDownList":{
+			"summary":"优惠套餐下拉列表",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.ContractSignVO>>"
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.DiscountPackageChildVO[]>"
 				}
 			],
-			"parameters":{
-				"contractSignQuery":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dal.query.ContractSignQuery"
-				}
-			},
-			"author":"彭晓峰"
+			"method":"POST"
 		},
-		"/contract/admin/batchInvite":{
-			"summary":"批量邀请",
+		"/supervisor/export/exportPayBatch":{
+			"summary":"导出批次记录",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult"
+					"summary":"string",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
 				}
 			],
 			"contentType":"application/json",
 			"parameters":{
-				"contractSignQuery":{
-					"pattern":"",
-					"summary":"签约记录ID们,英文逗号分隔",
+				"request":{
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dal.query.ContractSignQuery"
-				}
-			},
-			"author":"彭晓峰"
-		},
-		"/contract/admin/signType":{
-			"summary":"签约配置枚举",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<javafx.util.Pair<java.lang.String,java.lang.Integer>[]>"
-				}
-			],
-			"author":"彭晓峰"
-		},
-		"/contract/merchant/page":{
-			"summary":"分页查询签约记录",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.ContractSignVO>>"
-				}
-			],
-			"parameters":{
-				"contractSignQuery":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dal.query.ContractSignQuery"
-				}
-			},
-			"author":"彭晓峰"
-		},
-		"/selectOption/querySelectOptions":{
-			"summary":"获取所有的下拉框",
-			"responses":[
-				{
-					"summary":"获取所有的下拉框",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.Object>"
-				}
-			],
-			"method":"GET"
-		},
-		"/common/enums/queryAllPayChannelList":{
-			"summary":"查询所有可用打款通道",
-			"responses":[
-				{
-					"summary":"WebResult<List<Map<String,String>>>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String{}[]>"
-				}
-			]
-		},
-		"/common/enums/queryEnumsListByType":{
-			"summary":"根据枚举类型查询枚举值",
-			"responses":[
-				{
-					"summary":"WebResult<List<Map<String,String>>>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String{}[]>"
-				}
-			],
-			"parameters":{
-				"enumType":{
-					"pattern":"",
-					"summary":"枚举类型",
-					"optional":false,
-					"type":"java.lang.String"
+					"type":"com.weidai.taxmng.taxmng.service.entity.ExportDataRequest"
 				}
 			}
 		},
-		"/common/enums/queryThirdLevelDicListById":{
-			"summary":"根据字典id获取三级字典值",
+		"/supervisor/export/exportPayBatchDetail":{
+			"summary":"导出批次详情",
 			"responses":[
 				{
-					"summary":"WebResult<List<TaxDictionaryDTO>>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxDictionaryDTO[]>"
-				}
-			],
-			"parameters":{
-				"id":{
-					"pattern":"",
-					"summary":"字典id",
-					"optional":false,
-					"type":"int"
-				}
-			}
-		},
-		"/common/enums/queryFirstLevelDicListByType":{
-			"summary":"根据类型获取一级字典值",
-			"responses":[
-				{
-					"summary":"WebResult<List<TaxDictionaryDTO>>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxDictionaryDTO[]>"
-				}
-			],
-			"parameters":{
-				"dicTypeCode":{
-					"pattern":"",
-					"summary":"字典类型",
-					"optional":false,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/common/enums/querySecondLevelDicListById":{
-			"summary":"根据字典id获取二级字典值",
-			"responses":[
-				{
-					"summary":"WebResult<List<TaxDictionaryDTO>>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxDictionaryDTO[]>"
-				}
-			],
-			"parameters":{
-				"id":{
-					"pattern":"",
-					"summary":"字典id",
-					"optional":false,
-					"type":"int"
-				}
-			}
-		},
-		"/supervisor/bankReceipt/previewBankReceipt":{
-			"summary":"预览银行回单",
-			"responses":[
-				{
+					"summary":"string",
 					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
 				}
 			],
+			"contentType":"application/json",
 			"parameters":{
-				"payDetailNo":{
+				"request":{
 					"pattern":"",
-					"summary":"明细单号",
+					"summary":"查询条件",
 					"optional":true,
-					"type":"java.lang.String"
+					"type":"com.weidai.taxmng.taxmng.service.entity.ExportDataRequest"
+				}
+			}
+		},
+		"/supervisor/export/exportPayOrderDetail":{
+			"summary":"导出明细订单",
+			"responses":[
+				{
+					"summary":"string",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"query":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO"
+				}
+			}
+		},
+		"/supervisor/export/exportAccountDetail":{
+			"summary":"导出账务详情",
+			"responses":[
+				{
+					"summary":"string",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"query":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.CapitalFlowVO"
+				}
+			}
+		},
+		"/supervisor/fundOperation/getOne":{
+			"summary":"资金业务记录详情",
+			"responses":[
+				{
+					"summary":"WebResult<FundOperationVO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.FundOperationVO>"
+				}
+			],
+			"method":"GET",
+			"parameters":{
+				"id":{
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/supervisor/fundOperation/getRebateAmount":{
+			"summary":"查询可用余额 上月返点 累计返点",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.RebateVO>"
+				}
+			],
+			"method":"POST"
+		},
+		"/supervisor/fundOperation/export":{
+			"summary":"资金业务记录导出",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Void>"
+				}
+			],
+			"method":"POST",
+			"contentType":"application/json",
+			"parameters":{
+				"fundOperationQuery":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dal.query.FundOperationQuery"
+				}
+			}
+		},
+		"/supervisor/fundOperation/getList":{
+			"summary":"资金业务记录列表",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<FundOperationVO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dal.vo.FundOperationVO>>"
+				}
+			],
+			"method":"POST",
+			"contentType":"application/json",
+			"parameters":{
+				"fundOperationQuery":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dal.query.FundOperationQuery"
+				}
+			}
+		},
+		"/supervisor/guestCooperation/queryPage":{
+			"summary":"查询合作内容对象列表",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxMerchantDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxGuestCooperationDTO>>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"vo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxGuestCooperationQuery"
+				}
+			}
+		},
+		"/supervisor/guestCooperation/addRecord":{
+			"summary":"添加合作内容对象",
+			"responses":[
+				{
+					"summary":"WebResult",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Void>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"taxGuestCooperationDTO":{
+					"pattern":"",
+					"summary":"合作内容对象",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxGuestCooperationDTO"
+				}
+			}
+		},
+		"/supervisor/guestCooperation/queryAllTaxPlanningType":{
+			"summary":"获取合作内容枚举",
+			"responses":[
+				{
+					"summary":"WebResult",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
+				}
+			]
+		},
+		"/supervisor/guest/queryPage":{
+			"summary":"访客列表",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxMerchantDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxGuestUserDTO>>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"vo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.TaxGuestUserVO"
+				}
+			}
+		},
+		"/supervisor/guest/queryAllTaxPlanningType":{
+			"summary":"获取节税类型",
+			"responses":[
+				{
+					"summary":"WebResult",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			]
+		},
+		"/supervisor/guest/add":{
+			"summary":"新增访客",
+			"responses":[
+				{
+					"summary":"WebResult",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"taxGuestUserDTO":{
+					"pattern":"",
+					"summary":"访客记录",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxGuestUserDTO"
 				}
 			}
 		},
@@ -8043,51 +9015,70 @@
 			],
 			"method":"POST"
 		},
-		"/supervisor/merchantSettleInfo/addSettleInfo":{
-			"summary":"新增结算信息",
+		"/supervisor/merchant/queryWeChatWorkAgentInfos":{
+			"summary":"查询所有授权方应用信息",
 			"responses":[
 				{
-					"summary":"WebResult<TaxMerchantSettleInfoDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
+					"summary":"WebResult<List<TaxWeChatWorkAgentInfo>>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.webapp.vo.TaxWeChatWorkPermanentAgentVo[]>"
 				}
 			],
-			"method":"POST",
 			"parameters":{
-				"settleInfoDTO":{
-					"pattern":"",
-					"summary":"商户",
+				"merchantNo":{
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantSettleInfoDTO"
+					"type":"java.lang.String"
 				}
 			}
 		},
-		"/supervisor/merchantSettleInfo/updateSettleInfo":{
-			"summary":"更新结算信息",
+		"/supervisor/merchant/queryWeChatWorkCorpAdmins":{
+			"summary":"查询所有授权方管理员信息",
 			"responses":[
 				{
-					"summary":"WebResult<Boolean>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
+					"summary":"WebResult<List<TaxWeChatWorkAgentAdmin>>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.webapp.vo.TaxWeChatWorkAgentAdminVo[]>"
 				}
 			],
-			"method":"POST",
 			"parameters":{
-				"settleInfoDTO":{
-					"pattern":"",
-					"summary":"商户",
+				"merchantNo":{
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantSettleInfoDTO"
+					"type":"java.lang.String"
 				}
 			}
 		},
-		"/supervisor/merchantSettleInfo/queryByMerchantNo":{
-			"summary":"根据商户号查询结算信息",
+		"/supervisor/merchant/operatorSource":{
+			"summary":"获取操作来源枚举",
 			"responses":[
 				{
-					"summary":"WebResult<TaxMerchantSettleInfoDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantSettleInfoDTO>"
+					"summary":"WebResult<OperatorSourceEnum[]>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.enums.OperatorSourceEnum[]>"
+				}
+			]
+		},
+		"/supervisor/merchant/queryBalanceByMerchantAndAccountType":{
+			"summary":"根据商户号查询商户账户余额（payaccount）",
+			"responses":[
+				{
+					"summary":"WebResult<PlatformAccountDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.facade.dto.PlatformAccountDTO>"
 				}
 			],
-			"method":"POST",
+			"parameters":{
+				"vo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.QueryMerchantAccountBalanceVO"
+				}
+			}
+		},
+		"/supervisor/merchant/queryBalanceListByMerchant":{
+			"summary":"根据商户号查询商户可用账户列表余额（payaccount）",
+			"responses":[
+				{
+					"summary":"WebResult<PlatformAccountDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.facade.dto.PlatformAccountDTO[]>"
+				}
+			],
 			"parameters":{
 				"merchantNo":{
 					"pattern":"",
@@ -8097,12 +9088,21 @@
 				}
 			}
 		},
-		"/supervisor/accountorder/queryAccountOrderPage":{
-			"summary":"账户流水",
+		"/supervisor/merchant/belongMerchant":{
+			"summary":"获取服务商枚举",
 			"responses":[
 				{
-					"summary":"WebResult<PageBean<AccountLogDto>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.AccountLogDto>>"
+					"summary":"WebResult<List<Map<String, String>>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
+				}
+			]
+		},
+		"/supervisor/merchant/queryPage":{
+			"summary":"商户列表",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxMerchantDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>>"
 				}
 			],
 			"contentType":"application/json",
@@ -8111,25 +9111,242 @@
 					"pattern":"",
 					"summary":"查询条件",
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.AccountOrderVO"
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.MerchantVO"
 				}
 			}
 		},
-		"/supervisor/invoiceInfo/invoicingVerify":{
-			"summary":"开票核销",
+		"/supervisor/merchant/queryByMerchantNo":{
+			"summary":"根据商户号查询商户",
 			"responses":[
 				{
-					"summary":"WebResult<Boolean>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
 				}
 			],
-			"method":"POST",
 			"parameters":{
-				"inoicingVerifyDTO":{
+				"merchantNo":{
 					"pattern":"",
-					"summary":"开票核销参数",
+					"summary":"查询条件",
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.InvoicingVerifyDTO"
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/merchant/queryAllMerchant":{
+			"summary":"查询所有可用商户及服务主体列表",
+			"responses":[
+				{
+					"summary":"WebResult<List<TaxMerchantAndCollectedSubject>>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dal.entity.TaxMerchantAndCollectedSubject[]>"
+				}
+			]
+		},
+		"/supervisor/merchant/sendEmail":{
+			"summary":"发送邮件",
+			"responses":[
+				{
+					"summary":"ServiceResult<Void>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.Void>"
+				}
+			],
+			"parameters":{
+				"merchantNo":{
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"useremail":{
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/merchant/queryWeChatWorkCorpInfos":{
+			"summary":"查询授权方企业信息",
+			"responses":[
+				{
+					"summary":"WebResult<List<TaxWeChatWorkPermanentCode>>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.webapp.vo.TaxWeChatWorkPermanentCodeVo>"
+				}
+			],
+			"parameters":{
+				"merchantNo":{
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/merchant/able":{
+			"summary":"启用商户",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
+				}
+			],
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"商户ID",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/supervisor/merchant/addMerchant":{
+			"summary":"新增商户（商户基本信息）",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"merchantDTO":{
+					"pattern":"",
+					"summary":"商户",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO"
+				}
+			}
+		},
+		"/supervisor/merchant/updateMerchant":{
+			"summary":"更新商户---新",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"merchantDTO":{
+					"pattern":"",
+					"summary":"商户",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO"
+				}
+			}
+		},
+		"/supervisor/merchant/queryAllAvailable":{
+			"summary":"查询所有可用商户",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO[]>"
+				}
+			]
+		},
+		"/supervisor/merchant/add":{
+			"summary":"新增商户",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"merchantDTO":{
+					"pattern":"",
+					"summary":"商户",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.MerchantDTO"
+				}
+			}
+		},
+		"/supervisor/merchant/update":{
+			"summary":"更新商户",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"merchantDTO":{
+					"pattern":"",
+					"summary":"商户",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.MerchantDTO"
+				}
+			}
+		},
+		"/supervisor/merchant/disable":{
+			"summary":"停用商户",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
+				}
+			],
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"商户ID",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/supervisor/merchantextend/queryByMerchantNo":{
+			"summary":"查询商户扩展信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantExtendDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantExtendDTO>"
+				}
+			],
+			"parameters":{
+				"merchantNo":{
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/merchantextend/add":{
+			"summary":"配置商户扩展信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantExtendDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantExtendDTO>"
+				}
+			],
+			"parameters":{
+				"taxMerchantExtendDTO":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantExtendDTO"
+				}
+			}
+		},
+		"/supervisor/merchantextend/update":{
+			"summary":"更新商户扩展信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantExtendDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantExtendDTO>"
+				}
+			],
+			"parameters":{
+				"taxMerchantExtendDTO":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantExtendDTO"
+				}
+			}
+		},
+		"/supervisor/invoiceInfo/pageInvoiceInfo":{
+			"summary":"查询发票(管理后台商户号选填)",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoiceInfoDTO>>"
+				}
+			],
+			"parameters":{
+				"params":{
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantInvoiceInfoDTO"
 				}
 			}
 		},
@@ -8166,48 +9383,21 @@
 				}
 			}
 		},
-		"/supervisor/invoiceInfo/pageInvoiceInfo":{
-			"summary":"查询发票(管理后台商户号选填)",
+		"/supervisor/invoiceInfo/invoicingVerify":{
+			"summary":"开票核销",
 			"responses":[
 				{
-					"summary":"WebResult<PageBean<TaxMerchantInvoiceInfoDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoiceInfoDTO>>"
-				}
-			],
-			"parameters":{
-				"params":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantInvoiceInfoDTO"
-				}
-			}
-		},
-		"/supervisor/invoiceInfo/invoiceBillDetail":{
-			"summary":"查看发票账单明细",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxMerchantBillingInfoDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxMerchantBillingInfoDTO>>"
+					"summary":"WebResult<Boolean>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
 				}
 			],
 			"method":"POST",
 			"parameters":{
-				"applyNo":{
+				"inoicingVerifyDTO":{
 					"pattern":"",
-					"summary":"申请单号",
+					"summary":"开票核销参数",
 					"optional":true,
-					"type":"java.lang.String"
-				},
-				"curPage":{
-					"pattern":"",
-					"summary":"当前页码",
-					"optional":true,
-					"type":"java.lang.Integer"
-				},
-				"pageSize":{
-					"pattern":"",
-					"summary":"每页多少条",
-					"optional":true,
-					"type":"java.lang.Integer"
+					"type":"com.weidai.taxmng.taxmng.dto.InvoicingVerifyDTO"
 				}
 			}
 		},
@@ -8298,55 +9488,294 @@
 				}
 			}
 		},
-		"/supervisor/atachment/downloadAttachment":{
-			"summary":"下载附件",
+		"/supervisor/invoiceInfo/invoiceBillDetail":{
+			"summary":"查看发票账单明细",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+					"summary":"WebResult<PageBean<TaxMerchantBillingInfoDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxMerchantBillingInfoDTO>>"
 				}
 			],
-			"method":"GET",
+			"method":"POST",
 			"parameters":{
-				"url":{
+				"applyNo":{
 					"pattern":"",
-					"summary":"附件url",
+					"summary":"申请单号",
 					"optional":true,
 					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/atachment/uploadAttachment":{
-			"summary":"附件上传",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
-				}
-			],
-			"method":"POST"
-		},
-		"/supervisor/contact/able":{
-			"summary":"启用商户联系人",
-			"responses":[
-				{
-					"summary":"WebResult<TaxContactDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxContactDTO>"
-				}
-			],
-			"parameters":{
-				"id":{
+				},
+				"curPage":{
 					"pattern":"",
-					"summary":"商户ID",
+					"summary":"当前页码",
+					"optional":true,
+					"type":"java.lang.Integer"
+				},
+				"pageSize":{
+					"pattern":"",
+					"summary":"每页多少条",
 					"optional":true,
 					"type":"java.lang.Integer"
 				}
 			}
 		},
-		"/supervisor/contact/queryByMerchantNo":{
-			"summary":"根据商户号查询商户联系人",
+		"/supervisor/merchantInvoicingInfo/queryPrepaidByMerchantNo":{
+			"summary":"根据商户号查询开票信息(开票页面使用，没有类目报错)",
 			"responses":[
 				{
-					"summary":"WebResult<TaxContactDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxContactDTO[]>"
+					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"merchantNo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/merchantInvoicingInfo/updateInvoicingInfo":{
+			"summary":"更新开票信息",
+			"responses":[
+				{
+					"summary":"WebResult<Boolean>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"billingInfoDTO":{
+					"pattern":"",
+					"summary":"商户",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO"
+				}
+			}
+		},
+		"/supervisor/merchantInvoicingInfo/queryByMerchantNo":{
+			"summary":"根据商户号查询开票信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"merchantNo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/merchantInvoicingInfo/addInvoicingInfo":{
+			"summary":"新增开票信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"billingInfoDTO":{
+					"pattern":"",
+					"summary":"商户",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO"
+				}
+			}
+		},
+		"/supervisor/merchantInvoicingInfo/queryPrepaidInvoicingInfo":{
+			"summary":"查询开票信息(开票页面使用，没有类目报错)",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
+				}
+			],
+			"method":"POST"
+		},
+		"/supervisor/merchantInvoicingInfo/queryInvoicingInfo":{
+			"summary":"查询开票信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
+				}
+			],
+			"method":"POST"
+		},
+		"/supervisor/merchantLegalPerson/addLegalPerson":{
+			"summary":"新增法人信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantLegalPersonDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"settleInfoDTO":{
+					"pattern":"",
+					"summary":"商户",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantLegalPersonDTO"
+				}
+			}
+		},
+		"/supervisor/merchantLegalPerson/updateLegalPerson":{
+			"summary":"更新法人信息",
+			"responses":[
+				{
+					"summary":"WebResult<Boolean>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"settleInfoDTO":{
+					"pattern":"",
+					"summary":"商户",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantLegalPersonDTO"
+				}
+			}
+		},
+		"/supervisor/merchantLegalPerson/queryByMerchantNo":{
+			"summary":"根据商户号查询法人信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantLegalPersonDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantLegalPersonDTO>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"merchantNo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/natural/queryNaturalPersonDetail":{
+			"summary":"查询卡验证详情",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxMerchantNaturalPersonDTO>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"id":{
+					"pattern":"",
+					"summary":"查询卡验证详情",
+					"optional":true,
+					"type":"java.lang.Integer"
+				}
+			}
+		},
+		"/supervisor/natural/queryNaturalPersonList":{
+			"summary":"查询卡验证列表",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxMerchantNaturalPersonDTO>>"
+				}
+			],
+			"method":"POST",
+			"contentType":"application/json",
+			"parameters":{
+				"query":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.TaxMerchantNaturalPersonVO"
+				}
+			}
+		},
+		"/supervisor/merchantproduct/queryByMerchantNo":{
+			"summary":"查询商户产品信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantProductDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantProductDTO>"
+				}
+			],
+			"parameters":{
+				"merchantNo":{
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/merchantproduct/queryPayChannel":{
+			"summary":"查询所有可用发放通道",
+			"responses":[
+				{
+					"summary":"WebResult<List<Map<String, String>>>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String{}[]>"
+				}
+			]
+		},
+		"/supervisor/merchantproduct/add":{
+			"summary":"配置商户产品信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantProductDTO>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"taxMerchantProductDTO":{
+					"pattern":"",
+					"summary":"商户产品",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantProductDTO"
+				}
+			}
+		},
+		"/supervisor/merchantproduct/update":{
+			"summary":"配置商户产品信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantProductDTO>"
+				}
+			],
+			"contentType":"application/json",
+			"parameters":{
+				"taxMerchantProductDTO":{
+					"pattern":"",
+					"summary":"商户产品",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantProductDTO"
+				}
+			}
+		},
+		"/supervisor/merchantsecret/downLoadSecret":{
+			"summary":"下载平台公钥",
+			"parameters":{
+				"fileName":{
+					"pattern":"",
+					"summary":"下载文件名",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/merchantsecret/querySecretByMerchantNo":{
+			"summary":"根据商户号查询商户密钥等信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantSecretDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantSecretDTO>"
 				}
 			],
 			"parameters":{
@@ -8358,90 +9787,163 @@
 				}
 			}
 		},
-		"/supervisor/contact/add":{
-			"summary":"新增商户联系人",
+		"/supervisor/merchantsecret/saveMerchantSecret":{
+			"summary":"保存商户API公钥等信息",
 			"responses":[
 				{
-					"summary":"WebResult<TaxContactDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxContactDTO>"
+					"summary":"保存商户API公钥信息结果",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
 				}
 			],
 			"parameters":{
-				"taxContactDTO":{
+				"taxMerchantSecretVO":{
 					"pattern":"",
-					"summary":"商户联系人",
+					"summary":"查询条件",
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxContactDTO"
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantSecretVO"
 				}
 			}
 		},
-		"/supervisor/contact/update":{
-			"summary":"更新商户联系人",
+		"/supervisor/merchantsecret/queryPlatformSecret":{
+			"summary":"查询平台公钥",
 			"responses":[
 				{
-					"summary":"WebResult<TaxContactDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxContactDTO>"
+					"summary":"WebResult<TaxMerchantSecretDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxPlatformSecretVO>"
 				}
 			],
 			"parameters":{
-				"taxContactDTO":{
+				"merchantNo":{
 					"pattern":"",
-					"summary":"商户联系人",
+					"summary":"查询条件",
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxContactDTO"
+					"type":"java.lang.String"
 				}
 			}
 		},
-		"/supervisor/contact/disable":{
-			"summary":"停用商户商户联系人",
+		"/supervisor/merchantSettleInfo/addSettleInfo":{
+			"summary":"新增结算信息",
 			"responses":[
 				{
-					"summary":"WebResult<TaxContactDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxContactDTO>"
+					"summary":"WebResult<TaxMerchantSettleInfoDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"settleInfoDTO":{
+					"pattern":"",
+					"summary":"商户",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantSettleInfoDTO"
+				}
+			}
+		},
+		"/supervisor/merchantSettleInfo/queryByMerchantNo":{
+			"summary":"根据商户号查询结算信息",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantSettleInfoDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantSettleInfoDTO>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"merchantNo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/merchantSettleInfo/updateSettleInfo":{
+			"summary":"更新结算信息",
+			"responses":[
+				{
+					"summary":"WebResult<Boolean>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"settleInfoDTO":{
+					"pattern":"",
+					"summary":"商户",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantSettleInfoDTO"
+				}
+			}
+		},
+		"/supervisor/merchanttaxrule/delById":{
+			"summary":"删除商户配置的税费规则",
+			"responses":[
+				{
+					"summary":"WebResult",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult"
 				}
 			],
 			"parameters":{
 				"id":{
-					"pattern":"",
-					"summary":"商户联系人ID",
 					"optional":true,
 					"type":"java.lang.Integer"
 				}
 			}
 		},
-		"/supervisor/guestCooperation/addRecord":{
-			"summary":"添加合作内容对象",
+		"/supervisor/merchanttaxrule/add":{
+			"summary":"给商户配置的税费规则",
 			"responses":[
 				{
 					"summary":"WebResult",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Void>"
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult"
 				}
 			],
 			"contentType":"application/json",
 			"parameters":{
-				"taxGuestCooperationDTO":{
-					"pattern":"",
-					"summary":"合作内容对象",
+				"taxMerchantTaxRuleDTO":{
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxGuestCooperationDTO"
+					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantTaxRuleDTO"
 				}
 			}
 		},
-		"/supervisor/guestCooperation/queryAllTaxPlanningType":{
-			"summary":"获取合作内容枚举",
+		"/supervisor/merchanttaxrule/queryByMerchantNo":{
+			"summary":"根据商户号查询配置的费率规则",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantTaxRuleDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantTaxRuleDTO[]>"
+				}
+			],
+			"parameters":{
+				"merchantNo":{
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/bindUser":{
+			"summary":"关联商户账号",
 			"responses":[
 				{
 					"summary":"WebResult",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
 				}
-			]
+			],
+			"parameters":{
+				"taxMerchantUserDTO":{
+					"pattern":"",
+					"summary":"关联商户账号",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.service.entity.TaxMerchantUserDTO"
+				}
+			}
 		},
-		"/supervisor/guestCooperation/queryPage":{
-			"summary":"查询合作内容对象列表",
+		"/supervisor/payorder/queryPayOrderPage":{
+			"summary":"资金明细列表",
 			"responses":[
 				{
-					"summary":"WebResult<PageBean<TaxMerchantDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxGuestCooperationDTO>>"
+					"summary":"WebResult<PageBean<TaxPayOrderDto>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxPayOrderDto>>"
 				}
 			],
 			"contentType":"application/json",
@@ -8450,253 +9952,162 @@
 					"pattern":"",
 					"summary":"查询条件",
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxGuestCooperationQuery"
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayOrderVO"
 				}
 			}
 		},
-		"/supervisor/discountPackageData/saveOrUpdate":{
-			"summary":"优惠套餐列表添加/修改",
+		"/supervisor/payorder/queryOrder":{
+			"summary":"资金明细",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Void>"
+					"summary":"WebResult<TaxPayOrderDto>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxPayOrderDto>"
 				}
 			],
-			"method":"POST",
-			"contentType":"application/json",
-			"parameters":{
-				"taxDiscountPackageDataPO":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dal.po.TaxDiscountPackageDataPO"
-				}
-			}
-		},
-		"/supervisor/discountPackageData/getList":{
-			"summary":"优惠套餐列表查询",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean>"
-				}
-			],
-			"method":"POST",
-			"contentType":"application/json",
-			"parameters":{
-				"taxDiscountPackageDataQuery":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dal.query.TaxDiscountPackageDataQuery"
-				}
-			}
-		},
-		"/supervisor/discountPackageData/deleteRebate":{
-			"summary":"返点费率列表删除",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Void>"
-				}
-			],
-			"method":"GET",
 			"parameters":{
 				"id":{
+					"pattern":"",
+					"summary":"查询条件",
 					"optional":true,
 					"type":"java.lang.Integer"
 				}
 			}
 		},
-		"/supervisor/discountPackageData/getPackageTypeDropDownList":{
-			"summary":"优惠套餐==类型==下拉列表",
+		"/supervisor/product/queryAll":{
+			"summary":"查询所有产品",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.DiscountPackageTypeEnumVO[]>"
+					"summary":"WebResult<TaxProductDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxProductDTO[]>"
 				}
-			],
-			"method":"POST"
+			]
 		},
-		"/supervisor/discountPackageData/getPackageStatusDropDownList":{
-			"summary":"优惠套餐==状态==下拉列表",
+		"/supervisor/rebatepackage/queryAll":{
+			"summary":"查询所有返点套餐",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.DiscountPackageStatusVO[]>"
+					"summary":"WebResult<TaxRebatePackageDTO>",
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxRebatePackageDTO[]>"
 				}
-			],
-			"method":"POST"
+			]
 		},
-		"/supervisor/discountPackageData/delete":{
-			"summary":"优惠套餐列表删除",
+		"/supervisor/subAccount/queryByMerchantNo":{
+			"summary":"根据商户号查询商户子账户",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Void>"
-				}
-			],
-			"method":"GET",
-			"parameters":{
-				"id":{
-					"optional":true,
-					"type":"java.lang.Integer"
-				}
-			}
-		},
-		"/supervisor/discountPackageData/getDropDownList":{
-			"summary":"优惠套餐下拉列表",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.DiscountPackageChildVO[]>"
-				}
-			],
-			"method":"POST"
-		},
-		"/supervisor/discountPackageData/getOne":{
-			"summary":"优惠套餐详情",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.TaxDiscountPackageDataVO>"
-				}
-			],
-			"method":"GET",
-			"parameters":{
-				"id":{
-					"optional":true,
-					"type":"java.lang.Integer"
-				}
-			}
-		},
-		"/supervisor/merchantextend/queryByMerchantNo":{
-			"summary":"查询商户扩展信息",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantExtendDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantExtendDTO>"
+					"summary":"WebResult<TaxSubAccountDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO[]>"
 				}
 			],
 			"parameters":{
 				"merchantNo":{
+					"pattern":"",
+					"summary":"查询条件",
 					"optional":true,
 					"type":"java.lang.String"
 				}
 			}
 		},
-		"/supervisor/merchantextend/add":{
-			"summary":"配置商户扩展信息",
+		"/supervisor/subAccount/addPayProject":{
+			"summary":"添加商户平安易项目",
 			"responses":[
 				{
-					"summary":"WebResult<TaxMerchantExtendDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantExtendDTO>"
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO>"
 				}
 			],
 			"parameters":{
-				"taxMerchantExtendDTO":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantExtendDTO"
-				}
-			}
-		},
-		"/supervisor/merchantextend/update":{
-			"summary":"更新商户扩展信息",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantExtendDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantExtendDTO>"
-				}
-			],
-			"parameters":{
-				"taxMerchantExtendDTO":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantExtendDTO"
-				}
-			}
-		},
-		"/supervisor/authentication/queryAuthenticationDetail":{
-			"summary":"查询免验证详情",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxAuthenticationInfoDTO>"
-				}
-			],
-			"method":"POST",
-			"parameters":{
-				"id":{
+				"taxSubAccountDTO":{
 					"pattern":"",
-					"summary":"查询免验证详情",
+					"summary":"添加商户平安易项目",
 					"optional":true,
-					"type":"java.lang.Integer"
+					"type":"com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO"
 				}
 			}
 		},
-		"/supervisor/authentication/queryAuthenticationList":{
-			"summary":"免验证列表查询",
+		"/supervisor/subAccount/getTaxMerchantPayProject":{
+			"summary":"项目信息查询",
 			"responses":[
 				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxAuthenticationInfoDTO>>"
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantPayProjectDTO>"
 				}
 			],
-			"method":"POST",
+			"parameters":{
+				"merchantNo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/subAccount/queryAccount":{
+			"summary":"平安充值专户查询",
+			"responses":[
+				{
+					"summary":"WebResult<TaxSubAccountVO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.webapp.vo.TaxSubAccountVO>"
+				}
+			],
+			"parameters":{
+				"merchantNo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/subAccount/queryPinganyiByMerchant":{
+			"summary":"查询商户平安易资金监管充值账户（项目）",
+			"responses":[
+				{
+					"summary":"WebResult<List<TaxSubAccountDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO[]>"
+				}
+			],
+			"parameters":{
+				"merchantNo":{
+					"pattern":"",
+					"summary":"查询条件",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/supervisor/subAccount/update":{
+			"summary":"更新商户平安易项目",
+			"responses":[
+				{
+					"summary":"WebResult<TaxMerchantDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO>"
+				}
+			],
+			"parameters":{
+				"taxSubAccountDTO":{
+					"pattern":"",
+					"summary":"商户子账户",
+					"optional":true,
+					"type":"com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO"
+				}
+			}
+		},
+		"/supervisor/queryPayBatchList":{
+			"summary":"打款批次列表",
+			"responses":[
+				{
+					"summary":"WebResult<PageBean<TaxPayBatchDTO>>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO>>"
+				}
+			],
 			"contentType":"application/json",
 			"parameters":{
 				"query":{
 					"pattern":"",
 					"summary":"查询条件",
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.TaxAuthenticationInfoVO"
-				}
-			}
-		},
-		"/supervisor/authentication/checkAuthentication":{
-			"summary":"审核免验证",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"method":"POST",
-			"parameters":{
-				"id":{
-					"pattern":"",
-					"summary":"免验证id",
-					"optional":true,
-					"type":"java.lang.Integer"
-				},
-				"checkStatus":{
-					"pattern":"",
-					"summary":"审核状态1:审核通过 2:审核拒绝",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"checkMemo":{
-					"pattern":"",
-					"summary":"审核备注",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/queryPayBathSummary":{
-			"summary":"打款批次概要",
-			"responses":[
-				{
-					"summary":"WebResult<TaxPayBatchDetailSummaryDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailSummaryDTO>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO"
-				}
-			}
-		},
-		"/supervisor/payBill":{
-			"summary":"费用单",
-			"responses":[
-				{
-					"summary":"WebResult<TaxBatchDetailCostDto>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxBatchDetailCostDto>"
-				}
-			],
-			"parameters":{
-				"id":{
-					"pattern":"",
-					"summary":"批次明细主键",
-					"optional":true,
-					"type":"java.lang.Integer"
+					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayBatchVO"
 				}
 			}
 		},
@@ -8767,41 +10178,6 @@
 				}
 			}
 		},
-		"/supervisor/auditPayBatch":{
-			"summary":"打款批次审核",
-			"responses":[
-				{
-					"summary":"WebResult<Boolean>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
-				}
-			],
-			"parameters":{
-				"taxPayBatchAuditDTO":{
-					"pattern":"",
-					"summary":"批次审核对象",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchAuditDTO"
-				}
-			}
-		},
-		"/supervisor/queryPayBatchList":{
-			"summary":"打款批次列表",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxPayBatchDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDTO>>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayBatchVO"
-				}
-			}
-		},
 		"/supervisor/queryPayDetailsList":{
 			"summary":"打款明细列表",
 			"responses":[
@@ -8820,1065 +10196,71 @@
 				}
 			}
 		},
-		"/supervisor/merchanttaxrule/delById":{
-			"summary":"删除商户配置的税费规则",
+		"/supervisor/queryPayBathSummary":{
+			"summary":"打款批次概要",
 			"responses":[
 				{
-					"summary":"WebResult",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult"
-				}
-			],
-			"parameters":{
-				"id":{
-					"optional":true,
-					"type":"java.lang.Integer"
-				}
-			}
-		},
-		"/supervisor/merchanttaxrule/add":{
-			"summary":"给商户配置的税费规则",
-			"responses":[
-				{
-					"summary":"WebResult",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult"
+					"summary":"WebResult<TaxPayBatchDetailSummaryDTO>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailSummaryDTO>"
 				}
 			],
 			"contentType":"application/json",
 			"parameters":{
-				"taxMerchantTaxRuleDTO":{
+				"query":{
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantTaxRuleDTO"
+					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO"
 				}
 			}
 		},
-		"/supervisor/merchanttaxrule/queryByMerchantNo":{
-			"summary":"根据商户号查询配置的费率规则",
+		"/supervisor/payBill":{
+			"summary":"费用单",
 			"responses":[
 				{
-					"summary":"WebResult<TaxMerchantTaxRuleDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantTaxRuleDTO[]>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/rebatepackage/queryAll":{
-			"summary":"查询所有返点套餐",
-			"responses":[
-				{
-					"summary":"WebResult<TaxRebatePackageDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxRebatePackageDTO[]>"
-				}
-			]
-		},
-		"/supervisor/payorder/queryPayOrderPage":{
-			"summary":"资金明细列表",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxPayOrderDto>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxPayOrderDto>>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"vo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.PayOrderVO"
-				}
-			}
-		},
-		"/supervisor/payorder/queryOrder":{
-			"summary":"资金明细",
-			"responses":[
-				{
-					"summary":"WebResult<TaxPayOrderDto>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxPayOrderDto>"
+					"summary":"WebResult<TaxBatchDetailCostDto>",
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxBatchDetailCostDto>"
 				}
 			],
 			"parameters":{
 				"id":{
 					"pattern":"",
-					"summary":"查询条件",
+					"summary":"批次明细主键",
 					"optional":true,
 					"type":"java.lang.Integer"
 				}
 			}
 		},
-		"/supervisor/merchantsecret/querySecretByMerchantNo":{
-			"summary":"根据商户号查询商户密钥等信息",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantSecretDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantSecretDTO>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/merchantsecret/saveMerchantSecret":{
-			"summary":"保存商户API公钥等信息",
-			"responses":[
-				{
-					"summary":"保存商户API公钥信息结果",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
-				}
-			],
-			"parameters":{
-				"taxMerchantSecretVO":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantSecretVO"
-				}
-			}
-		},
-		"/supervisor/merchantsecret/queryPlatformSecret":{
-			"summary":"查询平台公钥",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantSecretDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxPlatformSecretVO>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/merchantsecret/downLoadSecret":{
-			"summary":"下载平台公钥",
-			"parameters":{
-				"fileName":{
-					"pattern":"",
-					"summary":"下载文件名",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/merchant/queryWeChatWorkAgentInfos":{
-			"summary":"查询所有授权方应用信息",
-			"responses":[
-				{
-					"summary":"WebResult<List<TaxWeChatWorkAgentInfo>>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.webapp.vo.TaxWeChatWorkPermanentAgentVo[]>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/merchant/queryWeChatWorkCorpAdmins":{
-			"summary":"查询所有授权方管理员信息",
-			"responses":[
-				{
-					"summary":"WebResult<List<TaxWeChatWorkAgentAdmin>>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.webapp.vo.TaxWeChatWorkAgentAdminVo[]>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/merchant/belongMerchant":{
-			"summary":"获取服务商枚举",
-			"responses":[
-				{
-					"summary":"WebResult<List<Map<String, String>>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
-				}
-			]
-		},
-		"/supervisor/merchant/able":{
-			"summary":"启用商户",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
-				}
-			],
-			"parameters":{
-				"id":{
-					"pattern":"",
-					"summary":"商户ID",
-					"optional":true,
-					"type":"java.lang.Integer"
-				}
-			}
-		},
-		"/supervisor/merchant/queryPage":{
-			"summary":"商户列表",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxMerchantDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"vo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.MerchantVO"
-				}
-			}
-		},
-		"/supervisor/merchant/queryAllAvailable":{
-			"summary":"查询所有可用商户",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO[]>"
-				}
-			]
-		},
-		"/supervisor/merchant/updateMerchant":{
-			"summary":"更新商户---新",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"merchantDTO":{
-					"pattern":"",
-					"summary":"商户",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO"
-				}
-			}
-		},
-		"/supervisor/merchant/queryAllMerchant":{
-			"summary":"查询所有可用商户及代征主体列表",
-			"responses":[
-				{
-					"summary":"WebResult<List<TaxMerchantAndCollectedSubject>>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dal.entity.TaxMerchantAndCollectedSubject[]>"
-				}
-			]
-		},
-		"/supervisor/merchant/sendEmail":{
-			"summary":"发送邮件",
-			"responses":[
-				{
-					"summary":"ServiceResult<Void>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.Void>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"useremail":{
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/merchant/operatorSource":{
-			"summary":"获取操作来源枚举",
-			"responses":[
-				{
-					"summary":"WebResult<OperatorSourceEnum[]>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.enums.OperatorSourceEnum[]>"
-				}
-			]
-		},
-		"/supervisor/merchant/queryByMerchantNo":{
-			"summary":"根据商户号查询商户",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/merchant/queryBalanceByMerchantAndAccountType":{
-			"summary":"根据商户号查询商户账户余额（payaccount）",
-			"responses":[
-				{
-					"summary":"WebResult<PlatformAccountDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.facade.dto.PlatformAccountDTO>"
-				}
-			],
-			"parameters":{
-				"vo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.QueryMerchantAccountBalanceVO"
-				}
-			}
-		},
-		"/supervisor/merchant/queryBalanceListByMerchant":{
-			"summary":"根据商户号查询商户可用账户列表余额（payaccount）",
-			"responses":[
-				{
-					"summary":"WebResult<PlatformAccountDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.facade.dto.PlatformAccountDTO[]>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/merchant/addMerchant":{
-			"summary":"新增商户（商户基本信息）",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"merchantDTO":{
-					"pattern":"",
-					"summary":"商户",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO"
-				}
-			}
-		},
-		"/supervisor/merchant/queryWeChatWorkCorpInfos":{
-			"summary":"查询授权方企业信息",
-			"responses":[
-				{
-					"summary":"WebResult<List<TaxWeChatWorkPermanentCode>>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.webapp.vo.TaxWeChatWorkPermanentCodeVo>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/merchant/add":{
-			"summary":"新增商户",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"merchantDTO":{
-					"pattern":"",
-					"summary":"商户",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.MerchantDTO"
-				}
-			}
-		},
-		"/supervisor/merchant/update":{
-			"summary":"更新商户",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"merchantDTO":{
-					"pattern":"",
-					"summary":"商户",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.MerchantDTO"
-				}
-			}
-		},
-		"/supervisor/merchant/disable":{
-			"summary":"停用商户",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.facade.dto.TaxMerchantDTO>"
-				}
-			],
-			"parameters":{
-				"id":{
-					"pattern":"",
-					"summary":"商户ID",
-					"optional":true,
-					"type":"java.lang.Integer"
-				}
-			}
-		},
-		"/supervisor/fundOperation/export":{
-			"summary":"资金操作记录导出",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Void>"
-				}
-			],
-			"method":"POST",
-			"contentType":"application/json",
-			"parameters":{
-				"fundOperationQuery":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dal.query.FundOperationQuery"
-				}
-			}
-		},
-		"/supervisor/fundOperation/getList":{
-			"summary":"资金操作记录列表",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<FundOperationVO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dal.vo.FundOperationVO>>"
-				}
-			],
-			"method":"POST",
-			"contentType":"application/json",
-			"parameters":{
-				"fundOperationQuery":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dal.query.FundOperationQuery"
-				}
-			}
-		},
-		"/supervisor/fundOperation/getRebateAmount":{
-			"summary":"查询可用余额 上月返点 累计返点",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.RebateVO>"
-				}
-			],
-			"method":"POST"
-		},
-		"/supervisor/fundOperation/getOne":{
-			"summary":"资金操作记录详情",
-			"responses":[
-				{
-					"summary":"WebResult<FundOperationVO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dal.vo.FundOperationVO>"
-				}
-			],
-			"method":"GET",
-			"parameters":{
-				"id":{
-					"optional":true,
-					"type":"java.lang.Integer"
-				}
-			}
-		},
-		"/supervisor/collectedsubject/querybyCollectedSubjectNo":{
-			"summary":"查询所有可用代征主体",
-			"responses":[
-				{
-					"summary":"WebResult<TaxCollectedSubjectDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxCollectedSubjectDTO>"
-				}
-			],
-			"parameters":{
-				"collectedSubjectNo":{
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/collectedsubject/queryAllAvailable":{
-			"summary":"查询所有可用代征主体",
-			"responses":[
-				{
-					"summary":"WebResult<TaxCollectedSubjectDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxCollectedSubjectDTO[]>"
-				}
-			]
-		},
-		"/supervisor/collectedsubject/add":{
-			"summary":"新增代征主体",
-			"responses":[
-				{
-					"summary":"WebResult",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"parameters":{
-				"taxCollectedSubjectDTO":{
-					"pattern":"",
-					"summary":"关联商户账号",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxCollectedSubjectDTO"
-				}
-			}
-		},
-		"/supervisor/collectedsubject/update":{
-			"summary":"修改代征主体",
-			"responses":[
-				{
-					"summary":"WebResult",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"parameters":{
-				"taxCollectedSubjectDTO":{
-					"pattern":"",
-					"summary":"关联商户账号",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxCollectedSubjectDTO"
-				}
-			}
-		},
-		"/supervisor/merchantInvoicingInfo/addInvoicingInfo":{
-			"summary":"新增开票信息",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
-				}
-			],
-			"method":"POST",
-			"parameters":{
-				"billingInfoDTO":{
-					"pattern":"",
-					"summary":"商户",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO"
-				}
-			}
-		},
-		"/supervisor/merchantInvoicingInfo/queryPrepaidByMerchantNo":{
-			"summary":"根据商户号查询开票信息(开票页面使用，没有类目报错)",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
-				}
-			],
-			"method":"POST",
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/merchantInvoicingInfo/updateInvoicingInfo":{
-			"summary":"更新开票信息",
+		"/supervisor/auditPayBatch":{
+			"summary":"打款批次审核",
 			"responses":[
 				{
 					"summary":"WebResult<Boolean>",
 					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
 				}
 			],
-			"method":"POST",
 			"parameters":{
-				"billingInfoDTO":{
+				"taxPayBatchAuditDTO":{
 					"pattern":"",
-					"summary":"商户",
+					"summary":"批次审核对象",
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO"
+					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchAuditDTO"
 				}
 			}
 		},
-		"/supervisor/merchantInvoicingInfo/queryByMerchantNo":{
-			"summary":"根据商户号查询开票信息",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
-				}
-			],
-			"method":"POST",
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/merchantInvoicingInfo/queryInvoicingInfo":{
-			"summary":"查询开票信息",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
-				}
-			],
-			"method":"POST"
-		},
-		"/supervisor/merchantInvoicingInfo/queryPrepaidInvoicingInfo":{
-			"summary":"查询开票信息(开票页面使用，没有类目报错)",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantInvoicingInfoDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantInvoicingInfoDTO>"
-				}
-			],
-			"method":"POST"
-		},
-		"/supervisor/account/offlineRecharge":{
-			"summary":"线下充值",
+		"/supervisor/retryDetailPay":{
+			"summary":"重试打款",
 			"responses":[
 				{
 					"summary":"WebResult",
 					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
 				}
 			],
-			"parameters":{
-				"rechargeVO":{
-					"pattern":"",
-					"summary":"充值内容",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.OfflineRechargeVO"
-				}
-			}
-		},
-		"/supervisor/account/queryPage":{
-			"summary":"查询资金账户列表",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxMerchantAccountVO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.webapp.vo.TaxMerchantAccountVO>>"
-				}
-			],
 			"contentType":"application/json",
 			"parameters":{
-				"accountVO":{
+				"taxPayBatchDetailDTO":{
 					"pattern":"",
-					"summary":"查询VO",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.MerchantAccountVO"
-				}
-			}
-		},
-		"/supervisor/account/queryAllAvailable":{
-			"summary":"查询所有可用商户账户",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantAccountDTO[]>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"商户号",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/capitalflow/queryCapitalFlowPage":{
-			"summary":"资金流水",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<IncomeExpensesDetailDto>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.IncomeExpensesDetailDto>>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"vo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.CapitalFlowVO"
-				}
-			}
-		},
-		"/supervisor/capitalflow/queryTransSubCodeList":{
-			"summary":"查询业务类型枚举",
-			"responses":[
-				{
-					"summary":"WebResult<List<TransSubCodeEnum>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String{}[]>"
-				}
-			]
-		},
-		"/supervisor/bankInfo/queryBankList":{
-			"summary":"获取银行数据列表",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.BankDTO[]>"
-				}
-			],
-			"method":"POST"
-		},
-		"/supervisor/export/exportPayBatchDetail":{
-			"summary":"导出批次详情",
-			"responses":[
-				{
-					"summary":"string",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"request":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.ExportDataRequest"
-				}
-			}
-		},
-		"/supervisor/export/exportPayOrderDetail":{
-			"summary":"导出明细订单",
-			"responses":[
-				{
-					"summary":"string",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"pattern":"",
-					"summary":"查询条件",
+					"summary":"批次明细",
 					"optional":true,
 					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO"
-				}
-			}
-		},
-		"/supervisor/export/exportAccountDetail":{
-			"summary":"导出账务明细",
-			"responses":[
-				{
-					"summary":"string",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.CapitalFlowVO"
-				}
-			}
-		},
-		"/supervisor/export/exportPayBatch":{
-			"summary":"导出批次记录",
-			"responses":[
-				{
-					"summary":"string",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"request":{
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.ExportDataRequest"
-				}
-			}
-		},
-		"/supervisor/guest/queryAllTaxPlanningType":{
-			"summary":"获取节税类型",
-			"responses":[
-				{
-					"summary":"WebResult",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			]
-		},
-		"/supervisor/guest/queryPage":{
-			"summary":"访客列表",
-			"responses":[
-				{
-					"summary":"WebResult<PageBean<TaxMerchantDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.dto.TaxGuestUserDTO>>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"vo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.TaxGuestUserVO"
-				}
-			}
-		},
-		"/supervisor/guest/add":{
-			"summary":"新增访客",
-			"responses":[
-				{
-					"summary":"WebResult",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"taxGuestUserDTO":{
-					"pattern":"",
-					"summary":"访客记录",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxGuestUserDTO"
-				}
-			}
-		},
-		"/supervisor/subAccount/queryAccount":{
-			"summary":"平安充值专户查询",
-			"responses":[
-				{
-					"summary":"WebResult<TaxSubAccountVO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.webapp.vo.TaxSubAccountVO>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/subAccount/queryPinganyiByMerchant":{
-			"summary":"查询商户平安易资金监管充值账户（项目）",
-			"responses":[
-				{
-					"summary":"WebResult<List<TaxSubAccountDTO>>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO[]>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/subAccount/addPayProject":{
-			"summary":"添加商户平安易项目",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO>"
-				}
-			],
-			"parameters":{
-				"taxSubAccountDTO":{
-					"pattern":"",
-					"summary":"添加商户平安易项目",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO"
-				}
-			}
-		},
-		"/supervisor/subAccount/getTaxMerchantPayProject":{
-			"summary":"项目信息查询",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantPayProjectDTO>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/subAccount/queryByMerchantNo":{
-			"summary":"根据商户号查询商户子账户",
-			"responses":[
-				{
-					"summary":"WebResult<TaxSubAccountDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO[]>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/subAccount/update":{
-			"summary":"更新商户平安易项目",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO>"
-				}
-			],
-			"parameters":{
-				"taxSubAccountDTO":{
-					"pattern":"",
-					"summary":"商户子账户",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxSubAccountDTO"
-				}
-			}
-		},
-		"/supervisor/product/queryAll":{
-			"summary":"查询所有产品",
-			"responses":[
-				{
-					"summary":"WebResult<TaxProductDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxProductDTO[]>"
-				}
-			]
-		},
-		"/supervisor/natural/queryNaturalPersonDetail":{
-			"summary":"查询卡验证详情",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.entity.TaxMerchantNaturalPersonDTO>"
-				}
-			],
-			"method":"POST",
-			"parameters":{
-				"id":{
-					"pattern":"",
-					"summary":"查询卡验证详情",
-					"optional":true,
-					"type":"java.lang.Integer"
-				}
-			}
-		},
-		"/supervisor/natural/queryNaturalPersonList":{
-			"summary":"查询卡验证列表",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.service.query.entity.PageBean<com.weidai.taxmng.taxmng.service.entity.TaxMerchantNaturalPersonDTO>>"
-				}
-			],
-			"method":"POST",
-			"contentType":"application/json",
-			"parameters":{
-				"query":{
-					"pattern":"",
-					"summary":"查询条件",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.vo.TaxMerchantNaturalPersonVO"
-				}
-			}
-		},
-		"/supervisor/merchantproduct/queryPayChannel":{
-			"summary":"查询所有可用打款通道",
-			"responses":[
-				{
-					"summary":"WebResult<List<Map<String, String>>>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<java.lang.String{}[]>"
-				}
-			]
-		},
-		"/supervisor/merchantproduct/queryByMerchantNo":{
-			"summary":"查询商户产品信息",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantProductDTO>",
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult<com.weidai.taxmng.taxmng.dto.TaxMerchantProductDTO>"
-				}
-			],
-			"parameters":{
-				"merchantNo":{
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/supervisor/merchantproduct/add":{
-			"summary":"配置商户产品信息",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantProductDTO>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"taxMerchantProductDTO":{
-					"pattern":"",
-					"summary":"商户产品",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantProductDTO"
-				}
-			}
-		},
-		"/supervisor/merchantproduct/update":{
-			"summary":"配置商户产品信息",
-			"responses":[
-				{
-					"summary":"WebResult<TaxMerchantDTO>",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<com.weidai.taxmng.taxmng.dto.TaxMerchantProductDTO>"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"taxMerchantProductDTO":{
-					"pattern":"",
-					"summary":"商户产品",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.dto.TaxMerchantProductDTO"
-				}
-			}
-		},
-		"/supervisor/bindUser":{
-			"summary":"关联商户账号",
-			"responses":[
-				{
-					"summary":"WebResult",
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"parameters":{
-				"taxMerchantUserDTO":{
-					"pattern":"",
-					"summary":"关联商户账号",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.TaxMerchantUserDTO"
 				}
 			}
 		},
@@ -9900,21 +10282,170 @@
 				}
 			}
 		},
-		"/supervisor/retryDetailPay":{
-			"summary":"重试打款",
+		"/remit/user/login":{
+			"summary":"用户登陆",
 			"responses":[
 				{
-					"summary":"WebResult",
 					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"method":"POST",
+			"parameters":{
+				"mobile":{
+					"pattern":"",
+					"summary":"手机号",
+					"optional":false,
+					"type":"java.lang.String"
+				},
+				"password":{
+					"pattern":"",
+					"summary":"密码",
+					"optional":false,
+					"type":"java.lang.String"
+				},
+				"userType":{
+					"pattern":"",
+					"summary":"登录来源:1商户平台/2系统后台",
+					"optional":false,
+					"type":"java.lang.Integer"
+				},
+				"merchantNo":{
+					"pattern":"",
+					"summary":"商户号",
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/user/addUser":{
+			"summary":"用户注册，管理后台新建商户用户",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
+				}
+			],
+			"parameters":{
+				"mobile":{
+					"pattern":"",
+					"summary":"用户手机号",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"type":{
+					"pattern":"",
+					"summary":"用户类型，非必传，1商户平台注册，2管理平台注册",
+					"optional":true,
+					"type":"java.lang.Integer"
+				},
+				"merchantNo":{
+					"pattern":"",
+					"summary":"关联商户号，可关联多个，逗号隔开",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"name":{
+					"pattern":"",
+					"summary":"姓名",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"contactmobile":{
+					"pattern":"",
+					"summary":"联系电话",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"company":{
+					"pattern":"",
+					"summary":"企业",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"department":{
+					"pattern":"",
+					"summary":"部门",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"position":{
+					"pattern":"",
+					"summary":"职位",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"memo":{
+					"pattern":"",
+					"summary":"备注",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"useremail":{
+					"pattern":"",
+					"summary":"邮箱",
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"role":{
+					"pattern":"",
+					"summary":"角色",
+					"optional":false,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/remit/user/wechat/login":{
+			"summary":"微信用户登陆",
+			"cache":5000,
+			"method":"POST",
+			"author":"彭晓峰",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult"
 				}
 			],
 			"contentType":"application/json",
 			"parameters":{
-				"taxPayBatchDetailDTO":{
+				"wechatUserInfoDto":{
 					"pattern":"",
-					"summary":"批次明细",
+					"summary":"微信用户信息",
 					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.service.entity.TaxPayBatchDetailDTO"
+					"type":"com.weidai.taxmng.taxmng.webapp.request.WechatUserInfoDto"
+				}
+			}
+		},
+		"/remit/user/logout":{
+			"summary":"用户登出",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			]
+		},
+		"/remit/user/changePassword":{
+			"summary":"用户修改密码",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
+				}
+			],
+			"parameters":{
+				"oldPassword":{
+					"pattern":"",
+					"summary":"用户老密码",
+					"optional":false,
+					"type":"java.lang.String"
+				},
+				"newPassword":{
+					"pattern":"",
+					"summary":"用户新密码",
+					"optional":false,
+					"type":"java.lang.String"
+				},
+				"confirmPassword":{
+					"pattern":"",
+					"summary":"确认新密码",
+					"optional":false,
+					"type":"java.lang.String"
 				}
 			}
 		},
@@ -10076,173 +10607,6 @@
 				}
 			}
 		},
-		"/remit/user/wechat/login":{
-			"summary":"微信用户登陆",
-			"cache":5000,
-			"method":"POST",
-			"author":"彭晓峰",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.service.entity.ServiceResult"
-				}
-			],
-			"contentType":"application/json",
-			"parameters":{
-				"wechatUserInfoDto":{
-					"pattern":"",
-					"summary":"微信用户信息",
-					"optional":true,
-					"type":"com.weidai.taxmng.taxmng.webapp.request.WechatUserInfoDto"
-				}
-			}
-		},
-		"/remit/user/logout":{
-			"summary":"用户登出",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
-				}
-			]
-		},
-		"/remit/user/changePassword":{
-			"summary":"用户修改密码",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.String>"
-				}
-			],
-			"parameters":{
-				"oldPassword":{
-					"pattern":"",
-					"summary":"用户老密码",
-					"optional":false,
-					"type":"java.lang.String"
-				},
-				"newPassword":{
-					"pattern":"",
-					"summary":"用户新密码",
-					"optional":false,
-					"type":"java.lang.String"
-				},
-				"confirmPassword":{
-					"pattern":"",
-					"summary":"确认新密码",
-					"optional":false,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/user/addUser":{
-			"summary":"用户注册，管理后台新建商户用户",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"parameters":{
-				"mobile":{
-					"pattern":"",
-					"summary":"用户手机号",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"type":{
-					"pattern":"",
-					"summary":"用户类型，非必传，1商户平台注册，2管理平台注册",
-					"optional":true,
-					"type":"java.lang.Integer"
-				},
-				"merchantNo":{
-					"pattern":"",
-					"summary":"关联商户号，可关联多个，逗号隔开",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"name":{
-					"pattern":"",
-					"summary":"姓名",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"contactmobile":{
-					"pattern":"",
-					"summary":"联系电话",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"company":{
-					"pattern":"",
-					"summary":"企业",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"department":{
-					"pattern":"",
-					"summary":"部门",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"position":{
-					"pattern":"",
-					"summary":"职位",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"memo":{
-					"pattern":"",
-					"summary":"备注",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"useremail":{
-					"pattern":"",
-					"summary":"邮箱",
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"role":{
-					"pattern":"",
-					"summary":"角色",
-					"optional":false,
-					"type":"java.lang.String"
-				}
-			}
-		},
-		"/remit/user/login":{
-			"summary":"用户登陆",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult"
-				}
-			],
-			"method":"POST",
-			"parameters":{
-				"mobile":{
-					"pattern":"",
-					"summary":"手机号",
-					"optional":false,
-					"type":"java.lang.String"
-				},
-				"password":{
-					"pattern":"",
-					"summary":"密码",
-					"optional":false,
-					"type":"java.lang.String"
-				},
-				"userType":{
-					"pattern":"",
-					"summary":"登录来源:1商户平台/2系统后台",
-					"optional":false,
-					"type":"java.lang.Integer"
-				},
-				"merchantNo":{
-					"pattern":"",
-					"summary":"商户号",
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
-		},
 		"/remit/user/getPublicKey":{
 			"summary":"获取公钥",
 			"responses":[
@@ -10258,6 +10622,15 @@
 					"type":"java.lang.String"
 				}
 			}
+		},
+		"/import/user/importUserExcel":{
+			"summary":"用户导入excel",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
+				}
+			],
+			"method":"POST"
 		},
 		"/import/user/queryUserImportList":{
 			"summary":"查询用户导入列表信息",
@@ -10277,24 +10650,6 @@
 		},
 		"/import/user/downLoadTemplate":{
 			"summary":"用户导入模版下载EXCEL"
-		},
-		"/import/user/importUserExcel":{
-			"summary":"用户导入excel",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.webapp.entity.WebResult<java.lang.Boolean>"
-				}
-			],
-			"method":"POST"
-		},
-		"/authuser/sendGraphicVerificationCode":{
-			"summary":"获取图形验证码",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.authcenter.wechatwork.result.Result<java.lang.String>"
-				}
-			],
-			"method":"POST"
 		},
 		"/authuser/weChatWorkScanCodeAuthLogin":{
 			"summary":"扫码授权登录",
@@ -10327,11 +10682,20 @@
 				},
 				"type":{
 					"pattern":"",
-					"summary":"type = 1:手机号登录 = 2:重置密码",
+					"summary":"type = 1:手机号登录 = 2:重置/找回/忘记密码",
 					"optional":true,
 					"type":"java.lang.Integer"
 				}
 			}
+		},
+		"/authuser/sendGraphicVerificationCode":{
+			"summary":"获取图形验证码",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.authcenter.wechatwork.result.Result<java.lang.String>"
+				}
+			],
+			"method":"POST"
 		},
 		"/authuser/loginWithPhoneNumber":{
 			"summary":"手机号登录",
@@ -10450,7 +10814,7 @@
 			}
 		},
 		"/authuser/verifyUserBindVerifyCode":{
-			"summary":"发送绑定验证码",
+			"summary":"校验绑定验证码",
 			"responses":[
 				{
 					"type":"com.weidai.taxmng.taxmng.authcenter.wechatwork.result.Result<com.weidai.taxmng.taxmng.facade.dto.UserInfoDto>"
@@ -10479,7 +10843,25 @@
 				}
 			}
 		},
-		"/wechatworkauth/getAuthUrl":{
+		"/callback/authRedirectUri":{
+			"summary":"从服务商网站授权",
+			"responses":[
+				{
+					"type":"com.weidai.taxmng.taxmng.authcenter.wechatwork.result.Result<java.lang.String>"
+				}
+			],
+			"parameters":{
+				"auth_code":{
+					"optional":true,
+					"type":"java.lang.String"
+				},
+				"state":{
+					"optional":true,
+					"type":"java.lang.String"
+				}
+			}
+		},
+		"/wechatworkauth/getRegisterCode":{
 			"summary":"获取应用授权 URL",
 			"responses":[
 				{
@@ -10487,7 +10869,7 @@
 				}
 			]
 		},
-		"/wechatworkauth/getRegisterCode":{
+		"/wechatworkauth/getAuthUrl":{
 			"summary":"获取应用授权 URL",
 			"responses":[
 				{
@@ -10508,26 +10890,8 @@
 					"type":"java.lang.Integer"
 				}
 			}
-		},
-		"/callback/authRedirectUri":{
-			"summary":"从服务商网站授权",
-			"responses":[
-				{
-					"type":"com.weidai.taxmng.taxmng.authcenter.wechatwork.result.Result<java.lang.String>"
-				}
-			],
-			"parameters":{
-				"auth_code":{
-					"optional":true,
-					"type":"java.lang.String"
-				},
-				"state":{
-					"optional":true,
-					"type":"java.lang.String"
-				}
-			}
 		}
 	},
-	"modified":"2021-01-22 18:10:37",
+	"modified":"2021-03-04 15:42:09",
 	"version":"2"
 }

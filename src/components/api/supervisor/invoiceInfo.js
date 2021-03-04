@@ -11,23 +11,23 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.invoiceDetail = exports.PrepaidInvoice = exports.cancelRefundApply = exports.refundInvoiceApply = exports.cancelApply = exports.invoiceBillDetail = exports.pageInvoiceInfo = exports.pagePrepaidInvoice = exports.refundVerify = exports.invoicingVerify = void 0;
+exports.invoiceBillDetail = exports.invoiceDetail = exports.PrepaidInvoice = exports.cancelRefundApply = exports.refundInvoiceApply = exports.cancelApply = exports.invoicingVerify = exports.pagePrepaidInvoice = exports.refundVerify = exports.pageInvoiceInfo = void 0;
 /**
  * @file API：/supervisor/invoiceInfo
  */
 var request_1 = require("@/utils/request");
 /**
- * 开票核销
- * @param inoicingVerifyDTO  开票核销参数
+ * 查询发票(管理后台商户号选填)
+ * @param params
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-function invoicingVerify(inoicingVerifyDTO, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/invoiceInfo/invoicingVerify", type: "POST", data: {
-            inoicingVerifyDTO: inoicingVerifyDTO
+function pageInvoiceInfo(params, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/invoiceInfo/pageInvoiceInfo", data: {
+            params: params
         }, success: success, error: error }, options));
 }
-exports.invoicingVerify = invoicingVerify;
+exports.pageInvoiceInfo = pageInvoiceInfo;
 /**
  * 退票核销
  * @param refundInvoiceVerifyDTO  退票核销参数
@@ -53,33 +53,17 @@ function pagePrepaidInvoice(params, success, error, options) {
 }
 exports.pagePrepaidInvoice = pagePrepaidInvoice;
 /**
- * 查询发票(管理后台商户号选填)
- * @param params
+ * 开票核销
+ * @param inoicingVerifyDTO  开票核销参数
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-function pageInvoiceInfo(params, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/invoiceInfo/pageInvoiceInfo", data: {
-            params: params
+function invoicingVerify(inoicingVerifyDTO, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/invoiceInfo/invoicingVerify", type: "POST", data: {
+            inoicingVerifyDTO: inoicingVerifyDTO
         }, success: success, error: error }, options));
 }
-exports.pageInvoiceInfo = pageInvoiceInfo;
-/**
- * 查看发票账单明细
- * @param applyNo  申请单号
- * @param curPage  当前页码
- * @param pageSize  每页多少条
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function invoiceBillDetail(applyNo, curPage, pageSize, success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/invoiceInfo/invoiceBillDetail", type: "POST", data: {
-            applyNo: applyNo,
-            curPage: curPage,
-            pageSize: pageSize
-        }, success: success, error: error }, options));
-}
-exports.invoiceBillDetail = invoiceBillDetail;
+exports.invoicingVerify = invoicingVerify;
 /**
  * 撤销开票申请
  * @param applyNo  申请单号
@@ -140,3 +124,19 @@ function invoiceDetail(applyNo, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.invoiceDetail = invoiceDetail;
+/**
+ * 查看发票账单明细
+ * @param applyNo  申请单号
+ * @param curPage  当前页码
+ * @param pageSize  每页多少条
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function invoiceBillDetail(applyNo, curPage, pageSize, success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/invoiceInfo/invoiceBillDetail", type: "POST", data: {
+            applyNo: applyNo,
+            curPage: curPage,
+            pageSize: pageSize
+        }, success: success, error: error }, options));
+}
+exports.invoiceBillDetail = invoiceBillDetail;

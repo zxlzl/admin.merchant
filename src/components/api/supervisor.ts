@@ -4,17 +4,16 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 打款批次概要
- * @param query 
+ * 关联商户账号
+ * @param taxMerchantUserDTO  关联商户账号
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function queryPayBathSummary(query?: TaxPayBatchDetailDTO, success?: (data: WebResult<TaxPayBatchDetailSummaryDTO>["data"], response: WebResult<TaxPayBatchDetailSummaryDTO>, xhr: any) => void, error?: (message: WebResult<TaxPayBatchDetailSummaryDTO>["message"], response: WebResult<TaxPayBatchDetailSummaryDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxPayBatchDetailSummaryDTO>["data"]> {
+export function bindUser(taxMerchantUserDTO?: TaxMerchantUserDTO, success?: (data: WebResult["data"], response: WebResult, xhr: any) => void, error?: (message: WebResult["message"], response: WebResult, xhr: any) => void, options?: any): Promise<WebResult["data"]> {
     return ajax({
-        url: `/supervisor/queryPayBathSummary`,
-        contentType: "application/json",
+        url: `/supervisor/bindUser`,
         data: {
-            query: query
+            taxMerchantUserDTO: taxMerchantUserDTO
         },
         success: success,
         error: error,
@@ -23,16 +22,17 @@ export function queryPayBathSummary(query?: TaxPayBatchDetailDTO, success?: (dat
 }
 
 /**
- * 费用单
- * @param id  批次明细主键
+ * 打款批次列表
+ * @param query  查询条件
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function payBill(id?: number, success?: (data: WebResult<TaxBatchDetailCostDto>["data"], response: WebResult<TaxBatchDetailCostDto>, xhr: any) => void, error?: (message: WebResult<TaxBatchDetailCostDto>["message"], response: WebResult<TaxBatchDetailCostDto>, xhr: any) => void, options?: any): Promise<WebResult<TaxBatchDetailCostDto>["data"]> {
+export function queryPayBatchList(query?: PayBatchVO, success?: (data: WebResult_1<PageBean_1<TaxPayBatchDTO>>["data"], response: WebResult_1<PageBean_1<TaxPayBatchDTO>>, xhr: any) => void, error?: (message: WebResult_1<PageBean_1<TaxPayBatchDTO>>["message"], response: WebResult_1<PageBean_1<TaxPayBatchDTO>>, xhr: any) => void, options?: any): Promise<WebResult_1<PageBean_1<TaxPayBatchDTO>>["data"]> {
     return ajax({
-        url: `/supervisor/payBill`,
+        url: `/supervisor/queryPayBatchList`,
+        contentType: "application/json",
         data: {
-            id: id
+            query: query
         },
         success: success,
         error: error,
@@ -46,7 +46,7 @@ export function payBill(id?: number, success?: (data: WebResult<TaxBatchDetailCo
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function queryPayBath(query?: PayBatchVO, success?: (data: WebResult<TaxPayBatchDTO>["data"], response: WebResult<TaxPayBatchDTO>, xhr: any) => void, error?: (message: WebResult<TaxPayBatchDTO>["message"], response: WebResult<TaxPayBatchDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxPayBatchDTO>["data"]> {
+export function queryPayBath(query?: PayBatchVO, success?: (data: WebResult_1<TaxPayBatchDTO>["data"], response: WebResult_1<TaxPayBatchDTO>, xhr: any) => void, error?: (message: WebResult_1<TaxPayBatchDTO>["message"], response: WebResult_1<TaxPayBatchDTO>, xhr: any) => void, options?: any): Promise<WebResult_1<TaxPayBatchDTO>["data"]> {
     return ajax({
         url: `/supervisor/queryPayBath`,
         contentType: "application/json",
@@ -65,7 +65,7 @@ export function queryPayBath(query?: PayBatchVO, success?: (data: WebResult<TaxP
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function payDetail(id?: number, success?: (data: WebResult<TaxPayBatchDetailDTO>["data"], response: WebResult<TaxPayBatchDetailDTO>, xhr: any) => void, error?: (message: WebResult<TaxPayBatchDetailDTO>["message"], response: WebResult<TaxPayBatchDetailDTO>, xhr: any) => void, options?: any): Promise<WebResult<TaxPayBatchDetailDTO>["data"]> {
+export function payDetail(id?: number, success?: (data: WebResult_1<TaxPayBatchDetailDTO>["data"], response: WebResult_1<TaxPayBatchDetailDTO>, xhr: any) => void, error?: (message: WebResult_1<TaxPayBatchDetailDTO>["message"], response: WebResult_1<TaxPayBatchDetailDTO>, xhr: any) => void, options?: any): Promise<WebResult_1<TaxPayBatchDetailDTO>["data"]> {
     return ajax({
         url: `/supervisor/payDetail`,
         data: {
@@ -82,7 +82,7 @@ export function payDetail(id?: number, success?: (data: WebResult<TaxPayBatchDet
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function batchPayStatus(success?: (data: WebResult<{[key: string]: string}[]>["data"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, error?: (message: WebResult<{[key: string]: string}[]>["message"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, options?: any): Promise<WebResult<{[key: string]: string}[]>["data"]> {
+export function batchPayStatus(success?: (data: WebResult_1<{[key: string]: string}[]>["data"], response: WebResult_1<{[key: string]: string}[]>, xhr: any) => void, error?: (message: WebResult_1<{[key: string]: string}[]>["message"], response: WebResult_1<{[key: string]: string}[]>, xhr: any) => void, options?: any): Promise<WebResult_1<{[key: string]: string}[]>["data"]> {
     return ajax({
         url: `/supervisor/batchPayStatus`,
         success: success,
@@ -96,7 +96,7 @@ export function batchPayStatus(success?: (data: WebResult<{[key: string]: string
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function detailPayStatus(success?: (data: WebResult<{[key: string]: string}[]>["data"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, error?: (message: WebResult<{[key: string]: string}[]>["message"], response: WebResult<{[key: string]: string}[]>, xhr: any) => void, options?: any): Promise<WebResult<{[key: string]: string}[]>["data"]> {
+export function detailPayStatus(success?: (data: WebResult_1<{[key: string]: string}[]>["data"], response: WebResult_1<{[key: string]: string}[]>, xhr: any) => void, error?: (message: WebResult_1<{[key: string]: string}[]>["message"], response: WebResult_1<{[key: string]: string}[]>, xhr: any) => void, options?: any): Promise<WebResult_1<{[key: string]: string}[]>["data"]> {
     return ajax({
         url: `/supervisor/detailPayStatus`,
         success: success,
@@ -111,46 +111,9 @@ export function detailPayStatus(success?: (data: WebResult<{[key: string]: strin
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function downloadPayDetails(query?: TaxPayBatchDTO, success?: (data: WebResult_1["data"], response: WebResult_1, xhr: any) => void, error?: (message: WebResult_1["message"], response: WebResult_1, xhr: any) => void, options?: any): Promise<WebResult_1["data"]> {
+export function downloadPayDetails(query?: TaxPayBatchDTO, success?: (data: WebResult["data"], response: WebResult, xhr: any) => void, error?: (message: WebResult["message"], response: WebResult, xhr: any) => void, options?: any): Promise<WebResult["data"]> {
     return ajax({
         url: `/supervisor/downloadPayDetails`,
-        contentType: "application/json",
-        data: {
-            query: query
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 打款批次审核
- * @param taxPayBatchAuditDTO  批次审核对象
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function auditPayBatch(taxPayBatchAuditDTO?: TaxPayBatchAuditDTO, success?: (data: WebResult<boolean>["data"], response: WebResult<boolean>, xhr: any) => void, error?: (message: WebResult<boolean>["message"], response: WebResult<boolean>, xhr: any) => void, options?: any): Promise<WebResult<boolean>["data"]> {
-    return ajax({
-        url: `/supervisor/auditPayBatch`,
-        data: {
-            taxPayBatchAuditDTO: taxPayBatchAuditDTO
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 打款批次列表
- * @param query  查询条件
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function queryPayBatchList(query?: PayBatchVO, success?: (data: WebResult<PageBean_1<TaxPayBatchDTO>>["data"], response: WebResult<PageBean_1<TaxPayBatchDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean_1<TaxPayBatchDTO>>["message"], response: WebResult<PageBean_1<TaxPayBatchDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean_1<TaxPayBatchDTO>>["data"]> {
-    return ajax({
-        url: `/supervisor/queryPayBatchList`,
         contentType: "application/json",
         data: {
             query: query
@@ -167,7 +130,7 @@ export function queryPayBatchList(query?: PayBatchVO, success?: (data: WebResult
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function queryPayDetailsList(query?: PayBatchDetailVO, success?: (data: WebResult<PageBean_1<TaxPayBatchDetailDTO>>["data"], response: WebResult<PageBean_1<TaxPayBatchDetailDTO>>, xhr: any) => void, error?: (message: WebResult<PageBean_1<TaxPayBatchDetailDTO>>["message"], response: WebResult<PageBean_1<TaxPayBatchDetailDTO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean_1<TaxPayBatchDetailDTO>>["data"]> {
+export function queryPayDetailsList(query?: PayBatchDetailVO, success?: (data: WebResult_1<PageBean_1<TaxPayBatchDetailDTO>>["data"], response: WebResult_1<PageBean_1<TaxPayBatchDetailDTO>>, xhr: any) => void, error?: (message: WebResult_1<PageBean_1<TaxPayBatchDetailDTO>>["message"], response: WebResult_1<PageBean_1<TaxPayBatchDetailDTO>>, xhr: any) => void, options?: any): Promise<WebResult_1<PageBean_1<TaxPayBatchDetailDTO>>["data"]> {
     return ajax({
         url: `/supervisor/queryPayDetailsList`,
         contentType: "application/json",
@@ -181,16 +144,17 @@ export function queryPayDetailsList(query?: PayBatchDetailVO, success?: (data: W
 }
 
 /**
- * 关联商户账号
- * @param taxMerchantUserDTO  关联商户账号
+ * 打款批次概要
+ * @param query 
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function bindUser(taxMerchantUserDTO?: TaxMerchantUserDTO, success?: (data: WebResult_1["data"], response: WebResult_1, xhr: any) => void, error?: (message: WebResult_1["message"], response: WebResult_1, xhr: any) => void, options?: any): Promise<WebResult_1["data"]> {
+export function queryPayBathSummary(query?: TaxPayBatchDetailDTO, success?: (data: WebResult_1<TaxPayBatchDetailSummaryDTO>["data"], response: WebResult_1<TaxPayBatchDetailSummaryDTO>, xhr: any) => void, error?: (message: WebResult_1<TaxPayBatchDetailSummaryDTO>["message"], response: WebResult_1<TaxPayBatchDetailSummaryDTO>, xhr: any) => void, options?: any): Promise<WebResult_1<TaxPayBatchDetailSummaryDTO>["data"]> {
     return ajax({
-        url: `/supervisor/bindUser`,
+        url: `/supervisor/queryPayBathSummary`,
+        contentType: "application/json",
         data: {
-            taxMerchantUserDTO: taxMerchantUserDTO
+            query: query
         },
         success: success,
         error: error,
@@ -199,17 +163,34 @@ export function bindUser(taxMerchantUserDTO?: TaxMerchantUserDTO, success?: (dat
 }
 
 /**
- * 打款
- * @param taxPayBatchDTO  批次
+ * 费用单
+ * @param id  批次明细主键
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function executePay(taxPayBatchDTO?: TaxPayBatchDTO, success?: (data: WebResult_1["data"], response: WebResult_1, xhr: any) => void, error?: (message: WebResult_1["message"], response: WebResult_1, xhr: any) => void, options?: any): Promise<WebResult_1["data"]> {
+export function payBill(id?: number, success?: (data: WebResult_1<TaxBatchDetailCostDto>["data"], response: WebResult_1<TaxBatchDetailCostDto>, xhr: any) => void, error?: (message: WebResult_1<TaxBatchDetailCostDto>["message"], response: WebResult_1<TaxBatchDetailCostDto>, xhr: any) => void, options?: any): Promise<WebResult_1<TaxBatchDetailCostDto>["data"]> {
     return ajax({
-        url: `/supervisor/executePay`,
-        contentType: "application/json",
+        url: `/supervisor/payBill`,
         data: {
-            taxPayBatchDTO: taxPayBatchDTO
+            id: id
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
+ * 打款批次审核
+ * @param taxPayBatchAuditDTO  批次审核对象
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function auditPayBatch(taxPayBatchAuditDTO?: TaxPayBatchAuditDTO, success?: (data: WebResult_1<boolean>["data"], response: WebResult_1<boolean>, xhr: any) => void, error?: (message: WebResult_1<boolean>["message"], response: WebResult_1<boolean>, xhr: any) => void, options?: any): Promise<WebResult_1<boolean>["data"]> {
+    return ajax({
+        url: `/supervisor/auditPayBatch`,
+        data: {
+            taxPayBatchAuditDTO: taxPayBatchAuditDTO
         },
         success: success,
         error: error,
@@ -223,7 +204,7 @@ export function executePay(taxPayBatchDTO?: TaxPayBatchDTO, success?: (data: Web
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function retryDetailPay(taxPayBatchDetailDTO?: TaxPayBatchDetailDTO, success?: (data: WebResult_1["data"], response: WebResult_1, xhr: any) => void, error?: (message: WebResult_1["message"], response: WebResult_1, xhr: any) => void, options?: any): Promise<WebResult_1["data"]> {
+export function retryDetailPay(taxPayBatchDetailDTO?: TaxPayBatchDetailDTO, success?: (data: WebResult["data"], response: WebResult, xhr: any) => void, error?: (message: WebResult["message"], response: WebResult, xhr: any) => void, options?: any): Promise<WebResult["data"]> {
     return ajax({
         url: `/supervisor/retryDetailPay`,
         contentType: "application/json",
@@ -236,496 +217,54 @@ export function retryDetailPay(taxPayBatchDetailDTO?: TaxPayBatchDetailDTO, succ
     }) as any;
 }
 
-export interface TaxPayBatchDetailDTO {
+/**
+ * 打款
+ * @param taxPayBatchDTO  批次
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function executePay(taxPayBatchDTO?: TaxPayBatchDTO, success?: (data: WebResult["data"], response: WebResult, xhr: any) => void, error?: (message: WebResult["message"], response: WebResult, xhr: any) => void, options?: any): Promise<WebResult["data"]> {
+    return ajax({
+        url: `/supervisor/executePay`,
+        contentType: "application/json",
+        data: {
+            taxPayBatchDTO: taxPayBatchDTO
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
 
-    /**
-     * 创建时间结束
-     */
-    endDate: string;
+export interface TaxMerchantUserDTO {
 
-    /**
-     * 打款时间
-     */
-    payTime: string;
+    uid: number;
 
-    /**
-     * 银行回单url
-     */
-    bankReceiptUrl: string;
+    gmtModified: string;
 
-    /**
-     * 备注
-     */
     memo: string;
-
-    /**
-     * 商户名称
-     */
-    merchantName: string;
-
-    /**
-     * 打款完成时间结束
-     */
-    payFinishTimeEnd: string;
-
-    /**
-     * 证件号码
-     */
-    identityNo: string;
-
-    startIndex: number;
-
-    /**
-     * 服务商共管账户应收
-     */
-    payrollReceive: string;
-
-    /**
-     * 用户实收金额
-     */
-    userActualReceiveAmount: number;
-
-    /**
-     * 打款通道编码
-     */
-    payChannelCode: string;
-
-    endIndex: number;
-
-    /**
-     * 扣增值税状态 状态：00：创建 01：打款中 02：打款完成 03:打款失败
-     */
-    vatStatus: string;
-
-    /**
-     * 是否可以预览回单,true可以预览
-     */
-    previewBankReceipt: boolean;
 
     id: number;
 
-    /**
-     * 是否可以重新打款，true是，false否
-     */
-    canRepay: boolean;
-
-    /**
-     * (未使用)扣服务费单号
-     */
-    deductOrderNo: string;
-
-    /**
-     * 撤销备注
-     */
-    cancelRemark: string;
-
-    /**
-     * 平台批次号
-     */
-    payBatchNo: string;
-
-    /**
-     * 薪资类型 税后：AFTER_TAX
-     */
-    salaryType: string;
-
-    /**
-     * 打款订单状态中文描述
-     */
-    payStatusDesc: string;
-
-    /**
-     * 账户类型： 00:银行卡   01:支付宝账号
-     */
-    accountType: string;
-
-    /**
-     * 连连确认备注
-     */
-    confirmRemark: string;
-
-    /**
-     * 打款通道
-     */
-    payChannelCodeName: string;
-
-    /**
-     * 商户订单号
-     */
-    merchantOrderNo: string;
-
-    /**
-     * 增值税金额(商户实付服务费)
-     */
-    vatAmount: number;
-
-    /**
-     * 税费计算费率备注
-     */
-    vatMemo: string;
-
-    /**
-     * 商户自有系统用户账号id
-     */
-    accountId: string;
-
-    /**
-     * 商户服务费率
-     */
-    merchantFeeRate: number;
-
-    /**
-     * 打款完成时间开始
-     */
-    payFinishTimeStart: string;
-
-    /**
-     * 连连回单编号
-     */
-    receiptNo: string;
-
-    /**
-     * 商户服务费差额
-     */
-    merchantFeeCostRegionDiffer: number;
-
-    /**
-     * 扣增值税时间
-     */
-    vatTime: string;
-
-    /**
-     * 扣服务费状态 状态：00：创建 01：打款中 02：打款完成 03:打款失败
-     */
-    deductStatus: string;
-
-    /**
-     * 服务单号
-     */
-    serviceNo: string;
-
-    /**
-     * 用户服务费差额
-     */
-    userFeeCostRegionDiffer: number;
-
-    /**
-     * 创建时间起始
-     */
-    startDate: string;
-
-    /**
-     * 商户号
-     */
-    merchantNo: string;
-
-    /**
-     * 服务商可用账户应收
-     */
-    chargeReceive: string;
-
-    /**
-     * 修改时间
-     */
-    gmtModified: string;
-
-    /**
-     * 内部订单号
-     */
-    innerOrderNo: string;
-
-    /**
-     * 锁定时间开始
-     */
-    lockTimeStart: string;
-
-    /**
-     * 账号名称(收款用户姓名)
-     */
-    accountName: string;
-
-    /**
-     * 费用公式版本,默认1.0税费/服务费，2.0商户/用户服务费
-     */
-    feeCostFormulaVersion: string;
-
-    /**
-     * 收款银行/渠道名称
-     */
-    bankName: string;
-
-    /**
-     * 服务商商户号(连连分配给宫薪记的商户号)
-     */
-    oidPartner: string;
-
-    /**
-     * 挂起备注
-     */
-    hangupRemark: string;
-
-    /**
-     * (未使用)扣增值税单号
-     */
-    vatOrderNo: string;
-
-    /**
-     * 商户已抵扣服务费
-     */
-    merchantOffsetFeeCost: number;
-
-    /**
-     * 商户批次号
-     */
-    merchantPayBatchNo: string;
-
-    /**
-     * 证件类型： 00：身份证
-     */
-    identityType: string;
-
-    /**
-     * 锁定时间,关联用户月额度
-     */
-    lockTime: string;
-
-    /**
-     * 收款账号
-     */
-    accountNo: string;
-
-    /**
-     * 代征主体
-     */
-    collectedSubjectName: string;
-
-    /**
-     * 代证主体
-     */
-    collectedSubjectNo: string;
-
-    /**
-     * 付方名称
-     */
-    payerName: string;
-
-    payStatuss: string[];
-
-    /**
-     * 金额查询结束值
-     */
-    endAmount: number;
-
-    /**
-     * 商户应付服务费
-     */
-    merchantShouldFeeCost: number;
-
-    /**
-     * 明细号(平台订单号)
-     */
-    payDetailNo: string;
-
-    /**
-     * 收款银行/渠道编号
-     */
-    bankCode: string;
-
-    /**
-     * 商户打款金额
-     */
-    amount: number;
-
-    /**
-     * 明细状态描述
-     */
-    statusDesc: string;
-
-    /**
-     * 服务费金额(用户实付服务费)
-     */
-    deductAmount: number;
-
-    /**
-     * 打款完成时间
-     */
-    payFinishTime: string;
-
-    /**
-     * 扣服务费时间
-     */
-    deductTime: string;
-
-    /**
-     * 收款用户手机号
-     */
-    mobile: string;
-
-    /**
-     * (订单来源)提交方式 0:商户平台  1:api
-     */
-    submitMode: string;
-
-    /**
-     * 创建时间
-     */
     gmtCreate: string;
 
-    /**
-     * 锁定时间结束
-     */
-    lockTimeEnd: string;
+    merchantNo: string;
 
-    /**
-     * 付方账户
-     */
-    payerAccount: string;
-
-    /**
-     * 金额查询开始值
-     */
-    startAmount: number;
-
-    /**
-     * 用户服务费率
-     */
-    userFeeRate: number;
-
-    /**
-     * 打款通道
-     */
-    channelName: string;
-
-    /**
-     * 打款订单状态：00：创建 01：打款中 02：打款完成 03：撤销 04:打款失败 
-     */
-    payStatus: string;
+    status: string;
 
 }
 
-export interface WebResult<T> {
+export interface WebResult {
 
     code: string;
 
     redirectUrl: string;
 
-    data: T;
+    data: any;
 
     success: boolean;
 
     message: string;
-
-}
-
-export interface TaxPayBatchDetailSummaryDTO {
-
-    /**
-     * 数量
-     */
-    number: number;
-
-    /**
-     * 金额
-     */
-    amount: number;
-
-    /**
-     * 平台批次号
-     */
-    list: TaxPayBatchDetailDTO[];
-
-}
-
-export interface TaxOrderCostDetailDto {
-
-    /**
-     * 优惠减免
-     */
-    discountRate: number;
-
-    /**
-     * 个税
-     */
-    taxRate: number;
-
-    /**
-     * 合作税率
-     */
-    currentTaxRate: number;
-
-    /**
-     * 应扣税费
-     */
-    currentTaxAmt: number;
-
-    /**
-     * 增值税
-     */
-    vatRate: number;
-
-    /**
-     * 核定金额
-     */
-    currentAmt: number;
-
-    /**
-     * 单月累计收款区间最大金额
-     */
-    maxAmt: number;
-
-    /**
-     * id
-     */
-    id: number;
-
-    /**
-     * 单月累计收款区间最小金额
-     */
-    minAmt: number;
-
-}
-
-export interface TaxBatchDetailCostDto {
-
-    /**
-     * 合作税率
-     */
-    vatRateMemo: string;
-
-    /**
-     * 收款金额
-     */
-    amount: number;
-
-    /**
-     * 合作服务费率
-     */
-    deductRate: number;
-
-    /**
-     * 收款方姓名
-     */
-    accountName: string;
-
-    /**
-     * 实收服务费
-     */
-    deductAmount: number;
-
-    /**
-     * id
-     */
-    id: number;
-
-    /**
-     * 税费明细
-     */
-    taxOrderCostDetailList: TaxOrderCostDetailDto[];
-
-    /**
-     * 实收税费
-     */
-    vatAmount: number;
 
 }
 
@@ -775,7 +314,7 @@ export interface TaxPayBatchDTO {
     selectStatus: number;
 
     /**
-     * 打款通道编码
+     * 发放通道编码
      */
     payChannelCode: string;
 
@@ -822,7 +361,7 @@ export interface TaxPayBatchDTO {
     count: number;
 
     /**
-     * 打款通道名称
+     * 发放通道名称
      */
     payChannelCodeName: string;
 
@@ -909,7 +448,7 @@ export interface TaxPayBatchDTO {
     feeCostFormulaVersion: string;
 
     /**
-     * 服务商商户号(连连分配给宫薪记的商户号)
+     * 服务商商户号(连连分配给代征平台的商户号)
      */
     oidPartner: string;
 
@@ -934,12 +473,12 @@ export interface TaxPayBatchDTO {
     lockTime: string;
 
     /**
-     * 代征主体名称
+     * 服务主体名称
      */
     collectedSubjectName: string;
 
     /**
-     * 代征主体代码
+     * 服务主体代码
      */
     collectedSubjectNo: string;
 
@@ -1086,36 +625,17 @@ export interface PayBatchVO {
 
 }
 
-export interface WebResult_1 {
+export interface WebResult_1<T> {
 
     code: string;
 
     redirectUrl: string;
 
-    data: any;
+    data: T;
 
     success: boolean;
 
     message: string;
-
-}
-
-export interface TaxPayBatchAuditDTO {
-
-    /**
-     * 平台批次号
-     */
-    payBatchNo: string;
-
-    /**
-     * 审核结论：1审核通过，2审核拒绝
-     */
-    auditResult: string;
-
-    /**
-     * 拒绝原因
-     */
-    refuseReason: string;
 
 }
 
@@ -1139,6 +659,373 @@ export interface PageBean_1<T> {
 
 }
 
+export interface TaxPayBatchDetailDTO {
+
+    /**
+     * 创建时间结束
+     */
+    endDate: string;
+
+    /**
+     * 打款时间
+     */
+    payTime: string;
+
+    /**
+     * 银行回单url
+     */
+    bankReceiptUrl: string;
+
+    /**
+     * 备注
+     */
+    memo: string;
+
+    /**
+     * 商户名称
+     */
+    merchantName: string;
+
+    /**
+     * 打款完成时间结束
+     */
+    payFinishTimeEnd: string;
+
+    /**
+     * 证件号码
+     */
+    identityNo: string;
+
+    startIndex: number;
+
+    /**
+     * 服务商共管账户应收
+     */
+    payrollReceive: string;
+
+    /**
+     * 用户实收金额
+     */
+    userActualReceiveAmount: number;
+
+    /**
+     * 发放通道编码
+     */
+    payChannelCode: string;
+
+    endIndex: number;
+
+    /**
+     * 扣增值税状态 状态：00：创建 01：打款中 02：打款完成 03:打款失败
+     */
+    vatStatus: string;
+
+    /**
+     * 是否可以预览回单,true可以预览
+     */
+    previewBankReceipt: boolean;
+
+    id: number;
+
+    /**
+     * 是否可以重新打款，true是，false否
+     */
+    canRepay: boolean;
+
+    /**
+     * (未使用)扣服务费单号
+     */
+    deductOrderNo: string;
+
+    /**
+     * 撤销备注
+     */
+    cancelRemark: string;
+
+    /**
+     * 平台批次号
+     */
+    payBatchNo: string;
+
+    /**
+     * 薪资类型 税后：AFTER_TAX
+     */
+    salaryType: string;
+
+    /**
+     * 打款订单状态中文描述
+     */
+    payStatusDesc: string;
+
+    /**
+     * 账户类型： 00:银行卡   01:支付宝账号
+     */
+    accountType: string;
+
+    /**
+     * 连连确认备注
+     */
+    confirmRemark: string;
+
+    /**
+     * 发放通道
+     */
+    payChannelCodeName: string;
+
+    /**
+     * 商户订单号
+     */
+    merchantOrderNo: string;
+
+    /**
+     * 增值税金额(商户实付服务费)
+     */
+    vatAmount: number;
+
+    /**
+     * 税费计算费率备注
+     */
+    vatMemo: string;
+
+    /**
+     * 商户自有系统用户账号id
+     */
+    accountId: string;
+
+    /**
+     * 商户服务费率
+     */
+    merchantFeeRate: number;
+
+    /**
+     * 打款完成时间开始
+     */
+    payFinishTimeStart: string;
+
+    /**
+     * 连连回单编号
+     */
+    receiptNo: string;
+
+    /**
+     * 商户服务费差额
+     */
+    merchantFeeCostRegionDiffer: number;
+
+    /**
+     * 扣增值税时间
+     */
+    vatTime: string;
+
+    /**
+     * 扣服务费状态 状态：00：创建 01：打款中 02：打款完成 03:打款失败
+     */
+    deductStatus: string;
+
+    /**
+     * 服务单号
+     */
+    serviceNo: string;
+
+    /**
+     * 用户服务费差额
+     */
+    userFeeCostRegionDiffer: number;
+
+    /**
+     * 创建时间起始
+     */
+    startDate: string;
+
+    /**
+     * 商户号
+     */
+    merchantNo: string;
+
+    /**
+     * 服务商可用账户应收
+     */
+    chargeReceive: string;
+
+    /**
+     * 修改时间
+     */
+    gmtModified: string;
+
+    /**
+     * 内部订单号
+     */
+    innerOrderNo: string;
+
+    /**
+     * 锁定时间开始
+     */
+    lockTimeStart: string;
+
+    /**
+     * 账号名称(收款用户姓名)
+     */
+    accountName: string;
+
+    /**
+     * 费用公式版本,默认1.0税费/服务费，2.0商户/用户服务费
+     */
+    feeCostFormulaVersion: string;
+
+    /**
+     * 收款银行/渠道名称
+     */
+    bankName: string;
+
+    /**
+     * 服务商商户号(连连分配给代征平台的商户号)
+     */
+    oidPartner: string;
+
+    /**
+     * 挂起备注
+     */
+    hangupRemark: string;
+
+    /**
+     * (未使用)扣增值税单号
+     */
+    vatOrderNo: string;
+
+    /**
+     * 商户已抵扣服务费
+     */
+    merchantOffsetFeeCost: number;
+
+    /**
+     * 商户批次号
+     */
+    merchantPayBatchNo: string;
+
+    /**
+     * 证件类型： 00：身份证
+     */
+    identityType: string;
+
+    /**
+     * 锁定时间,关联用户月额度
+     */
+    lockTime: string;
+
+    /**
+     * 收款账号
+     */
+    accountNo: string;
+
+    /**
+     * 服务主体
+     */
+    collectedSubjectName: string;
+
+    /**
+     * 代证主体
+     */
+    collectedSubjectNo: string;
+
+    /**
+     * 付方名称
+     */
+    payerName: string;
+
+    payStatuss: string[];
+
+    /**
+     * 金额查询结束值
+     */
+    endAmount: number;
+
+    /**
+     * 商户应付服务费
+     */
+    merchantShouldFeeCost: number;
+
+    /**
+     * 明细号(平台订单号)
+     */
+    payDetailNo: string;
+
+    /**
+     * 收款银行/渠道编号
+     */
+    bankCode: string;
+
+    /**
+     * 商户打款金额
+     */
+    amount: number;
+
+    /**
+     * 明细状态描述
+     */
+    statusDesc: string;
+
+    /**
+     * 服务费金额(用户实付服务费)
+     */
+    deductAmount: number;
+
+    /**
+     * 打款完成时间
+     */
+    payFinishTime: string;
+
+    /**
+     * 扣服务费时间
+     */
+    deductTime: string;
+
+    /**
+     * 收款用户手机号
+     */
+    mobile: string;
+
+    /**
+     * (订单来源)提交方式 0:商户平台  1:api
+     */
+    submitMode: string;
+
+    /**
+     * 创建时间
+     */
+    gmtCreate: string;
+
+    /**
+     * 锁定时间结束
+     */
+    lockTimeEnd: string;
+
+    /**
+     * 付方账户
+     */
+    payerAccount: string;
+
+    /**
+     * 金额查询开始值
+     */
+    startAmount: number;
+
+    /**
+     * 用户服务费率
+     */
+    userFeeRate: number;
+
+    /**
+     * 发放通道
+     */
+    channelName: string;
+
+    /**
+     * 打款订单状态：00：创建 01：打款中 02：打款完成 03：撤销 04:打款失败 
+     */
+    payStatus: string;
+
+}
+
 export interface PayBatchDetailVO {
 
     query: TaxPayBatchDetailDTO;
@@ -1147,21 +1034,134 @@ export interface PayBatchDetailVO {
 
 }
 
-export interface TaxMerchantUserDTO {
+export interface TaxPayBatchDetailSummaryDTO {
 
-    uid: number;
+    /**
+     * 数量
+     */
+    number: number;
 
-    gmtModified: string;
+    /**
+     * 金额
+     */
+    amount: number;
 
-    memo: string;
+    /**
+     * 平台批次号
+     */
+    list: TaxPayBatchDetailDTO[];
 
+}
+
+export interface TaxOrderCostDetailDto {
+
+    /**
+     * 优惠减免
+     */
+    discountRate: number;
+
+    /**
+     * 个税
+     */
+    taxRate: number;
+
+    /**
+     * 合作税率
+     */
+    currentTaxRate: number;
+
+    /**
+     * 应扣税费
+     */
+    currentTaxAmt: number;
+
+    /**
+     * 增值税
+     */
+    vatRate: number;
+
+    /**
+     * 核定金额
+     */
+    currentAmt: number;
+
+    /**
+     * 单月累计收款区间最大金额
+     */
+    maxAmt: number;
+
+    /**
+     * id
+     */
     id: number;
 
-    gmtCreate: string;
+    /**
+     * 单月累计收款区间最小金额
+     */
+    minAmt: number;
 
-    merchantNo: string;
+}
 
-    status: string;
+export interface TaxBatchDetailCostDto {
+
+    /**
+     * 合作税率
+     */
+    vatRateMemo: string;
+
+    /**
+     * 收款金额
+     */
+    amount: number;
+
+    /**
+     * 合作服务费率
+     */
+    deductRate: number;
+
+    /**
+     * 收款方姓名
+     */
+    accountName: string;
+
+    /**
+     * 实收服务费
+     */
+    deductAmount: number;
+
+    /**
+     * id
+     */
+    id: number;
+
+    /**
+     * 税费明细
+     */
+    taxOrderCostDetailList: TaxOrderCostDetailDto[];
+
+    /**
+     * 实收税费
+     */
+    vatAmount: number;
+
+}
+
+export interface TaxPayBatchAuditDTO {
+
+    /**
+     * 平台批次号
+     */
+    payBatchNo: string;
+
+    /**
+     * 审核结论：1审核通过，2审核拒绝
+     */
+    auditResult: string;
+
+    /**
+     * 拒绝原因
+     */
+    refuseReason: string;
 
 }
 

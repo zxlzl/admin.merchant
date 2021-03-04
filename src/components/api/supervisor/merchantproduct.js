@@ -11,20 +11,11 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.update = exports.add = exports.queryByMerchantNo = exports.queryPayChannel = void 0;
+exports.update = exports.add = exports.queryPayChannel = exports.queryByMerchantNo = void 0;
 /**
  * @file API：/supervisor/merchantproduct
  */
 var request_1 = require("@/utils/request");
-/**
- * 查询所有可用打款通道
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function queryPayChannel(success, error, options) {
-    return request_1.ajax(__assign({ url: "/supervisor/merchantproduct/queryPayChannel", success: success, error: error }, options));
-}
-exports.queryPayChannel = queryPayChannel;
 /**
  * 查询商户产品信息
  * @param merchantNo
@@ -37,6 +28,15 @@ function queryByMerchantNo(merchantNo, success, error, options) {
         }, success: success, error: error }, options));
 }
 exports.queryByMerchantNo = queryByMerchantNo;
+/**
+ * 查询所有可用发放通道
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function queryPayChannel(success, error, options) {
+    return request_1.ajax(__assign({ url: "/supervisor/merchantproduct/queryPayChannel", success: success, error: error }, options));
+}
+exports.queryPayChannel = queryPayChannel;
 /**
  * 配置商户产品信息
  * @param taxMerchantProductDTO  商户产品

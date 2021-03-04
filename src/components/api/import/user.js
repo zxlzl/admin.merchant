@@ -11,11 +11,20 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.importUserExcel = exports.downLoadTemplate = exports.queryUserImportList = void 0;
+exports.downLoadTemplate = exports.queryUserImportList = exports.importUserExcel = void 0;
 /**
  * @file API：/import/user
  */
 var request_1 = require("@/utils/request");
+/**
+ * 用户导入excel
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function importUserExcel(success, error, options) {
+    return request_1.ajax(__assign({ url: "/import/user/importUserExcel", type: "POST", success: success, error: error }, options));
+}
+exports.importUserExcel = importUserExcel;
 /**
  * 查询用户导入列表信息
  * @param taxImportRecordDTO
@@ -37,12 +46,3 @@ function downLoadTemplate(success, error, options) {
     return request_1.ajax(__assign({ url: "/import/user/downLoadTemplate", success: success, error: error }, options));
 }
 exports.downLoadTemplate = downLoadTemplate;
-/**
- * 用户导入excel
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function importUserExcel(success, error, options) {
-    return request_1.ajax(__assign({ url: "/import/user/importUserExcel", type: "POST", success: success, error: error }, options));
-}
-exports.importUserExcel = importUserExcel;

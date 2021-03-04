@@ -789,12 +789,12 @@ export interface TaxPayBatchBillingDetailDto {
     merchantName: string;
 
     /**
-     * 打款通道
+     * 发放通道
      */
     paymentChannel: string;
 
     /**
-     * 打款通道名称
+     * 发放通道名称
      */
     paymentChannelName: string;
 

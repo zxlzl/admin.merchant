@@ -4,6 +4,25 @@
 import { ajax } from "@/utils/request";
 
 /**
+ * 导出批次记录
+ * @param request 
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function exportPayBatch(request?: ExportDataRequest, success?: (data: WebResult<string>["data"], response: WebResult<string>, xhr: any) => void, error?: (message: WebResult<string>["message"], response: WebResult<string>, xhr: any) => void, options?: any): Promise<WebResult<string>["data"]> {
+    return ajax({
+        url: `/supervisor/export/exportPayBatch`,
+        contentType: "application/json",
+        data: {
+            request: request
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+/**
  * 导出批次详情
  * @param request  查询条件
  * @param success 请求成功的回调函数
@@ -42,7 +61,7 @@ export function exportPayOrderDetail(query?: TaxPayBatchDetailDTO, success?: (da
 }
 
 /**
- * 导出账务明细
+ * 导出账务详情
  * @param query  查询条件
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
@@ -53,25 +72,6 @@ export function exportAccountDetail(query?: CapitalFlowVO, success?: (data: WebR
         contentType: "application/json",
         data: {
             query: query
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 导出批次记录
- * @param request 
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function exportPayBatch(request?: ExportDataRequest, success?: (data: WebResult<string>["data"], response: WebResult<string>, xhr: any) => void, error?: (message: WebResult<string>["message"], response: WebResult<string>, xhr: any) => void, options?: any): Promise<WebResult<string>["data"]> {
-    return ajax({
-        url: `/supervisor/export/exportPayBatch`,
-        contentType: "application/json",
-        data: {
-            request: request
         },
         success: success,
         error: error,
@@ -129,7 +129,7 @@ export interface ExportDataRequest {
     userActualReceiveAmount: number;
 
     /**
-     * 打款通道编码
+     * 发放通道编码
      */
     payChannelCode: string;
 
@@ -185,7 +185,7 @@ export interface ExportDataRequest {
     confirmRemark: string;
 
     /**
-     * 打款通道
+     * 发放通道
      */
     payChannelCodeName: string;
 
@@ -292,7 +292,7 @@ export interface ExportDataRequest {
     bankName: string;
 
     /**
-     * 服务商商户号(连连分配给宫薪记的商户号)
+     * 服务商商户号(连连分配给代征平台的商户号)
      */
     oidPartner: string;
 
@@ -332,7 +332,7 @@ export interface ExportDataRequest {
     accountNo: string;
 
     /**
-     * 代征主体
+     * 服务主体
      */
     collectedSubjectName: string;
 
@@ -429,7 +429,7 @@ export interface ExportDataRequest {
     userFeeRate: number;
 
     /**
-     * 打款通道
+     * 发放通道
      */
     channelName: string;
 
@@ -504,7 +504,7 @@ export interface TaxPayBatchDetailDTO {
     userActualReceiveAmount: number;
 
     /**
-     * 打款通道编码
+     * 发放通道编码
      */
     payChannelCode: string;
 
@@ -563,7 +563,7 @@ export interface TaxPayBatchDetailDTO {
     confirmRemark: string;
 
     /**
-     * 打款通道
+     * 发放通道
      */
     payChannelCodeName: string;
 
@@ -673,7 +673,7 @@ export interface TaxPayBatchDetailDTO {
     bankName: string;
 
     /**
-     * 服务商商户号(连连分配给宫薪记的商户号)
+     * 服务商商户号(连连分配给代征平台的商户号)
      */
     oidPartner: string;
 
@@ -713,7 +713,7 @@ export interface TaxPayBatchDetailDTO {
     accountNo: string;
 
     /**
-     * 代征主体
+     * 服务主体
      */
     collectedSubjectName: string;
 
@@ -810,7 +810,7 @@ export interface TaxPayBatchDetailDTO {
     userFeeRate: number;
 
     /**
-     * 打款通道
+     * 发放通道
      */
     channelName: string;
 

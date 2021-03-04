@@ -11,53 +11,11 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.getCurrentMerchant = exports.queryBalanceListByMerchant = exports.queryBalanceByMerchantAndAccountType = exports.queryByMerchantNo = exports.queryWeChatWorkCorpAgents = exports.belongMerchant = exports.queryByUid = void 0;
+exports.queryWeChatWorkCorpAgents = exports.queryByMerchantNo = exports.belongMerchant = exports.queryByUid = exports.getCurrentMerchant = exports.queryBalanceListByMerchant = exports.queryBalanceByMerchantAndAccountType = void 0;
 /**
  * @file API：/remit/merchant
  */
 var request_1 = require("@/utils/request");
-/**
- * 根据用户id查询商户列表
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function queryByUid(success, error, options) {
-    return request_1.ajax(__assign({ url: "/remit/merchant/queryByUid", success: success, error: error }, options));
-}
-exports.queryByUid = queryByUid;
-/**
- * 获取服务商枚举
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function belongMerchant(success, error, options) {
-    return request_1.ajax(__assign({ url: "/remit/merchant/belongMerchant", success: success, error: error }, options));
-}
-exports.belongMerchant = belongMerchant;
-/**
- * 查询授权应用信息
- * @param merchantNo
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function queryWeChatWorkCorpAgents(merchantNo, success, error, options) {
-    return request_1.ajax(__assign({ url: "/remit/merchant/queryWeChatWorkCorpAgents", data: {
-            merchantNo: merchantNo
-        }, success: success, error: error }, options));
-}
-exports.queryWeChatWorkCorpAgents = queryWeChatWorkCorpAgents;
-/**
- * 根据商户号查询商户
- * @param merchantNo  查询条件
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-function queryByMerchantNo(merchantNo, success, error, options) {
-    return request_1.ajax(__assign({ url: "/remit/merchant/queryByMerchantNo", data: {
-            merchantNo: merchantNo
-        }, success: success, error: error }, options));
-}
-exports.queryByMerchantNo = queryByMerchantNo;
 /**
  * 根据商户号查询商户账户余额（payaccount）
  * @param queryMerchantAccountBalanceVO  查询条件
@@ -91,3 +49,45 @@ function getCurrentMerchant(success, error, options) {
     return request_1.ajax(__assign({ url: "/remit/merchant/getCurrentMerchant", success: success, error: error }, options));
 }
 exports.getCurrentMerchant = getCurrentMerchant;
+/**
+ * 根据用户id查询商户列表
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function queryByUid(success, error, options) {
+    return request_1.ajax(__assign({ url: "/remit/merchant/queryByUid", success: success, error: error }, options));
+}
+exports.queryByUid = queryByUid;
+/**
+ * 获取服务商枚举
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function belongMerchant(success, error, options) {
+    return request_1.ajax(__assign({ url: "/remit/merchant/belongMerchant", success: success, error: error }, options));
+}
+exports.belongMerchant = belongMerchant;
+/**
+ * 根据商户号查询商户
+ * @param merchantNo  查询条件
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function queryByMerchantNo(merchantNo, success, error, options) {
+    return request_1.ajax(__assign({ url: "/remit/merchant/queryByMerchantNo", data: {
+            merchantNo: merchantNo
+        }, success: success, error: error }, options));
+}
+exports.queryByMerchantNo = queryByMerchantNo;
+/**
+ * 查询授权应用信息
+ * @param merchantNo
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+function queryWeChatWorkCorpAgents(merchantNo, success, error, options) {
+    return request_1.ajax(__assign({ url: "/remit/merchant/queryWeChatWorkCorpAgents", data: {
+            merchantNo: merchantNo
+        }, success: success, error: error }, options));
+}
+exports.queryWeChatWorkCorpAgents = queryWeChatWorkCorpAgents;

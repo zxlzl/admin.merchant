@@ -184,8 +184,6 @@ export interface AccountLogDto {
 
     collectedSubjectName: string;
 
-    gmtUpdate: string;
-
     acctType: string;
 
     custType: string;

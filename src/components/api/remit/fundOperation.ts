@@ -4,38 +4,17 @@
 import { ajax } from "@/utils/request";
 
 /**
- * 资金操作记录导出
- * @param fundOperationQuery 
+ * 资金业务记录详情
+ * @param id 
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function export_1(fundOperationQuery?: FundOperationQuery, success?: (data: WebResult<void>["data"], response: WebResult<void>, xhr: any) => void, error?: (message: WebResult<void>["message"], response: WebResult<void>, xhr: any) => void, options?: any): Promise<WebResult<void>["data"]> {
+export function getOne(id?: number, success?: (data: WebResult<FundOperationVO>["data"], response: WebResult<FundOperationVO>, xhr: any) => void, error?: (message: WebResult<FundOperationVO>["message"], response: WebResult<FundOperationVO>, xhr: any) => void, options?: any): Promise<WebResult<FundOperationVO>["data"]> {
     return ajax({
-        url: `/remit/fundOperation/export`,
-        type: "POST",
-        contentType: "application/json",
+        url: `/remit/fundOperation/getOne`,
+        type: "GET",
         data: {
-            fundOperationQuery: fundOperationQuery
-        },
-        success: success,
-        error: error,
-        ...options
-    }) as any;
-}
-
-/**
- * 资金操作记录列表
- * @param fundOperationQuery 
- * @param success 请求成功的回调函数
- * @param error 请求失败的回调函数
- */
-export function getList(fundOperationQuery?: FundOperationQuery, success?: (data: WebResult<PageBean<FundOperationVO>>["data"], response: WebResult<PageBean<FundOperationVO>>, xhr: any) => void, error?: (message: WebResult<PageBean<FundOperationVO>>["message"], response: WebResult<PageBean<FundOperationVO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean<FundOperationVO>>["data"]> {
-    return ajax({
-        url: `/remit/fundOperation/getList`,
-        type: "POST",
-        contentType: "application/json",
-        data: {
-            fundOperationQuery: fundOperationQuery
+            id: id
         },
         success: success,
         error: error,
@@ -59,22 +38,182 @@ export function getRebateAmount(success?: (data: WebResult<RebateVO>["data"], re
 }
 
 /**
- * 资金操作记录详情
- * @param id 
+ * 资金业务记录导出
+ * @param fundOperationQuery 
  * @param success 请求成功的回调函数
  * @param error 请求失败的回调函数
  */
-export function getOne(id?: number, success?: (data: WebResult<FundOperationVO>["data"], response: WebResult<FundOperationVO>, xhr: any) => void, error?: (message: WebResult<FundOperationVO>["message"], response: WebResult<FundOperationVO>, xhr: any) => void, options?: any): Promise<WebResult<FundOperationVO>["data"]> {
+export function export_1(fundOperationQuery?: FundOperationQuery, success?: (data: WebResult<void>["data"], response: WebResult<void>, xhr: any) => void, error?: (message: WebResult<void>["message"], response: WebResult<void>, xhr: any) => void, options?: any): Promise<WebResult<void>["data"]> {
     return ajax({
-        url: `/remit/fundOperation/getOne`,
-        type: "GET",
+        url: `/remit/fundOperation/export`,
+        type: "POST",
+        contentType: "application/json",
         data: {
-            id: id
+            fundOperationQuery: fundOperationQuery
         },
         success: success,
         error: error,
         ...options
     }) as any;
+}
+
+/**
+ * 资金业务记录列表
+ * @param fundOperationQuery 
+ * @param success 请求成功的回调函数
+ * @param error 请求失败的回调函数
+ */
+export function getList(fundOperationQuery?: FundOperationQuery, success?: (data: WebResult<PageBean<FundOperationVO>>["data"], response: WebResult<PageBean<FundOperationVO>>, xhr: any) => void, error?: (message: WebResult<PageBean<FundOperationVO>>["message"], response: WebResult<PageBean<FundOperationVO>>, xhr: any) => void, options?: any): Promise<WebResult<PageBean<FundOperationVO>>["data"]> {
+    return ajax({
+        url: `/remit/fundOperation/getList`,
+        type: "POST",
+        contentType: "application/json",
+        data: {
+            fundOperationQuery: fundOperationQuery
+        },
+        success: success,
+        error: error,
+        ...options
+    }) as any;
+}
+
+export interface WebResult<T> {
+
+    code: string;
+
+    redirectUrl: string;
+
+    data: T;
+
+    success: boolean;
+
+    message: string;
+
+}
+
+export interface FundOperationVO {
+
+    /**
+     * 入款账户名称
+     */
+    intoAccountName: string;
+
+    /**
+     * 入款账户
+     */
+    intoAccount: string;
+
+    /**
+     * 修改时间
+     */
+    gmtModified: string;
+
+    /**
+     * 业务类型 0--充值  1--提现  2--账户间转账 
+     */
+    bizType: number;
+
+    /**
+     * 业务类型名称 
+     */
+    bizTypeName: string;
+
+    /**
+     * 商户名称
+     */
+    merchantMame: string;
+
+    /**
+     * 备注
+     */
+    memo: string;
+
+    /**
+     * 出款账户
+     */
+    outAccount: string;
+
+    /**
+     * 操作员
+     */
+    operator: string;
+
+    /**
+     * 操作附言
+     */
+    operationPs: string;
+
+    /**
+     * 金额
+     */
+    tradeAmount: number;
+
+    /**
+     * 业务订单号
+     */
+    bankBizOrderNo: string;
+
+    /**
+     * 服务主体
+     */
+    collectedSubjectName: string;
+
+    /**
+     * 出款账户名称
+     */
+    outAccountName: string;
+
+    /**
+     * 发起时间 
+     */
+    transDate: string;
+
+    cellStyleMap: any;
+
+    /**
+     * 主键
+     */
+    id: number;
+
+    /**
+     * 状态名称
+     */
+    claimStatusName: string;
+
+    /**
+     * 状态 0:处理中 1:成功 2:失败
+     */
+    claimStatus: string;
+
+    /**
+     * 商户号
+     */
+    merchantNo: string;
+
+    /**
+     * 操作备注
+     */
+    operationRemark: string;
+
+}
+
+export interface RebateVO {
+
+    /**
+     * 累计返点金额
+     */
+    totalRebateAmount: number;
+
+    /**
+     * 可用余额
+     */
+    availableAmount: number;
+
+    /**
+     * 上月返点金额
+     */
+    lastMonthRebateAmount: number;
+
 }
 
 export interface FundOperationQuery {
@@ -161,20 +300,6 @@ export interface FundOperationQuery {
 
 }
 
-export interface WebResult<T> {
-
-    code: string;
-
-    redirectUrl: string;
-
-    data: T;
-
-    success: boolean;
-
-    message: string;
-
-}
-
 export interface Object {
 
 }
@@ -196,131 +321,6 @@ export interface PageBean<T> {
     list: T[];
 
     maxPage: number;
-
-}
-
-export interface FundOperationVO {
-
-    /**
-     * 入款账户名称
-     */
-    intoAccountName: string;
-
-    /**
-     * 入款账户
-     */
-    intoAccount: string;
-
-    /**
-     * 修改时间
-     */
-    gmtModified: string;
-
-    /**
-     * 业务类型 0--充值  1--提现  2--账户间转账 
-     */
-    bizType: number;
-
-    /**
-     * 业务类型名称 
-     */
-    bizTypeName: string;
-
-    /**
-     * 商户名称
-     */
-    merchantMame: string;
-
-    /**
-     * 备注
-     */
-    memo: string;
-
-    /**
-     * 出款账户
-     */
-    outAccount: string;
-
-    /**
-     * 操作员
-     */
-    operator: string;
-
-    /**
-     * 操作附言
-     */
-    operationPs: string;
-
-    /**
-     * 金额
-     */
-    tradeAmount: number;
-
-    /**
-     * 业务订单号
-     */
-    bankBizOrderNo: string;
-
-    /**
-     * 代征主体
-     */
-    collectedSubjectName: string;
-
-    /**
-     * 出款账户名称
-     */
-    outAccountName: string;
-
-    /**
-     * 发起时间 
-     */
-    transDate: string;
-
-    cellStyleMap: any;
-
-    /**
-     * 主键
-     */
-    id: number;
-
-    /**
-     * 状态名称
-     */
-    claimStatusName: string;
-
-    /**
-     * 状态 0:处理中 1:成功 2:失败
-     */
-    claimStatus: string;
-
-    /**
-     * 商户号
-     */
-    merchantNo: string;
-
-    /**
-     * 操作备注
-     */
-    operationRemark: string;
-
-}
-
-export interface RebateVO {
-
-    /**
-     * 累计返点金额
-     */
-    totalRebateAmount: number;
-
-    /**
-     * 可用余额
-     */
-    availableAmount: number;
-
-    /**
-     * 上月返点金额
-     */
-    lastMonthRebateAmount: number;
 
 }
 

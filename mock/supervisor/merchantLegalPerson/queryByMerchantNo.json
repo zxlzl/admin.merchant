@@ -1,0 +1,18 @@
+{
+    "code": "code",
+    "redirectUrl": "http://test.com/redirectUrl",
+    "data": {
+        "legalName": "data_legalName",
+        "legalGender": "data_legalGender",
+        "gmtModified": "2010/01/01 00:00:00",
+        "legalEmail": "data_legalEmail_email@test.com",
+        "id": 100,
+        "legalMobile": "data_legalMobile",
+        "gmtCreate": "2010/01/01 00:00:00",
+        "operatorAdd": 0,
+        "operatorModified": 0,
+        "merchantNo": "data_merchantNo"
+    },
+    "success": true,
+    "message": "message"
+}
