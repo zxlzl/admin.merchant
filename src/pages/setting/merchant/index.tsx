@@ -61,7 +61,7 @@ class Merchant extends Component<
     this.state = {
       menuMap,
       mode: 'inline',
-      selectKey: 'base',
+      selectKey: 'corpn', //base
       merchantNo: '',
     };
   }
@@ -166,7 +166,7 @@ class Merchant extends Component<
       case 'invoice':
         return <InvoiceView invoiceData={invoiceData} {...commonProps} />;
         case 'corpn':
-        return <CorpnView contactData={contactData} {...commonProps} />;
+        return <CorpnView {...commonProps} />;
       default:
         break;
     }

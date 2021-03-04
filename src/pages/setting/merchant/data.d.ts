@@ -44,6 +44,13 @@ export interface ContactData {
   status: string;
 }
 
+export interface CorpnData {
+  legalName: string;
+  legalGender: string;
+  legalMobile: string;
+  legalEmail: string;
+}
+
 export interface SettleData {
   /**
    * bank_account_name，银行户名
