@@ -226,16 +226,15 @@ class Login extends Component<LoginProps, LoginState> {
             </a>
           </div>
           <Submit>登录</Submit>
-          <div id="wechat" className={styles.other}>
+          {/* <div id="wechat" className={styles.other}>
             企业微信登录
-            {/* <WeiboCircleOutlined className={styles.icon} /> */}
             <a href={`https://open.work.weixin.qq.com/wwopen/sso/3rd_qrConnect?appid=${appid}&redirect_uri=${encodeURIComponent(redirect_uri)}&state=${wechat_state}@gyoss9&usertype=${usertype}`}>
               <img src={business_wechat}></img>
             </a>
-            {/* <Link className={styles.register} to="/user/register">
+            <Link className={styles.register} to="/user/register">
             注册账户
-          </Link> */}
-          </div>
+          </Link>
+          </div> */}
         </LoginComponents>
         <ChangePass
           visible={changePassModalVisible}

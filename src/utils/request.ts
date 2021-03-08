@@ -12,19 +12,19 @@ switch (process.env.DEFINED_ENV) {
     // apiUrl = 'http://swy-taxmng.wdai.com/api'; // 稳定环境
     // middlewareApi = 'http://basicservice.wdai.com/api';
 
-    apiUrl = 'http://settlement.szjh.com/api'; 
+    apiUrl = 'https://settlement.szjh.com/api'; 
     middlewareApi = 'http://basicService.szjh.com/api';
     break;
   case 'fat':
-    apiUrl = 'http://settlement.szjh.com/api'; 
+    apiUrl = 'https://settlement.szjh.com/api'; 
     middlewareApi = 'http://basicService.szjh.com/api';
     break;
   case 'uat':
-    apiUrl = 'http://settlement.szjh.com/api'; 
+    apiUrl = 'https://settlement.szjh.com/api'; 
     middlewareApi = 'http://basicService.szjh.com/api';
     break;
   case 'prd':
-    apiUrl = 'http://settlement.szjh.com/api'; 
+    apiUrl = 'https://settlement.szjh.com/api'; 
     middlewareApi = 'http://basicService.szjh.com/api';
     break;
 }
