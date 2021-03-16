@@ -13,19 +13,19 @@ switch (process.env.DEFINED_ENV) {
     // middlewareApi = 'http://basicservice.wdai.com/api';
 
     apiUrl = 'https://settlement.szjh.com/api'; 
-    middlewareApi = 'http://basicService.szjh.com/api';
+    middlewareApi = 'https://basicservice.wdai.com/api';
     break;
   case 'fat':
     apiUrl = 'https://settlement.szjh.com/api'; 
-    middlewareApi = 'http://basicService.szjh.com/api';
+    middlewareApi = 'https://basicservice.wdai.com/api';
     break;
   case 'uat':
     apiUrl = 'https://settlement.szjh.com/api'; 
-    middlewareApi = 'http://basicService.szjh.com/api';
+    middlewareApi = 'https://basicservice.wdai.com/api';
     break;
   case 'prd':
     apiUrl = 'https://settlement.szjh.com/api'; 
-    middlewareApi = 'http://basicService.szjh.com/api';
+    middlewareApi = 'https://basicservice.wdai.com/api';
     break;
 }
 
