@@ -120,7 +120,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
         menuHeaderRender={(logoDom, titleDom) => {
           return (
             <Link to="/">
-              <div className={styles.title}>{titleDom}</div>
+              <div className={styles.title}>交易中心</div>
             </Link>
           );
         }}
@@ -139,6 +139,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
             <span>{route.breadcrumbName}</span>
           );
         }}
+        
         footerRender={() => <Footer />}
         menuDataRender={menuDataRender}
         rightContentRender={rightProps => <RightContent2 {...rightProps} />}
