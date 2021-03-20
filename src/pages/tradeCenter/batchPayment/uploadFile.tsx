@@ -177,48 +177,16 @@ class UploadFile extends React.Component<UploadFileProps, UploadFileState> {
           <Title type="secondary" level={5}>
             说明
           </Title>
-          <Title type="secondary" level={5}>
-          打款通道
-          </Title>
           <Text type="secondary">
-          平台支持银行卡通道、支付宝通道、微信支付通道打款，银行卡通道支持所有银联借记卡收款。请选择打款通道，下载对应的打款文件模板。
+          1.平台支持银行卡通道发放，支持所有银联借记卡收款。请选择发放通道，然后下载对应的发放模板完成发放；
           </Text>
-          <Title type="secondary" level={5}>
-          打款文件
-          </Title>
+          <br />
           <Text type="secondary">
-          商户批次号由商户自定义命名，格式建议为「商户名称+日期+编号」，例如：XX商户-2015-09-01。
+          2.单批次限制：1000笔；单笔限额：1～100万元；单人单月限额：签订合作时约定；
           </Text>
-          <Title type="secondary" level={5}>
-          打款限额
-          </Title>
+          <br />
           <Text type="secondary">
-          同一用户单月收款上限：40万元。
-          </Text>
-          <Title type="secondary" level={5}>
-          银行卡通道
-          </Title>
-          <Text type="secondary">
-          批次限制：单批次1000笔，多于1000笔请分拆不同批次来打款。单笔打款区间：1元-200万元。单日打款上限：3000万元。
-          </Text>
-          <Title type="secondary" level={5}>
-          支付宝通道
-          </Title>
-          <Text type="secondary">
-          单笔打款限额：5万元。日限额： 200 万元。月限额： 3100 万元。
-          </Text>
-          <Title type="secondary" level={5}>
-          微信支付通道
-          </Title>
-          <Text type="secondary">
-          单笔打款区间：1元-5000元。单日打款上限：10万元。同一用户单日收款上限：5000元。
-          </Text>
-          <Title type="secondary" level={5}>
-          平安易监管通道
-          </Title>
-          <Text type="secondary">
-          提交平安易监管通道打款后，请及时登录平安橙e网审批打款。单笔打款区间：1元-200万元。单日打款上限：3000
-万元。
+          3.自定义批次名称会作为商户批次好保存，文件名格式建议为「商户名称+日期+编号」，例如：XX商户-20160909-01。
           </Text>
         </Typography>
       </>
