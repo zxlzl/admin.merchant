@@ -523,6 +523,7 @@ export default class Account extends React.Component<AccountProps, AccountState>
               </div>
               <Text type="secondary">适用于个体工商业者的银行账户收款</Text>
             </Card>
+            
             <Card
               onClick={() => this.choose(2)}
               style={{ borderColor: index == 2 ? '#108ee9' : '' }}
@@ -614,7 +615,6 @@ export default class Account extends React.Component<AccountProps, AccountState>
               </div>
               <Text type="secondary">适用于个体工商业者的微信零钱账户收款</Text>
             </Card>
-
             <Card
               onClick={() => this.choose(3)}
               style={{ borderColor: index == 3 ? '#108ee9' : '' }}
