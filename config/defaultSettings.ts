@@ -54,7 +54,7 @@ export default {
   menu: {
     locale: true,
   },
-  title: '商户平台',
+  title: '服务平台',
   pwa: false,
   iconfontUrl: '',
 } as DefaultSettings;

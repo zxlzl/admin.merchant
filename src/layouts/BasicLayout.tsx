@@ -91,7 +91,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
     <ProLayout
       disableContentMargin
       layout="topmenu"
-      title="商户平台"
+      title="服务平台"
       {...props}
       // logo={<img style={{height: '23px'}} src={logo}></img>}
       logo={logo}

@@ -352,6 +352,8 @@ export default {
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn
   theme: {
     'primary-color': primaryColor,
+    'menu-dark-bg': '#6190E8 !important' ,
+    'menu-dark-highlight-color': '#FFFFFF !important'
   },
   define: {
     'process.env': {
