@@ -4,6 +4,25 @@
   .ant-layout-header {
     background: #6190e8 !important;
   }
+
+  
+}
+
+.navlogo {
+  height: 25px !important;
+
+  & + h1 {
+    position: relative;
+    margin: 0 50px 0 10px;
+    // border-left: 1px solid #cccccc;
+
+    &::before {
+      content: "|";
+      margin-right: 7px;
+      color: #cccccc;
+
+    }
+  }
 }
 
 .platform {

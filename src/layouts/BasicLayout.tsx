@@ -19,7 +19,7 @@ import { GlobalProvider } from '@/components/GlobalContext';
 import { ConnectState } from '@/models/connect';
 import styles from './BasicLayout.less';
 import Footer from './Footer';
-import logo from '../assets/logo.png';
+import logo from '../assets/navlogo.png';
 import { API_URL } from '@/utils/request';
 
 export interface BasicLayoutProps extends ProLayoutProps {
@@ -93,8 +93,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
       layout="topmenu"
       title="服务平台"
       {...props}
-      // logo={<img style={{height: '23px'}} src={logo}></img>}
-      logo={logo}
+      logo={<img className={styles.navlogo}  src={logo}></img>}
       // route={{
       //   routes: topmMenu,
       // }}
