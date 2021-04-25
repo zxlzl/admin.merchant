@@ -447,7 +447,11 @@ export default class Account extends React.Component<AccountProps, AccountState>
     } = this.state;
     const tableProps = {
       cardTitle: '资金操作记录',
-      extra: <Button type="primary" onClick={this.exportAccountRecord} icon={<DownloadOutlined />} >下载资金操作记录文件</Button>,
+      extra: (
+        <Button type="primary" onClick={this.exportAccountRecord} icon={<DownloadOutlined />}>
+          下载资金操作记录文件
+        </Button>
+      ),
       tableData, // 表格数据
       // tableHeader: () => `累计充值 ${}元，实际到账 ${}元`,
       // loading, // 请求状态
@@ -477,7 +481,7 @@ export default class Account extends React.Component<AccountProps, AccountState>
       '冻结金额，是指提交打款时，系统冻结该批次的用户实收金额与应收费用。等打款完成后，成功的订单扣减对应的用户实收金额和应收费用，失败的订单冻结对应的用户实收金额和应收费用。';
     return (
       <PageHeaderWrapper>
-        <Card bordered={false} title="资金账户" style={{marginBottom: 20}}>
+        <Card bordered={false} title="资金账户" style={{ marginBottom: 20 }}>
           <div className={styles.box}>
             <Card
               onClick={() => this.choose(0)}
@@ -523,8 +527,8 @@ export default class Account extends React.Component<AccountProps, AccountState>
               </div>
               <Text type="secondary">适用于个体工商业者的银行账户收款</Text>
             </Card>
-            
-            <Card
+
+            {/* <Card
               onClick={() => this.choose(2)}
               style={{ borderColor: index == 2 ? '#108ee9' : '' }}
               className={styles.card}
@@ -569,7 +573,9 @@ export default class Account extends React.Component<AccountProps, AccountState>
               </div>
               <Text type="secondary">适用于个体工商业者的支付宝账户收款</Text>
             </Card>
-            <Card
+            */}
+
+            {/* <Card
               onClick={() => this.choose(1)}
               style={{ borderColor: index == 1 ? '#108ee9' : '' }}
               className={styles.card}
@@ -615,7 +621,9 @@ export default class Account extends React.Component<AccountProps, AccountState>
               </div>
               <Text type="secondary">适用于个体工商业者的微信零钱账户收款</Text>
             </Card>
-            <Card
+           */}
+
+            {/* <Card
               onClick={() => this.choose(3)}
               style={{ borderColor: index == 3 ? '#108ee9' : '' }}
               className={styles.card}
@@ -641,7 +649,7 @@ export default class Account extends React.Component<AccountProps, AccountState>
               />
               <div className={styles.money}>
                 <Text strong>
-                冻结金额{' '}
+                  冻结金额{' '}
                   <Popover
                     overlayStyle={{ width: 300 }}
                     color="#fff"
@@ -662,13 +670,14 @@ export default class Account extends React.Component<AccountProps, AccountState>
                 >
                   充值
                 </Button>
-                {/* <Button style={{ marginRight: '10px' }} onClick={this.goTrans}>
+                <Button style={{ marginRight: '10px' }} onClick={this.goTrans}>
                   转账
-                </Button> */}
+                </Button>
                 <Button onClick={this.getCash}>提现</Button>
               </div>
               <Text type="secondary">适用于个体工商业者的银行卡账户收款</Text>
             </Card>
+           */}
           </div>
         </Card>
 
